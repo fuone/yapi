@@ -580,7 +580,7 @@
     --Y-form-bg-color: tranparent;
   }
   .n .form-control{}
-  /* fim formuilarios*/ 
+  /* fim formularios*/ 
   /* spinner */
   .spinner{}
   /* fim spinner */
@@ -592,3 +592,77 @@
 /* * */
 /* ids */
 /* * */
+/*----------------------------------------*/
+/* helpers - classes acessórias*/
+  .d-flex{display: flex !important;}
+  .hide,.hidden{display: none !important;}
+  .show,.shown{display: inicial;}
+  .not-valid, invalid, .error{color: var(--Y-invalid-color) !important;}
+  .no-input-style{
+    background: transparent !important;
+    border: none !important;
+  }
+  .no-bg{
+    --Y-bg-color: transparent;
+    background: transparent !important;
+  }
+  .no-color, .transparent{color: transparent !important;}
+  .no-border{border: none !important;}
+  .no-border-radius{border-radius: 0!important;}
+  .border-transp{border-color: transparent !important;}
+/* fim helpers */
+/*----------------------------------------*/
+/* anime */
+  .yapi .y-animate{
+    --Y-animation-duration: 0.8s;
+    --Y-animation-delay: 0s;
+    --Y-animation-count: infinite;
+    --Y-animation-fill-mode: both;
+    --Y-animation-direction: normal;
+    --Y-animation-timing-function: linear;
+    display: inline-block;
+  }
+  .rotate-center{
+	  /* -webkit-animation: rotate-center 0.8s linear infinite both;
+	  animation: rotate-center 0.8s linear infinite both; */
+    
+    -webkit-animation-name: rotate-center;
+            animation-name: rotate-center;
+    -webkit-animation-duration: var(--Y-animation-duration, 1s);
+            animation-duration: var(--Y-animation-duration, 1s);
+    -webkit-animation-iteration-count: var(--Y-animation-count, infinite);
+            animation-iteration-count: var(--Y-animation-count, infinite);
+    -webkit-animation-timing-function: var(--Y-animation-timing-function, linear);
+            animation-timing-function: var(--Y-animation-timing-function, linear);
+    -webkit-animation-delay: var(--Y-animation-delay, 0s);
+            animation-delay: var(--Y-animation-delay, 0s);
+    -webkit-animation-direction: var(--Y-animation-direction, normal);
+            animation-direction: var(--Y-animation-direction, normal);
+  }
+  /**
+  * ----------------------------------------
+  * animation rotate-center
+  * ----------------------------------------
+  */
+  @-webkit-keyframes rotate-center{
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate-center{
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+/* fim anime */
+/*----------------------------------------*/
