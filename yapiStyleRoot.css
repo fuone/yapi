@@ -2,6 +2,7 @@
 ********** CSS ROOT *************/
 :root{
   --cor-ff: #ffffff;--cor-ff-rgb: 255, 255, 255;
+  --cor-testes: #ffffff;
   /* preto/cinza */
   --cor-00: #000000;--cor-00-rgb: 0, 0, 0;
   --cor-01: #343a40;--cor-01-rgb: 52, 58, 64;
