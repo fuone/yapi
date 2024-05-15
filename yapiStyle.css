@@ -439,6 +439,7 @@
   }
   .yapi .form-group{--Y-yapi:'none';}
   .yapi .form-control{
+    --Y-form-focus-box-shadow: none;
     display: block;
     width: 100%;
     padding: var(--Y-form-padding);
@@ -539,10 +540,11 @@
   .s .input-group-text{
     --Y-form-bg-color: var(--Y-form-border-color);
   }
-  .s .form-control{--Y-yapi:'none';}
+  .s .form-control{
+    --Y-yapi:'none';
+  }
   .s .form-control:active,
   .s .form-control:focus{
-    --Y-form-focus-box-shadow: none;
     border-color: var(--Y-form-focus-border-color);    
     box-shadow: var(--Y-form-focus-box-shadow);
   }
