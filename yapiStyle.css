@@ -416,7 +416,7 @@
     --Y-form-txt-color:   var(--Y-txt-color);
     --Y-form-bg-color:    var(--Y-white-color);
     
-    --Y-form-border-color:  var(--Y-llgrey-color);
+    --Y-form-border-color:  var(--Y-border-color);
     --Y-form-border-radius: 4px;
     --Y-border-width:       1px;
     --Y-border-style:       solid;
