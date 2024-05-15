@@ -139,7 +139,7 @@
   .border-rad-esq{border-radius: var(--Y-border-radius) 0 0 var(--Y-border-radius) !important;}
   /* fim borders */
   /* icones */
-  .icon{}
+  .icon{vertical-align: middle;}
   .iA{padding: 0 ;}/*.iA= iconAlone; */
   .iB{/*.iB = iconButton; */
     padding: 0 5px 0 0;
