@@ -423,6 +423,12 @@
     border-collapse: var(--Y-border-collapse)!important;
     
   }
+.yapi form label{
+	margin-bottom: 5px;
+	line-height: 1.5;
+	font-size: inherit;
+	color: var(--Y-form-txt-color);
+}
   .yapi .form-group{--Y-yapi: none;}
   .yapi .form-control{
     --Y-form-focus-box-shadow: none;
@@ -432,6 +438,7 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
+	  margin: auto;
     color: var(--Y-form-txt-color);
     background-color: var(--Y-form-bg-color);
     background-clip: padding-box;
