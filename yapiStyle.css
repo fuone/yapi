@@ -18,9 +18,10 @@
     text-decoration: none;
     cursor: pointer;
   }
-/* * */
+/*
+*/
 /* classes */
-  .yapi{--Y-yapi:'none';}/* classe geral */
+  .yapi{--Y-yapi:none;}/* classe geral */
   .body{
     font-family: var(--Y-font-family);
     font-weight: var(--Y-font-weight);
@@ -39,7 +40,7 @@
     position: relative;
     border-radius: 50%;
   }
-	.yapi .grupo{--Y-yapi:'none';}
+	.yapi .grupo{--Y-yapi:none;}
 
 	/* ----- agrupados ----- */	
   /* cores */
@@ -606,13 +607,17 @@
 	*/
   /* requerido */
   .required{--Y-yapi:none;}
-  .required-color{--Y-yapi:none;}
+  .required .required-color{
+		color: var(--Y-invalid-color);
+	}
   /* fim requerido 
 	*/
   
-/* * */
+/*
+*/
 /* ids */
-/* * */
+/*
+*/
 /*----------------------------------------*/
 /* helpers - classes acessórias*/
   .d-flex{display: flex !important;}
