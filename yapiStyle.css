@@ -1,6 +1,6 @@
 /********** YAPIGAS **************
 ************ CSS FRAMEWORK *******/
-/*16052024*/
+/*17052024*/
 /* tags */
   html{
     padding: 10px;
@@ -165,6 +165,7 @@
     webkit-user-select: none;
     -moz-user-select: none;
     border-radius: var(--Y-btn-border-radius);
+		box-shadow: var(--Y-btn-box-shadow);
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
                 border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
@@ -174,6 +175,7 @@
     color: var(--Y-btn-hover-color) !important;
     background-color: var(--Y-btn-hover-bg-color) !important;
     border-color: var(--Y-btn-hover-border-color) !important;
+		box-shadow: var(--Y-btn-hover-box-shadow) !important;
   }
   .btn:disabled{
     opacity: 0.6;
@@ -187,6 +189,8 @@
     --Y-btn-hover-color: var(--Y-white-color);
     --Y-btn-hover-bg-color: var(--Y-black-color);
     --Y-btn-hover-border-color: var(--Y-black-color);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-grey{
     --Y-btn-color: var(--Y-white-color);
@@ -195,6 +199,8 @@
     --Y-btn-hover-color: var(--Y-white-color);
     --Y-btn-hover-bg-color: var(--cor-03);
     --Y-btn-hover-border-color: var(--cor-03);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-lgrey{
     --Y-btn-color: var(--Y-dgrey-color);
@@ -203,6 +209,8 @@
     --Y-btn-hover-color: var(--Y-white-color);
     --Y-btn-hover-bg-color: rgba(var(--cor-04-rgb), 0.9);
     --Y-btn-hover-border-color: rgba(var(--cor-04-rgb), 0.9);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-llgrey{
     --Y-btn-color: var(--Y-dgrey-color);
@@ -211,6 +219,8 @@
     --Y-btn-hover-color: var(--Y-dgrey-color);
     --Y-btn-hover-bg-color: var(--cor-07);
     --Y-btn-hover-border-color: var(--cor-07);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-lllgrey,
   .y-btn-clean{
@@ -220,6 +230,8 @@
     --Y-btn-hover-color: var(--cor-03);
     --Y-btn-hover-bg-color: var(--cor-08);
     --Y-btn-hover-border-color: var(--cor-08);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-transparent{
     --Y-btn-color: var(--cor-03);
@@ -228,7 +240,19 @@
     --Y-btn-hover-color: var(--cor-03);
     --Y-btn-hover-bg-color: var(--Y-btn-bg-color);
     --Y-btn-hover-border-color: var(--cor-09);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
+	.y-btn-transparent-white{
+	  --Y-btn-color: var(--cor-09);
+    --Y-btn-bg-color: transparent;
+    --Y-btn-border-color: transparent;
+    --Y-btn-hover-color: var(--Y-white-color);
+    --Y-btn-hover-bg-color: var(--Y-btn-bg-color);
+    --Y-btn-hover-border-color: var(--Y-btn-border-color);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
+	}
   .y-btn-white{
     --Y-btn-color: var(--cor-03);
     --Y-btn-bg-color: var(--Y-white-color);
@@ -236,6 +260,8 @@
     --Y-btn-hover-color: var(--cor-03);
     --Y-btn-hover-bg-color: var(--cor-09);
     --Y-btn-hover-border-color: var(--cor-09);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-green,
   .y-btn-success{
@@ -245,6 +271,8 @@
     --Y-btn-hover-color: var(--Y-white-color);
     --Y-btn-hover-bg-color: rgba(var(--cor-20-rgb), 0.9);
     --Y-btn-hover-border-color: rgba(var(--cor-20-rgb), 0.9);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-lgreen,
   .y-btn-lsuccess{
@@ -254,6 +282,8 @@
     --Y-btn-hover-color: var(--Y-white-color);
     --Y-btn-hover-bg-color: var(--cor-22);
     --Y-btn-hover-border-color: var(--cor-22);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-llgreen,
   .y-btn-llsuccess{
@@ -263,6 +293,8 @@
     --Y-btn-hover-color: var(--Y-white-color);
     --Y-btn-hover-bg-color: var(--cor-24);
     --Y-btn-hover-border-color: var(--cor-24);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-blue{
     --Y-btn-color: var(--Y-white-color);
@@ -271,6 +303,8 @@
     --Y-btn-hover-color: var(--Y-white-color);
     --Y-btn-hover-bg-color: rgba(var(--cor-11-rgb), 0.9);
     --Y-btn-hover-border-color: rgba(var(--cor-11-rgb), 0.9);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-lblue{
     --Y-btn-color: var(--Y-white-color);
@@ -279,6 +313,8 @@
     --Y-btn-hover-color: var(--Y-white-color);
     --Y-btn-hover-bg-color: #0054d3;
     --Y-btn-hover-border-color: #0054d3;
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-llblue{
     --Y-btn-color: var(--Y-dblue-color);
@@ -287,6 +323,8 @@
     --Y-btn-hover-color: var(--Y-white-color);
     --Y-btn-hover-bg-color: var(--cor-14);
     --Y-btn-hover-border-color: var(--cor-14);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-uv{
     --Y-btn-color: var(--Y-white-color);
@@ -295,6 +333,8 @@
     --Y-btn-hover-color: var(--Y-white-color);
     --Y-btn-hover-bg-color: var(--Y-dviolet-color);
     --Y-btn-hover-border-color: var(--Y-dviolet-color);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-yellow,
   .y-btn-alert{
@@ -304,6 +344,8 @@
     --Y-btn-hover-color: var(--cor-60);
     --Y-btn-hover-bg-color: var(--cor-30);
     --Y-btn-hover-border-color: var(--cor-30);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-red,
   .y-btn-danger{
@@ -313,15 +355,19 @@
     --Y-btn-hover-color: var(--Y-white-color);
     --Y-btn-hover-bg-color: var(--Y-red-color);
     --Y-btn-hover-border-color: var(--Y-red-color);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-lred,
   .y-btn-ldanger{
     --Y-btn-color: var(--cor-60);
-    --Y-btn-bg-color: var(--Y-lred-color);/* --cor-53 --Y-lred-color */
+    --Y-btn-bg-color: var(--Y-lred-color);
     --Y-btn-border-color: var(--Y-lred-color);
     --Y-btn-hover-color: var(--Y-white-color);
     --Y-btn-hover-bg-color: var(--cor-53);
     --Y-btn-hover-border-color: var(--cor-53);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-magenta{
     --Y-btn-color: var(--Y-white-color);
@@ -330,6 +376,8 @@
     --Y-btn-hover-color: var(--Y-white-color);
     --Y-btn-hover-bg-color: var(--Y-dmajenta-color);
     --Y-btn-hover-border-color: var(--Y-dmajenta-color);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-lmagenta{
     --Y-btn-color: var(--Y-white-color);
@@ -338,6 +386,8 @@
     --Y-btn-hover-color: var(--Y-white-color);
     --Y-btn-hover-bg-color: var(--Y-majenta-color);
     --Y-btn-hover-border-color: var(--Y-majenta-color);
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-cyan,
   .y-btn-info{
@@ -347,6 +397,8 @@
     --Y-btn-hover-color: var(--Y-dblue-color);
     --Y-btn-hover-bg-color: #73ebfd;
     --Y-btn-hover-border-color: #73ebfd;
+		--Y-btn-box-shadow: none;
+		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
   .y-btn-mini{
     --Y-btn-padding-x: var(--Y-mini-padding-x) !important;
@@ -356,11 +408,13 @@
     --Y-btn-hover-color: var(--Y-cor-clara);
     --Y-btn-hover-bg-color: var(--Y-cor-escura);
     --Y-btn-hover-border-color: var(--Y-cor-escura);
+		--Y-btn-hover-box-shadow: none;
   }
   .y-btn-mono-hover-2{
     --Y-btn-hover-color: var(--Y-cor-escura);
     --Y-btn-hover-bg-color: var(--Y-cor-clara);
     --Y-btn-hover-border-color: var(--Y-cor-clara);
+		--Y-btn-hover-box-shadow: none;
   }
   .y-btn-outline{
     --Y-btn-color: var(--Y-btn-border-color);
