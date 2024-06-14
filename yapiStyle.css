@@ -1,6 +1,6 @@
 /********** YAPIGAS **************
 ************ CSS FRAMEWORK *******/
-/*17052024*/
+/*1462024*/
 /* tags */
   html{
     padding: 10px;
@@ -110,7 +110,7 @@
   .opacity-03{--Y-opacity: 0.30;} /* menos opaco */
   .opacity-05{--Y-opacity: 0.50;} /* medio opaco */
   .opacity-07{--Y-opacity: 0.75;} /* mais opaco */
-	.opacity-1{--Y-opacity: 1;}     /* opaco */
+	.opacity-10{--Y-opacity: 1;}     /* opaco */
   /* fim opacity 
 	*/
 
@@ -296,6 +296,16 @@
 		--Y-btn-box-shadow: none;
 		--Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
   }
+.y-btn-5lgreen{
+	--Y-btn-color: var(--Y-dblue-color);
+    --Y-btn-bg-color: #f4f8f7;
+    --Y-btn-border-color: #c5e1d9;
+    --Y-btn-hover-color: #03c18c;
+    --Y-btn-hover-bg-color: #c5e1d9;
+    --Y-btn-hover-border-color: #c5e1d9;
+    --Y-btn-box-shadow: none;
+    --Y-btn-hover-box-shadow: var(--Y-btn-box-shadow);
+}
   .y-btn-blue{
     --Y-btn-color: var(--Y-white-color);
     --Y-btn-bg-color: var(--Y-blue-color);
@@ -417,12 +427,12 @@
 		--Y-btn-hover-box-shadow: none;
   }
   .y-btn-outline{
-    --Y-btn-color: var(--Y-btn-border-color);
-    --Y-btn-bg-color: tranparent;
+    --Y-btn-color: var(--Y-btn-border-color) !important;
+    --Y-btn-bg-color: tranparent !important;
   }
   .y-btn-outline-2{
-    --Y-btn-color: var(--Y-txt-color);
-    --Y-btn-bg-color: tranparent;
+    --Y-btn-color: var(--Y-txt-color) !important;
+    --Y-btn-bg-color: tranparent !important;
   }
 
   .y-btn-circle, 
@@ -430,6 +440,7 @@
     --Y-btn-padding-x: 0.6rem !important;
     /* border-radius: 50px; border-radius: 100%; */
     border-radius: 10rem !important;
+	vertical-align: initial !important;
   }
   .y-btn-one-char{}
   /*
