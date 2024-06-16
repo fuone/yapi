@@ -1,6 +1,6 @@
 /********** YAPIGAS **************
 ************ CSS FRAMEWORK *******/
-/*1462024*/
+/*15062024*/
 /* tags */
   html{
     padding: 10px;
@@ -643,7 +643,7 @@
   /* modals */
   .modal{
     --Y-modal-color: var(--Y-txt-color);
-    --Y-modal-bg-color: var(--Y-lllgrey-color);
+    --Y-modal-bg-color: var(--Y-bg-color);
     --Y-modal-backdrop-color: var(--Y-backdrop-color);
   }
   .modal-header{border-bottom: transparent;}
