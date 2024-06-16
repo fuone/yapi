@@ -1,5 +1,6 @@
 /********** YAPIGAS **************
 ********** CSS ROOT *************/
+/*15062024*/
 :root{
   --cor-ff: #ffffff;--cor-ff-rgb: 255, 255, 255;
   --cor-testes: #ffffff;
@@ -99,6 +100,7 @@
   --Y-dgreen-color:   var(--cor-20);
   --Y-lgreen-color:   var(--cor-23);
   --Y-llgreen-color:  rgba(var(--cor-24-rgb), 0.7);
+  --Y-5lgreen-color:  #b5e2e3; --Y-5lgreen-color-rgb: 181,226,227;
 
   --Y-yellow-color:   var(--cor-32);
 
@@ -118,7 +120,6 @@
   --Y-lmajenta-color: rgba(var(--cor-58-rgb), 0.8);
 
   --Y-cyan-color:     #00ddff; --Y-cyan-color-rgb: 0,221,255;
-
   
 
   --Y-cor-success:    var(--Y-green-color);   /* verde */
