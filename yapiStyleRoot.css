@@ -1,6 +1,6 @@
 /********** YAPIGAS **************
 ********** CSS ROOT *************/
-/*15062024*/
+/*08072024*/
 :root{
   --cor-ff: #ffffff;--cor-ff-rgb: 255, 255, 255;
   --cor-testes: #ffffff;
@@ -146,15 +146,15 @@
   --Y-cor-clara:  var(--Y-light-color);
   --Y-cor-escura: var(--Y-dark-color);
 
-  --Y-tam-ppp:  1px;    /* 0.4% */
-  --Y-tam-pp:   3px;    /* 5.38% */
-  --Y-tam-p:    8px;    /* 15.34% */
+  --Y-tam-ppp:  3px;    /* 0.4% */
+  --Y-tam-pp:   8px;    /* 5.38% */
+  --Y-tam-p:    10px;    /* 15.34% */
   --Y-tam-m:    13px;   /* 25.3% */
-  --Y-tam-mm:   25px;   /* 50.2% */
-  --Y-tam-mmm:  37.5px; /* 75.1% */
-  --Y-tam-g:    50px;   /* 100% */
-  --Y-tam-gg:   62px;   /* 124.9% */
-  --Y-tam-ggg:  75px;   /* 149.8% */
+  --Y-tam-mm:   18px;   /* 50.2% */
+  --Y-tam-mmm:  28px; /* 75.1% */
+  --Y-tam-g:    40px;   /* 100% */
+  --Y-tam-gg:   52px;   /* 124.9% */
+  --Y-tam-ggg:  70px;   /* 149.8% */
 
   
   --Y-padding:        5px;
