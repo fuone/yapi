@@ -1,6 +1,6 @@
 /********** YAPIGAS **************
 ************ CSS FRAMEWORK *******/
-  /*22072024*/
+  /*23072024*/
   /*----------------------------------------*/
   /* tags
 	/*----------------------------------------*/
@@ -45,22 +45,28 @@
   /*----------------------------------------*/
   /* icons
 	/*----------------------------------------*/
-  .icon,
+	.icon {
+    font-size: var(--Y-icon-size);
+		display:inline-block;
+  }  
+
+	.icon,
   .i {
     vertical-align: middle;
   }
 
   .iA {
+		/* iA= iconAlone; */
     padding: 0 !important;
   }
-
-  /* iA= iconAlone; */
+  
   .iB {
     /* iB = iconButton; */
     padding: 0 5px 0 0 !important;
   }
 
-	.iBA {/* icone de btn alone*/
+	.iBA {
+		/* icone de btn alone*/
     padding: 0 3px;
   }
   .iC {
@@ -69,15 +75,10 @@
   }
 
   .iT {
+		/* iT = iconTexto */
     padding: 0 10px 0 0 !important;
-  }
-
-  /* iT = iconTexto */
-  .icon {
-    font-size: var(--Y-icon-size);
-		display:inline-block;
-  }
-
+  }  
+  
 	.icon-size-inherit {
 		--Y-icon-size: inherit !important;
 	}
@@ -452,10 +453,10 @@
     font-weight: var(--Y-font-weight);
     font-size: var(--Y-font-size);
   }
-	.txt-inherit{
+	.txt-inherit {
 		--Y-txt-color: inherit;
 	}
-	.txt-initial{
+	.txt-initial {
 		--Y-txt-color: initial;
 	}
   .txt-success,
@@ -521,43 +522,43 @@
   }
 
 /* font-size ----------------------------------------*/
-	.fs-10{
+	.fs-10 {
 		--Y-font-size: 10px;
 		font-size: var(--Y-font-size) !important;
 	}
-	.fs-12{
+	.fs-1 2{
 		--Y-font-size: 12px;
 		font-size: var(--Y-font-size) !important;
 	}
-	.fs-13{
+	.fs-13 {
 		--Y-font-size: 13px;
 		font-size: var(--Y-font-size) !important;
 	}
-	.fs-14{
+	.fs-14 {
 		--Y-font-size: 14px;
 		font-size: var(--Y-font-size) !important;
 	}
-	.fs-15{
+	.fs-15 {
 		--Y-font-size: 15px;
 		font-size: var(--Y-font-size) !important;
 	}
-	.fs-16{
+	.fs-16 {
 		--Y-font-size: 16px;
 		font-size: var(--Y-font-size) !important;
 	}
-	.fs-17{
+	.fs-17 {
 		--Y-font-size: 17px;
 		font-size: var(--Y-font-size) !important;
 	}
-	.fs-18{
+	.fs-18 {
 		--Y-font-size: 18px;
 		font-size: var(--Y-font-size) !important;
 	}
-	.fs-19{
+	.fs-19 {
 		--Y-font-size: 19px;
 		font-size: var(--Y-font-size) !important;
 	}
-	.fs-20{
+	.fs-20 {
 		--Y-font-size: 20px;
 		font-size: var(--Y-font-size) !important;
 	}
@@ -582,23 +583,23 @@
     --Y-font-size: var(--Y-tam-m);
   }
 
-  .txt-mm
+  .txt-mm,
 	.fs-mm {
     --Y-font-size: var(--Y-tam-mm);
   }
 
-  .txt-mmm
-	.fs-mmm{
+  .txt-mmm,
+	.fs-mmm {
     --Y-font-size: var(--Y-tam-mmm);
   }
 
-  .txt-g
+  .txt-g,
 	.fs-g {
     --Y-font-size: var(--Y-tam-g);
   }
 
   .txt-gg,
-	fs-gg {
+	.fs-gg {
     --Y-font-size: var(--Y-tam-gg);
   }
 
@@ -1139,7 +1140,7 @@
     font-size: 1rem;
     font-weight: var(--Y-font-weight);
     line-height: 1.5;
-    color: var(--Y-formfield-txt-color);
+    color: var(--Y-form-field-txt-color);
     text-align: center;
     white-space: nowrap;
     background-color: var(--Y-form-field-bg-color);
@@ -1185,11 +1186,11 @@
   }
 
   .input-group:focus-within .input-group-text {
-    --Y-form-txt-color: var(--Y-white-color);
-    --Y-form-bg-color: var(--Y-form-focus-border-color);
-    background-color: var(--Y-form-bg-color);
+    --Y-form-field-txt-color: var(--Y-white-color);
+    --Y-form-field-bg-color: var(--Y-form-focus-border-color);
+    background-color: var(--Y-form-field-bg-color);
     border-color: var(--Y-form-focus-border-color);
-    color: var(--Y-form-txt-color);
+    color: var(--Y-form-field-txt-color);
   }
 
   /* s = campos COM borda */
@@ -1289,7 +1290,7 @@
     --Y-modal-color: var(--Y-txt-color);
     --Y-modal-bg-color: var(--Y-bg-color);
     --Y-modal-backdrop-color: var(--Y-backdrop-color);
-		--Y-modal-width:700px;
+		--Y-modal-width: 700px;
   }
 
   .modal-header {
@@ -1330,12 +1331,13 @@
   }
   /*ajusta o tamanho do modal*/
   @media(min-width: 576px){
-    .modal-dialog{
-      max-width:var(--Y-modal-width)!important;
+    .modal-dialog {
+      max-width: var(--Y-modal-width)!important;
     }
   }
   @media(min-width: 992px){
-    .modal-lg, .modal-xl{
+    .modal-lg, 
+		.modal-xl {
       --Y-modal-width: 800px;
     }    
   }
