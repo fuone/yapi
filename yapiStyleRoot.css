@@ -1,6 +1,6 @@
 /********** YAPIGAS **************
 ********** CSS ROOT *************/
-/*08072024*/
+/*25072024*/
 :root{
   --cor-ff: #ffffff;--cor-ff-rgb: 255, 255, 255;
   --cor-testes: #ffffff;
@@ -119,18 +119,17 @@
   --Y-dmajenta-color: var(--cor-59);
   --Y-lmajenta-color: rgba(var(--cor-58-rgb), 0.8);
 
-  --Y-cyan-color:     #00ddff; --Y-cyan-color-rgb: 0,221,255;
-  
+  --Y-cyan-color:     #00ddff; --Y-cyan-color-rgb: 0,221,255;  
 
-  --Y-cor-success:    var(--Y-green-color);   /* verde */
-  --Y-cor-sky:        var(--Y-lblue-color);   /* azul */
-  --Y-cor-danger:     var(--cor-51);          /* vermelho */
-  --Y-cor-alert:      var(--Y-yellow-color);  /* amarelo */
-  --Y-cor-info:       var(--Y-cyan-color);    /* ciano */
-  --Y-cor-dark:       var(--Y-dgrey-color);   /* cinza muito escuro ou preto */
-  --Y-cor-light:      var(--Y-lllgrey-color); /* cinza muito claro ou branco */
-  --Y-cor-secondary:  var(--Y-lgrey-color);   /* cinza */
-  --Y-cor-white:      var(--Y-white-color);   /*  branco */
+  /*--Y-cor-success:    var(--Y-green-color);   /* verde */
+  /*--Y-cor-sky:        var(--Y-lblue-color);   /* azul */
+  /*--Y-cor-danger:     var(--cor-51);          /* vermelho */
+  /*--Y-cor-alert:      var(--Y-yellow-color);  /* amarelo */
+  /*--Y-cor-info:       var(--Y-cyan-color);    /* ciano */
+  /*--Y-cor-dark:       var(--Y-dgrey-color);   /* cinza muito escuro ou preto */
+  /*--Y-cor-light:      var(--Y-lllgrey-color); /* cinza muito claro ou branco */
+  /*--Y-cor-secondary:  var(--Y-lgrey-color);   /* cinza */
+  /*--Y-cor-white:      var(--Y-white-color);   /*  branco */
 
   --Y-success-color:    var(--Y-green-color);   /* verde */
   --Y-sky-color:        var(--Y-lblue-color);   /* azul */
@@ -140,8 +139,6 @@
   --Y-dark-color:       var(--Y-dgrey-color);   /* cinza muito escuro ou preto */
   --Y-light-color:      var(--Y-lllgrey-color); /* cinza muito claro ou branco */
   --Y-secondary-color:  var(--Y-lgrey-color);   /* cinza claro */
-
-
   /******/
   --Y-cor-clara:  var(--Y-light-color);
   --Y-cor-escura: var(--Y-dark-color);
@@ -155,7 +152,6 @@
   --Y-tam-g:    40px;   /* 100% */
   --Y-tam-gg:   52px;   /* 124.9% */
   --Y-tam-ggg:  70px;   /* 149.8% */
-
   
   --Y-padding:        5px;
   --Y-padding-x:      0.75rem;/* 12px */
@@ -185,22 +181,22 @@
   --Y-link-hover-bg-color:  var(--Y-link-bg-color);
   --Y-link-hover-txt-color: var(--Y-link-color);
 
-  --Y-border-color:   var(--cor-04);
-  --Y-border-radius:  4px;
-  --Y-border-width:   1px;
-  --Y-border-style:   solid;
-  --Y-border:         var(--Y-border-width) var(--Y-border-style) var(--Y-border-color);
-  --Y-border-solid:   var(--Y-border-width) solid var(--Y-border-color);
-  --Y-border-dotted:  var(--Y-border-width) dotted var(--Y-border-color);
-  --Y-border-dashed:  var(--Y-border-width) dashed var(--Y-border-color);
+  --Y-border-color:       var(--cor-04);
+  --Y-border-radius:      4px;
+  --Y-border-width:       1px;
+  --Y-border-style:       solid;
+  --Y-border:             var(--Y-border-width) var(--Y-border-style) var(--Y-border-color);
+  --Y-border-solid:       var(--Y-border-width) solid var(--Y-border-color);
+  --Y-border-dotted:      var(--Y-border-width) dotted var(--Y-border-color);
+  --Y-border-dashed:      var(--Y-border-width) dashed var(--Y-border-color);
   --Y-border-transparent: 1px solid tranparent;
-  --Y-border-collapse:  collapse;
+  --Y-border-collapse:    collapse;
 
   --Y-zoom:             90%;
   --Y-transition:       0.3s ease;
   --Y-opacity:          1;
   --Y-backdrop-color:   var(--Y-black-color);
-  --Y-backdrop-opacity: 0.3;
+  --Y-backdrop-opacity: 0.5;
 
   --Y-spinner-bg-color: var(--Y-white-color);
   --Y-spinner-color:    var(--Y-txt-color);
