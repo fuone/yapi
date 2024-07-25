@@ -1,6 +1,6 @@
 /********** YAPIGAS **************
 ************ CSS FRAMEWORK *******/
-/*24072024*/
+/*25072024*/
 /*----------------------------------------*/
 /* tags
 /*----------------------------------------*/
@@ -84,7 +84,7 @@ a {
 
 .icon,
 .i {
-  vertical-align: middle;
+  /*vertical-align: middle;*/
 }
 
 .iA {
@@ -98,7 +98,7 @@ a {
 }
 
 .iBA {
-  /* icone de btn alone*/
+  /* iBA = iconButtonAlone*/
   padding: 0 3px;
 }
 
@@ -413,7 +413,7 @@ a {
 /*----------------------------------------*/
 .y-badge {
   /* a ser usado com bg-[cor]*/
-  --Y-badge-padding-y: 3px;
+  --Y-badge-padding-y: 6px;
   --Y-badge-padding-x: 6px;
   --Y-bagde-bg-color: var(--Y-bg-color);
   --Y-badge-color: var(--Y-bg-txt-color);
@@ -426,7 +426,7 @@ a {
   font-size: var(--Y-badge-font-size);
 
   text-align: center;
-  line-height: 1;
+  line-height: 0.5;
   white-space: nowrap;
   vertical-align: baseline;
   display: inline-block;
@@ -1218,10 +1218,11 @@ a {
   --Y-form-field-disabled-color: var(--Y-disabled-color);
   --Y-form-field-disabled-bg-color: var(--Y-disabled-bg-color);
   --Y-form-field-disabled-border-color: var(--Y-disabled-border-color);
+  --Y-form-field-focus-txt-color: inherit;
   --Y-form-field-focus-bg-color: transparent;
-  ;
   --Y-form-field-focus-border-color: var(--Y-black-color);
   --Y-form-field-focus-box-shadow: 0 0 0 0.01rem rgb(1 62 106 / 99%);
+  
   height: inherit;
   line-height: 25px;
   font-size: 16px;
@@ -1291,30 +1292,30 @@ a {
 .yapi .input-group .form-control:active,
 .yapi .input-group .form-check-input:focus {
   --Y-form-field-focus-border-color: transparent;
-  border-width: 0 !important;
-  box-shadow: none;
+  --Y-form-field-focus-box-shadow: none;
+  border-width: 0 !important;  
   outline: 0;
   border-color: var(--Y-form-field-focus-border-color);
+  box-shadow: var(--Y-form-field-focus-box-shadow);
 }
 
-/******************* ate aqui*/
-
 .yapi .input-group .input-group-text {
-  --Y-yapi: 'none';
+  --Y-yapi: none;
 }
 
 .yapi .input-group:focus-within {
-  --Y-yapi: 'none';
+  --Y-yapi: none;
 }
 
 .yapi .input-group:focus-within .input-group-text {
-  --Y-form-field-txt-color: var(--Y-white-color);
-  --Y-form-field-bg-color: var(--Y-form-focus-border-color);
-  background-color: var(--Y-form-field-bg-color);
+  --Y-form-field-txt-color: var(--Y-form-field-focus-txt-color);/*--Y-form-field-txt-color: var(--Y-white-color);*/
+  --Y-form-field-bg-color: var(--Y-form-field-focus-bg-color);/*--Y-form-field-bg-color: var(--Y-form-focus-border-color);*/
+  /*background-color: var(--Y-form-field-bg-color);
   border-color: var(--Y-form-focus-border-color);
-  color: var(--Y-form-field-txt-color);
+  color: var(--Y-form-field-txt-color);*/
 }
 
+/******************* ate aqui*/
 /* s = campos COM borda */
 .yapi .s {
   border: inherit;
@@ -1410,8 +1411,10 @@ a {
 /*----------------------------------------*/
 .yapi .modal {
   --Y-modal-color: var(--Y-txt-color);
-  --Y-modal-bg-color: var(--Y-bg-color);
+  --Y-modal-bg-color: var(--Y-white-color);
   --Y-modal-backdrop-color: var(--Y-backdrop-color);
+  --Y-modal-backdrop-opacity: var(--Y-backdrop-opacity);
+  --Y-modal-backdrop-bg: var(--Y-backdrop-color);
   --Y-modal-width: 700px;
 }
 
@@ -1427,18 +1430,16 @@ a {
 }
 
 .yapi .modal-backdrop {
-  /*fundo do modal */
-  --Y-modal-backdrop-opacity: 0.5;
-  --Y-modal-backdrop-bg: var(--Y-black-color);
+  /*fundo do modal */  
   background-color: var(--Y-modal-backdrop-bg);
   z-index: 1050;
-  width: 100%;
-  height: 100%;
+  /*width: 100%;
+  height: 100%;*/
 }
 
-.yapi .modal-backdrop.show {
+/*.yapi .modal-backdrop.show {
   opacity: var(--Y-modal-backdrop-opacity);
-}
+}*/
 
 .yapi .modal-backdrop,
 .yapi .offcanvas-backdrop {
@@ -1463,7 +1464,6 @@ a {
 }
 
 @media(min-width: 992px) {
-
   .modal-lg,
   .modal-xl {
     --Y-modal-width: 800px;
