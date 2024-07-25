@@ -237,8 +237,10 @@ a {
 /* backgrounds
 /*----------------------------------------*/
 .bg {
+  --Y-txt-color: var(--Y-bg-txt-color);
   opacity: var(--Y-opacity);
   background-color: var(--Y-bg-color);
+  color: var(--Y-bg-txt-color);  
 }
 
 /* ff branco ----------------------------------------*/
@@ -413,16 +415,18 @@ a {
 /*----------------------------------------*/
 .y-badge {
   /* a ser usado com bg-[cor]*/
+  --Y-txt-color: var(--Y-bg-txt-color);
   --Y-badge-padding-y: 6px;
   --Y-badge-padding-x: 6px;
   --Y-bagde-bg-color: var(--Y-bg-color);
-  --Y-badge-color: var(--Y-bg-txt-color);
+  --Y-badge-txt-color: var(--Y-bg-txt-color);  
   --Y-badge-font-size: inherit;
-  opacity: var(--Y-opacity);
+  --Y-badge-opacity: var(--Y-opacity);
+  opacity: var( --Y-badge-opacity);
   background: var(--Y-bagde-bg-color);
   padding: var(--Y-badge-padding-y) var(--Y-badge-padding-x);
   border-radius: var(--Y-border-radius);
-  color: var(--Y-badge-color);
+  color: var(--Y-badge-txt-color);
   font-size: var(--Y-badge-font-size);
 
   text-align: center;
