@@ -1,6 +1,6 @@
 /********** YAPIGAS **************
 ************ CSS FRAMEWORK *******/
-/*25072024*/
+/*26072024*/
 /*----------------------------------------*/
 /* tags
 /*----------------------------------------*/
@@ -414,10 +414,13 @@ a {
 /* badge
 /*----------------------------------------*/
 .y-badge {
-  /* a ser usado com bg-[cor]*/
+  /* o bagde deve ser usado em div, com a classe bg-[cor]
+  /*O texto deve vir em um elemento filho com classe txt. um <span class="txt"> por exemplo
+  */
+  --Y-line-height: 1;
   --Y-txt-color: var(--Y-bg-txt-color);
-  --Y-badge-padding-y: 6px;
-  --Y-badge-padding-x: 6px;
+  --Y-badge-padding-y: 0.3rem;
+  --Y-badge-padding-x: 0.3rem;
   --Y-bagde-bg-color: var(--Y-bg-color);
   --Y-badge-txt-color: var(--Y-bg-txt-color);  
   --Y-badge-font-size: inherit;
@@ -437,8 +440,8 @@ a {
 }
 
 .y-badge.badge-sm {
-  --Y-badge-padding-y: 2px !important;
-  --Y-badge-padding-x: 4px !important;
+  --Y-badge-padding-y: 0.125rem !important;
+  --Y-badge-padding-x: 0.25rem !important;
   --Y-badge-font-size: 11px;
 }
 
@@ -450,7 +453,13 @@ a {
 }
 
 .y-badge.badge-lg {
-  --Y-badge-padding-y: 10px !important;
+  --Y-badge-padding-y: 0.625rem !important;
+  --Y-badge-padding-x: var(--Y-badge-padding-y) !important;
+  --Y-badge-font-size: inherit;
+}
+
+.y-badge.badge-xl {
+  --Y-badge-padding-y: 1rem !important;
   --Y-badge-padding-x: var(--Y-badge-padding-y) !important;
   --Y-badge-font-size: inherit;
 }
@@ -769,14 +778,10 @@ a {
 .yapi .btn, 
 .y-btn {
   --Y-btn-padding-x: var(--Y-padding-x);
-  /* 12px */
   --Y-btn-padding-y: var(--Y-padding-y);
-  /* 6px */
   --Y-btn-font-size: 1rem;
-  /* 16px; */
   --Y-btn-font-weight: var(--Y-font-weight);
   --Y-btn-border-radius: 0.375rem;
-  /* 6px */
 
   color: var(--Y-btn-color) !important;
   background-color: var(--Y-btn-bg-color);
@@ -1100,6 +1105,7 @@ a {
   --Y-btn-padding-y: var(--Y-mini-padding-y) !important;
 }
 
+.y-btn-xsm,
 .y-btn-sm-sm {
   --Y-btn-padding-x: 0.15rem !important;
   --Y-btn-padding-y: 0.005rem !important;
@@ -1132,10 +1138,15 @@ a {
 
 .y-btn-circle,
 .y-btn-rounded {
-  --Y-btn-padding-x: 0.7rem;
+  --Y-btn-padding-x: 0.7rem !important;
   /* border-radius: 50px; border-radius: 100%; */
   border-radius: 10rem !important;
   vertical-align: initial !important;
+}
+.y-btn-sm.y-btn-circle {
+  --Y-btn-padding-x: 0.45rem !important;
+  --Y-btn-padding-y: 0.16rem !important;
+  vertical-align: middle !important;
 }
 
 .y-btn-one-char {}
@@ -1419,7 +1430,7 @@ a {
   --Y-modal-backdrop-color: var(--Y-backdrop-color);
   --Y-modal-backdrop-opacity: var(--Y-backdrop-opacity);
   --Y-modal-backdrop-bg: var(--Y-backdrop-color);
-  --Y-modal-width: 700px;
+  --Y-modal-width: 750px;
 }
 
 .yapi .modal-header {
@@ -1485,8 +1496,10 @@ a {
   --Y-modal-bg-color: var(--Y-spinner-bg-color);
   --Y-modal-color: var(--Y-spinner-color);
   border: none !important;
-  width: fit-content !important;
+  width: fit-content !important; 
+  height: fit-content;
   margin: auto;
+  padding: 1rem;
 }
 
 .modal-spinner .modal-body {
