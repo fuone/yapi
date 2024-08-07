@@ -1,6 +1,6 @@
 /********** YAPIGAS **************
 ************ CSS FRAMEWORK *******/
-/*07082024*/
+/*07082024-2*/
 /*----------------------------------------*/
 /* tags
 /*----------------------------------------*/
@@ -887,6 +887,14 @@ a {
   border: var(--Y-border-width) var(--Y-border-style) var(--Y-border-color) !important;
 }
 
+.border-1 {
+  --Y-border-width: 1px;
+}
+
+.border-2 {
+  --Y-border-width: 2px;
+}
+
 .border-dotted {
   --Y-border-style: dotted;
 }
@@ -1378,7 +1386,7 @@ a {
 }
 
 .yapi form .special-field {
-  background-color: var(--Y-form-field-special-bg-color) !important;
+  --Y-form-field-bg-color: var(--Y-form-field-special-bg-color) !important;
   border: transparent !important;
   border-radius: var(--Y-border-radius) !important;
   color: var(--Y-form-field-txt-color);
@@ -1499,9 +1507,9 @@ a {
 }
 
 /* floating labels */
-.yapi .form-floating {}
+.yapi form .form-floating {}
 
-.yapi .form-floating>.form-control {
+.yapi form .form-floating>.form-control {
   --Y-form-field-padding-y: 1rem;
   --Y-form-field-padding-x: 0.75rem;
 }
@@ -1551,7 +1559,7 @@ a {
 /* n = campos SEM borda */
 .yapi .n {
   --Y-form-txt-color: var(--Y-txt-color);
-  --Y-form-bg-color: var(--Y-white-color);
+  --Y-form-bg-color: transparent;
 
   /*--Y-form-border-color:  transparent;*/
   --Y-form-border-radius: 0;
@@ -1597,6 +1605,77 @@ a {
   --Y-yapi: none;
 }
 
+/*----------------------------------------*/
+/* campos fora do formulário
+/*----------------------------------------*/
+.yapi .y-field {
+  --Y-field-padding-y: 5px;
+  --Y-field-padding-x: 5px;
+  --Y-field-border-width: 1px;
+  --Y-field-border-style: solid;
+  --Y-field-border-color: var(--cor-07);
+  --Y-field-border-radius: 5px;
+  --Y-field-border-transitions: .3s ease all;
+  --Y-field-font-family: 'Quicksand', sans-serif;
+  --Y-field-font-size: 1rem, var(--Y-font-size);
+  --Y-field-txt-color: var(--Y-txt-color);
+  --Y-field-bg-color: var(--Y-bg-color);
+  --Y-field-special-txt-color: var(--Y-dark-color);
+  --Y-field-special-bg-color: var(--cor-07);
+  --Y-field-disabled-color: var(--Y-disabled-color);
+  --Y-field-disabled-bg-color: var(--Y-disabled-bg-color);
+  --Y-field-disabled-border-color: var(--Y-disabled-border-color);
+  --Y-field-focus-txt-color: inherit;
+  --Y-field-focus-bg-color: transparent;
+  --Y-field-focus-border-color: var(--Y-dblue-color);
+  --Y-field-focus-box-shadow: 0 0 0 0.01rem rgb(1 62 106 / 99%);
+}
+
+.y-field .field-control {
+  height: inherit;
+  line-height: 1.5625rem;
+  font-size: var(--Y-field-font-size);
+  width: 100%;
+  padding: var(--Y-field-padding-y) var(--Y-field-padding-x);
+  border-width: var(--Y-field-border-width);
+  border-style: var(--Y-field-border-style);
+  border-color: var(--Y-field-border-color) !important;
+  border-radius: var(--Y-field-border-radius);
+  background: var(--Y-field-bg-color);
+  color: var(--Y-field-txt-color);
+  font-family: 'Quicksand', sans-serif;
+  transition: var(--Y-field-border-transitions);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.y-field .field-control:focus {
+  color: inherit;
+  border-width: var(--Y-field-border-width);
+  border-style: var(--Y-field-border-style);
+  border-color: var(--Y-field-focus-border-color) !important;
+  outline: 0;
+  box-shadow: var(--Y-field-focus-box-shadow);
+}
+.y-field .special-field {
+  background-color: var(--Y-field-special-bg-color) !important;
+  border: transparent !important;
+  border-radius: var(--Y-border-radius) !important;
+  color: var(--Y-field-txt-color);
+}
+.y-field.form-floating>.field-control{
+  --Y-field-padding-y: 1rem;
+  --Y-field-padding-x: 0.75rem;
+}
+
+.y-field.form-floating>.form-control:focus,
+.y-field.form-floating>.form-control:not(:placeholder-shown),
+.y-field.form-floating>.field-control:focus,
+.y-field.form-floating>.field-control:not(:placeholder-shown){
+  padding-top: 1.625rem;
+  padding-bottom: .375rem;
+}
 /*----------------------------------------*/
 /* modal
 /*----------------------------------------*/
