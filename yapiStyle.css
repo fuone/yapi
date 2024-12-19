@@ -1732,9 +1732,15 @@ a {
   --Y-modal-max-width: none;
 }
 @media (min-width: 576px) {
+  .modal-lg,
+  .modal-xl {
+    --Y-modal-max-width: var(--Y-modal-min-width);
+  }
   .modal-dialog {
     min-width: var(--Y-modal-min-width) !important;
     max-width: var(--Y-modal-max-width);
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
