@@ -1685,7 +1685,8 @@ a {
   --Y-modal-backdrop-color: var(--Y-backdrop-color);
   --Y-modal-backdrop-opacity: var(--Y-backdrop-opacity);
   --Y-modal-backdrop-bg: var(--Y-backdrop-color);
-  --Y-modal-width: 750px;
+  --Y-modal-min-width: 750px;
+  --Y-modal-max-width: fit-content;
 }
 
 .yapi .modal-header {
@@ -1727,20 +1728,27 @@ a {
 }
 
 /*ajusta o tamanho do modal*/
+.modal-full {
+  --Y-modal-max-width: none;
+}
 @media (min-width: 576px) {
   .modal-dialog {
-    min-width: var(--Y-modal-width) !important;
-    max-width: inherit;
+    min-width: var(--Y-modal-min-width) !important;
+    max-width: var(--Y-modal-max-width);
   }
 }
 
 @media(min-width: 992px) {
   .modal-lg,
   .modal-xl {
-    --Y-modal-width: 800px;
+    --Y-modal-max-width: 800px;
   }
 }
-
+@media (min-width: 1200px) {
+  .modal-xl {
+      --Y-modal-max-width: 1150px;
+  }
+}
 /*----------------------------------------*/
 /* spinner
 /*----------------------------------------*/
