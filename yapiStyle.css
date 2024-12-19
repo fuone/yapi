@@ -947,7 +947,7 @@ a {
   --Y-btn-border-radius: 0.375rem;
 
   color: var(--Y-btn-color) !important;
-  background-color: var(--Y-btn-bg-color);
+  background-color: var(--Y-btn-bg-color) !important;
   border: var(--Y-border-width) var(--Y-border-style) var(--Y-btn-border-color);
   display: inline-block;
   padding: var(--Y-btn-padding-y) var(--Y-btn-padding-x);
@@ -978,8 +978,8 @@ a {
 
 .btn:disabled {
   opacity: 0.6;
-  color: var(--Y-btn-color);
-  background-color: var(--Y-btn-bg-color);
+  color: var(--Y-btn-color) !important;
+  background-color: var(--Y-btn-bg-color) !important;
 }
 
 /* 00 branco preto e cinza -------------------*/
