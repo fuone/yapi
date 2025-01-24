@@ -1,13 +1,54 @@
 /* <script id="yapiJs" type="text/javascript">
 25012025
 */
-function ToUpper(texto) {
+/***********************************
+* Declarations
+************************************/
+/* sweetAlert2 */
+const ICONESUCESSO = "success";
+const ICONEERRO = "error";
+const ICONEATENCAO = "warning";
+const ICONEINFO = "info";
+const ICONEPERGUNTA = "question";
+
+/***********************************
+* Functions
+************************************/
+function TextToUpper(texto) {
+    /* 012025
+    * retorna o texto recebido em carixa alta 
+    */
     return texto.toUpperCase();
 }
 //
+function LetterToUpper(letra){
+    /* 012025
+    * retorna a letra recebida em caixa alta.
+    * geralmente usado no evento "oninput"
+    */
+    var ss = letra.target.selectionStart;
+    var se = letra.target.selectionEnd;
+    letra.target.value = letra.target.value.toUpperCase();
+    letra.target.selectionStart = ss;
+    letra.target.selectionEnd = se;
+}
+//
+function DoMask(campo, mascara){
+    /* 012025
+    * formata o campo de formulário recebido para aceitar somente valores que correspondem à mascara.
+    * geralmente usado no evento onkeypres. Exemplo: onkeypress="DoMask(this,'SSS-000000/0000')"
+    * dependences:
+    *   - JQuery
+    */
+    $(campo).mask(mascara, {
+      'translation': {
+        S: {pattern: /[A-Za-z]/},
+      }
+    });  
+  }
+//
 function HideElementById(elementId) {
-    /*
-    * 01/2025
+    /*012025
     * dependences:
     *   - JQuery
     *   - yapiStyle
@@ -16,8 +57,7 @@ function HideElementById(elementId) {
 }
 //
 function HideChildElementById(elementoPai, elementoFilho) {
-    /*
-    * 01/2025
+    /* 012025
     * dependences:
     *   - JQuery
     *   - yapiStyle
@@ -26,8 +66,7 @@ function HideChildElementById(elementoPai, elementoFilho) {
 }
 //
 function ShowElementById(elementId) {
-    /*
-    * 01/2025
+    /* 012025
     * dependences:
     *   - JQuery
     *   - yapiStyle
@@ -36,8 +75,7 @@ function ShowElementById(elementId) {
 }
 //
 function ShowChildElementById(elementoPai, elementoFilho) {
-    /*
-    * 01/2025
+    /* 012025
     * dependences:
     *   - JQuery
     *   - yapiStyle
@@ -45,26 +83,8 @@ function ShowChildElementById(elementoPai, elementoFilho) {
     $('#' + elementoPai + ' .' + elementoFilho).removeClass('hide');
 }
 //
-function SetLoading(showHide) {
-    /*
-    * 01/2025
-    * dependences:
-    *   - JQuery
-    *   - html do modal spinner
-    */
-    switch (showHide) {
-        case 'show':
-            $('#spinnerModal').modal('show');
-            break;
-        case 'hide':
-            $('#spinnerModal').modal('hide');
-            break;
-    }
-}
-//
 function MsgBox(msg, titulo, icone, timer) {
-    /* 
-    * 01/2025
+    /* 012025
     * dependences:
     *   - sweetalert2
     *   - yapiStyle
@@ -104,8 +124,7 @@ function MsgBox(msg, titulo, icone, timer) {
 }
 //
 function ToastBox(msg, titulo, icone, timer) {
-    /* 
-    * 01/2025
+    /* 012025
     * dependences:
     *   - sweetalert2
     *   - yapiStyle
@@ -135,11 +154,28 @@ function ToastBox(msg, titulo, icone, timer) {
     });
 }
 //
+/***********************************
+* Functions que dependem do html
+************************************/
+function SetLoading(showHide) {
+    /* 012025
+    * dependences:
+    *   - JQuery
+    *   - html do modal spinner
+    */
+    switch (showHide) {
+        case 'show':
+            $('#spinnerModal').modal('show');
+            break;
+        case 'hide':
+            $('#spinnerModal').modal('hide');
+            break;
+    }
+}
 //
 function SetFooter(ver) {
-    /* 
+    /* 012025
     * Os valores PROJINFO e DEVINFO são trazidos do servidor
-    * 01/2025
     * dependences:
     *   - hint.css
     *   - yapiStyle
