@@ -1,7 +1,7 @@
 # yapi
-Framework de desenvolvimento web criado por AndersonBrito
-Contato: fuone.dev@gmail.com
+Framework de desenvolvimento web criado por AndersonBrito<br/> Contato: fuone.dev@gmail.com
 
+.
 >[!TIP]
 >**CDN**:
 >- yapiStyle: _[https://cdn.jsdelivr.net/gh/fuone/yapi@main/yapiStyle.css](https://cdn.jsdelivr.net/gh/fuone/yapi@main/yapiStyle.css)_;
