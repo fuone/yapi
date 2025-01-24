@@ -104,7 +104,7 @@ function MsgBox(msg, titulo, icone, timer) {
         default: confirmButtonCClass = "y-btn-uv";
     }
     Swal.fire({
-        title: ToUpper(t),
+        title: TextToUpper(t),
         html: msg,
         icon: i,
         timer: timer,
@@ -136,7 +136,7 @@ function ToastBox(msg, titulo, icone, timer) {
     if (i == "") { i = IconeAtencao; }
     if (timer == "") { timer = 3000; }
     Swal.fire({
-        title: ToUpper(t),
+        title: TextToUpper(t),
         html: msg,
         icon: i,
         toast: true,
@@ -164,12 +164,8 @@ function SetLoading(showHide) {
     *   - html do modal spinner
     */
     switch (showHide) {
-        case 'show':
-            $('#spinnerModal').modal('show');
-            break;
-        case 'hide':
-            $('#spinnerModal').modal('hide');
-            break;
+        case 'show': $('#spinnerModal').modal('show'); break;
+        case 'hide': $('#spinnerModal').modal('hide'); break;
     }
 }
 //
