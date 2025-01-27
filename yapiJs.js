@@ -184,3 +184,51 @@ function SetFooter(ver) {
     document.getElementById('footer').innerHTML = code;
 }
 //
+function ShowSidebarMenu(sidebarClass){
+    /* 012025
+    * dependences:
+    *   - hint.css
+    *   - yapiStyle
+    *   - css da sidebar
+    *   - html: <nav><ul><li class="menu-button" onclick=ShowSidebarMenu()>...</li></ul></nav>
+    */
+    if(IsNull(sidebarClass){
+        console.log("function ShowSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente");
+        return 
+    }
+    let sidebar = document.querySelector(sidebarClass);
+    sidebar.style.display = 'flex';
+}
+//
+function HideSidebarMenu(sidebarClass){
+    /* 012025
+    * dependences:
+    *   - hint.css
+    *   - yapiStyle
+    *   - css da sidebar
+    *   - html: <nav><ul class="sidebar"><li onclick=HideSidebarMenu()>...</li></ul></nav>
+    */
+    if(IsNull(sidebarClass){
+        console.log("function ShowSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente");
+        return 
+    }
+    let sidebar = document.querySelector(sidebarClass);
+    sidebar.style.display = 'none';
+}
+//
+function HasValue(opt){
+    /* 012025
+    * Verifica se a variavel "opt" tem valor 
+    * dependences: none
+    */ 
+    if(!opt || opt ==""|| opt == null || opt === undefined){return false}else{return true}
+    }
+//
+function IsNull(opt){
+    /* 012025
+    * Verifica se a variavel "opt" está vazia
+    * dependences: none
+    */ 
+    if(!opt || opt ==""|| opt == null || opt === undefined){return true}else{return false}
+}
+//
