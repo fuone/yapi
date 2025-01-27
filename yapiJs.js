@@ -1,5 +1,5 @@
 /* <script id="yapiJs" type="text/javascript">
-27012025b
+270125b
 */
 /***********************************
 * Declarations
@@ -15,14 +15,14 @@ const ICONEPERGUNTA = "question";
 * Functions
 ************************************/
 function TextToUpper(texto) {
-    /* 012025
+    /* 0125
     * retorna o texto recebido em carixa alta 
     */
     return texto.toUpperCase();
 }
 //
 function LetterToUpper(letra){
-    /* 012025
+    /* 0125
     * retorna a letra recebida em caixa alta.
     * geralmente usado no evento "oninput"
     */
@@ -34,7 +34,7 @@ function LetterToUpper(letra){
 }
 //
 function DoMask(campo, mascara){
-    /* 012025
+    /* 0125
     * formata o campo de formulário recebido para aceitar somente valores que correspondem à mascara.
     * geralmente usado no evento onkeypres. Exemplo: onkeypress="DoMask(this,'SSS-000000/0000')"
     * dependences:
@@ -48,7 +48,7 @@ function DoMask(campo, mascara){
   }
 //
 function HideElementById(elementId) {
-    /*012025
+    /* 0125
     * dependences:
     *   - JQuery
     *   - yapiStyle
@@ -57,7 +57,7 @@ function HideElementById(elementId) {
 }
 //
 function HideChildElementById(elementoPai, elementoFilho) {
-    /* 012025
+    /* 0125
     * dependences:
     *   - JQuery
     *   - yapiStyle
@@ -66,7 +66,7 @@ function HideChildElementById(elementoPai, elementoFilho) {
 }
 //
 function ShowElementById(elementId) {
-    /* 012025
+    /* 0125
     * dependences:
     *   - JQuery
     *   - yapiStyle
@@ -75,7 +75,7 @@ function ShowElementById(elementId) {
 }
 //
 function ShowChildElementById(elementoPai, elementoFilho) {
-    /* 012025
+    /* 0125
     * dependences:
     *   - JQuery
     *   - yapiStyle
@@ -84,7 +84,7 @@ function ShowChildElementById(elementoPai, elementoFilho) {
 }
 //
 function MsgBox(msg, titulo, icone, timer) {
-    /* 012025
+    /* 0125
     * dependences:
     *   - sweetalert2
     *   - yapiStyle
@@ -124,7 +124,7 @@ function MsgBox(msg, titulo, icone, timer) {
 }
 //
 function ToastBox(msg, titulo, icone, timer) {
-    /* 012025
+    /* 0125
     * dependences:
     *   - sweetalert2
     *   - yapiStyle
@@ -155,7 +155,7 @@ function ToastBox(msg, titulo, icone, timer) {
 }
 //
 function HasValue(opt){
-    /* 012025
+    /* 0125
     * Verifica se a variavel "opt" tem valor 
     * dependences: none
     */ 
@@ -163,15 +163,16 @@ function HasValue(opt){
     }
 //
 function HasSpecialChar(str){
-    /* 012025
+    /* 0125
     * Verifica se a variavel "str" contem caracter especial. Retorna true, se conter, ou false
     * dependences: none
     */
     let regex = /^(?=.*[.@!#$%^&*()\/\\])/;
     return regex.test(str)
 }
+//
 function IsNull(opt){
-    /* 012025
+    /* 0125
     * Verifica se a variavel "opt" está vazia
     * dependences: none
     */ 
@@ -182,7 +183,7 @@ function IsNull(opt){
 * Functions que dependem do html
 ************************************/
 function SetLoading(showHide) {
-    /* 012025
+    /* 0125
     * dependences:
     *   - JQuery
     *   - html do modal spinner
@@ -194,7 +195,7 @@ function SetLoading(showHide) {
 }
 //
 function SetFooter(ver) {
-    /* 012025
+    /* 0125
     * Os valores PROJINFO e DEVINFO são trazidos do servidor
     * dependences:
     *   - hint.css
@@ -209,41 +210,33 @@ function SetFooter(ver) {
 }
 //
 function ShowSidebarMenu(sidebarClass){
-    /* 012025
+    /* 0125
     * dependences:
     *   - hint.css
     *   - yapiStyle
     *   - css da sidebar
     *   - html: <nav><ul><li class="menu-button" onclick=ShowSidebarMenu()>...</li></ul></nav>
     */
-    if(IsNull(sidebarClass)){
-        console.log("function ShowSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente");
-        return 
-    }
+    if(IsNull(sidebarClass)){console.log("function ShowSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente");return}
     /* se tiver caracter especial no inicio da string, retira */
-    if(HasSpecialChar(sidebarClass.charAt(0))){sidebarClass = sidebarClass.substr(1);}
+    if(HasSpecialChar(sidebarClass.charAt(0))){sidebarClass = sidebarClass.substr(1)}
     let sidebar = document.querySelector('.' + sidebarClass);
     sidebar.style.display = 'flex';
 }
 //
 function HideSidebarMenu(sidebarClass){
-    /* 012025
+    /* 0125
     * dependences:
     *   - hint.css
     *   - yapiStyle
     *   - css da sidebar
     *   - html: <nav><ul class="sidebar"><li onclick=HideSidebarMenu()>...</li></ul></nav>
     */
-    if(IsNull(sidebarClass)){
-        console.log("function HideSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente");
-        return 
-    }
-    if(HasSpecialChar(sidebarClass.charAt(0))){
-        /* se tiver caracter especial, retira-o */
-        sidebarClass = sidebarClass.substr(1);
-    }
+    if(IsNull(sidebarClass)){console.log("function HideSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente"); return}
+    /* se tiver caracter especial no inicio da string, retira */
+    if(HasSpecialChar(sidebarClass.charAt(0))){sidebarClass = sidebarClass.substr(1)}
     let sidebar = document.querySelector('.' + sidebarClass);
     sidebar.style.display = 'none';
 }
-
+//
 //
