@@ -154,6 +154,30 @@ function ToastBox(msg, titulo, icone, timer) {
     });
 }
 //
+function HasValue(opt){
+    /* 012025
+    * Verifica se a variavel "opt" tem valor 
+    * dependences: none
+    */ 
+    if(!opt || opt ==""|| opt == null || opt === undefined){return false}else{return true}
+    }
+//
+function HasSpecialChar(str){
+    /* 012025
+    * Verifica se a variavel "str" contem caracter especial. Retorna true, se conter, ou false
+    * dependences: none
+    */
+    let regex = /^(?=.*[.@!#$%^&*()\/\\])/;
+    return regex.test(str)
+}
+function IsNull(opt){
+    /* 012025
+    * Verifica se a variavel "opt" está vazia
+    * dependences: none
+    */ 
+    if(!opt || opt ==""|| opt == null || opt === undefined){return true}else{return false}
+}
+//
 /***********************************
 * Functions que dependem do html
 ************************************/
@@ -196,7 +220,9 @@ function ShowSidebarMenu(sidebarClass){
         console.log("function ShowSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente");
         return 
     }
-    let sidebar = document.querySelector(sidebarClass);
+    /* se tiver caracter especial no inicio da string, retira */
+    if(HasSpecialChar(sidebarClass.charAt(0))){sidebarClass = sidebarClass.substr(1);}
+    let sidebar = document.querySelector('.' + sidebarClass);
     sidebar.style.display = 'flex';
 }
 //
@@ -209,26 +235,15 @@ function HideSidebarMenu(sidebarClass){
     *   - html: <nav><ul class="sidebar"><li onclick=HideSidebarMenu()>...</li></ul></nav>
     */
     if(IsNull(sidebarClass)){
-        console.log("function ShowSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente");
+        console.log("function HideSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente");
         return 
     }
-    let sidebar = document.querySelector(sidebarClass);
+    if(HasSpecialChar(sidebarClass.charAt(0))){
+        /* se tiver caracter especial, retira-o */
+        sidebarClass = sidebarClass.substr(1);
+    }
+    let sidebar = document.querySelector('.' + sidebarClass);
     sidebar.style.display = 'none';
 }
-//
-function HasValue(opt){
-    /* 012025
-    * Verifica se a variavel "opt" tem valor 
-    * dependences: none
-    */ 
-    if(!opt || opt ==""|| opt == null || opt === undefined){return false}else{return true}
-    }
-//
-function IsNull(opt){
-    /* 012025
-    * Verifica se a variavel "opt" está vazia
-    * dependences: none
-    */ 
-    if(!opt || opt ==""|| opt == null || opt === undefined){return true}else{return false}
-}
+
 //
