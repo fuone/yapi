@@ -192,7 +192,7 @@ function ShowSidebarMenu(sidebarClass){
     *   - css da sidebar
     *   - html: <nav><ul><li class="menu-button" onclick=ShowSidebarMenu()>...</li></ul></nav>
     */
-    if(IsNull(sidebarClass){
+    if(IsNull(sidebarClass)){
         console.log("function ShowSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente");
         return 
     }
@@ -208,7 +208,7 @@ function HideSidebarMenu(sidebarClass){
     *   - css da sidebar
     *   - html: <nav><ul class="sidebar"><li onclick=HideSidebarMenu()>...</li></ul></nav>
     */
-    if(IsNull(sidebarClass){
+    if(IsNull(sidebarClass)){
         console.log("function ShowSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente");
         return 
     }
