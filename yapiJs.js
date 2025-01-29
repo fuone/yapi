@@ -1,5 +1,5 @@
 /* <script id="yapiJs" type="text/javascript">
-270125b
+290125
 */
 /***********************************
 * Declarations
@@ -39,6 +39,7 @@ function DoMask(campo, mascara){
     * geralmente usado no evento onkeypres. Exemplo: onkeypress="DoMask(this,'SSS-000000/0000')"
     * dependences:
     *   - JQuery
+    *   - JQuery Mask
     */
     $(campo).mask(mascara, {
       'translation': {
@@ -179,6 +180,13 @@ function IsNull(opt){
     if(!opt || opt ==""|| opt == null || opt === undefined){return true}else{return false}
 }
 //
+function CalcularDtFutura(dtInicial,t){
+    return dtFutura = AdicionarDias(new Date(dtInicial),t).toISOString().slice(0, 10);
+  }
+  //
+  function AdicionarDias(date,dias){
+    return date.setDate(date.getDate() + dias);
+  }
 /***********************************
 * Functions que dependem do html
 ************************************/
@@ -196,7 +204,7 @@ function SetLoading(showHide) {
 //
 function SetFooter(ver) {
     /* 0125
-    * Os valores PROJINFO e DEVINFO são trazidos do servidor
+    * Os valores PROJINFO e DEVINFO sao trazidos do servidor
     * dependences:
     *   - hint.css
     *   - yapiStyle
@@ -212,7 +220,6 @@ function SetFooter(ver) {
 function ShowSidebarMenu(sidebarClass){
     /* 0125
     * dependences:
-    *   - hint.css
     *   - yapiStyle
     *   - css da sidebar
     *   - html: <nav><ul><li class="menu-button" onclick=ShowSidebarMenu()>...</li></ul></nav>
@@ -227,7 +234,6 @@ function ShowSidebarMenu(sidebarClass){
 function HideSidebarMenu(sidebarClass){
     /* 0125
     * dependences:
-    *   - hint.css
     *   - yapiStyle
     *   - css da sidebar
     *   - html: <nav><ul class="sidebar"><li onclick=HideSidebarMenu()>...</li></ul></nav>

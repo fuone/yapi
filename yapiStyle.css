@@ -1,6 +1,6 @@
 /********** YAPIGAS **************
 ************ CSS FRAMEWORK *******/
-/*24012025*/
+/*29012025*/
 /*----------------------------------------*/
 /* tags
 /*----------------------------------------*/
@@ -331,83 +331,101 @@ a {
   color: var(--Y-bg-txt-color);
 }
 
-.bg.no-bg {
+.bg.no-bg,
+.y-badge.no-bg {
   --Y-bg-color: transparent;
   --Y-bg-txt-color: initial;
   background: transparent !important;
-
 }
 
 /* ff branco ----------------------------------------*/
-.bg-white {
+.bg.bg-white,
+.y-badge.bg-white {
   --Y-bg-color: var(--Y-white-color);
   --Y-bg-txt-color: var(--Y-dgrey-color);
 }
 
 /* 00 preto e cinza ---------------------------------*/
-.bg.bg-black {
+.bg.bg-black,
+.y-badge.bg-black {
   --Y-bg-color: var(--Y-black-color);
   --Y-bg-txt-color: var(--Y-white-color);
 }
 
 .bg.bg-dark,
-.bg.bg-dgrey {
+.bg.bg-dgrey,
+.y-badge.bg-dark,
+.y-badge.bg-dgrey {
   --Y-bg-color: var(--cor-02);
   --Y-bg-txt-color: var(--Y-white-color);
 }
 
 .bg.bg-secondary,
-.bg.bg-grey {
+.bg.bg-grey,
+.y-badge.bg-secondary,
+.y-badge.bg-grey {
   --Y-bg-color: var(--cor-04);
   --Y-bg-txt-color: var(--cor-01);
 }
 
 .bg.bg-light,
-.bg.bg-lgrey {
+.bg.bg-lgrey,
+.y-badge.bg-light,
+.y-badge.bg-lgrey {
   --Y-bg-color: var(--cor-06);
   --Y-bg-txt-color: var(--cor-01);
 }
 
-.bg.bg-llgrey {
+.bg.bg-llgrey,
+.y-badge.bg-llgrey {
   --Y-bg-color: var(--Y-llgrey-color);
   --Y-bg-txt-color: var(--Y-dgrey-color);
 }
 
-.bg.bg-lllgrey {
+.bg.bg-lllgrey,
+.y-badge.bg-lllgrey {
   --Y-bg-color: var(--Y-lllgrey-color);
   --Y-bg-txt-color: var(--Y-dgrey-color);
 }
 
 /* 10 azul ----------------------------------------*/
 .bg.bg-sky,
-.bg.bg-blue {
+.bg.bg-blue,
+.y-badge.bg-sky,
+.y-badge.bg-blue {
   --Y-bg-color: var(--cor-12);
   --Y-bg-txt-color: var(--Y-white-color);
 }
 
-.bg.bg-lblue {
+.bg.bg-lblue,
+.y-badge.bg-lblue {
   --Y-bg-color: var(--Y-lblue-color);
   --Y-bg-txt-color: var(--Y-white-color);
 }
 
-.bg.bg-llblue {
+.bg.bg-llblue,
+.y-badge.bg-llblue {
   --Y-bg-color: var(--Y-llblue-color);
   --Y-bg-txt-color: var(--Y-blue-color);
 }
 
 /* 20 verde ----------------------------------------*/
 .bg.bg-success,
-.bg.bg-green {
+.bg.bg-green,
+.y-badge.bg-success,
+.y-badge.bg-green {
   --Y-bg-color: var(--cor-22);
   --Y-bg-txt-color: var(--Y-white-color);
 }
 
-.bg.bg-lgreen {
+.bg.bg-lgreen,
+.y-badge.bg-lgreen {
   --Y-bg-color: var(--cor-24);
   --Y-bg-txt-color: var(--cor-20);
 }
 
-.bg.bg-llgreen {
+.bg.bg-llgreen,
+.y-badge.bg-llgreen {
   --Y-bg-color: var(--Y-llgreen-color);
   --Y-bg-txt-color: var(--Y-green-color);
 }
@@ -415,78 +433,96 @@ a {
 /* 30 amarelo ----------------------------------------*/
 .bg.bg-alert,
 .bg.bg-warning,
-.bg.bg-yellow {
+.bg.bg-yellow,
+.y-badge.bg-alert,
+.y-badge.bg-warning,
+.y-badge.bg-yellow {
   --Y-bg-color: var(--cor-32);
   --Y-bg-txt-color: var(--cor-60);
 }
 
-.bg.bg-lyellow {
+.bg.bg-lyellow,
+.y-badge.bg-lyellow {
   --Y-bg-color: var(--cor-33);
   --Y-bg-txt-color: var(--cor-60);
 }
 
-.bg.bg-llyellow {
+.bg.bg-llyellow,
+.y-badge.bg-llyellow {
   --Y-bg-color: var(--cor-34);
   --Y-bg-txt-color: var(--cor-62);
 }
 
 /* 40 orange ----------------------------------------*/
-.bg.bg-orange {
+.bg.bg-orange,
+.y-badge.bg-orange {
   --Y-bg-color: var(--cor-43);
   --Y-bg-txt-color: var(--Y-white-color);
 }
 
-.bg.bg-lorange {
+.bg.bg-lorange,
+.y-badge.bg-lorange {
   --Y-bg-color: var(--cor-44);
   --Y-bg-txt-color: var(--cor-60);
 }
 
-.bg.bg-llorange {
+.bg.bg-llorange,
+.y-badge.bg-llorange {
   --Y-bg-color: rgba(var(--cor-44-rgb), 0.7);
   --Y-bg-txt-color: var(--cor-60);
 }
 
 /* 50 vermelho ----------------------------------------*/
-.bg.bg-dred {
+.bg.bg-dred,
+.y-badge.bg-dred {
   --Y-bg-color: var(--cor-50);
   --Y-bg-txt-color: var(--Y-white-color);
 }
 
 .bg.bg-danger,
-.bg.bg-red {
+.bg.bg-red,
+.y-badge.bg-danger,
+.y-badge.bg-red {
   --Y-bg-color: var(--cor-51);
   --Y-bg-txt-color: var(--Y-white-color);
 }
 
-.bg.bg-lred {
+.bg.bg-lred,
+.y-badge.bg-lred {
   --Y-bg-color: var(--cor-54);
   --Y-bg-txt-color: var(--cor-50);
 }
 
-.bg.bg-llred {
+.bg.bg-llred,
+.y-badge.bg-llred {
   --Y-bg-color: rgba(var(--cor-54-rgb), 0.7);
   --Y-bg-txt-color: var(--cor-50);
 }
 
 /* 60 marrom ----------------------------------------*/
-.bg.bg-brown {
+.bg.bg-brown,
+.y-badge.bg-brown {
   --Y-bg-color: rgba(var(--cor-64-rgb), 0.7);
   --Y-bg-txt-color: var(--cor-60);
 }
 
 /* ciano ----------------------------------------*/
 .bg.bg-info,
-.bg.bg-cyan {
+.bg.bg-cyan,
+.y-badge.bg-info,
+.y-badge.bg-cyan {
   --Y-bg-color: var(--Y-cyan-color);
   --Y-bg-txt-color: var(--Y-blue-color);
 }
 
-.bg.bg-lcyan {
+.bg.bg-lcyan,
+.y-badge.bg-lcyan {
   --Y-bg-color: var(--Y-lcyan-color);
   --Y-bg-txt-color: var(--Y-blue-color);
 }
 
-.bg.bg-llcyan {
+.bg.bg-llcyan,
+.y-badge.bg-llcyan {
   /* iguala cyan*/
   --Y-bg-color: rgba(var(--Y-lcyan-color-rgb), 0.7);
   ;
@@ -495,13 +531,16 @@ a {
 
 /* violeta ----------------------------------------*/
 .bg.bg-violet,
-.bg.bg-uv {
+.bg.bg-uv,
+.y-badge.bg-violet,
+.y-badge.bg-uv {
   --Y-bg-color: var(--Y-lviolet-color);
   --Y-bg-txt-color: var(--Y-dviolet-color);
 }
 
 /* majenta ----------------------------------------*/
-.bg.bg-majenta {
+.bg.bg-majenta,
+.y-badge.bg-majenta {
   --Y-bg-color: var(--Y-lmajenta-color);
   --Y-bg-txt-color: var(--Y-dmajenta-color);
 }
@@ -521,18 +560,24 @@ a {
   --Y-badge-txt-color: var(--Y-bg-txt-color);
   --Y-badge-font-size: inherit;
   --Y-badge-opacity: var(--Y-opacity);
+
   opacity: var(--Y-badge-opacity);
   background: var(--Y-bagde-bg-color);
   padding: var(--Y-badge-padding-y) var(--Y-badge-padding-x);
   border-radius: var(--Y-border-radius);
   color: var(--Y-badge-txt-color);
   font-size: var(--Y-badge-font-size);
-
   text-align: center;
   line-height: 0.5;
   white-space: nowrap;
   vertical-align: baseline;
   display: inline-block;
+}
+
+.y-badge.badge {/*padrão*/
+  --Y-badge-padding-y: 0.3rem !important;
+  --Y-badge-padding-x: 0.3rem !important;
+  --Y-badge-font-size: inherit;
 }
 
 .y-badge.badge-sm {
