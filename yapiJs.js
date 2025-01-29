@@ -21,7 +21,7 @@ function TextToUpper(texto) {
     return texto.toUpperCase();
 }
 //
-function LetterToUpper(letra){
+function LetterToUpper(letra) {
     /* 0125
     * retorna a letra recebida em caixa alta.
     * geralmente usado no evento "oninput"
@@ -33,7 +33,7 @@ function LetterToUpper(letra){
     letra.target.selectionEnd = se;
 }
 //
-function DoMask(campo, mascara){
+function DoMask(campo, mascara) {
     /* 0125
     * formata o campo de formulário recebido para aceitar somente valores que correspondem à mascara.
     * geralmente usado no evento onkeypres. Exemplo: onkeypress="DoMask(this,'SSS-000000/0000')"
@@ -42,11 +42,11 @@ function DoMask(campo, mascara){
     *   - JQuery Mask
     */
     $(campo).mask(mascara, {
-      'translation': {
-        S: {pattern: /[A-Za-z]/},
-      }
-    });  
-  }
+        'translation': {
+            S: { pattern: /[A-Za-z]/ },
+        }
+    });
+}
 //
 function HideElementById(elementId) {
     /* 0125
@@ -155,15 +155,15 @@ function ToastBox(msg, titulo, icone, timer) {
     });
 }
 //
-function HasValue(opt){
+function HasValue(opt) {
     /* 0125
     * Verifica se a variavel "opt" tem valor 
     * dependences: none
-    */ 
-    if(!opt || opt ==""|| opt == null || opt === undefined){return false}else{return true}
-    }
+    */
+    if (!opt || opt == "" || opt == null || opt === undefined) { return false } else { return true }
+}
 //
-function HasSpecialChar(str){
+function HasSpecialChar(str) {
     /* 0125
     * Verifica se a variavel "str" contem caracter especial. Retorna true, se conter, ou false
     * dependences: none
@@ -172,21 +172,23 @@ function HasSpecialChar(str){
     return regex.test(str)
 }
 //
-function IsNull(opt){
+function IsNull(opt) {
     /* 0125
     * Verifica se a variavel "opt" está vazia
     * dependences: none
-    */ 
-    if(!opt || opt ==""|| opt == null || opt === undefined){return true}else{return false}
+    */
+    if (!opt || opt == "" || opt == null || opt === undefined) { return true } else { return false }
 }
 //
-function CalcularDtFutura(dtInicial,t){
-    return dtFutura = AdicionarDias(new Date(dtInicial),t).toISOString().slice(0, 10);
-  }
-  //
-  function AdicionarDias(date,dias){
-    return date.setDate(date.getDate() + dias);
-  }
+function AddDays(date, dias) {
+    date.setDate(date.getDate() + dias);
+    return date
+}
+//
+function CalcFutureDate(dtInicial, t) {
+    return dtFutura = AddDays(new Date(dtInicial), t).toISOString().slice(0, 10);
+}
+//
 /***********************************
 * Functions que dependem do html
 ************************************/
@@ -217,30 +219,30 @@ function SetFooter(ver) {
     document.getElementById('footer').innerHTML = code;
 }
 //
-function ShowSidebarMenu(sidebarClass){
+function ShowSidebarMenu(sidebarClass) {
     /* 0125
     * dependences:
     *   - yapiStyle
     *   - css da sidebar
     *   - html: <nav><ul><li class="menu-button" onclick=ShowSidebarMenu()>...</li></ul></nav>
     */
-    if(IsNull(sidebarClass)){console.log("function ShowSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente");return}
+    if (IsNull(sidebarClass)) { console.log("function ShowSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente"); return }
     /* se tiver caracter especial no inicio da string, retira */
-    if(HasSpecialChar(sidebarClass.charAt(0))){sidebarClass = sidebarClass.substr(1)}
+    if (HasSpecialChar(sidebarClass.charAt(0))) { sidebarClass = sidebarClass.substr(1) }
     let sidebar = document.querySelector('.' + sidebarClass);
     sidebar.style.display = 'flex';
 }
 //
-function HideSidebarMenu(sidebarClass){
+function HideSidebarMenu(sidebarClass) {
     /* 0125
     * dependences:
     *   - yapiStyle
     *   - css da sidebar
     *   - html: <nav><ul class="sidebar"><li onclick=HideSidebarMenu()>...</li></ul></nav>
     */
-    if(IsNull(sidebarClass)){console.log("function HideSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente"); return}
+    if (IsNull(sidebarClass)) { console.log("function HideSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente"); return }
     /* se tiver caracter especial no inicio da string, retira */
-    if(HasSpecialChar(sidebarClass.charAt(0))){sidebarClass = sidebarClass.substr(1)}
+    if (HasSpecialChar(sidebarClass.charAt(0))) { sidebarClass = sidebarClass.substr(1) }
     let sidebar = document.querySelector('.' + sidebarClass);
     sidebar.style.display = 'none';
 }
