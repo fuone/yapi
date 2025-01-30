@@ -138,21 +138,32 @@ footer,
 }
 
 .icon-size-20 {
-  --Y-icon-size: 20px;
+  --Y-icon-size: 1.25;/*20px;*/
 }
 
 .icon-size-25 {
-  --Y-icon-size: 25px;
+  --Y-icon-size: 1.5625;/*25px;*/
 }
 
 .icon-size-30 {
-  --Y-icon-size: 30px;
+  --Y-icon-size: 1.875rem;/*30px;*/
 }
 
 .icon-size-35 {
-  --Y-icon-size: 35px;
+  --Y-icon-size: 2.1875rem;/*35px;*/
 }
 
+.icon-size-40 {
+  --Y-icon-size: 2.5rem;/*40px;*/
+}
+
+.icon-size-45 {
+  --Y-icon-size: 2.8125rem;/*45px;*/
+}
+
+.icon-size-50 {
+  --Y-icon-size: 3.125rem;/*50px;*/
+}
 
 /*----------------------------------------*/
 /* cores
@@ -1119,7 +1130,7 @@ footer,
   vertical-align: middle;
   cursor: pointer;
   user-select: none;
-  webkit-user-select: none;
+  -webkit-user-select: none;
   -moz-user-select: none;
   border-radius: var(--Y-btn-border-radius);
   box-shadow: var(--Y-btn-box-shadow);
@@ -2188,13 +2199,39 @@ footer,
 /* animate
 /*----------------------------------------*/
 .yapi .y-animate {
+  /*
   --Y-animation-duration: 0.8s;
   --Y-animation-delay: 0s;
   --Y-animation-count: infinite;
   --Y-animation-fill-mode: both;
   --Y-animation-direction: normal;
-  --Y-animation-timing-function: linear;
+  --Y-animation-timing-function: linear;*/
   display: inline-block;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-duration: var(--Y-animation-duration);
+  animation-duration: var(--Y-animation-duration);
+  -webkit-animation-fill-mode:  var(--Y-animation-fill-mode);
+  animation-fill-mode: var(--Y-animation-fill-mode);
+}
+.y-animate.animate{
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-duration: var(--Y-animation-duration);
+  animation-duration: var(--Y-animation-duration);
+  -webkit-animation-fill-mode:  var(--Y-animation-fill-mode);
+  animation-fill-mode: var(--Y-animation-fill-mode);
+}
+.y-animate.animate-faster{
+  -webkit-animation-duration: .4s;
+  animation-duration: .4s;
+  -webkit-animation-duration: calc(var(--Y-animation-duration) / 2);
+  animation-duration: calc(var(--Y-animation-duration) / 2);
+}
+
+.y-animate.animate-infinite{
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 .rotate-center {

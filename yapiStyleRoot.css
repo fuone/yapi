@@ -303,4 +303,11 @@
   --Y-hint-txt-color: var(--Y-hint-cor-clara);
   --Y-hint-border: var(--Y-border-width) var(--Y-border-style) var(--Y-hint-cor-clara);
 
+  --Y-animation-duration: 0.8s;
+  --Y-animation-delay: 0s;
+  --Y-animation-count: infinite;
+  --Y-animation-fill-mode: both;
+  --Y-animation-direction: normal;
+  --Y-animation-timing-function: linear;
+
 }
