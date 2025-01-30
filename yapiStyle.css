@@ -1952,8 +1952,8 @@ footer,
 /*----------------------------------------*/
 .spinner {
   --Y-yapi: none;
-  --Y-spinner-bg-color: initial;
-  --Y-spinner-color: var(--Y-color);
+  --Y-spinner-bg-color: inherit;
+  --Y-spinner-color: inherit;
 }
 
 .spinner .spinner-1 {
