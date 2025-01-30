@@ -10,7 +10,7 @@ const ICONEERRO = "error";
 const ICONEATENCAO = "warning";
 const ICONEINFO = "info";
 const ICONEPERGUNTA = "question";
-
+var swalCustomClass='';
 /***********************************
 * Functions
 ************************************/
@@ -91,32 +91,30 @@ function MsgBox(msg, titulo, icone, timer, posicao) {
     *   - yapiStyle
     *   - declaracoes previas e global dos icones
     */
-    let t = titulo;
-    let i = icone;
-    let p = posicao;
-    if (t == "") { t = "Atenção!"; }
-    if (i == "") { i = "warning"; }
-    if (timer == "") { timer = 3000; }
-    if (p == "") { p = "center"; }
-    let confirmButtonCClass;
+    if (IsNull(msg)) { msg = "Não há mensagem" }
+    if (IsNull(titulo)) { titulo = "Atenção!"; }
+    if (IsNull(icone)) { icone = "warning"; }
+    if (IsNull(timer)) { timer = 3000; }
+    if (IsNull(posicao)) { posicao = "center"; }
     switch (icone) {
-        case ICONEERRO: confirmButtonCClass = "y-btn-llgrey"; break;
-        case ICONESUCESSO: confirmButtonCClass = "y-btn-green"; break;
-        case ICONEINFO: confirmButtonCClass = "y-btn-info"; break;
-        case ICONEPERGUNTA: confirmButtonCClass = "y-btn-blue"; break;
-        default: confirmButtonCClass = "y-btn-uv";
+        case ICONEERRO: swalCustomClass = "y-btn-llgrey"; break;
+        case ICONESUCESSO: swalCustomClass = "y-btn-green"; break;
+        case ICONEINFO: swalCustomClass = "y-btn-info"; break;
+        case ICONEPERGUNTA: swalCustomClass = "y-btn-blue"; break;
+        case ICONEATENCAO: swalCustomClass = "y-btn-warning"; break;
+        default: swalCustomClass = "y-btn-uv";
     }
     Swal.fire({
-        title: TextToUpper(t),
+        title: TextToUpper(titulo),
         html: msg,
-        icon: i,
-        position: p,
+        icon: icone,
+        position: posicao,
         timer: timer,
         timerProgressBar: true,
         buttonsStyling: false,
         showCancelButton: false,
         customClass: {
-            confirmButton: 'btn btn-lg ' + confirmButtonCClass,
+            confirmButton: 'btn btn-lg ' + swalCustomClass,
             cancelButton: 'btn btn-lg y-btn-llgrey',
             loader: 'custom-loader',
         },
@@ -134,25 +132,24 @@ function ToastBox(msg, titulo, icone, timer, posicao) {
     *   - yapiStyle
     *   - declaracoes previas e global dos icones
     */
-    let t = titulo;
-    let i = icone;
-    let p = posicao;
-    if (t == "") { t = "Atenção!"; }
-    if (i == "") { i = "warning"; }
-    if (timer == "") { timer = 3000; }
-    if (p == "") { p = "bottom"; }
+    
+    if (IsNull(msg)) { msg = "Não há mensagem" }
+    if (IsNull(titulo)) { titulo = "Atenção!"; }
+    if (IsNull(icone)) { icone = "warning"; }
+    if (IsNull(timer)) { timer = 3000; }
+    if (IsNull(posicao)) { posicao = "bottom"; }
     Swal.fire({
-        title: TextToUpper(t),
+        title: TextToUpper(titulo),
         html: msg,
-        icon: i,
+        icon: icone,
         toast: true,
         animation: true,
-        position: p,
+        position: posicao,
         timer: timer,
         timerProgressBar: true,
         showConfirmButton: false,
         width: 'auto',
-        customClass: { popup: 'msg-box' },
+        customClass: { popup: 'msg-box' + swalCustomClass },
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)
             toast.addEventListener('mouseleave', Swal.resumeTimer)
