@@ -1,5 +1,5 @@
 /* <script id="yapiJs" type="text/javascript">
-290125
+300125
 */
 /***********************************
 * Declarations
@@ -84,18 +84,20 @@ function ShowChildElementById(elementoPai, elementoFilho) {
     $('#' + elementoPai + ' .' + elementoFilho).removeClass('hide');
 }
 //
-function MsgBox(msg, titulo, icone, timer) {
+function MsgBox(msg, titulo, icone, timer, posicao) {
     /* 0125
     * dependences:
     *   - sweetalert2
     *   - yapiStyle
-    *   - declarações prévias e global dos ícones
+    *   - declaracoes previas e global dos icones
     */
     let t = titulo;
     let i = icone;
+    let p = posicao;
     if (t == "") { t = "Atenção!"; }
-    if (i == "") { i = IconeAtencao; }
-    if (timer == "") { timer = 0; }
+    if (i == "") { i = "warning"; }
+    if (timer == "") { timer = 3000; }
+    if (p == "") { p = "center"; }
     let confirmButtonCClass;
     switch (icone) {
         case ICONEERRO: confirmButtonCClass = "y-btn-llgrey"; break;
@@ -108,6 +110,7 @@ function MsgBox(msg, titulo, icone, timer) {
         title: TextToUpper(t),
         html: msg,
         icon: i,
+        position: p,
         timer: timer,
         timerProgressBar: true,
         buttonsStyling: false,
@@ -124,30 +127,32 @@ function MsgBox(msg, titulo, icone, timer) {
     });
 }
 //
-function ToastBox(msg, titulo, icone, timer) {
+function ToastBox(msg, titulo, icone, timer, posicao) {
     /* 0125
     * dependences:
     *   - sweetalert2
     *   - yapiStyle
-    *   - declarações prévias e global dos ícones
+    *   - declaracoes previas e global dos icones
     */
     let t = titulo;
     let i = icone;
+    let p = posicao;
     if (t == "") { t = "Atenção!"; }
-    if (i == "") { i = IconeAtencao; }
+    if (i == "") { i = "warning"; }
     if (timer == "") { timer = 3000; }
+    if (p == "") { p = "bottom"; }
     Swal.fire({
         title: TextToUpper(t),
         html: msg,
         icon: i,
         toast: true,
         animation: true,
-        position: 'bottom',
+        position: p,
         timer: timer,
         timerProgressBar: true,
         showConfirmButton: false,
         width: 'auto',
-        customClass: { popup: 'colored-toast toast-sm' },
+        customClass: { popup: 'msg-box' },
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer)
             toast.addEventListener('mouseleave', Swal.resumeTimer)

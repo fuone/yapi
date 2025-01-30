@@ -1,6 +1,6 @@
 /********** YAPIGAS **************
 ********** CSS ROOT *************/
-/*24012025*/
+/*30012025*/
 :root {
   --cor-ff: #ffffff;
   --cor-ff-rgb: 255, 255, 255;
@@ -281,7 +281,7 @@
   --Y-backdrop-color: var(--Y-black-color);
   --Y-backdrop-opacity: 0.5;
 
-  --Y-spinner-bg-color: var(--Y-white-color);
+  --Y-spinner-bg-color: transparent;
   --Y-spinner-color: var(--Y-txt-color);
 
   --Y-invalid-color: var(--Y-dred-color);

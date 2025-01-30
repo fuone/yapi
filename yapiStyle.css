@@ -5,7 +5,7 @@
 /* tags
 /*----------------------------------------*/
 html {
-  padding: 10px;
+  /*padding: 10px;*/
   zoom: var(--Y-zoom);
 }
 
@@ -13,6 +13,11 @@ a {
   color: unset;
   text-decoration: none;
   cursor: pointer;
+}
+
+footer,
+.footer {
+  cursor: default;
 }
 
 /*----------------------------------------*/
@@ -1936,6 +1941,90 @@ a {
 /*----------------------------------------*/
 .spinner {
   --Y-yapi: none;
+  --Y-spinner-bg-color: initial;
+  --Y-spinner-color: var(--Y-color);
+}
+
+.spinner .spinner-1 {
+  width: 48px;
+  height: 48px;
+  background: var(--Y-spinner-color);
+  /*#766DF4;*/
+  border-radius: 9px;
+  --c: radial-gradient(farthest-side, #000 92%, #0000);
+  --s: 18px 18px;
+  -webkit-mask:
+    var(--c) left 4px top 4px,
+    var(--c) right 4px top 4px,
+    var(--c) right 4px bottom 4px,
+    var(--c) left 4px bottom 4px,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  -webkit-mask-repeat: no-repeat;
+  animation: cu4 1.5s infinite;
+}
+
+@keyframes cu4 {
+  0% {
+    -webkit-mask-size: 0 0, 0 0, 0 0, 0 0, auto
+  }
+
+  12.5% {
+    -webkit-mask-size: var(--s), 0 0, 0 0, 0 0, auto
+  }
+
+  25% {
+    -webkit-mask-size: var(--s), var(--s), 0 0, 0 0, auto
+  }
+
+  37.5% {
+    -webkit-mask-size: var(--s), var(--s), var(--s), 0 0, auto
+  }
+
+  50% {
+    -webkit-mask-size: var(--s), var(--s), var(--s), var(--s), auto
+  }
+
+  62.5% {
+    -webkit-mask-size: 0 0, var(--s), var(--s), var(--s), auto
+  }
+
+  75% {
+    -webkit-mask-size: 0 0, 0 0, var(--s), var(--s), auto
+  }
+
+  87.5% {
+    -webkit-mask-size: 0 0, 0 0, 0 0, var(--s), auto
+  }
+
+  100% {
+    -webkit-mask-size: 0 0, 0 0, 0 0, 0 0, auto
+  }
+}
+
+.spinner .spinner-2 {
+  width: 4px;
+  height: 4px;
+  color: var(--Y-spinner-color);
+  border-radius: 50%;
+  box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+  transform: translateX(-38px);
+  animation: d1 .5s infinite alternate linear;
+}
+
+.spinner i{
+  color: var(--Y-spinner-color);
+}
+
+@keyframes d1 {
+  50% {
+    box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px
+  }
+
+  100% {
+    box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px
+  }
 }
 
 .modal-spinner {
@@ -2029,6 +2118,13 @@ a {
 }
 
 /*----------------------------------------*/
+/*alert / msgBox
+/*----------------------------------------*/
+.msg-box{
+  --Y-msgBox-color: inherit;
+  --Y-msgBox-bg-color: #fff;
+}
+/*----------------------------------------*/
 /* ids
 /*----------------------------------------*/
 
@@ -2078,7 +2174,7 @@ a {
 }
 
 .not-valid,
-invalid,
+.invalid,
 .error {
   color: var(--Y-invalid-color) !important;
 }
@@ -2140,83 +2236,6 @@ invalid,
   }
 }
 
-.y-spinner-1 {
-  width: 48px;
-  height: 48px;
-  background: #FFFFFF;
-  /*#766DF4;*/
-  border-radius: 9px;
-  --c: radial-gradient(farthest-side, #000 92%, #0000);
-  --s: 18px 18px;
-  -webkit-mask:
-    var(--c) left 4px top 4px,
-    var(--c) right 4px top 4px,
-    var(--c) right 4px bottom 4px,
-    var(--c) left 4px bottom 4px,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  -webkit-mask-repeat: no-repeat;
-  animation: cu4 1.5s infinite;
-}
-
-@keyframes cu4 {
-  0% {
-    -webkit-mask-size: 0 0, 0 0, 0 0, 0 0, auto
-  }
-
-  12.5% {
-    -webkit-mask-size: var(--s), 0 0, 0 0, 0 0, auto
-  }
-
-  25% {
-    -webkit-mask-size: var(--s), var(--s), 0 0, 0 0, auto
-  }
-
-  37.5% {
-    -webkit-mask-size: var(--s), var(--s), var(--s), 0 0, auto
-  }
-
-  50% {
-    -webkit-mask-size: var(--s), var(--s), var(--s), var(--s), auto
-  }
-
-  62.5% {
-    -webkit-mask-size: 0 0, var(--s), var(--s), var(--s), auto
-  }
-
-  75% {
-    -webkit-mask-size: 0 0, 0 0, var(--s), var(--s), auto
-  }
-
-  87.5% {
-    -webkit-mask-size: 0 0, 0 0, 0 0, var(--s), auto
-  }
-
-  100% {
-    -webkit-mask-size: 0 0, 0 0, 0 0, 0 0, auto
-  }
-}
-
-.y-spinner-2 {
-  width: 4px;
-  height: 4px;
-  color: #FFFFFF;
-  border-radius: 50%;
-  box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
-  transform: translateX(-38px);
-  animation: d1 .5s infinite alternate linear;
-}
-
-@keyframes d1 {
-  50% {
-    box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px
-  }
-
-  100% {
-    box-shadow: 19px 0 0 0, 38px 0 0 3px, 57px 0 0 7px
-  }
-}
 
 /*----------------------------------------*/
 /*----------------------------------------*/
