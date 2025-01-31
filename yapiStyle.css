@@ -1,17 +1,17 @@
 /********** YAPIGAS **************
 ************ CSS FRAMEWORK *******/
-/*29012025*/
+/*310125*/
 /*----------------------------------------*/
 /* tags
 /*----------------------------------------*/
 html {
-  /*padding: 10px;*/
+  min-height: 1px;
   zoom: var(--Y-zoom);
 }
 
 a {
   color: unset;
-  text-decoration: none;
+  text-decoration: none !important;
   cursor: pointer;
 }
 
