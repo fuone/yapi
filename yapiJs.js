@@ -1,5 +1,5 @@
 /* <script id="yapiJs" type="text/javascript">
-300125-b
+030225
 */
 /***********************************
 * Declarations
@@ -240,6 +240,7 @@ function HideSidebarMenu(sidebarClass) {
     * dependences:
     *   - yapiStyle
     *   - css da sidebar
+    *   - jQuery
     *   - html: <nav><ul class="sidebar"><li onclick=HideSidebarMenu()>...</li></ul></nav>
     */
     if (IsNull(sidebarClass)) { console.log("function HideSidebarMenu(sidebarClass) => É necessário especificar a classe corretamente"); return }
@@ -247,6 +248,7 @@ function HideSidebarMenu(sidebarClass) {
     if (HasSpecialChar(sidebarClass.charAt(0))) { sidebarClass = sidebarClass.substr(1) }
     let sidebar = document.querySelector('.' + sidebarClass);
     sidebar.style.display = 'none';
+    $('.'+sidebarClass).css('display','none');
 }
 //
 //

@@ -1,6 +1,6 @@
 /********** YAPIGAS **************
 ************ CSS FRAMEWORK *******/
-/*310125*/
+/*030225*/
 /*----------------------------------------*/
 /* tags
 /*----------------------------------------*/
@@ -15,11 +15,70 @@ a {
   cursor: pointer;
 }
 
+/*----------------------------------------*/
+/* Header
+/*----------------------------------------*/
+header,
+.header{
+  --header-color: var(--Y-txt-color);
+  --header-link-color: var(--Y-link-color);
+  --header-link-bg-color: var( --Y-link-bg-color);
+  --header-link-hover-bg-color: var(--Y-link-hover-bg-color);
+  --header-link-hover-color: var(--Y-link-hover-color);
+  --header-font-size: var(--Y-font-size);
+  --header-font-family: var(--Y-font-family);
+  display: flex;
+  vertical-align: middle;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 10px;
+  font-size: var(--header-font-size);
+  font-family: var(--header-font-family);
+  color: var(--header-color);
+  margin-bottom: 1rem;
+
+}
+.header nav,
+.header .nav {
+  display: flex;
+  vertical-align: middle;
+  height: 100%;
+  padding: 0;
+  justify-content: space-between;
+}
+.header a {
+  color: var(--header-link-color);
+  background: var(--header-link-bg-color);
+
+}
+.header a:hover {
+  color: var(--header-link-hover-color);
+  background: var(--header-link-hover-bg-color);
+}
+.header nav .btn {}
+.header .title {}
+.header .subtitle {}
+.header .title,
+.header .subtitle{
+  padding: 0 20px;
+}
+/*----------------------------------------*/
+/* main
+/*----------------------------------------*/
+main,
+.main {
+
+}
+/*----------------------------------------*/
+/* footer
+/*----------------------------------------*/
 footer,
 .footer {
   cursor: default;
+  margin: auto;
+  justify-content: center;
 }
-
 /*----------------------------------------*/
 /* classes
 /*----------------------------------------*/
@@ -138,11 +197,11 @@ footer,
 }
 
 .icon-size-20 {
-  --Y-icon-size: 1.25;/*20px;*/
+  --Y-icon-size: 1.25rem;/*20px;*/
 }
 
 .icon-size-25 {
-  --Y-icon-size: 1.5625;/*25px;*/
+  --Y-icon-size: 1.5625rem;/*25px;*/
 }
 
 .icon-size-30 {
@@ -2195,6 +2254,12 @@ footer,
   border: none !important;
 }
 
+.jus-cont-space-between{justify-content: space-between !important;}
+.jus-cont-space-around{justify-content: space-around !important;}
+.jus-cont-center{justify-content: center !important;}
+.jus-cont-baseline{justify-content:baseline !important;}
+.jus-cont-end{justify-content:end !important;}
+.jus-cont-start{justify-content:start !important;}
 /*----------------------------------------*/
 /* animate
 /*----------------------------------------*/
