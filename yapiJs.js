@@ -1,5 +1,5 @@
 /* <script id="yapiJs" type="text/javascript">
-030225
+100225
 */
 /***********************************
 * Declarations
@@ -251,4 +251,17 @@ function HideSidebarMenu(sidebarClass) {
     $('.'+sidebarClass).css('display','none');
 }
 //
+function SetClock() {
+    /* 02/25
+    * Mostra um relogio digital na tela
+    * dependences:
+    *   - html: <div id="relogio"></div>
+    *   - comando JS: setInterval(SetClock, 1000); //(1000=1seg)
+    */
+    let data = new Date(),
+        hora =  data.getHours(), 
+        minuto = data.getMinutes() <= 9 ? "0"+ data.getMinutes() : data.getMinutes(),
+        segundos = data.getSeconds() <= 9 ? "0"+ data.getSeconds() : data.getSeconds();
+    document.getElementById("relogio").innerHTML = `${hora}:${minuto}:${segundos}`;
+}
 //
