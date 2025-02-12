@@ -1,5 +1,5 @@
 /* <script id="yapiJs" type="text/javascript">
-100225
+120225
 */
 /***********************************
 * Declarations
@@ -220,6 +220,21 @@ function SetFooter(ver) {
     //$('#footer').html(code); //jQuery
     document.getElementById('footer').innerHTML = code;
 }
+//
+function SetHeader(proj) {
+    /* 0225 
+    * dependences:
+    *   - JQuery*
+    *   - definicaoo previa dos dados do projeto (Name, Description, Version, Icon)
+    *   - campos com classes proj-?? definidas
+    */
+    if (IsNull(proj)) { console.log('SetHeader: parametro proj não definido'); return }
+    $('.proj-name').html(proj.Name);
+    $('.proj-description').html(proj.Description);
+    $('.proj-ver').html(proj.Version);
+    $('.proj-icon').addClass(proj.Icon);
+    
+}  
 //
 function ShowSidebarMenu(sidebarClass) {
     /* 0125
