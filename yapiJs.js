@@ -10,7 +10,7 @@ const ICONEERRO = "error";
 const ICONEATENCAO = "warning";
 const ICONEINFO = "info";
 const ICONEPERGUNTA = "question";
-var swalCustomClass='';
+var swalCustomClass = '';
 /***********************************
 * Functions
 ************************************/
@@ -132,7 +132,7 @@ function ToastBox(msg, titulo, icone, timer, posicao) {
     *   - yapiStyle
     *   - declaracoes previas e global dos icones
     */
-    
+
     if (IsNull(msg)) { msg = "Não há mensagem" }
     if (IsNull(titulo)) { titulo = "Atenção!"; }
     if (IsNull(icone)) { icone = "warning"; }
@@ -216,7 +216,7 @@ function SetFooter(ver) {
     *   - html: <div id="footer" class=""></div>
     */
     let date = new Date();
-    let code = '<p class="txt text-center font-weight-light">© ' + date.getFullYear() + ' - ' + PROJINFO.Name + ' v. <span class="version">' + ver + '</span> by <span class="hint--right" data-hint="' + DEVINFO.EmailAutor + '">' + DEVINFO.Autor + '</span></p>';
+    let code = '<p class="txt txt-center txt-thin proj-name">© ' + date.getFullYear() + ' - ' + PROJINFO.Name + ' v. <span class="proj-ver">' + ver + '</span> by <span class="proj-autor hint--right" data-hint="' + DEVINFO.EmailAutor + '">' + DEVINFO.Autor + '</span></p>';
     //$('#footer').html(code); //jQuery
     document.getElementById('footer').innerHTML = code;
 }
@@ -233,8 +233,23 @@ function SetHeader(proj) {
     $('.proj-description').html(proj.Description);
     $('.proj-ver').html(proj.Version);
     $('.proj-icon').addClass(proj.Icon);
-    
-}  
+}
+//
+function SetProjInfo(proj) {
+    /* 0225 
+    * dependences:
+    *   - definicaoo previa dos dados do projeto (Name, Description, Version,...)
+    *   - campos com classes proj-?? definidas
+    */
+    if (IsNull(proj)) { console.log('SetProjInfo: parametro proj não definido'); return }
+    document.querySelectorAll('.proj-name').forEach(node => node.innerHTML = proj.Name);
+    document.querySelectorAll('.proj-description').forEach(node => node.innerHTML = proj.Description);
+    document.querySelectorAll('.proj-ver').forEach(node => node.innerHTML = proj.Version);
+    document.querySelectorAll('.proj-autor').forEach(node => node.innerHTML = proj.Autor);
+    document.querySelectorAll('.proj-email-autor').forEach(node => node.innerHTML = proj.EmailAutor);
+    document.querySelectorAll('.proj-framework').forEach(node => node.innerHTML = proj.Framework);
+    document.querySelectorAll('.proj-icon').forEach(node => node.classList.add(proj.Icon));
+}
 //
 function ShowSidebarMenu(sidebarClass) {
     /* 0125
@@ -263,7 +278,7 @@ function HideSidebarMenu(sidebarClass) {
     if (HasSpecialChar(sidebarClass.charAt(0))) { sidebarClass = sidebarClass.substr(1) }
     let sidebar = document.querySelector('.' + sidebarClass);
     sidebar.style.display = 'none';
-    $('.'+sidebarClass).css('display','none');
+    $('.' + sidebarClass).css('display', 'none');
 }
 //
 function SetClock() {
@@ -274,9 +289,9 @@ function SetClock() {
     *   - comando JS: setInterval(SetClock, 1000); //(1000=1seg)
     */
     let data = new Date(),
-        hora =  data.getHours(), 
-        minuto = data.getMinutes() <= 9 ? "0"+ data.getMinutes() : data.getMinutes(),
-        segundos = data.getSeconds() <= 9 ? "0"+ data.getSeconds() : data.getSeconds();
+        hora = data.getHours(),
+        minuto = data.getMinutes() <= 9 ? "0" + data.getMinutes() : data.getMinutes(),
+        segundos = data.getSeconds() <= 9 ? "0" + data.getSeconds() : data.getSeconds();
     document.getElementById("relogio").innerHTML = `${hora}:${minuto}:${segundos}`;
 }
 //

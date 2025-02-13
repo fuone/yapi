@@ -158,7 +158,13 @@ footer,
 .footer {
   cursor: default;
   margin: auto;
-  justify-content: center;
+  justify-self: center;
+  align-self: center;
+}
+
+.footer * {
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -1172,22 +1178,27 @@ footer,
 /*----------------------------------------*/
 .opacity-01 {
   --Y-opacity: 0.10;
+  opacity: var(--Y-opacity);
 }
 
 .opacity-03 {
   --Y-opacity: 0.30;
+  opacity: var(--Y-opacity);
 }
 
 .opacity-05 {
   --Y-opacity: 0.50;
+  opacity: var(--Y-opacity);
 }
 
 .opacity-07 {
   --Y-opacity: 0.75;
+  opacity: var(--Y-opacity);
 }
 
 .opacity-10 {
   --Y-opacity: 1;
+  opacity: var(--Y-opacity);
 }
 
 /*----------------------------------------*/
