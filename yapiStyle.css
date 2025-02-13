@@ -1,6 +1,7 @@
 /********** YAPIGAS **************
-************ CSS FRAMEWORK *******/
-/*120225*/
+******** CSS FRAMEWORK **********
+* 130225 *
+*/
 /*----------------------------------------*/
 /* tags
 /*----------------------------------------*/
@@ -16,35 +17,68 @@ a {
 }
 
 /*----------------------------------------*/
-/* Header
+/* classes
 /*----------------------------------------*/
-header,
-.header {
+/* classe geral ----------------------------------*/
+.yapi {
+  /* esta classe deve ser declarada na tag html ou body */
+  --Y-yapi: none;
+}
+
+.yapi.body,
+.yapi body {
+  font-family: var(--Y-font-family);
+  font-weight: var(--Y-font-weight);
+  font-size: var(--Y-font-size);
+  color: var(--Y-txt-color);
+  background-color: var(--Y-bg-color);
+  background-size: cover;
+}
+
+/* header ----------------------------------------*/
+header {
+  --header-font-size: var(--Y-font-size);
+  --header-font-family: var(--Y-font-family);
   --header-color: var(--Y-txt-color);
-  --Header-bg-color: transparent;
+  --header-bg-color: transparent;
   --header-link-color: var(--Y-link-color);
   --header-link-bg-color: var(--Y-link-bg-color);
   --header-link-hover-bg-color: var(--Y-link-hover-bg-color);
   --header-link-hover-color: var(--Y-link-hover-color);
-  --header-font-size: var(--Y-font-size);
-  --header-font-family: var(--Y-font-family);
+  width: auto;
+  margin: 1rem;
+}
+
+.header {
   display: flex;
   vertical-align: middle;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  max-width: -webkit-fill-available;
   min-height: 10px;
   font-size: var(--header-font-size);
   font-family: var(--header-font-family);
   color: var(--header-color);
-  margin-bottom: 1rem;
+  background: var(--header-bg-color);
+  margin-bottom: 0 !important;
+  padding: 1rem;
 
 }
 
-.header {
-  background: var(--Y-header-bg-color);
-  margin-bottom: 0 !important;
-  max-width: -webkit-fill-available;
+.col-start,
+.col-esq {
+  text-align: left;
+}
+
+.col-center,
+.col-centro {
+  text-align: center;
+}
+
+.col-end,
+.col-dir {
+  text-align: right;
 }
 
 .header nav,
@@ -56,10 +90,12 @@ header,
   justify-content: space-between;
 }
 
+.header nav .btn {}
+
 .header a {
   color: var(--header-link-color);
   background: var(--header-link-bg-color);
-
+  text-decoration: none;
 }
 
 .header a:hover {
@@ -67,25 +103,10 @@ header,
   background: var(--header-link-hover-bg-color);
 }
 
-.header nav .btn {}
-
 .header .title {}
 
 .header .subtitle {}
 
-.header .title,
-.header .subtitle {
-  padding: 0 20px;
-}
-
-.col-start,
-.col-esq {}
-
-.col-center,
-.col-centro {}
-
-.col-end,
-.col-dir {}
 
 @media (max-width: 960px) {
   .header {
@@ -128,15 +149,11 @@ header,
   }
 }
 
-/*----------------------------------------*/
-/* main
-/*----------------------------------------*/
+/* main ------------------------------------------*/
 main,
 .main {}
 
-/*----------------------------------------*/
-/* footer
-/*----------------------------------------*/
+/* footer ----------------------------------------*/
 footer,
 .footer {
   cursor: default;
@@ -144,24 +161,7 @@ footer,
   justify-content: center;
 }
 
-/*----------------------------------------*/
-/* classes
-/*----------------------------------------*/
-/* classe geral */
-.yapi {
-  /* esta classe deve ser declarada na tag html ou body */
-  --Y-yapi: none;
-}
 
-.yapi.body,
-.yapi body {
-  font-family: var(--Y-font-family);
-  font-weight: var(--Y-font-weight);
-  font-size: var(--Y-font-size);
-  color: var(--Y-txt-color);
-  background-color: var(--Y-bg-color);
-  background-size: cover;
-}
 
 .link {
   color: var(--Y-link-color);
@@ -309,35 +309,35 @@ footer,
   color: var(--Y-color) !important;
 }
 
-/* ff branco ----------------------------------------*/
+/* ff branco -------------------------------------*/
 .cor.cor-white {
   --Y-color: var(--Y-white-color);
 }
 
-/* 00 preto ----------------------------------------*/
+/* 00 preto --------------------------------------*/
 .cor.cor-black {
   --Y-color: var(--Y-black-color);
 }
 
-/* 01 cinza ----------------------------------------*/
+/* 01 cinza --------------------------------------*/
 .cor.cor-secondary,
 .cor.cor-grey {
   --Y-color: var(--Y-secondary-color);
 }
 
-/* cinza muito escuro */
+/* cinza muito escuro ----------------------------*/
 .cor.cor-dark,
 .cor.cor-dgrey {
   --Y-color: var(--Y-dark-color);
 }
 
-/* cinza muito claro*/
+/* cinza muito claro -----------------------------*/
 .cor.cor-light,
 .cor.cor-lgrey {
   --Y-color: var(--Y-light-color);
 }
 
-/* 10 azul ----------------------------------------*/
+/* 10 azul ---------------------------------------*/
 .cor.cor-sky,
 .cor.cor-blue {
   --Y-color: var(--Y-blue-color);
@@ -355,7 +355,7 @@ footer,
   --Y-color: var(--Y-lblue-color);
 }
 
-/* 20 verde ----------------------------------------*/
+/* 20 verde --------------------------------------*/
 .cor.cor-success,
 .cor.cor-green {
   --Y-color: var(--Y-green-color);
@@ -374,7 +374,7 @@ footer,
   /*23*/
 }
 
-/* 30 amarelo ----------------------------------------*/
+/* 30 amarelo -----------------------------------*/
 .cor.cor-alert,
 .cor.cor-yellow {
   --Y-color: var(--Y-yellow-color);
@@ -391,7 +391,7 @@ footer,
   --Y-color: var(--Y-cor-33);
 }
 
-/* 40 orange ----------------------------------------*/
+/* 40 orange ------------------------------------*/
 .cor.cor-orange {
   --Y-color: var(--cor-41);
 }
@@ -404,7 +404,7 @@ footer,
   --Y-color: var(--cor-42);
 }
 
-/* 50 vermelho ----------------------------------------*/
+/* 50 vermelho ----------------------------------*/
 .cor.cor-danger,
 .cor.cor-red {
   --Y-color: var(--Y-red-color:);
@@ -420,7 +420,7 @@ footer,
   --Y-color: var(--Y-lred-color:);
 }
 
-/* 60 marrom ----------------------------------------*/
+/* 60 marrom -----------------------------------*/
 .cor.cor-brown {
   --Y-color: var(--cor-61);
 }
@@ -433,13 +433,13 @@ footer,
   --Y-color: var(--cor-63);
 }
 
-/* ciano ----------------------------------------*/
+/* ciano ---------------------------------------*/
 .cor.cor-info,
 .cor.cor-cyan {
   --Y-color: var(--Y-cyan-color);
 }
 
-/* violeta ----------------------------------------*/
+/* violeta -------------------------------------*/
 .cor.cor-violet,
 .cor.cor-uv {
   --Y-color: var(--Y-violet-color);
@@ -455,7 +455,7 @@ footer,
   --Y-color: var(--Y-lviolet-color);
 }
 
-/* magenta ----------------------------------------*/
+/* magenta -------------------------------------*/
 .cor.cor-majenta {
   --Y-color: var(--Y-majenta-color);
 }
@@ -485,14 +485,14 @@ footer,
   background: transparent !important;
 }
 
-/* ff branco ----------------------------------------*/
+/* ff branco ---------------------------------*/
 .bg.bg-white,
 .y-badge.bg-white {
   --Y-bg-color: var(--Y-white-color);
   --Y-bg-txt-color: var(--Y-dgrey-color);
 }
 
-/* 00 preto e cinza ---------------------------------*/
+/* 00 preto e cinza --------------------------*/
 .bg.bg-black,
 .y-badge.bg-black {
   --Y-bg-color: var(--Y-black-color);
@@ -535,7 +535,7 @@ footer,
   --Y-bg-txt-color: var(--Y-dgrey-color);
 }
 
-/* 10 azul ----------------------------------------*/
+/* 10 azul -----------------------------------*/
 .bg.bg-sky,
 .bg.bg-blue,
 .y-badge.bg-sky,
@@ -556,7 +556,7 @@ footer,
   --Y-bg-txt-color: var(--Y-blue-color);
 }
 
-/* 20 verde ----------------------------------------*/
+/* 20 verde ----------------------------------*/
 .bg.bg-success,
 .bg.bg-green,
 .y-badge.bg-success,
@@ -577,7 +577,7 @@ footer,
   --Y-bg-txt-color: var(--Y-green-color);
 }
 
-/* 30 amarelo ----------------------------------------*/
+/* 30 amarelo --------------------------------*/
 .bg.bg-alert,
 .bg.bg-warning,
 .bg.bg-yellow,
@@ -600,7 +600,7 @@ footer,
   --Y-bg-txt-color: var(--cor-62);
 }
 
-/* 40 orange ----------------------------------------*/
+/* 40 orange --------------------------------*/
 .bg.bg-orange,
 .y-badge.bg-orange {
   --Y-bg-color: var(--cor-43);
@@ -619,7 +619,7 @@ footer,
   --Y-bg-txt-color: var(--cor-60);
 }
 
-/* 50 vermelho ----------------------------------------*/
+/* 50 vermelho ------------------------------*/
 .bg.bg-dred,
 .y-badge.bg-dred {
   --Y-bg-color: var(--cor-50);
@@ -646,14 +646,14 @@ footer,
   --Y-bg-txt-color: var(--cor-50);
 }
 
-/* 60 marrom ----------------------------------------*/
+/* 60 marrom --------------------------------*/
 .bg.bg-brown,
 .y-badge.bg-brown {
   --Y-bg-color: rgba(var(--cor-64-rgb), 0.7);
   --Y-bg-txt-color: var(--cor-60);
 }
 
-/* ciano ----------------------------------------*/
+/* ciano ------------------------------------*/
 .bg.bg-info,
 .bg.bg-cyan,
 .y-badge.bg-info,
@@ -676,7 +676,7 @@ footer,
   --Y-bg-txt-color: var(--Y-blue-color);
 }
 
-/* violeta ----------------------------------------*/
+/* violeta ----------------------------------*/
 .bg.bg-violet,
 .bg.bg-uv,
 .y-badge.bg-violet,
@@ -685,7 +685,7 @@ footer,
   --Y-bg-txt-color: var(--Y-dviolet-color);
 }
 
-/* majenta ----------------------------------------*/
+/* majenta ----------------------------------*/
 .bg.bg-majenta,
 .y-badge.bg-majenta {
   --Y-bg-color: var(--Y-lmajenta-color);
