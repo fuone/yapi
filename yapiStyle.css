@@ -65,6 +65,13 @@ header {
   padding: 1rem;
 
 }
+/*
+.header.m1{
+  /*modelo 1
+  * nesse modelo sao 03 colunas tamanhos iguais para tela > 960px. Para tela menor, a coluna esuqerda e suprimida, sendo completada com a coluna do meio
+  * /
+  --m1: none;
+}*/
 
 .col-start,
 .col-esq {
@@ -103,18 +110,22 @@ header {
   background: var(--header-link-hover-bg-color);
 }
 
-.header .title {}
+.header .title {
+  --header-font-size: calc(var(--header-font-size)*1.5);
+}
 
-.header .subtitle {}
+.header .subtitle {
+  --header-font-size: calc(var(--header-font-size)*1.1);
+}
 
 
 @media (max-width: 960px) {
   .header {
     zoom: 95%;
   }
-
-  .col-start,
-  .col-esq {
+/*
+  .header.m1 .col-start,
+  .header.m1 .col-esq{
     display: none !important;
   }
 
@@ -126,14 +137,14 @@ header {
     width: auto;
   }
 
-  .col-center div.div-in,
-  .col-centro div.div-in {
+  .header.m1 .col-center div.div-in,
+  .header.m1 .col-centro div.div-in {
     margin: 0 !important;
     text-align: left !important;
   }
 
-  .col-center .title,
-  .col-centro .title {
+  .header.m1 .col-center .title,
+  .header.m1 .col-centro .title {
     display: flex;
     --Y-font-size: var(--Y-tam-mmm);
   }
@@ -147,6 +158,7 @@ header {
   .col-centro .subtitle {
     --Y-font-size: var(--Y-tam-mm);
   }
+*/
 }
 
 /* main ------------------------------------------*/
