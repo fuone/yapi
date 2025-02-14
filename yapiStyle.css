@@ -1,6 +1,6 @@
 /********** YAPIGAS **************
 ******** CSS FRAMEWORK **********
-* 130225 *
+* 140225 *
 */
 /*----------------------------------------*/
 /* tags
@@ -45,6 +45,7 @@ header {
   --header-link-bg-color: var(--Y-link-bg-color);
   --header-link-hover-bg-color: var(--Y-link-hover-bg-color);
   --header-link-hover-color: var(--Y-link-hover-color);
+  --header-fator: 1.5;
   width: auto;
   margin: 1rem;
 }
@@ -57,7 +58,7 @@ header {
   width: 100%;
   max-width: -webkit-fill-available;
   min-height: 10px;
-  font-size: var(--header-font-size);
+  font-size: calc(var(--header-font-size)* var(--header-fator));
   font-family: var(--header-font-family);
   color: var(--header-color);
   background: var(--header-bg-color);
@@ -65,26 +66,29 @@ header {
   padding: 1rem;
 
 }
-/*
-.header.m1{
-  /*modelo 1
-  * nesse modelo sao 03 colunas tamanhos iguais para tela > 960px. Para tela menor, a coluna esuqerda e suprimida, sendo completada com a coluna do meio
-  * /
-  --m1: none;
-}*/
 
-.col-start,
-.col-esq {
+/* config geral*/
+.header a {
+  color: var(--header-link-color);
+  background: var(--header-link-bg-color);
+  text-decoration: none;
+}
+
+.header a:hover {
+  color: var(--header-link-hover-color);
+  background: var(--header-link-hover-bg-color);
+}
+
+/**/
+.header .col-start {
   text-align: left;
 }
 
-.col-center,
-.col-centro {
+.header .col-center {
   text-align: center;
 }
 
-.col-end,
-.col-dir {
+.header .col-end {
   text-align: right;
 }
 
@@ -99,66 +103,111 @@ header {
 
 .header nav .btn {}
 
-.header a {
-  color: var(--header-link-color);
-  background: var(--header-link-bg-color);
-  text-decoration: none;
+
+.header .div-title {
+  --header-fator: 3;
+  font-size: calc(var(--header-font-size)* var(--header-fator));
 }
 
-.header a:hover {
-  color: var(--header-link-hover-color);
-  background: var(--header-link-hover-bg-color);
+.header .div-subtitle {
+  --header-fator: 2;
+  font-size: calc(var(--header-font-size)* var(--header-fator));
 }
 
-.header .title {
-  --header-font-size: calc(var(--header-font-size)*1.5);
+/****** m1 *******/
+.header.m1 {
+  /*modelo 1
+  * nesse modelo sao 03 colunas (start, center e end) > 02 colunas
+  */
+  --m1: none;
+  --header-bg-color: var(--Y-white-color);
 }
 
-.header .subtitle {
-  --header-font-size: calc(var(--header-font-size)*1.1);
+.header.m1>.col-start {
+  display: unset;
 }
 
+.header.m1>.col-center {
+  display: unset;
+}
+
+.header.m1>.col-end {
+  display: unset;
+}
 
 @media (max-width: 960px) {
-  .header {
-    zoom: 95%;
-  }
-/*
-  .header.m1 .col-start,
-  .header.m1 .col-esq{
+  .header.m1>.col-start {
     display: none !important;
   }
 
-  .col-start,
-  .col-esq,
-  .col-end,
-  .col-dir {
+  .header.m1>.col-center {
+    margin: 0 !important;
+    text-align: left !important;
+  }
+}
+
+/****** m2 *******/
+.header.m2 {
+  /* modelo 2
+  * nesse modelo sao 02 colunas (start e end) > 02 colunas e os itens de menu colocados em uma side bar
+  */
+  --m2: none;
+}
+
+.header.m2>.col-start {
+  display: unset;
+}
+
+.header.m2>.col-center {
+  display: none;
+}
+
+.header.m2>.col-end {
+  display: unset;
+}
+
+.header.m2 .div-title {
+  display: flex;
+  --header-fator: 2.5
+}
+
+.header.m2 .div-subtitle {
+  display: flex;
+  --header-fator: 1.7
+}
+
+@media (max-width: 960px) {
+  .header.m2 .div-title {
+    --header-fator: 2 !important
+  }
+
+  .header.m2 .div-subtitle {
+    --header-fator: 1.5 !important
+  }
+}
+
+/** geral **/
+@media (max-width: 960px) {
+
+  /*header{--header-fator: 1.3;}*/
+  .header {
+    zoom: 95%;
+    --header-fator: 1.3;
+  }
+
+  .header .col-end {
     flex: 0 0 auto;
     width: auto;
   }
 
-  .header.m1 .col-center div.div-in,
-  .header.m1 .col-centro div.div-in {
-    margin: 0 !important;
-    text-align: left !important;
-  }
-
-  .header.m1 .col-center .title,
-  .header.m1 .col-centro .title {
+  .header .div-title {
     display: flex;
-    --Y-font-size: var(--Y-tam-mmm);
+    --header-fator: 2.5;
   }
 
-  .col-center .title>.txt,
-  .col-centro .title>.txt {
-    display: inherit;
+  .header .div-subtitle {
+    --header-fator: 1.7;
   }
-
-  .col-center .subtitle,
-  .col-centro .subtitle {
-    --Y-font-size: var(--Y-tam-mm);
-  }
-*/
 }
 
 /* main ------------------------------------------*/

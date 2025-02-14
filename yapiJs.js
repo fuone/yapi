@@ -1,5 +1,5 @@
 /* <script id="yapiJs" type="text/javascript">
-130225
+140225
 */
 /***********************************
 * Declarations
@@ -235,8 +235,9 @@ function SetHeader(proj) {
     $('.proj-icon').addClass(proj.Icon);
 }
 //
-function SetProjInfo(proj) {
-    /* 0225 
+function SetProjInfo2(proj) {
+    /* 0225
+    * todos os elementos que tiverem a classe '.proj-??' receberão o valor correspondente do array 'proj.??'
     * dependences:
     *   - definicaoo previa dos dados do projeto (Name, Description, Version,...)
     *   - campos com classes proj-?? definidas
@@ -248,7 +249,7 @@ function SetProjInfo(proj) {
     document.querySelectorAll('.proj-autor').forEach(node => node.innerHTML = proj.Autor);
     document.querySelectorAll('.proj-email-autor').forEach(node => node.innerHTML = proj.EmailAutor);
     document.querySelectorAll('.proj-framework').forEach(node => node.innerHTML = proj.Framework);
-    document.querySelectorAll('.proj-icon').forEach(node => node.classList.add(proj.Icon));
+    document.querySelectorAll('.proj-icon').forEach(node => node.classList.add(...proj.Icon.split(' ')));
 }
 //
 function ShowSidebarMenu(sidebarClass) {
