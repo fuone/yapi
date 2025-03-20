@@ -1,5 +1,5 @@
 /* <script id="yapiJs" type="text/javascript">
-140225
+200325
 */
 /***********************************
 * Declarations
@@ -46,6 +46,25 @@ function DoMask(campo, mascara) {
             S: { pattern: /[A-Za-z]/ },
         }
     });
+}
+//
+function HideElement(element){
+    /* 0325
+    * dependences:
+    *   - JQuery
+    *   - yapiStyle
+    */
+    $(element).addClass('hide');
+}
+//
+function ShowElement(element){
+    /* 0325
+    * dependences:
+    *   - JQuery
+    *   - yapiStyle
+    */
+    $(element).removeClass('hide');
+    $(element).show();
 }
 //
 function HideElementById(elementId) {
@@ -190,6 +209,16 @@ function AddDays(date, dias) {
 function CalcFutureDate(dtInicial, t) {
     return dtFutura = AddDays(new Date(dtInicial), t).toISOString().slice(0, 10);
 }
+//
+function ShowComingSoonMsg(){
+    /* 0325
+    * dependences:
+    *   - sweetalert2
+    *   - yapiStyle
+    *   - declaracoes previas e global dos icones
+    */
+    ToastBox("Aguarde novidades","Em breve",ICONEINFO,2000, "center");
+  }
 //
 /***********************************
 * Functions que dependem do html
