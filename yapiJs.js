@@ -1,5 +1,5 @@
 /* <script id="yapiJs" type="text/javascript">
-200325
+140425
 */
 /***********************************
 * Declarations
@@ -245,9 +245,19 @@ function SetFooter(ver) {
     *   - html: <div id="footer" class=""></div>
     */
     let date = new Date();
-    let code = '<p class="txt txt-center txt-thin proj-name">© ' + date.getFullYear() + ' - ' + PROJINFO.Name + ' v. <span class="proj-ver">' + ver + '</span> by <span class="proj-autor hint--right" data-hint="' + DEVINFO.EmailAutor + '">' + DEVINFO.Autor + '</span></p>';
+    let code_old = '<p class="txt txt-center txt-thin proj-name">© ' + date.getFullYear() + ' - ' + PROJINFO.Name + ' v. <span class="proj-ver">' + ver + '</span> by <span class="proj-autor hint--right" data-hint="' + DEVINFO.EmailAutor + '">' + DEVINFO.Autor + '</span></p>';
+    let code1= '<p class="txt txt-center txt-thin>© ' + date.getFullYear() + ' - ' +
+      '<span class="proj-name hint--right" data-hint="'+ PROJINFO.Description +'">' + PROJINFO.Name + '</span>' +
+      ' v.<span class="proj-ver">' + PROJINFO.Version + '</span>' +
+      ' by <span class="proj-autor hint--right" data-hint="' + DEVINFO.EmailAutor + '">' + DEVINFO.Autor + '</span>' +
+      '</p>';
+    /*let code2= '<p class="txt txt-center txt-thin>© ' + date.getFullYear() + ' - ' +
+      '<span class="proj-name hint--right" data-hint="'+ PROJINFO.Description +'"></span>' +
+      ' v.<span class="proj-ver"></span>' +
+      ' by <span class="proj-autor hint--right" data-hint="' + DEVINFO.EmailAutor + '"></span>' +
+      '</p>';*/
     //$('#footer').html(code); //jQuery
-    document.getElementById('footer').innerHTML = code;
+    document.getElementById('footer').innerHTML = code1;
 }
 //
 function SetHeader(proj) {
