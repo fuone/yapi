@@ -246,7 +246,7 @@ function SetFooter(ver) {
     */
     let date = new Date();
     let code_old = '<p class="txt txt-center txt-thin proj-name">© ' + date.getFullYear() + ' - ' + PROJINFO.Name + ' v. <span class="proj-ver">' + ver + '</span> by <span class="proj-autor hint--right" data-hint="' + DEVINFO.EmailAutor + '">' + DEVINFO.Autor + '</span></p>';
-    let code1= '<p class="txt txt-center txt-thin>© ' + date.getFullYear() + ' - ' +
+    let code1= '<p class="txt txt-center txt-thin">© ' + date.getFullYear() + ' - ' +
       '<span class="proj-name hint--right" data-hint="'+ PROJINFO.Description +'">' + PROJINFO.Name + '</span>' +
       ' v.<span class="proj-ver">' + PROJINFO.Version + '</span>' +
       ' by <span class="proj-autor hint--right" data-hint="' + DEVINFO.EmailAutor + '">' + DEVINFO.Autor + '</span>' +
