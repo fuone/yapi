@@ -238,6 +238,22 @@ function ShowLoadingMsg(){
     ToastBox(" ","Carregando...",ICONEINFO,3000, "center");
   }
 //
+async function Redirect(url){
+    /* 0425
+    * Redireciona a pagina para outra url recebida por parâmetro
+    * dependences: none
+    */
+    if(IsNull(url)){
+      //pafina "Em breve"
+      url = 'https://script.google.com/macros/s/AKfycbxyyyk_yaDXvsrIvR1FJpxrjZvkLCLxUd2jcZ2UdU6FIp-LO5JmGPblx4AFU4iVU7M/exec';
+    }
+    let url2 = 'https://b.link/f/soon';
+    ToastBox(" ","Carregando...",ICONEINFO,3000, "center");
+    //let win = window.open(url2, '_self');
+    //let win = window.location.href = url2;
+    //let win = window.location.assign(url);
+    let win = window.location.replace(url);
+  }
 /***********************************
 * Functions que dependem do html
 ************************************/
