@@ -202,11 +202,19 @@ function IsNull(opt) {
 }
 //
 function AddDays(date, dias) {
+    /* 0125
+    * adiciona dias a uma data qualquer e retorna a nova data
+    * dependences: none
+    */
     date.setDate(date.getDate() + dias);
     return date
 }
 //
 function CalcFutureDate(dtInicial, t) {
+    /* 0125
+    * calcula data futura a partir da data inicial e qtd de dias
+    * dependences: none
+    */
     return dtFutura = AddDays(new Date(dtInicial), t).toISOString().slice(0, 10);
 }
 //
@@ -218,6 +226,16 @@ function ShowComingSoonMsg(){
     *   - declaracoes previas e global dos icones
     */
     ToastBox("Aguarde novidades","Em breve",ICONEINFO,2000, "center");
+  }
+//
+function ShowLoadingMsg(){
+    /* 0425
+    * dependences:
+    *   - sweetalert2
+    *   - yapiStyle
+    *   - declaracoes previas e global dos icones
+    */
+    ToastBox(" ","Carregando...",ICONEINFO,3000, "center");
   }
 //
 /***********************************
@@ -242,22 +260,17 @@ function SetFooter(ver) {
     *   - hint.css
     *   - yapiStyle
     *   - JQuery*
-    *   - html: <div id="footer" class=""></div>
+    *   - html: <footer id="footer" class="footer"></footer>
     */
     let date = new Date();
-    let code_old = '<p class="txt txt-center txt-thin proj-name">© ' + date.getFullYear() + ' - ' + PROJINFO.Name + ' v. <span class="proj-ver">' + ver + '</span> by <span class="proj-autor hint--right" data-hint="' + DEVINFO.EmailAutor + '">' + DEVINFO.Autor + '</span></p>';
-    let code1= '<p class="txt txt-center txt-thin">© ' + date.getFullYear() + ' - ' +
+    let code= '<p class="txt txt-center">© ' + date.getFullYear() + ' - ' +
       '<span class="proj-name hint--right" data-hint="'+ PROJINFO.Description +'">' + PROJINFO.Name + '</span>' +
       ' v.<span class="proj-ver">' + PROJINFO.Version + '</span>' +
       ' by <span class="proj-autor hint--right" data-hint="' + DEVINFO.EmailAutor + '">' + DEVINFO.Autor + '</span>' +
       '</p>';
-    /*let code2= '<p class="txt txt-center txt-thin>© ' + date.getFullYear() + ' - ' +
-      '<span class="proj-name hint--right" data-hint="'+ PROJINFO.Description +'"></span>' +
-      ' v.<span class="proj-ver"></span>' +
-      ' by <span class="proj-autor hint--right" data-hint="' + DEVINFO.EmailAutor + '"></span>' +
-      '</p>';*/
     //$('#footer').html(code); //jQuery
-    document.getElementById('footer').innerHTML = code1;
+    document.getElementById('footer').innerHTML = code;
+    return code;
 }
 //
 function SetHeader(proj) {
@@ -322,16 +335,44 @@ function HideSidebarMenu(sidebarClass) {
 }
 //
 function SetClock() {
-    /* 02/25
+    /* 0225
     * Mostra um relogio digital na tela
     * dependences:
-    *   - html: <div id="relogio"></div>
     *   - comando JS: setInterval(SetClock, 1000); //(1000=1seg)
     */
     let data = new Date(),
-        hora = data.getHours(),
-        minuto = data.getMinutes() <= 9 ? "0" + data.getMinutes() : data.getMinutes(),
+        horas = data.getHours(),
+        minutos = data.getMinutes() <= 9 ? "0" + data.getMinutes() : data.getMinutes(),
         segundos = data.getSeconds() <= 9 ? "0" + data.getSeconds() : data.getSeconds();
-    document.getElementById("relogio").innerHTML = `${hora}:${minuto}:${segundos}`;
+    //document.getElementById("relogio").innerHTML = `${horas}:${minutos}:${segundos}`;
+    return horas +':'+ minutos +':'+ segundos
 }
 //
+function SetDate(){
+    /* 0425
+    * Retorna a data 
+    * dependences:
+    */
+    return new Date().toLocaleDateString();
+}
+//
+/***********************************
+* Functions que dependem do GAS
+************************************/
+function GetProjInfo2(){
+    /* 0425
+    * Busca no server as informações do projeto e do autor eatribui às variaveis  PROJINFO e DEVINFO
+    * dependences:
+    *   - definicaoo previa dos dados do projeto (Name, Description, Version,...) no servidor
+    *   - declaração das variaveis PROJINFO e DEVINFO;
+    *   - função GetProjInfo desenvolvida no servidor
+    */
+    google.script.run.withSuccessHandler(function(r){
+      PROJINFO = r;
+      DEVINFO = {Autor: r.Autor, EmailAutor: r.EmailAutor,Framework: r.Framework};
+      SetProjInfo2(PROJINFO);
+      SetFooter(PROJINFO);
+      SetLoading('hide');
+      console.timeEnd('tempo');
+    }).GetProjInfo();
+  }
