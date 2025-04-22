@@ -1,5 +1,5 @@
 /* <script id="yapiJs" type="text/javascript">
-220425a
+220425aa
 */
 /***********************************
 * Declarations
@@ -238,16 +238,16 @@ function ShowLoadingMsg(){
     ToastBox(" ","Carregando...",ICONEINFO,3000, "center");
   }
 //
-async function Redirect(url){
+async function RedirectMe(url){
     /* 0425
     * Redireciona a pagina para outra url recebida por parâmetro
     * dependences: none
     */
     if(IsNull(url)){
-      //pafina "Em breve"
+      //pagina "Em breve"
       url = 'https://script.google.com/macros/s/AKfycbxyyyk_yaDXvsrIvR1FJpxrjZvkLCLxUd2jcZ2UdU6FIp-LO5JmGPblx4AFU4iVU7M/exec';
     }
-    let url2 = 'https://b.link/f/soon';
+    //let url2 = 'https://b.link/f/soon';
     ToastBox(" ","Carregando...",ICONEINFO,3000, "center");
     //let win = window.open(url2, '_self');
     //let win = window.location.href = url2;
