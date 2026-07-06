@@ -5,3 +5,325 @@
 * Dev: Fuone
 * fuone.dev@gmaill.com
 **************************/
+:root{    
+    /*red*/
+    --Y-red: #db2828;
+    --Y-red-mais-10: color-mix(in srgb, var(--Y-red), black 10%);
+    --Y-red-mais-20: color-mix(in srgb, var(--Y-red), black 20%);
+    --Y-red-mais-30: color-mix(in srgb, var(--Y-red), black 30%);
+    --Y-red-mais-40: color-mix(in srgb, var(--Y-red), black 40%);
+    --Y-red-mais-50: color-mix(in srgb, var(--Y-red), black 50%);
+    
+    --Y-red-menos-10: color-mix(in srgb, var(--Y-red), white 10%);
+    --Y-red-menos-20: color-mix(in srgb, var(--Y-red), white 20%);
+    --Y-red-menos-30: color-mix(in srgb, var(--Y-red), white 30%);
+    --Y-red-menos-40: color-mix(in srgb, var(--Y-red), white 40%);
+    --Y-red-menos-50: color-mix(in srgb, var(--Y-red), white 50%);
+    --Y-red-menos-60: color-mix(in srgb, var(--Y-red), white 60%);
+    --Y-red-menos-70: color-mix(in srgb, var(--Y-red), white 70%);
+    --Y-red-menos-80: color-mix(in srgb, var(--Y-red), white 80%);
+    --Y-red-menos-90: color-mix(in srgb, var(--Y-red), white 90%);
+    --Y-red-menos-100: color-mix(in srgb, var(--Y-red), white 95%);
+
+    /*orange*/
+    --Y-orange: #f2711c;
+    --Y-orange-mais-10: color-mix(in srgb, var(--Y-orange), black 10%);
+    --Y-orange-mais-20: color-mix(in srgb, var(--Y-orange), black 20%);
+    --Y-orange-mais-30: color-mix(in srgb, var(--Y-orange), black 30%);
+    --Y-orange-mais-40: color-mix(in srgb, var(--Y-orange), black 40%);
+    --Y-orange-mais-50: color-mix(in srgb, var(--Y-orange), black 50%);
+    
+    --Y-orange-menos-10: color-mix(in srgb, var(--Y-orange), white 10%);
+    --Y-orange-menos-20: color-mix(in srgb, var(--Y-orange), white 20%);
+    --Y-orange-menos-30: color-mix(in srgb, var(--Y-orange), white 30%);
+    --Y-orange-menos-40: color-mix(in srgb, var(--Y-orange), white 40%);
+    --Y-orange-menos-50: color-mix(in srgb, var(--Y-orange), white 50%);
+    --Y-orange-menos-60: color-mix(in srgb, var(--Y-orange), white 60%);
+    --Y-orange-menos-70: color-mix(in srgb, var(--Y-orange), white 70%);
+    --Y-orange-menos-80: color-mix(in srgb, var(--Y-orange), white 80%);
+    --Y-orange-menos-90: color-mix(in srgb, var(--Y-orange), white 90%);
+    --Y-orange-menos-100: color-mix(in srgb, var(--Y-orange), white 95%);
+
+    /*yellow*/
+    --Y-yellow: #ffcf4c;
+    --Y-yellow-mais-10: color-mix(in srgb, var(--Y-yellow), black 10%);
+    --Y-yellow-mais-20: color-mix(in srgb, var(--Y-yellow), black 20%);
+    --Y-yellow-mais-30: color-mix(in srgb, var(--Y-yellow), black 30%);
+    --Y-yellow-mais-40: color-mix(in srgb, var(--Y-yellow), black 40%);
+    --Y-yellow-mais-50: color-mix(in srgb, var(--Y-yellow), black 50%);
+    
+    --Y-yellow-menos-10: color-mix(in srgb, var(--Y-yellow), white 10%);
+    --Y-yellow-menos-20: color-mix(in srgb, var(--Y-yellow), white 20%);
+    --Y-yellow-menos-30: color-mix(in srgb, var(--Y-yellow), white 30%);
+    --Y-yellow-menos-40: color-mix(in srgb, var(--Y-yellow), white 40%);
+    --Y-yellow-menos-50: color-mix(in srgb, var(--Y-yellow), white 50%);
+    --Y-yellow-menos-60: color-mix(in srgb, var(--Y-yellow), white 60%);
+    --Y-yellow-menos-70: color-mix(in srgb, var(--Y-yellow), white 70%);
+    --Y-yellow-menos-80: color-mix(in srgb, var(--Y-yellow), white 80%);
+    --Y-yellow-menos-90: color-mix(in srgb, var(--Y-yellow), white 90%);
+    --Y-yellow-menos-100: color-mix(in srgb, var(--Y-yellow), white 95%);
+
+    /*olive*/
+    --Y-olive: #84B067;
+    --Y-olive-mais-10: color-mix(in srgb, var(--Y-olive), black 10%);
+    --Y-olive-mais-20: color-mix(in srgb, var(--Y-olive), black 20%);
+    --Y-olive-mais-30: color-mix(in srgb, var(--Y-olive), black 30%);
+    --Y-olive-mais-40: color-mix(in srgb, var(--Y-olive), black 40%);
+    --Y-olive-mais-50: color-mix(in srgb, var(--Y-olive), black 50%);
+    
+    --Y-olive-menos-10: color-mix(in srgb, var(--Y-olive), white 10%);
+    --Y-olive-menos-20: color-mix(in srgb, var(--Y-olive), white 20%);
+    --Y-olive-menos-30: color-mix(in srgb, var(--Y-olive), white 30%);
+    --Y-olive-menos-40: color-mix(in srgb, var(--Y-olive), white 40%);
+    --Y-olive-menos-50: color-mix(in srgb, var(--Y-olive), white 50%);
+    --Y-olive-menos-60: color-mix(in srgb, var(--Y-olive), white 60%);
+    --Y-olive-menos-70: color-mix(in srgb, var(--Y-olive), white 70%);
+    --Y-olive-menos-80: color-mix(in srgb, var(--Y-olive), white 80%);
+    --Y-olive-menos-90: color-mix(in srgb, var(--Y-olive), white 90%);
+    --Y-olive-menos-100: color-mix(in srgb, var(--Y-olive), white 95%);
+
+    /*green*/
+    --Y-green: #2E8B57;
+    --Y-green-mais-10: color-mix(in srgb, var(--Y-green), black 10%);
+    --Y-green-mais-20: color-mix(in srgb, var(--Y-green), black 20%);
+    --Y-green-mais-30: color-mix(in srgb, var(--Y-green), black 30%);
+    --Y-green-mais-40: color-mix(in srgb, var(--Y-green), black 40%);
+    --Y-green-mais-50: color-mix(in srgb, var(--Y-green), black 50%);
+    
+    --Y-green-menos-10: color-mix(in srgb, var(--Y-green), white 10%);
+    --Y-green-menos-20: color-mix(in srgb, var(--Y-green), white 20%);
+    --Y-green-menos-30: color-mix(in srgb, var(--Y-green), white 30%);
+    --Y-green-menos-40: color-mix(in srgb, var(--Y-green), white 40%);
+    --Y-green-menos-50: color-mix(in srgb, var(--Y-green), white 50%);
+    --Y-green-menos-60: color-mix(in srgb, var(--Y-green), white 60%);
+    --Y-green-menos-70: color-mix(in srgb, var(--Y-green), white 70%);
+    --Y-green-menos-80: color-mix(in srgb, var(--Y-green), white 80%);
+    --Y-green-menos-90: color-mix(in srgb, var(--Y-green), white 90%);
+    --Y-green-menos-100: color-mix(in srgb, var(--Y-green), white 95%);
+
+    /*teal*/
+    --Y-teal: #38b2ac;
+    --Y-teal-mais-10: color-mix(in srgb, var(--Y-teal), black 10%);
+    --Y-teal-mais-20: color-mix(in srgb, var(--Y-teal), black 20%);
+    --Y-teal-mais-30: color-mix(in srgb, var(--Y-teal), black 30%);
+    --Y-teal-mais-40: color-mix(in srgb, var(--Y-teal), black 40%);
+    --Y-teal-mais-50: color-mix(in srgb, var(--Y-teal), black 50%);
+    
+    --Y-teal-menos-10: color-mix(in srgb, var(--Y-teal), white 10%);
+    --Y-teal-menos-20: color-mix(in srgb, var(--Y-teal), white 20%);
+    --Y-teal-menos-30: color-mix(in srgb, var(--Y-teal), white 30%);
+    --Y-teal-menos-40: color-mix(in srgb, var(--Y-teal), white 40%);
+    --Y-teal-menos-50: color-mix(in srgb, var(--Y-teal), white 50%);
+    --Y-teal-menos-60: color-mix(in srgb, var(--Y-teal), white 60%);
+    --Y-teal-menos-70: color-mix(in srgb, var(--Y-teal), white 70%);
+    --Y-teal-menos-80: color-mix(in srgb, var(--Y-teal), white 80%);
+    --Y-teal-menos-90: color-mix(in srgb, var(--Y-teal), white 90%);
+    --Y-teal-menos-100: color-mix(in srgb, var(--Y-teal), white 95%);
+
+    /*cyan*/
+    --Y-cyan: #00FFF0;
+    --Y-cyan-mais-10: color-mix(in srgb, var(--Y-cyan), black 10%);
+    --Y-cyan-mais-20: color-mix(in srgb, var(--Y-cyan), black 20%);
+    --Y-cyan-mais-30: color-mix(in srgb, var(--Y-cyan), black 30%);
+    --Y-cyan-mais-40: color-mix(in srgb, var(--Y-cyan), black 40%);
+    --Y-cyan-mais-50: color-mix(in srgb, var(--Y-cyan), black 50%);
+    
+    --Y-cyan-menos-10: color-mix(in srgb, var(--Y-cyan), white 10%);
+    --Y-cyan-menos-20: color-mix(in srgb, var(--Y-cyan), white 20%);
+    --Y-cyan-menos-30: color-mix(in srgb, var(--Y-cyan), white 30%);
+    --Y-cyan-menos-40: color-mix(in srgb, var(--Y-cyan), white 40%);
+    --Y-cyan-menos-50: color-mix(in srgb, var(--Y-cyan), white 50%);
+    --Y-cyan-menos-60: color-mix(in srgb, var(--Y-cyan), white 60%);
+    --Y-cyan-menos-70: color-mix(in srgb, var(--Y-cyan), white 70%);
+    --Y-cyan-menos-80: color-mix(in srgb, var(--Y-cyan), white 80%);
+    --Y-cyan-menos-90: color-mix(in srgb, var(--Y-cyan), white 90%);
+    --Y-cyan-menos-100: color-mix(in srgb, var(--Y-cyan), white 95%);
+    
+    /*blue*/
+    --Y-blue: #057ad9;/* #0c0361;*/
+    --Y-blue-mais-10: color-mix(in srgb, var(--Y-blue), black 10%);
+    --Y-blue-mais-20: color-mix(in srgb, var(--Y-blue), black 20%);
+    --Y-blue-mais-30: color-mix(in srgb, var(--Y-blue), black 30%);
+    --Y-blue-mais-40: color-mix(in srgb, var(--Y-blue), black 40%);
+    --Y-blue-mais-50: color-mix(in srgb, var(--Y-blue), black 50%);
+    
+    --Y-blue-menos-10: color-mix(in srgb, var(--Y-blue), white 10%);
+    --Y-blue-menos-20: color-mix(in srgb, var(--Y-blue), white 20%);
+    --Y-blue-menos-30: color-mix(in srgb, var(--Y-blue), white 30%);
+    --Y-blue-menos-40: color-mix(in srgb, var(--Y-blue), white 40%);
+    --Y-blue-menos-50: color-mix(in srgb, var(--Y-blue), white 50%);
+    --Y-blue-menos-60: color-mix(in srgb, var(--Y-blue), white 60%);
+    --Y-blue-menos-70: color-mix(in srgb, var(--Y-blue), white 70%);
+    --Y-blue-menos-80: color-mix(in srgb, var(--Y-blue), white 80%);
+    --Y-blue-menos-90: color-mix(in srgb, var(--Y-blue), white 90%);
+    --Y-blue-menos-100: color-mix(in srgb, var(--Y-blue), white 95%);
+
+    /*violet*/
+    --Y-violet: #6435c9;
+    --Y-violet-mais-10: color-mix(in srgb, var(--Y-violet), black 10%);
+    --Y-violet-mais-20: color-mix(in srgb, var(--Y-violet), black 20%);
+    --Y-violet-mais-30: color-mix(in srgb, var(--Y-violet), black 30%);
+    --Y-violet-mais-40: color-mix(in srgb, var(--Y-violet), black 40%);
+    --Y-violet-mais-50: color-mix(in srgb, var(--Y-violet), black 50%);
+    
+    --Y-violet-menos-10: color-mix(in srgb, var(--Y-violet), white 10%);
+    --Y-violet-menos-20: color-mix(in srgb, var(--Y-violet), white 20%);
+    --Y-violet-menos-30: color-mix(in srgb, var(--Y-violet), white 30%);
+    --Y-violet-menos-40: color-mix(in srgb, var(--Y-violet), white 40%);
+    --Y-violet-menos-50: color-mix(in srgb, var(--Y-violet), white 50%);
+    --Y-violet-menos-60: color-mix(in srgb, var(--Y-violet), white 60%);
+    --Y-violet-menos-70: color-mix(in srgb, var(--Y-violet), white 70%);
+    --Y-violet-menos-80: color-mix(in srgb, var(--Y-violet), white 80%);
+    --Y-violet-menos-90: color-mix(in srgb, var(--Y-violet), white 90%);
+    --Y-violet-menos-100: color-mix(in srgb, var(--Y-violet), white 95%);
+
+    /*purple*/
+    --Y-purple: #800080;
+    --Y-purple-mais-10: color-mix(in srgb, var(--Y-purple), black 10%);
+    --Y-purple-mais-20: color-mix(in srgb, var(--Y-purple), black 20%);
+    --Y-purple-mais-30: color-mix(in srgb, var(--Y-purple), black 30%);
+    --Y-purple-mais-40: color-mix(in srgb, var(--Y-purple), black 40%);
+    --Y-purple-mais-50: color-mix(in srgb, var(--Y-purple), black 50%);
+    
+    --Y-purple-menos-10: color-mix(in srgb, var(--Y-purple), white 10%);
+    --Y-purple-menos-20: color-mix(in srgb, var(--Y-purple), white 20%);
+    --Y-purple-menos-30: color-mix(in srgb, var(--Y-purple), white 30%);
+    --Y-purple-menos-40: color-mix(in srgb, var(--Y-purple), white 40%);
+    --Y-purple-menos-50: color-mix(in srgb, var(--Y-purple), white 50%);
+    --Y-purple-menos-60: color-mix(in srgb, var(--Y-purple), white 60%);
+    --Y-purple-menos-70: color-mix(in srgb, var(--Y-purple), white 70%);
+    --Y-purple-menos-80: color-mix(in srgb, var(--Y-purple), white 80%);
+    --Y-purple-menos-90: color-mix(in srgb, var(--Y-purple), white 90%);
+    --Y-purple-menos-100: color-mix(in srgb, var(--Y-purple), white 95%);
+
+    /*magenta*/
+    --Y-magenta: #c52688;
+    --Y-magenta-mais-10: color-mix(in srgb, var(--Y-magenta), black 10%);
+    --Y-magenta-mais-20: color-mix(in srgb, var(--Y-magenta), black 20%);
+    --Y-magenta-mais-30: color-mix(in srgb, var(--Y-magenta), black 30%);
+    --Y-magenta-mais-40: color-mix(in srgb, var(--Y-magenta), black 40%);
+    --Y-magenta-mais-50: color-mix(in srgb, var(--Y-magenta), black 50%);
+    
+    --Y-magenta-menos-10: color-mix(in srgb, var(--Y-magenta), white 10%);
+    --Y-magenta-menos-20: color-mix(in srgb, var(--Y-magenta), white 20%);
+    --Y-magenta-menos-30: color-mix(in srgb, var(--Y-magenta), white 30%);
+    --Y-magenta-menos-40: color-mix(in srgb, var(--Y-magenta), white 40%);
+    --Y-magenta-menos-50: color-mix(in srgb, var(--Y-magenta), white 50%);
+    --Y-magenta-menos-60: color-mix(in srgb, var(--Y-magenta), white 60%);
+    --Y-magenta-menos-70: color-mix(in srgb, var(--Y-magenta), white 70%);
+    --Y-magenta-menos-80: color-mix(in srgb, var(--Y-magenta), white 80%);
+    --Y-magenta-menos-90: color-mix(in srgb, var(--Y-magenta), white 90%);
+    --Y-magenta-menos-100: color-mix(in srgb, var(--Y-magenta), white 95%);
+
+    /*rose*/
+    --Y-rose: #ff80ed;
+    --Y-rose-mais-10: color-mix(in srgb, var(--Y-rose), black 10%);
+    --Y-rose-mais-20: color-mix(in srgb, var(--Y-rose), black 20%);
+    --Y-rose-mais-30: color-mix(in srgb, var(--Y-rose), black 30%);
+    --Y-rose-mais-40: color-mix(in srgb, var(--Y-rose), black 40%);
+    --Y-rose-mais-50: color-mix(in srgb, var(--Y-rose), black 50%);
+    
+    --Y-rose-menos-10: color-mix(in srgb, var(--Y-rose), white 10%);
+    --Y-rose-menos-20: color-mix(in srgb, var(--Y-rose), white 20%);
+    --Y-rose-menos-30: color-mix(in srgb, var(--Y-rose), white 30%);
+    --Y-rose-menos-40: color-mix(in srgb, var(--Y-rose), white 40%);
+    --Y-rose-menos-50: color-mix(in srgb, var(--Y-rose), white 50%);
+    --Y-rose-menos-60: color-mix(in srgb, var(--Y-rose), white 60%);
+    --Y-rose-menos-70: color-mix(in srgb, var(--Y-rose), white 70%);
+    --Y-rose-menos-80: color-mix(in srgb, var(--Y-rose), white 80%);
+    --Y-rose-menos-90: color-mix(in srgb, var(--Y-rose), white 90%);
+    --Y-rose-menos-100: color-mix(in srgb, var(--Y-rose), white 95%);
+
+    /*brown*/
+    --Y-brown: #a5673f;
+    --Y-brown-mais-10: color-mix(in srgb, var(--Y-brown), black 10%);
+    --Y-brown-mais-20: color-mix(in srgb, var(--Y-brown), black 20%);
+    --Y-brown-mais-30: color-mix(in srgb, var(--Y-brown), black 30%);
+    --Y-brown-mais-40: color-mix(in srgb, var(--Y-brown), black 40%);
+    --Y-brown-mais-50: color-mix(in srgb, var(--Y-brown), black 50%);
+    
+    --Y-brown-menos-10: color-mix(in srgb, var(--Y-brown), white 10%);
+    --Y-brown-menos-20: color-mix(in srgb, var(--Y-brown), white 20%);
+    --Y-brown-menos-30: color-mix(in srgb, var(--Y-brown), white 30%);
+    --Y-brown-menos-40: color-mix(in srgb, var(--Y-brown), white 40%);
+    --Y-brown-menos-50: color-mix(in srgb, var(--Y-brown), white 50%);
+    --Y-brown-menos-60: color-mix(in srgb, var(--Y-brown), white 60%);
+    --Y-brown-menos-70: color-mix(in srgb, var(--Y-brown), white 70%);
+    --Y-brown-menos-80: color-mix(in srgb, var(--Y-brown), white 80%);
+    --Y-brown-menos-90: color-mix(in srgb, var(--Y-brown), white 90%);
+    --Y-brown-menos-100: color-mix(in srgb, var(--Y-brown), white 95%);
+
+    /*grey*/
+    --Y-grey: #aaaaaa;
+    --Y-grey-mais-10: color-mix(in srgb, var(--Y-grey), black 10%);
+    --Y-grey-mais-20: color-mix(in srgb, var(--Y-grey), black 20%);
+    --Y-grey-mais-30: color-mix(in srgb, var(--Y-grey), black 30%);
+    --Y-grey-mais-40: color-mix(in srgb, var(--Y-grey), black 40%);
+    --Y-grey-mais-50: color-mix(in srgb, var(--Y-grey), black 50%);
+    
+    --Y-grey-menos-10: color-mix(in srgb, var(--Y-grey), white 10%);
+    --Y-grey-menos-20: color-mix(in srgb, var(--Y-grey), white 20%);
+    --Y-grey-menos-30: color-mix(in srgb, var(--Y-grey), white 30%);
+    --Y-grey-menos-40: color-mix(in srgb, var(--Y-grey), white 40%);
+    --Y-grey-menos-50: color-mix(in srgb, var(--Y-grey), white 50%);
+    --Y-grey-menos-60: color-mix(in srgb, var(--Y-grey), white 60%);
+    --Y-grey-menos-70: color-mix(in srgb, var(--Y-grey), white 70%);
+    --Y-grey-menos-80: color-mix(in srgb, var(--Y-grey), white 80%);
+    --Y-grey-menos-90: color-mix(in srgb, var(--Y-grey), white 90%);
+    --Y-grey-menos-100: color-mix(in srgb, var(--Y-grey), white 95%);
+
+    /*neutral*/
+    --Y-neutral: #64748b;
+    --Y-neutral-mais-10: color-mix(in srgb, var(--Y-neutral), black 10%);
+    --Y-neutral-mais-20: color-mix(in srgb, var(--Y-neutral), black 20%);
+    --Y-neutral-mais-30: color-mix(in srgb, var(--Y-neutral), black 30%);
+    --Y-neutral-mais-40: color-mix(in srgb, var(--Y-neutral), black 40%);
+    --Y-neutral-mais-50: color-mix(in srgb, var(--Y-neutral), black 50%);
+    
+    --Y-neutral-menos-10: color-mix(in srgb, var(--Y-neutral), white 10%);
+    --Y-neutral-menos-20: color-mix(in srgb, var(--Y-neutral), white 20%);
+    --Y-neutral-menos-30: color-mix(in srgb, var(--Y-neutral), white 30%);
+    --Y-neutral-menos-40: color-mix(in srgb, var(--Y-neutral), white 40%);
+    --Y-neutral-menos-50: color-mix(in srgb, var(--Y-neutral), white 50%);
+    --Y-neutral-menos-60: color-mix(in srgb, var(--Y-neutral), white 60%);
+    --Y-neutral-menos-70: color-mix(in srgb, var(--Y-neutral), white 70%);
+    --Y-neutral-menos-80: color-mix(in srgb, var(--Y-neutral), white 80%);
+    --Y-neutral-menos-90: color-mix(in srgb, var(--Y-neutral), white 90%);
+    --Y-neutral-menos-100: color-mix(in srgb, var(--Y-neutral), white 95%);
+    
+    /*black*/
+    --Y-black: #2e2e2e;
+    --Y-black-mais-10: color-mix(in srgb, var(--Y-black), black 10%);
+    --Y-black-mais-20: color-mix(in srgb, var(--Y-black), black 20%);
+    --Y-black-mais-30: color-mix(in srgb, var(--Y-black), black 30%);
+    --Y-black-mais-40: color-mix(in srgb, var(--Y-black), black 40%);
+    --Y-black-mais-50: color-mix(in srgb, var(--Y-black), black 50%);
+    
+    --Y-black-menos-10: color-mix(in srgb, var(--Y-black), white 10%);
+    --Y-black-menos-20: color-mix(in srgb, var(--Y-black), white 20%);
+    --Y-black-menos-30: color-mix(in srgb, var(--Y-black), white 30%);
+    --Y-black-menos-40: color-mix(in srgb, var(--Y-black), white 40%);
+    --Y-black-menos-50: color-mix(in srgb, var(--Y-black), white 50%);
+    --Y-black-menos-60: color-mix(in srgb, var(--Y-black), white 60%);
+    --Y-black-menos-70: color-mix(in srgb, var(--Y-black), white 70%);
+    --Y-black-menos-80: color-mix(in srgb, var(--Y-black), white 80%);
+    --Y-black-menos-90: color-mix(in srgb, var(--Y-black), white 90%);
+    --Y-black-menos-100: color-mix(in srgb, var(--Y-black), white 95%);
+
+    --Y-disabled-color: #bbbbbb;
+    --Y-border-color: var(--y-color-menos-50,var(--Y-grey-menos-50));
+
+    /*magin-padding*/
+    --Y-mp-05:  0.5rem;
+    --Y-mp-1:   1rem;
+    --Y-mp-15:  1.5rem;
+    --Y-mp-2:   2rem;
+    --Y-mp-25:  2.5rem;
+    --Y-mp-3:   3rem;
+
+    --Y-font-size: 1rem;
+    --Y-txt-indent: 10mm;
+    --Y-grid-col: 12;
+    --Y-sm-fator: 0.75;
+    --Y-lg-fator: 1.25;
+}
