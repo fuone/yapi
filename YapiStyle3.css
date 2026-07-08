@@ -5,3 +5,64 @@
 * Dev: Fuone
 * fuone.dev@gmaill.com
 **************************/
+
+
+
+/*------------------------------*
+/ FuoneTag
+/-------------------------------*/
+.fuone-tag{
+  border: 1px dotted #cccccc; */
+  border-radius: 6px;
+  background: #eee;
+  display: flex;
+  padding: 5px 10px;
+  max-width: 350px;
+  max-height: 100px;
+  align-items: center;
+  justify-self: center;
+  opacity: 0.5;
+  /* zoom: 80%; */
+  transition: transform 0.5s ease, opacity 0.5s ease-out;
+}
+.fuone-tag.no-bg{
+  background: transparent !important;
+}
+.fuone-tag.no-border{
+  border: transparent !important;
+}
+.fuone-tag:hover{
+  opacity: 1;
+}
+.fuone-tag a{
+  text-decoration: none;
+}
+.fuone-icon{
+  --f-icon-color-1: #94a3b8;
+  --f-icon-color-2: #64748b;
+  --f-icon-color-3: #94a3b8;
+  --f-icon-color-4: #64748b;
+  --f-icon-color-full: var(--f-icon-color-1);
+  min-width: 80px;
+  transition: transform 0.5s ease, opacity 0.5s ease-out;
+}
+.fuone-icon:hover{
+  --f-icon-color-1: #3ab1ef;
+  --f-icon-color-2: #287ab6;
+}
+.f-icon-color-1{
+  fill: var(--f-icon-color-1);
+  color: var(--f-icon-color-1);
+}
+.f-icon-color-2{
+  fill: var(--f-icon-color-2);
+  color: var(--f-icon-color-2);
+}
+.f-icon-color-3{
+  fill: var(--f-icon-color-3);
+  color: var(--f-icon-color-3);
+}
+.f-icon-color-4{
+  fill: var(--f-icon-color-4);
+  color: var(--f-icon-color-4);
+}
