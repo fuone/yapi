@@ -7,5 +7,5 @@ https://b.link/f/aboutme
 >**CDN**:
 >- YapiStyle:<br/>Folha de Estilo CSS<br/> _[https://cdn.jsdelivr.net/gh/fuone/yapi@main/YapiStyle3.css](https://cdn.jsdelivr.net/gh/fuone/yapi@main/YapiStyle3.css)_
 >- YapiStyleRoot:<br/>Folha de Estilo CSS (Root)<br/> _[https://cdn.jsdelivr.net/gh/fuone/yapi@main/YapiStyleRoot3.css](https://cdn.jsdelivr.net/gh/fuone/yapi@main/YapiStyleRoot3.css)_
->- YapiScript:<br/>Folha de Estilo CSS<br/> _[https://cdn.jsdelivr.net/gh/fuone/yapi@main/YapiScritp3.js](https://cdn.jsdelivr.net/gh/fuone/yapi@main/YapiScritp3.js)_
+>- YapiScript:<br/>Javascritp<br/> _[https://cdn.jsdelivr.net/gh/fuone/yapi@main/YapiScritp3.js](https://cdn.jsdelivr.net/gh/fuone/yapi@main/YapiScritp3.js)_
 
