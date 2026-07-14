@@ -1326,6 +1326,7 @@
 /*------------------------------*
 / SHADOW
 /-------------------------------*/
+  .using-shadow{}
   .shadow{
     --y-shadow: 0 0.5rem 1rem var(--y-shadow-color, #dee2e6);
     --y-shadow-width: 1px;
@@ -1376,6 +1377,7 @@
 /*------------------------------*
 / OPACIDADE
 /-------------------------------*/
+	.using-opacity{}
   .opacity-10{--y-opacity: 0.10 !important;opacity: var(--y-opacity);}
   .opacity-25{--y-opacity: 0.25 !important;opacity: var(--y-opacity);}
   .opacity-50{--y-opacity: 0.50 !important;opacity: var(--y-opacity);}
@@ -1385,6 +1387,7 @@
 /*------------------------------*
 / ALTURA E LARGURA
 /-------------------------------*/
+	.using-altura-e-largura{}
   .w-fit {    width: fit-content !important;}
   .w-fill{    width: -webkit-fill-available !important;}
   .w-min {    width: min-content !important;}
@@ -1521,6 +1524,7 @@
 /*------------------------------*
 / POSITION
 /-------------------------------*/
+	.using-position{}
   .pos-absolute { position: absolute !important;}/***/
   .pos-fixed {    position: fixed !important;}/***/
   .pos-relative { position: relative !important;}/***/
@@ -1532,6 +1536,7 @@
 /*------------------------------*
 / DISPLAY
 /-------------------------------*/
+	.using-display{}
   .d-none, .hide.hide, [hidden] {display: none !important}/***/
   .d-inherit{display: inherit !important}
   .d-initial{display: initial !important}
@@ -1555,6 +1560,7 @@
 /*------------------------------*
 / ROTACAO
 /-------------------------------*/
+	.using-rotate{}
   .rotate{
     -webkit-transform: rotate(var(--y-rotate-angle, 0));
     transform: rotate(var(--y-rotate-angle, 0));
@@ -1580,6 +1586,7 @@
 /*------------------------------*
 / ALINHAMENTO
 /-------------------------------*/
+	.using-alinhamento{}
   .just-cont-center{   justify-content:center !important;}
   .just-cont-start{    justify-content:start !important;}
   .just-cont-end{      justify-content:end !important;}
@@ -1663,6 +1670,7 @@
 /*------------------------------*
 / ZOOM
 /-------------------------------*/
+	.using-zoom{}
   .z-05{zoom: 05%;}
   .z-10{zoom: 10%;}
   .z-15{zoom: 15%;}
@@ -1965,6 +1973,7 @@
 /*------------------------------*
 / ICON
 /-------------------------------*/
+	.using-icon{}
   .i{
     font-size: var(--y-i-size, var(--Y-icon-size));
     display: inline-block;
@@ -2030,6 +2039,7 @@
 /*------------------------------*
 / Gap
 /-------------------------------*/
+	.using-gap{}
   .gap-0{gap: 0 !important;}
   .gap-02{gap: 2px !important;}
   .gap-04{gap: 4px !important;}
@@ -2132,6 +2142,7 @@
 /*------------------------------*
 / LINHAS
 /-------------------------------*/
+	.using-linhas{}
   .yapi .row{
     --y-gutter-x: 1.5rem;
     --y-gutter-y: 0;
@@ -2159,6 +2170,157 @@
 /*------------------------------*
 / ALERT
 /-------------------------------*/
+	.using-alert{
+    /*
+    1.  <div class="alert closing" role="alert">Este é um "alert".</div>
+    2.  <div class="alert red closing" role="alert">Este é um "alert vermelgo".</div>
+    3.  <div class="alert orange closing" role="alert">
+          Este é um "alert" orange com botão de fechar.
+          <buttom class="btn-close" data-dismiss="alert" aria-label="Close"></buttom>
+        </div>
+    4.  <div class="alert" role="alert">
+          <span class="">Este é um "alert" com título. </span>
+          <p class="">É formado com as classes "alert" e "closing" (opcional. Somente se houver botão de fechar); "txt" e "indent" (opcional), para o texto; "border" e "border-all", para as bordas (opcional);</p>
+          <p>(X) A clsse de cor pode ser declarada no elemento superior (pai, avô, bisavô...).</p>
+        </div>
+    5.  <div class="alert" role="alert">
+          <span class="alert-title">Este é um "alert" com título. </span>
+          <span class="alert-subtitle">E com subtítulo. </span>
+          <p class="">É formado com as classes "alert" e "closing" (opcional. Somente se houver botão de fechar); "txt" e "indent" (opcional), para o texto; "border" e "border-all", para as bordas (opcional);</p>
+          <p>(X) A clsse de cor pode ser declarada no elemento superior (pai, avô, bisavô...).</p>
+        </div>
+    6.  <div class="alert closing" role="alert">
+          <span class="alert-title">Este é um "alert" com título e botão fechar. </span>
+          <span class="alert-subtitle">E com subtítulo. </span>
+          <p class="">É formado com as classes "alert" e "closing" (opcional. Somente se houver botão de fechar); "txt" e "indent" (opcional), para o texto; "border" e "border-all", para as bordas (opcional);</p>
+          <p>(X) A clsse de cor pode ser declarada no elemento superior (pai, avô, bisavô...).</p>
+          <buttom class="btn-close" data-dismiss="alert" aria-label="Close"></buttom>
+        </div>
+
+        ATENÇÃO: para usar o recurso "closing" é necessária a função JS.
+    */
+  }
+
+  .yapi .alert{
+    --y-alert-fator: 1;
+    --y-alert-txt-color:     var(--y-txt-color, var(--y-color-mais-10, var(--Y-grey-mais-50)));
+    --y-alert-left-color:    var(--y-bg-color,var(--y-color-menos-80,var(--Y-grey-menos-100)));
+    --y-alert-right-color:   var(--y-bg-color,var(--y-color-menos-80,var(--Y-grey-menos-100)));
+
+    /*--y-alert-bg-1-color:    var(--y-bg-color,var(--y-color-menos-80,var(--Y-grey-menos-100)));*/
+    --y-alert-bg-color:      linear-gradient(to right, var(--y-alert-left-color), var(--y-alert-right-color));
+
+    --y-alert-border-color:  var(--y-border-color,var(--y-color-menos-10,var(--Y-grey-menos-10)));
+    --y-alert-border-radius: 0.5rem;
+    --y-alert-border-width:  var(--y-border-width, var(--Y-border-width, 1px));
+    --y-alert-border-style:  var(--y-border-style, var(--Y-border-style, solid));
+    --y-alert-border:        var(--y-alert-border-width) var(--y-alert-border-style) var(--y-alert-border-color);
+    
+    --y-alert-padding-y:     calc(15px * var(--y-alert-fator));
+    --y-alert-padding-x:     calc(20px * var(--y-alert-fator));
+    --y-alert-font-size:     calc(var(--y-font-size,var(--Y-font-size, 1rem)) * var(--y-alert-fator));
+    --y-alert-opacity:       var(--y-opacity, var(--Y-opacity));
+
+
+    /*display: inline-block;*/
+    /*flex-wrap: nowrap;*/
+    position: relative;
+    opacity: var(--y-alert-opacity);
+    color: var(--y-alert-txt-color);
+    background: linear-gradient(to right, var(--y-alert-left-color), var(--y-alert-right-color));
+    background: -webkit-gradient(linear, left top, right top, from(var(--y-alert-left-color)), to(var(--y-alert-right-color)));
+    background: -webkit-linear-gradient(left, var(--y-alert-left-color), var(--y-alert-right-color));
+
+    border: var(--y-alert-border);
+    border-radius: var(--y-alert-border-radius);
+
+    padding: var(--y-alert-padding-y) var(--y-alert-padding-x);/**/
+    margin: 1rem 0;    
+    font-size: var(--y-alert-font-size);
+    font-weight: inherit;
+    line-height: normal;/**/
+    text-align: justify;
+    white-space: normal;
+    vertical-align: middle;
+    align-content: center;
+    align-items: center;
+    align-self: center;    
+    user-select: text;
+  }
+  .alert.disabled,
+  .alert.disabled .alert-body{
+    --y-l-color: #bbbbbb;
+    --y-alert-txt-color:    var(--y-l-color);
+    --y-alert-bg-color:     var(--Y-grey-menos-100);
+    --y-alert-border-color: var(--y-l-color);
+
+    color: var(--y-alert-txt-color) !important;
+    background: var(--y-alert-bg-color) !important;
+    border-color: var(--y-alert-border-color);
+  }
+
+  .alert.alert-outlined{background: white !important;}
+
+  .alert>.alert-title{
+    display: block;
+    font-weight: 700;
+    color: var(--y-alert-title-color,var(--y-alert-txt-color));
+    font-size: calc(var(--y-alert-font-size)* 1.3);
+  }
+  .alert>.alert-subtitle{
+    display: block;
+    font-size: calc(var(--y-alert-font-size)* 1);
+    color: var(--y-alert-subtitle-color,var(--y-alert-txt-color));
+    font-weight: 600;
+    font-style: oblique;
+    padding-bottom: .5rem;
+  }
+  .alert.indent, .alert>.indent{text-indent: 10mm;}
+  .alert p{
+    margin: 0;
+    padding-top: 5px;
+    line-height:1.2;
+  }
+
+  .alert.closing{
+    padding-right: calc(3rem * var(--y-alert-fator));
+    transition: opacity 0.5s ease;
+  }
+  .alert.closing>.btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5rem 1rem;
+    margin-left: 15px;
+    opacity: 0.5;
+    color: inherit;
+    float: right;
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: normal;/*1.5;*/
+    background: none !important;
+    border: none;
+    -webkit-appearance: none;
+  }
+  .alert.closing>.btn-close::before{content: "x";}
+  .alert.closing>.btn-close:hover{
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  /*--- variação de cores específicas ---*/
+  .alert.yellow, .yellow .alert,
+  .alert.cyan, .cyan .alert{
+    --y-alert-txt-color:       var(--y-color-mais-40);
+    --y-alert-border-color:    var(--y-color-mais-20);
+  }
+  .alert.gradient{
+    --y-alert-txt-color:    var(--y-txt-color, var(--y-color-mais-10, var(--Y-grey-mais-50)));
+    --y-alert-left-color:   var(--y-bg-color-1, var(--y-bg-color, var(--y-color-menos-80, var(--Y-grey-menos-100))));
+    --y-alert-right-color:  var(--y-bg-color-2, var(--y-bg-color, var(--y-color-menos-80, var(--Y-grey-menos-100))));
+  }
+/*--- fim ALERT --- */
 /*------------------------------*
 / BADGE
 /-------------------------------*/
@@ -2180,58 +2342,60 @@
 /*------------------------------*
 / FuoneTag
 /-------------------------------*/
-.fuone-tag{
-  border: 1px dotted #cccccc; */
-  border-radius: 6px;
-  background: #eee;
-  display: flex;
-  padding: 5px 10px;
-  max-width: 350px;
-  max-height: 100px;
-  align-items: center;
-  justify-self: center;
-  opacity: 0.5;
-  /* zoom: 80%; */
-  transition: transform 0.5s ease, opacity 0.5s ease-out;
-}
-.fuone-tag.no-bg{
-  background: transparent !important;
-}
-.fuone-tag.no-border{
-  border: transparent !important;
-}
-.fuone-tag:hover{
-  opacity: 1;
-}
-.fuone-tag a{
-  text-decoration: none;
-}
-.fuone-icon{
-  --f-icon-color-1: #94a3b8;
-  --f-icon-color-2: #64748b;
-  --f-icon-color-3: #94a3b8;
-  --f-icon-color-4: #64748b;
-  --f-icon-color-full: var(--f-icon-color-1);
-  min-width: 80px;
-  transition: transform 0.5s ease, opacity 0.5s ease-out;
-}
-.fuone-icon:hover{
-  --f-icon-color-1: #3ab1ef;
-  --f-icon-color-2: #287ab6;
-}
-.f-icon-color-1{
-  fill: var(--f-icon-color-1);
-  color: var(--f-icon-color-1);
-}
-.f-icon-color-2{
-  fill: var(--f-icon-color-2);
-  color: var(--f-icon-color-2);
-}
-.f-icon-color-3{
-  fill: var(--f-icon-color-3);
-  color: var(--f-icon-color-3);
-}
-.f-icon-color-4{
-  fill: var(--f-icon-color-4);
-  color: var(--f-icon-color-4);
-}
+	.using-fuone-tag{}
+	.fuone-tag{
+	  border: 1px dotted #cccccc; */
+	  border-radius: 6px;
+	  background: #eee;
+	  display: flex;
+	  padding: 5px 10px;
+	  max-width: 350px;
+	  max-height: 100px;
+	  align-items: center;
+	  justify-self: center;
+	  opacity: 0.5;
+	  /* zoom: 80%; */
+	  transition: transform 0.5s ease, opacity 0.5s ease-out;
+	}
+	.fuone-tag.no-bg{
+	  background: transparent !important;
+	}
+	.fuone-tag.no-border{
+	  border: transparent !important;
+	}
+	.fuone-tag:hover{
+	  opacity: 1;
+	}
+	.fuone-tag a{
+	  text-decoration: none;
+	}
+	.fuone-icon{
+	  --f-icon-color-1: #94a3b8;
+	  --f-icon-color-2: #64748b;
+	  --f-icon-color-3: #94a3b8;
+	  --f-icon-color-4: #64748b;
+	  --f-icon-color-full: var(--f-icon-color-1);
+	  min-width: 80px;
+	  transition: transform 0.5s ease, opacity 0.5s ease-out;
+	}
+	.fuone-icon:hover{
+	  --f-icon-color-1: #3ab1ef;
+	  --f-icon-color-2: #287ab6;
+	}
+	.f-icon-color-1{
+	  fill: var(--f-icon-color-1);
+	  color: var(--f-icon-color-1);
+	}
+	.f-icon-color-2{
+	  fill: var(--f-icon-color-2);
+	  color: var(--f-icon-color-2);
+	}
+	.f-icon-color-3{
+	  fill: var(--f-icon-color-3);
+	  color: var(--f-icon-color-3);
+	}
+	.f-icon-color-4{
+	  fill: var(--f-icon-color-4);
+	  color: var(--f-icon-color-4);
+	}
+/*--- fim FUONE-TAG --- */
