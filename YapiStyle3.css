@@ -2330,6 +2330,337 @@
 /*------------------------------*
 / BOTOES
 /-------------------------------*/
+	.using-btn{}
+	.ybtn,
+  .yapi .btn,
+  .yapi button,
+  [type=button],
+  [type=reset],
+  [type=submit],
+  [role=button]
+  {-webkit-appearance: button;}
+
+  .ybtn:not(:disabled),
+  .yapi .btn:not(:disabled),
+  .yapi button:not(:disabled),
+  [type=button]:not(:disabled),
+  [type=reset]:not(:disabled),
+  [type=submit]:not(:disabled),
+  [role=button]:not(:disabled)
+  {cursor: pointer;}
+
+  .ybtn:focus:not(:focus-visible),
+  .yapi .btn:focus:not(:focus-visible),
+  .yapi button:focus:not(:focus-visible){outline: 0;}
+
+  .ybtn,
+  .yapi .btn, 
+  .yapi button,[type=button]{
+    --y-btn-py: 0.575rem;
+    --y-btn-px: 0.75rem;
+    --y-btn-my: 0.25rem;
+    --y-btn-mx: 0.25rem;
+    --y-btn-fator: 1;
+
+    --y-btn-txt-color:    var(--y-txt-color, var(--y-color-menos-100, var(--Y-black-mais-50)));
+    --y-btn-bg-color:     var(--y-bg-color,  var(--y-color-menos-10,  var(--Y-grey-menos-70)));	
+    --y-btn-border-color: var(--y-btn-bg-color);
+
+    --y-btn-txt-hover-color:    var(--y-txt-hover-color,    var(--y-btn-txt-color));    
+    --y-btn-bg-hover-color:     var(--y-bg-hover-color,     var(--y-color-mais-20, var(--Y-grey-menos-50)));	
+    --y-btn-border-hover-color: var(--y-border-hover-color, var(--y-btn-bg-hover-color));
+
+    --y-btn-txt-disabled-color:    var(--Y-grey);
+    --y-btn-bg-disabled-color:     var(--Y-grey-menos-90);
+    --y-btn-border-disabled-color: var(--y-btn-bg-disabled-color);
+
+    --y-btn-border-radius: 0.25rem;
+    --y-btn-border-width:  var(--y-border-width,     var(--Y-border-width, 1px));
+    --y-btn-border-style:  var(--y-border-style,     var(--Y-border-style, solid));
+    --y-btn-border:        var(--y-btn-border-width) var(--y-btn-border-style) var(--y-btn-border-color);
+    
+    --y-btn-box-shadow-hover: var(--y-box-shadow-hover);
+    --y-btn-padding-y: calc(var(--y-btn-py) * var(--y-btn-fator));
+    --y-btn-padding-x: calc(var(--y-btn-px) * var(--y-btn-fator));
+    --y-btn-font-size: calc(var(--Y-font-size) * var(--y-btn-fator));
+    --y-btn-font-weight: var(--y-font-weight, var(--Y-font-weight));
+    --y-btn-box-shadow: none;
+    --y-btn-box-shadow-hover: var(--y-btn-box-shadow);
+    --y-btn-transition-time: 0.35s;
+    
+    display: inline-flex;	
+    color: var(--y-btn-txt-color);
+    background: var(--y-btn-bg-color);
+    border: var(--y-btn-border);
+    border-radius: var(--y-btn-border-radius);	
+    box-shadow: var(--y-btn-box-shadow);
+    
+    padding: var(--y-btn-padding-y) var(--y-btn-padding-x);
+    margin: var(--y-btn-margin-y) var(--y-btn-margin-x);
+    font-size: var(--y-btn-font-size) !important;
+    font-weight: var(--y-btn-font-weight) !important;
+    line-height: 1;  
+    text-decoration: none;
+    text-align: center !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;	
+    vertical-align: middle;
+    align-content: center;
+    align-items: center;
+    align-self:center;	
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    cursor: pointer;	
+    transition: 
+      color var(--y-btn-transition-time) ease-in-out, background-color var(--y-btn-transition-time) ease-in-out,
+      border-color var(--y-btn-transition-time) ease-in-out, box-shadow var(--y-btn-transition-time) ease-in-out;	
+  }
+
+  .ybtn:hover, .yapi .btn:hover, .yapi button:hover, 
+  .ybtn:active, .yapi .btn:active, .yapi button:active,
+  .ybtn:focus, .yapi .btn:focus, .yapi button:focus {
+    color: var(--y-btn-txt-hover-color) !important;
+    background-color: var(--y-btn-bg-hover-color) !important;
+    border-color: var(--y-btn-border-hover-color) !important;
+    box-shadow: var(--y-btn-box-shadow-hover) !important;
+  }
+
+  .ybtn.disabled, .ybtn:disabled,
+  .yapi .btn.disabled,
+  .yapi .btn:disabled,
+  .ybtn:hover:disabled, 
+  .yapi .btn:hover:disabled,
+  .yapi button.disabled,
+  .yapi button:disabled,
+  .yapi button:hover:disabled,
+  [type=button]:disabled,
+  [type=reset]:disabled,
+  [type=submit]:disabled {
+    --y-btn-txt-hover-color:    var(--y-btn-txt-disabled-color);
+    --y-btn-bg-hover-color:     var(--y-btn-bg-disabled-color);
+    --y-btn-border-hover-color: var(--y-btn-border-disabled-color);
+    
+    color: var(--y-btn-txt-disabled-color) !important;
+    background-color: var(--y-btn-bg-disabled-color) !important;
+    border-color: var(--y-btn-border-disabled-color) !important;
+    cursor: not-allowed;
+  }
+
+  .ybtn.btn-outlined, 
+  .yapi .btn.btn-outlined{
+    --y-btn-txt-color:       var(--y-default-color, var(--Y-grey-mais-10));/**/
+    --y-btn-txt-hover-color: var(--y-color-menos-90,var(--Y-black-mais-50));/**/
+    --y-btn-bg-color:        var(--y-default-color, var(--Y-grey-menos-70));/**/
+    --y-btn-bg-hover-color:  var(--y-btn-bg-color);   
+    --y-btn-border-color:    var(--y-btn-txt-color);/**/
+    --y-btn-border-width:    1.5px;/**/
+    --y-btn-transition:      var(--y-tn-transition-time, .4s);
+    
+    background-color: transparent;
+  }
+
+  .btn.btn-circle{
+    --y-wh: 50px;
+    opacity: var(--y-opacity);
+    border-radius: 50% !important;
+    display: flex;
+    flex-shrink: 0;
+    /*height: var(--y-wh);*/
+    /*width: var(--y-wh);*/
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+  }
+  .btn.btn-circle-2{
+  /*width: 10%;            /* Responsivo à largura do container */
+  aspect-ratio: 1 / 1;   /* Mantém sempre o formato de quadrado */
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;     /* Se for uma imagem, evita distorção */
+  overflow: hidden;
+  }
+
+  .btn.btn-one-char{
+    --y-btn-py: 0.275rem;
+    --y-btn-px: 0.55rem;
+  }
+
+  .btn.btn-mini,
+  .btn.btn-sm{
+    --y-btn-fator: var(--Y-sm-fator);
+  }
+
+  .btn.btn-large,
+  .btn.btn-lg{
+    --y-btn-fator: var(--Y-lg-fator);
+  }
+
+  .btn.btn-light,
+  .btn.bg-light{
+    --y-btn-txt-color:    var(--y-txt-color, var(--y-color-menos-10, var(--Y-black-menos-10)));
+    --y-btn-bg-color:     var(--y-bg-color, var(--y-color-menos-90, var(--Y-grey-menos-90)));
+    --y-btn-border-color: var(--y-btn-bg-color);
+    
+    --y-txt-hover-color:    var(--y-btn-txt-color);
+    --y-bg-hover-color:     var(--y-color-menos-80, var(--Y-grey-menos-80));
+    --y-border-hover-color: var(--y-bg-hover-color);
+  }
+  .btn.btn-dark,
+  .btn.bg-dark{
+    --y-btn-txt-color:    var(--y-txt-color, var(--y-color-menos-100, var(--Y-grey-menos-100)));
+    --y-btn-bg-color:     var(--y-bg-color, var(--y-dark-color, var(--Y-grey-mais-50)));
+    --y-btn-border-color: var(--y-btn-bg-color);
+
+    --y-txt-hover-color:    var(--y-btn-txt-color);
+    --y-bg-hover-color:     var(--y-color-mais-20, var(--Y-grey-mais-20));
+    --y-border-hover-color: var(--y-bg-hover-color);
+  }
+    .btn.btn-vivid,
+    .btn.bg-vivid{
+    --y-btn-txt-color:    var(--y-txt-color, var(--y-color-menos-100, var(--Y-grey-menos-100)));
+    --y-btn-bg-color:     var(--y-bg-color, var(--y-vivid-color, var(--Y-grey-mais-50)));
+    --y-btn-border-color: var(--y-btn-bg-color);
+
+    --y-txt-hover-color:    var(--y-btn-txt-color);
+    --y-bg-hover-color:     var(--y-color-menos-20, var(--Y-grey-mais-20));
+    --y-border-hover-color: var(--y-bg-hover-color);
+  }
+
+  .btn.btn-custom.btn-custom{}
+  .btn.btn-custom:hover.btn-custom:hover{}
+
+  /*--- variações de hover ---*/
+  .btn.btn-h2{
+    --y-btn-txt-hover-color: var(--y-btn-border-hover-color);
+    --y-btn-border-hover-color: var(--y-default-color, var(--Y-grey));/**/
+    --y-btn-border-width: 1.5px;/**/
+    --y-btn-transition: var(--y-btn-transition-time, .4s);
+  }
+  .btn.btn-h2:hover{background-color: transparent !important;/**/}
+
+  .btn.btn-h3,
+  .btn.btn-h3a,
+  .btn.btn-h3a-t,
+  .btn.btn-h3a-r,
+  .btn.btn-h3a-b,
+  .btn.btn-h3a-l{
+    --y-btn-txt-color:       var(--y-default-color, var(--Y-grey));
+    --y-btn-txt-hover-color: var(--y-color-menos-90,var(--Y-black));/**/
+    --y-btn-bg-color:        var(--y-default-color, var(--Y-grey));/**/
+    --y-btn-bg-hover-color:  var(--y-default-color, var(--Y-grey-menos-70));	
+    --y-btn-border-color:    var(--y-btn-bg-color);;/**/
+    --y-btn-border-width:    1.5px;/**/	
+    --y-btn-font-weight:     500;
+    --y-btn-transition-time: 1s;/**/
+    --y-btn-transition: all var(--y-btn-transition-time);
+    
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+  }
+
+  .btn.btn-h3::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -35px;
+    transform: skewX(45deg);
+    background-color: var(--y-btn-bg-hover-color);
+    color: var(--y-btn-txt-hover-color);
+    z-index: -1;
+    transition: all var(--y-btn-transition-time);
+  }
+
+  .btn.btn-h3:hover{background: transparent !important;}
+  .btn.btn-h3:hover::before{width: 200%;}
+
+  .btn.btn-h3a,
+  .btn.btn-h3a-t,
+  .btn.btn-h3a-r,
+  .btn.btn-h3a-b,
+  .btn.btn-h3a-l{
+    --y-btn-transition-time: 0.5s;
+    box-shadow: inset 0 0 0 0 var(--y-btn-bg-hover-color);/**/
+  }
+
+  .btn.btn-h3a:hover{box-shadow:   inset 200px 0 0 0  var(--y-btn-bg-hover-color) !important;}
+  .btn.btn-h3a-t:hover{box-shadow: inset 0 100px 0 0  var(--y-btn-bg-hover-color) !important;}
+  .btn.btn-h3a-r:hover{box-shadow: inset -200px 0 0 0 var(--y-btn-bg-hover-color) !important;}
+  .btn.btn-h3a-b:hover{box-shadow: inset 0 -100px 0 0 var(--y-btn-bg-hover-color) !important;}
+  .btn.btn-h3a-l:hover{box-shadow: inset 200px 0 0 0  var(--y-btn-bg-hover-color) !important;}
+
+  .btn.btn-h3a:active,
+  .btn.btn-h3a-t:active,
+  .btn.btn-h3a-r:active,
+  .btn.btn-h3a-b:active,
+  .btn.btn-h3a-l:active{transform: scale(0.9);}
+
+  /*--- variação de cores específicas ---*/
+  .btn.yellow{
+    --y-btn-txt-color:       var(--y-color-mais-50);
+    --y-btn-txt-hover-color: var(--y-color-mais-50);
+    --y-btn-bg-hover-color:  var(--y-color-menos-40);
+  }
+  .btn.btn-outlined.yellow{
+    --y-btn-txt-color:      var(--y-default-color);
+    --y-btn-border-color:   var(--y-btn-txt-color) !important;
+    --y-btn-bg-hover-color: var(--y-default-color);
+  }
+  .btn.btn-h2.yellow{
+    --y-btn-txt-hover-color:    var(--y-default-color);
+    --y-btn-border-hover-color: var(--y-btn-txt-hover-color) !important;
+  }
+
+  .btn.btn-h3.yellow,
+  .btn.btn-h3a.yellow,
+  .btn.btn-h3a-t.yellow,
+  .btn.btn-h3a-r.yellow,
+  .btn.btn-h3a-b.yellow,
+  .btn.btn-h3a-l.yellow{
+    --y-btn-txt-color:       var(--y-default-color);
+    --y-btn-txt-hover-color: var(--y-color-mais-50);
+    --y-btn-border-color:    var(--y-btn-txt-color) !important;
+    --y-btn-bg-hover-color:  var(--y-default-color);
+  }
+
+  .btn.cyan{
+    --y-t-color:  var(--y-color-mais-20);
+    --y-t2-color: var(--y-color-mais-50);
+    
+    --y-btn-txt-color:      var(--y-t2-color);
+    --y-btn-bg-hover-color: var(--y-color-mais-10);
+  }
+  .btn.btn-outlined.cyan{
+    --y-btn-txt-color:       var(--y-t-color);
+    --y-btn-txt-hover-color: var(--y-t2-color);
+    --y-btn-border-color:    var(--y-btn-txt-color) !important;
+    --y-btn-bg-hover-color:  var(--y-default-color);
+  }
+  .btn.btn-h2.cyan{
+    --y-btn-txt-hover-color:    var(--y-t-color);
+    --y-btn-border-hover-color: var(--y-btn-txt-hover-color) !important;
+  }
+  .btn.btn-h3.cyan,
+  .btn.btn-h3a.cyan,
+  .btn.btn-h3a-t.cyan,
+  .btn.btn-h3a-r.cyan,
+  .btn.btn-h3a-b.cyan,
+  .btn.btn-h3a-l.cyan{
+    --y-btn-txt-color:       var(--y-t-color);
+    --y-btn-txt-hover-color: var(--y-t2-color);
+    --y-btn-border-color:    var(--y-btn-txt-color) !important;
+    --y-btn-bg-hover-color:  var(--y-default-color);
+  }
+/*--- fim BOTAO --- */
 /*------------------------------*
 / FORMULARIO
 /-------------------------------*/
