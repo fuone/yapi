@@ -117,3 +117,9 @@ function LetterToUpper(letra) {
     letra.target.selectionEnd = se;
 }
 //
+function TextToUpper(texto) {
+    /* 0726
+    * retorna o texto recebido em carixa alta 
+    */
+    return texto.toUpperCase();
+}
