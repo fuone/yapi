@@ -3978,7 +3978,263 @@
 /*------------------------------*
 / FORMULARIO
 /-------------------------------*/
+  .using-form{
+    /*
+    <form class="form">
+      <fieldset class="fieldset">
+        <input class="formfield">
+      </fieldset>
+    </form>
+    Nota:
+    - imprescindível o uso da classe nos elementos form e fieldset;
+    - classe padrão para campos de formulários: formfield;
+    */
+  }
 
+  .yapi .form{
+    --y-form-txt-color:     var(--y-txt-color, var(--y-color-mais-40, var(--Y-grey-mais-50)));
+    --y-form-bg-color:      var(--y-bg-color, transparent);
+    --y-form-border-color:  var(--y-border-color,var(--Y-border-color));
+    --y-form-border-radius: 0.25rem;
+    --y-form-box-shadow: none;
+    
+    color:        var(--y-form-txt-color);
+    background:   var(--y-form-bg-color);
+    border-radius:var(--y-form-border-radius);
+  }
+    .form > .fieldset{
+      --y-fieldset-txt-color:   var(--y-txt-color,var(--y-color-mais-40, var(--y-form-txt-color)));
+      --y-fieldset-bg-color:    var(--y-bg-color, white);
+      --y-fieldset-border-color:var(--y-border-color,transparent);
+
+      color: var(--y-fieldset-txt-color);
+      background-color: var(--y-fieldset-bg-color);
+      border-color: var(--y-fieldset-border-color);
+    }
+      .fieldset > *{
+        /*todos os filhos*/
+      }
+      .fieldset > .form-field:not(:last-child){
+        /*margin-bottom: 0.5rem;*/
+      }     
+    /*fim fieldset*/
+
+    /*form-field*/
+    .form .form-field{
+      /*--y-formfield-txt-color:  var(--y-fieldset-txt-color);
+      color: var(--y-formfield-txt-color);*/
+    }
+    .form-field,
+    .free-field,
+    .field-group{
+      --y-field-fator:1;
+      --y-field-txt-color:    var(--y-txt-color,
+                              var(--y-color-mais-40,                         
+                              var(--Y-black-menos-10)));
+      --y-field-bg-color:     white;
+      --y-field-border-color: var(--Y-border-color);
+      --y-field-border-width: 1px;
+      --y-field-border-style: solid;
+      --y-field-border-radius:5px;
+      --y-field-border-transitions: 0.3s ease all;
+      --y-field-padding-x:    calc(0.75rem * var(--y-field-fatorr,1));
+      --y-field-padding-y:    calc(0.375rem * var(--y-field-fatorr,1));
+      --y-field-padding:      var(--y-field-padding-y) var(--y-field-padding-x);
+      --y-field-font-size:    calc(var(--y-font-size,1rem) * var(--y-field-fatorr,1));
+      
+      --y-field-focus-txt-color:    var(--y-color-mais-40,var(--y-field-txt-color));
+      --y-field-focus-bg-color:     white;
+      --y-field-focus-border-color: var(--y-color-mais-20,var(--Y-neutral));
+      --y-field-focus-box-shadow:   0 0 0 0.02rem hsl(from var(--y-field-focus-border-color) h s l /99%);
+    }
+
+    .form-field.field-sm,
+    .free-field.field-sm,
+    .label-field-group.field-sm>*,
+    .field-group.field-sm>*{
+      /*--y-field-fator: 0.75;*/
+      --y-field-padding: calc(var(--y-field-padding-y) * 0.5) var(--y-field-padding-x) !important;
+      padding:   calc(var(--y-field-padding-y) * 0.5) var(--y-field-padding-x) !important;
+      font-size: calc(var(--y-field-font-size,1rem) * 0.85) !important;
+    }
+
+    
+    .form-field.field-lg,
+    .free-field.field-lg,
+    .field-group.field-lg>*{
+      /*--y-field-fator: 1.25;*/
+      --y-field-padding: calc(var(--y-field-padding-y) * 1.35) var(--y-field-padding-x) !important;
+      padding:   calc(var(--y-field-padding-y) * 1.35) calc(var(--y-field-padding-x) * 1) !important;
+      font-size: calc(var(--y-field-font-size) * 1.25) !important;
+      }
+
+    .form-field,
+    .free-field{
+      display:      block;
+      color:        var(--y-color-mais-40,var(--y-field-txt-color));
+      background:   var(--y-field-bg-color);
+      border-color: var(--y-field-border-color);
+      border-width: var(--y-field-border-width);
+      border-style: var(--y-field-border-style);
+      border-radius:var(--y-field-border-radius);
+      padding:      var(--y-field-padding);
+      width:        100%;
+      height:       inherit;
+      font-size:    var(--y-field-font-size);
+      font-weight:  400;
+      line-height:  25px;
+      font-family:  'Quicksand', sans-serif;
+      transition:   var(--y-field-border-transitions);
+      outline:      none;   
+      appearance:   none; 
+      -moz-appearance: none;
+    }
+    .form-field:focus,
+    .free-field:focus{
+      color: var(--y-field-focus-txt-color);
+      background-color: var(--y-field-focus-bg-color);   
+      border-color:var(--y-field-focus-border-color)!important;
+      box-shadow:  var(--y-field-focus-box-shadow);
+      outline: 0;
+    }
+    /* variacoes (readonly, plaitext, etc) */
+    .form-field.readonly,.form-field[readonly],
+    .free-field.readonly,.free-field[readonly]{
+      outline: 0;
+    }
+
+    .form-field[readonly].plaintext,
+    .free-field[readonly].plaintext,
+    .form-field.plaintext,
+    .free-field.plaintext{
+      background-color: transparent;
+      border-color: transparent;
+      padding: 5px 0;
+      margin-bottom: 0;
+    }
+    .form-field[readonly].plaintext:focus,
+    .free-field[readonly].plaintext:focus,
+    .form-field.plaintext:focus,
+    .free-field.plaintext:focus{
+      outline: 0;
+      border-color: transparent !important;
+      box-shadow: none;
+    }
+    /*fim form-field*/
+
+  /*fim form*/  
+  
+  /*campo livre*/
+  .free-field{}
+
+  /*labels*/
+  label{
+    display:inline-block;
+  }
+  .field-label{
+    color: var(--y-txt-color, inherit);
+    margin-bottom: 0.2rem;
+    flex: 0 0 auto;
+  }
+  /*fim label*/
+
+  /*label-field-group*/
+  .label-field-group{
+    --y-txt-color: var(--y-color-mais-40);
+  }
+  .label-field-group.inline-group{
+    display:flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .inline-group > *{
+    align-items: center;
+    align-content: center;
+  }
+  /*fim label-field-group*/
+
+  /*field-group*/
+  .field-group{
+    --y-txt-color: var(--color-mais-40);
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    flex-direction: row;
+  }
+    .field-group-text{color: var(--y-txt-color);}
+    .field-group > *{
+      align-items: center;
+      align-content: center;
+      border: var(--y-field-border-width) var(--y-field-border-style) var(--y-field-border-color);
+      border-radius: 0 !important;
+      padding: var(--y-field-padding);
+      margin: 0;
+    }
+    .field-group>:first-child{
+      border-top-left-radius:   var(--y-field-border-radius) !important;
+      border-bottom-left-radius:var(--y-field-border-radius) !important;
+    }
+    .field-group>:last-child{
+      border-top-right-radius:    var(--y-field-border-radius) !important;
+      border-bottom-right-radius: var(--y-field-border-radius) !important;
+    }
+    .field-group>:not(:first-child){
+      margin-left: calc(-1 * var(--y-field-border-width));
+    }
+    .field-group>:not(:last-child){
+      margin-right: calc(-1 * var(--y-field-border-width));
+    }
+    .field-group>:not(:first-child):not(:last-child){
+      --info: teste;
+    }
+    .field-group>.form-field:focus,
+    .field-group>.free-field:focus{
+      z-index:5;
+    }
+    .field-group:not(.group-in)>:not(.form-field):not(.free-field){
+      background: var(--y-color-menos-80, var(--Y-grey-menos-90));
+    }
+    .field-group>.btn,
+    .field-group>[type=button]{}
+    .field-group>.btn:hover,
+    .field-group>[type=button]:hover{
+      border-color: var(--y-field-focus-border-color);
+    }
+
+    /*group-in*/
+    .field-group.group-in{
+      border:         var(--y-field-border-width) var(--y-field-border-style) var(--y-field-border-color);
+      padding:        var(--y-field-padding-y) 0;
+      padding:        0;
+      border-radius:  var(--y-field-border-radius);
+      transition:     var(--y-field-border-transitions);
+      /*gap:1rem;*/
+    }
+    .field-group.group-in>.btn,
+    .field-group.group-in>[type=button]{
+      margin-left: var(--y-field-padding-x);
+    }
+    
+    .field-group.group-in>.btn:not(.free-field):not(.form-field),
+    .field-group.group-in>[type=button]:not(.free-field):not(.form-field){
+      padding: var(--y-field-padding-x);
+    }
+    .field-group.group-in:focus-within{
+      color:            var(--y-field-focus-txt-color);
+      background-color: var(--y-field-focus-bg-color);
+      border-color:     var(--y-field-focus-border-color) !important;
+      box-shadow:       var(--y-field-focus-box-shadow);
+      outline: 0;
+    }
+    .field-group.group-in>*,
+    .field-group.group-in>*:focus{
+      border: none !important;
+      box-shadow: none !important;
+    }
+    /*fim group-in*/   
+
+/*--- fim FORM --- */
 /*------------------------------*
 / Disabled
 /-------------------------------*/
