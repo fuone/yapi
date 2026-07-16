@@ -20,7 +20,11 @@
   .yapi{--y-yapi: none;   /* deve ser declarada na tag html */}
 
   *.disabled{cursor: not-allowed;}
-
+	body, .body{}
+	p{}
+	ul{}
+	ol{}
+	li{}
 /*--- fim BASE --- */
 /*------------------------------*
 / Fontes
@@ -535,7 +539,7 @@
     */
   }
 
-  .bg{background-color: var(--y-bg-color, var(--y-default-color, var(--Y-bg-color))); opacity: var(--y-opacity)}
+  .yapi .bg{background-color: var(--y-bg-color, var(--y-default-color, var(--Y-bg-color))); opacity: var(--y-opacity)}
 
   /* --- variação (pra ser usado se declarado a cor) --- */
     .bg-mais-10{  --y-bg-color: var(--y-color-mais-10);}
@@ -874,59 +878,59 @@
     */
   }
 
-  .border{
+  .yapi .border{
     --y-border-width: var(--Y-border-width, inherit);
     --y-border-style: var(--Y-border-style, solid);
     /*--y-lb-color: var(--y-default-color, #dee2e6);*/
     --y-bcolor: hsl(from var(--y-border-color, var(--y-default-color, #dee2e6)) h s l / var(--y-border-opacity, 1));
   }
 
-  .border.border-all, .border .border-all,
-  .border.border-a, .border .border-a{
+  .yapi .border.border-all, .yapi .border .border-all,
+  .yapi .border.border-a, .yapi .border .border-a{
     border: var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
   }
-  .border.border-top, .border .border-top,
-  .border.border-t, .border .border-t{
+  .yapi .border.border-top, .yapi .border .border-top,
+  .yapi .border.border-t, .yapi .border .border-t{
     border-top: var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
   }
-  .border.border-bottom, .border .border-bottom,
-  .border.border-b, .border .border-b{
+  .yapi .border.border-bottom, .yapi .border .border-bottom,
+  .yapi .border.border-b, ..yapi border .border-b{
     border-bottom: var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
   }
-  .border.border-right, .border .border-right,
-  .border.border-r, .border .border-r{
+  .yapi .border.border-right, .yapi .border .border-right,
+  .yapi .border.border-r, .yapi .border .border-r{
     border-right: var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
   }
-  .border.border-left, .border .border-left,
-  .border.border-l, .border .border-l{
+  .yapi .border.border-left, .yapi .border .border-left,
+  .yapi .border.border-l, .yapi .border .border-l{
     border-left: var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
   }
-  .border.border-x,
-  .border.border-lr{
+  .yapi .border.border-x,
+  .yapi .border.border-lr{
     border-left:  var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
     border-right: var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
   }
-  .border.border-y,
-  .border.border-tb{
+  .yapi .border.border-y,
+  .yapi .border.border-tb{
     border-top:   var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
     border-bottom:var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
   }
 
   /*--- tamanho da borda ---*/
-  .border.border-1{--y-border-width: 1px;}
-  .border.border-2{--y-border-width: 2px;}
-  .border.border-3{--y-border-width: 3px;}
-  .border.border-4{--y-border-width: 4px;}
-  .border.border-5{--y-border-width: 5px;}
+  .yapi .border.border-1{--y-border-width: 1px;}
+  .yapi .border.border-2{--y-border-width: 2px;}
+  .yapi .border.border-3{--y-border-width: 3px;}
+  .yapi .border.border-4{--y-border-width: 4px;}
+  .yapi .border.border-5{--y-border-width: 5px;}
 
   /*--- estilo da borda ---*/
-  .border.solid{ --y-border-style: solid;}
-  .border.dotted{--y-border-style: dotted;}
-  .border.dashed{--y-border-style: dashed;}
+  .yapi .border.solid{ --y-border-style: solid;}
+  .yapi .border.dotted{--y-border-style: dotted;}
+  .yapi .border.dashed{--y-border-style: dashed;}
   /****estilo forçado ****/
-  .border-solid{ border-style: solid !important;}
-  .border-dotted{border-style: dotted !important;}
-  .border-dashed{border-style: dashed !important;}
+  .yapi .border-solid{ border-style: solid !important;}
+  .yapi .border-dotted{border-style: dotted !important;}
+  .yapi .border-dashed{border-style: dashed !important;}
 
   /*--- opacidade ---*/
   .border-opacity-10{--y-border-opacity: 0.1;}
@@ -1001,30 +1005,30 @@
   }
 
   /* --- variação (pra ser usado se declarado a cor) --- */
-  .border.color-mais-10{ --y-border-color: var(--y-color-mais-10);}
-  .border.color-mais-20{ --y-border-color: var(--y-color-mais-20);}
-  .border.color-mais-30{ --y-border-color: var(--y-color-mais-30);}
-  .border.color-mais-40{ --y-border-color: var(--y-color-mais-40);}
-  .border.color-mais-50{ --y-border-color: var(--y-color-mais-50);}
-  .border.color-menos-10{--y-border-color: var(--y-color-menos-10);}
-  .border.color-menos-20{--y-border-color: var(--y-color-menos-20);}
-  .border.color-menos-30{--y-border-color: var(--y-color-menos-30);}
-  .border.color-menos-40{--y-border-color: var(--y-color-menos-40);}
-  .border.color-menos-50{--y-border-color: var(--y-color-menos-50);}
-  .border.color-menos-60.color-menos-60{  --y-border-color: var(--y-color-menos-60);}
-  .border.color-menos-70.color-menos-70{  --y-border-color: var(--y-color-menos-70);}
-  .border.color-menos-80.color-menos-80{  --y-border-color: var(--y-color-menos-80);}
-  .border.color-menos-90.color-menos-90{  --y-border-color: var(--y-color-menos-90);}
-  .border.color-menos-100.color-menos-100{--y-border-color: var(--y-color-menos-100);}
+  .yapi .border.color-mais-10{ --y-border-color: var(--y-color-mais-10);}
+  .yapi .border.color-mais-20{ --y-border-color: var(--y-color-mais-20);}
+  .yapi .border.color-mais-30{ --y-border-color: var(--y-color-mais-30);}
+  .yapi .border.color-mais-40{ --y-border-color: var(--y-color-mais-40);}
+  .yapi .border.color-mais-50{ --y-border-color: var(--y-color-mais-50);}
+  .yapi .border.color-menos-10{--y-border-color: var(--y-color-menos-10);}
+  .yapi .border.color-menos-20{--y-border-color: var(--y-color-menos-20);}
+  .yapi .border.color-menos-30{--y-border-color: var(--y-color-menos-30);}
+  .yapi .border.color-menos-40{--y-border-color: var(--y-color-menos-40);}
+  .yapi .border.color-menos-50{--y-border-color: var(--y-color-menos-50);}
+  .yapi .border.color-menos-60.color-menos-60{  --y-border-color: var(--y-color-menos-60);}
+  .yapi .border.color-menos-70.color-menos-70{  --y-border-color: var(--y-color-menos-70);}
+  .yapi .border.color-menos-80.color-menos-80{  --y-border-color: var(--y-color-menos-80);}
+  .yapi .border.color-menos-90.color-menos-90{  --y-border-color: var(--y-color-menos-90);}
+  .yapi .border.color-menos-100.color-menos-100{--y-border-color: var(--y-color-menos-100);}
 
-  .border.color-mais-0,
-  .border.color-menos-0,
-  .border.color-default,
-  .border.color-def{   --y-border-color: var(--y-default-color);}
-  .border.color-light{ --y-border-color: var(--y-light-color) !important;}
-  .border.color-destak{--y-border-color: var(--y-destak-color) !important;}
-  .border.color-vivid{ --y-border-color: var(--y-vivid-color) !important;}
-  .border.color-dark{  --y-border-color: var(--y-dark-color) !important;}
+  .yapi .border.color-mais-0,
+  .yapi .border.color-menos-0,
+  .yapi .border.color-default,
+  .yapi .border.color-def{   --y-border-color: var(--y-default-color);}
+  .yapi .border.color-light{ --y-border-color: var(--y-light-color) !important;}
+  .yapi .border.color-destak{--y-border-color: var(--y-destak-color) !important;}
+  .yapi .border.color-vivid{ --y-border-color: var(--y-vivid-color) !important;}
+  .yapi .border.color-dark{  --y-border-color: var(--y-dark-color) !important;}
 
   /* --- Variação de cor --- */
   .border-white{border-color: #fff !important;}
@@ -1327,7 +1331,7 @@
 / SHADOW
 /-------------------------------*/
   .using-shadow{}
-  .shadow{
+  .yapi .shadow{
     --y-shadow: 0 0.5rem 1rem var(--y-shadow-color, #dee2e6);
     --y-shadow-width: 1px;
     --y-s-color: var(--y-default-color);
@@ -1349,30 +1353,30 @@
   }
 
   /* --- variação (pra ser usado se declarado a cor) --- */
-  .shadow.color-mais-10{ --y-s-color: var(--y-color-mais-10);}
-  .shadow.color-mais-20{ --y-s-color: var(--y-color-mais-20);}
-  .shadow.color-mais-30{ --y-s-color: var(--y-color-mais-30);}
-  .shadow.color-mais-40{ --y-s-color: var(--y-color-mais-40);}
-  .shadow.color-mais-50{ --y-s-color: var(--y-color-mais-50);}
-  .shadow.color-menos-10{--y-s-color: var(--y-color-menos-10);}
-  .shadow.color-menos-20{--y-s-color: var(--y-color-menos-20);}
-  .shadow.color-menos-30{--y-s-color: var(--y-color-menos-30);}
-  .shadow.color-menos-40{--y-s-color: var(--y-color-menos-40);}
-  .shadow.color-menos-50{--y-s-color: var(--y-color-menos-50);}
-  .shadow.color-menos-60{--y-s-color: var(--y-color-menos-60);}
-  .shadow.color-menos-70{--y-s-color: var(--y-color-menos-70);}
-  .shadow.color-menos-80{--y-s-color: var(--y-color-menos-80);}
-  .shadow.color-menos-90{--y-s-color: var(--y-color-menos-90);}
-  .shadow.color-menos-100{--y-s-color: var(--y-color-menos-100);}
+  .yapi .shadow.color-mais-10{ --y-s-color: var(--y-color-mais-10);}
+  .yapi .shadow.color-mais-20{ --y-s-color: var(--y-color-mais-20);}
+  .yapi .shadow.color-mais-30{ --y-s-color: var(--y-color-mais-30);}
+  .yapi .shadow.color-mais-40{ --y-s-color: var(--y-color-mais-40);}
+  .yapi .shadow.color-mais-50{ --y-s-color: var(--y-color-mais-50);}
+  .yapi .shadow.color-menos-10{--y-s-color: var(--y-color-menos-10);}
+  .yapi .shadow.color-menos-20{--y-s-color: var(--y-color-menos-20);}
+  .yapi .shadow.color-menos-30{--y-s-color: var(--y-color-menos-30);}
+  .yapi .shadow.color-menos-40{--y-s-color: var(--y-color-menos-40);}
+  .yapi .shadow.color-menos-50{--y-s-color: var(--y-color-menos-50);}
+  .yapi .shadow.color-menos-60{--y-s-color: var(--y-color-menos-60);}
+  .yapi .shadow.color-menos-70{--y-s-color: var(--y-color-menos-70);}
+  .yapi .shadow.color-menos-80{--y-s-color: var(--y-color-menos-80);}
+  .yapi .shadow.color-menos-90{--y-s-color: var(--y-color-menos-90);}
+  .yapi .shadow.color-menos-100{--y-s-color: var(--y-color-menos-100);}
 
-  .shadow.color-mais-0,
-  .shadow.color-menos-0,
-  .shadow.color-default,
-  .shadow.color-def{   --y-s-color:     var(--y-default-color);}
-  .shadow.color-light{ --y-shadow-color:var(--y-light-color) !important;}
-  .shadow.color-destak{--y-s-color: 	  var(--y-destak-color) !important;}
-  .shadow.color-vivid{ --y-s-color: 	  var(--y-vivid-color) !important;}
-  .shadow.color-dark{  --y-s-color: 		var(--y-dark-color) !important;}
+  .yapi .shadow.color-mais-0,
+  .yapi .shadow.color-menos-0,
+  .yapi .shadow.color-default,
+  .yapi .shadow.color-def{   --y-s-color:     var(--y-default-color);}
+  .yapi .shadow.color-light{ --y-shadow-color:var(--y-light-color) !important;}
+  .yapi .shadow.color-destak{--y-s-color: 	  var(--y-destak-color) !important;}
+  .yapi .shadow.color-vivid{ --y-s-color: 	  var(--y-vivid-color) !important;}
+  .yapi .shadow.color-dark{  --y-s-color: 		var(--y-dark-color) !important;}
 /*--- fim SHADOW --- */
 /*------------------------------*
 / OPACIDADE
@@ -1548,8 +1552,8 @@
   .d-in-flex{display: inline-flex !important}/***/
   .d-in-grid{display: inline-grid !important}/***/
 
-  .flex-dir-col{flex-direction: column !important;}
-  .flex-dir-row{flex-direction: row !important;}
+  .flex-dir-col, .flex-col{flex-direction: column !important;}
+  .flex-dir-row, .flex-row{flex-direction: row !important;}
   .flex-wrap-wrap{flex-wrap: wrap !important};
   .flex-wrap-balance{flex-wrap: balance !important};
   .flex-wrap-nowrap{flex-wrap: nowrap !important};
@@ -2152,7 +2156,7 @@
     margin-top: calc(-1 * var(--y-gutter-y));
     margin-right: calc(-.5 * var(--y-gutter-x));
   }
-  .row>*{
+  .yapi .row>*{
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
@@ -2464,7 +2468,7 @@
     background-color: transparent;
   }
 
-  .btn.btn-circle{
+  .yapi .btn.btn-circle{
     --y-wh: 50px;
     opacity: var(--y-opacity);
     border-radius: 50% !important;
@@ -2477,7 +2481,7 @@
     aspect-ratio: 1/1;
     overflow: hidden;
   }
-  .btn.btn-circle-2{
+  .yapi .btn.btn-circle-2{
   /*width: 10%;            /* Responsivo à largura do container */
   aspect-ratio: 1 / 1;   /* Mantém sempre o formato de quadrado */
   border-radius: 50%;
@@ -2487,23 +2491,23 @@
   overflow: hidden;
   }
 
-  .btn.btn-one-char{
+  .yapi .btn.btn-one-char{
     --y-btn-py: 0.275rem;
     --y-btn-px: 0.55rem;
   }
 
-  .btn.btn-mini,
-  .btn.btn-sm{
+  .yapi .btn.btn-mini,
+  .yapi .btn.btn-sm{
     --y-btn-fator: var(--Y-sm-fator);
   }
 
-  .btn.btn-large,
-  .btn.btn-lg{
+  .yapi .btn.btn-large,
+  .yapi .btn.btn-lg{
     --y-btn-fator: var(--Y-lg-fator);
   }
 
-  .btn.btn-light,
-  .btn.bg-light{
+  .yapi .btn.btn-light,
+  .yapi .btn.bg-light{
     --y-btn-txt-color:    var(--y-txt-color, var(--y-color-menos-10, var(--Y-black-menos-10)));
     --y-btn-bg-color:     var(--y-bg-color, var(--y-color-menos-90, var(--Y-grey-menos-90)));
     --y-btn-border-color: var(--y-btn-bg-color);
@@ -2512,8 +2516,8 @@
     --y-bg-hover-color:     var(--y-color-menos-80, var(--Y-grey-menos-80));
     --y-border-hover-color: var(--y-bg-hover-color);
   }
-  .btn.btn-dark,
-  .btn.bg-dark{
+ .yapi .btn.btn-dark,
+  .yapi .btn.bg-dark{
     --y-btn-txt-color:    var(--y-txt-color, var(--y-color-menos-100, var(--Y-grey-menos-100)));
     --y-btn-bg-color:     var(--y-bg-color, var(--y-dark-color, var(--Y-grey-mais-50)));
     --y-btn-border-color: var(--y-btn-bg-color);
@@ -2522,8 +2526,8 @@
     --y-bg-hover-color:     var(--y-color-mais-20, var(--Y-grey-mais-20));
     --y-border-hover-color: var(--y-bg-hover-color);
   }
-    .btn.btn-vivid,
-    .btn.bg-vivid{
+  .yapi .btn.btn-vivid,
+  .yapi .btn.bg-vivid{
     --y-btn-txt-color:    var(--y-txt-color, var(--y-color-menos-100, var(--Y-grey-menos-100)));
     --y-btn-bg-color:     var(--y-bg-color, var(--y-vivid-color, var(--Y-grey-mais-50)));
     --y-btn-border-color: var(--y-btn-bg-color);
@@ -2533,24 +2537,24 @@
     --y-border-hover-color: var(--y-bg-hover-color);
   }
 
-  .btn.btn-custom.btn-custom{}
-  .btn.btn-custom:hover.btn-custom:hover{}
+  .yapi .btn.btn-custom.btn-custom{}
+  .yapi .btn.btn-custom:hover.btn-custom:hover{}
 
   /*--- variações de hover ---*/
-  .btn.btn-h2{
+  .yapi btn.btn-h2{
     --y-btn-txt-hover-color: var(--y-btn-border-hover-color);
     --y-btn-border-hover-color: var(--y-default-color, var(--Y-grey));/**/
     --y-btn-border-width: 1.5px;/**/
     --y-btn-transition: var(--y-btn-transition-time, .4s);
   }
-  .btn.btn-h2:hover{background-color: transparent !important;/**/}
+  .yapi .btn.btn-h2:hover{background-color: transparent !important;/**/}
 
-  .btn.btn-h3,
-  .btn.btn-h3a,
-  .btn.btn-h3a-t,
-  .btn.btn-h3a-r,
-  .btn.btn-h3a-b,
-  .btn.btn-h3a-l{
+  .yapi .btn.btn-h3,
+  .yapi .btn.btn-h3a,
+  .yapi .btn.btn-h3a-t,
+  .yapi .btn.btn-h3a-r,
+  .yapi .btn.btn-h3a-b,
+  .yapi .btn.btn-h3a-l{
     --y-btn-txt-color:       var(--y-default-color, var(--Y-grey));
     --y-btn-txt-hover-color: var(--y-color-menos-90,var(--Y-black));/**/
     --y-btn-bg-color:        var(--y-default-color, var(--Y-grey));/**/
@@ -2566,7 +2570,7 @@
     overflow: hidden;
   }
 
-  .btn.btn-h3::before{
+  .yapi .btn.btn-h3::before{
     content: "";
     position: absolute;
     height: 100%;
@@ -2580,81 +2584,81 @@
     transition: all var(--y-btn-transition-time);
   }
 
-  .btn.btn-h3:hover{background: transparent !important;}
-  .btn.btn-h3:hover::before{width: 200%;}
+  .yapi .btn.btn-h3:hover{background: transparent !important;}
+  .yapi .btn.btn-h3:hover::before{width: 200%;}
 
-  .btn.btn-h3a,
-  .btn.btn-h3a-t,
-  .btn.btn-h3a-r,
-  .btn.btn-h3a-b,
-  .btn.btn-h3a-l{
+  .yapi .btn.btn-h3a,
+  .yapi .btn.btn-h3a-t,
+  .yapi .btn.btn-h3a-r,
+  .yapi .btn.btn-h3a-b,
+  .yapi .btn.btn-h3a-l{
     --y-btn-transition-time: 0.5s;
     box-shadow: inset 0 0 0 0 var(--y-btn-bg-hover-color);/**/
   }
 
-  .btn.btn-h3a:hover{box-shadow:   inset 200px 0 0 0  var(--y-btn-bg-hover-color) !important;}
-  .btn.btn-h3a-t:hover{box-shadow: inset 0 100px 0 0  var(--y-btn-bg-hover-color) !important;}
-  .btn.btn-h3a-r:hover{box-shadow: inset -200px 0 0 0 var(--y-btn-bg-hover-color) !important;}
-  .btn.btn-h3a-b:hover{box-shadow: inset 0 -100px 0 0 var(--y-btn-bg-hover-color) !important;}
-  .btn.btn-h3a-l:hover{box-shadow: inset 200px 0 0 0  var(--y-btn-bg-hover-color) !important;}
+  .yapi .btn.btn-h3a:hover{box-shadow:   inset 200px 0 0 0  var(--y-btn-bg-hover-color) !important;}
+  .yapi .btn.btn-h3a-t:hover{box-shadow: inset 0 100px 0 0  var(--y-btn-bg-hover-color) !important;}
+  .yapi .btn.btn-h3a-r:hover{box-shadow: inset -200px 0 0 0 var(--y-btn-bg-hover-color) !important;}
+  .yapi .btn.btn-h3a-b:hover{box-shadow: inset 0 -100px 0 0 var(--y-btn-bg-hover-color) !important;}
+  .yapi .btn.btn-h3a-l:hover{box-shadow: inset 200px 0 0 0  var(--y-btn-bg-hover-color) !important;}
 
-  .btn.btn-h3a:active,
-  .btn.btn-h3a-t:active,
-  .btn.btn-h3a-r:active,
-  .btn.btn-h3a-b:active,
-  .btn.btn-h3a-l:active{transform: scale(0.9);}
+  .yapi .btn.btn-h3a:active,
+  .yapi .btn.btn-h3a-t:active,
+  .yapi .btn.btn-h3a-r:active,
+  .yapi .btn.btn-h3a-b:active,
+  .yapi .btn.btn-h3a-l:active{transform: scale(0.9);}
 
   /*--- variação de cores específicas ---*/
-  .btn.yellow{
+  .yapi .btn.yellow{
     --y-btn-txt-color:       var(--y-color-mais-50);
     --y-btn-txt-hover-color: var(--y-color-mais-50);
     --y-btn-bg-hover-color:  var(--y-color-menos-40);
   }
-  .btn.btn-outlined.yellow{
+  .yapi .btn.btn-outlined.yellow{
     --y-btn-txt-color:      var(--y-default-color);
     --y-btn-border-color:   var(--y-btn-txt-color) !important;
     --y-btn-bg-hover-color: var(--y-default-color);
   }
-  .btn.btn-h2.yellow{
+  .yapi .btn.btn-h2.yellow{
     --y-btn-txt-hover-color:    var(--y-default-color);
     --y-btn-border-hover-color: var(--y-btn-txt-hover-color) !important;
   }
 
-  .btn.btn-h3.yellow,
-  .btn.btn-h3a.yellow,
-  .btn.btn-h3a-t.yellow,
-  .btn.btn-h3a-r.yellow,
-  .btn.btn-h3a-b.yellow,
-  .btn.btn-h3a-l.yellow{
+  .yapi .btn.btn-h3.yellow,
+  .yapi .btn.btn-h3a.yellow,
+  .yapi .btn.btn-h3a-t.yellow,
+  .yapi .btn.btn-h3a-r.yellow,
+  .yapi .btn.btn-h3a-b.yellow,
+  .yapi .btn.btn-h3a-l.yellow{
     --y-btn-txt-color:       var(--y-default-color);
     --y-btn-txt-hover-color: var(--y-color-mais-50);
     --y-btn-border-color:    var(--y-btn-txt-color) !important;
     --y-btn-bg-hover-color:  var(--y-default-color);
   }
 
-  .btn.cyan{
+  .yapi .btn.cyan{
     --y-t-color:  var(--y-color-mais-20);
     --y-t2-color: var(--y-color-mais-50);
     
     --y-btn-txt-color:      var(--y-t2-color);
     --y-btn-bg-hover-color: var(--y-color-mais-10);
   }
-  .btn.btn-outlined.cyan{
+  .yapi .btn.btn-outlined.cyan{
     --y-btn-txt-color:       var(--y-t-color);
     --y-btn-txt-hover-color: var(--y-t2-color);
     --y-btn-border-color:    var(--y-btn-txt-color) !important;
     --y-btn-bg-hover-color:  var(--y-default-color);
   }
-  .btn.btn-h2.cyan{
+  .yapi .btn.btn-h2.cyan{
     --y-btn-txt-hover-color:    var(--y-t-color);
     --y-btn-border-hover-color: var(--y-btn-txt-hover-color) !important;
   }
-  .btn.btn-h3.cyan,
-  .btn.btn-h3a.cyan,
-  .btn.btn-h3a-t.cyan,
-  .btn.btn-h3a-r.cyan,
-  .btn.btn-h3a-b.cyan,
-  .btn.btn-h3a-l.cyan{
+  .yapi .btn.btn-h3.cyan,
+  .yapi .btn.btn-h3a.cyan,
+  .yapi .btn.btn-h3a-t.cyan,
+  .yapi .btn.btn-h3a-r.cyan,
+  .yapi .btn.btn-h3a-b.cyan,
+  .yapi .btn.btn-h3a-l.cyan{
     --y-btn-txt-color:       var(--y-t-color);
     --y-btn-txt-hover-color: var(--y-t2-color);
     --y-btn-border-color:    var(--y-btn-txt-color) !important;
@@ -2673,7 +2677,24 @@
 /*------------------------------*
 / FuoneTag
 /-------------------------------*/
-	.using-fuone-tag{}
+	.using-fuone-tag{
+		/*
+		* FUONE_TAG = `
+          <div class="fuone-tag text-secondary d-flex align-items-center mt-2 no-bg no-border">
+            <div class="pe-2 py-2 align-items-center border-end border-secondary">${PROJINFO.IconAutor}</div>
+            <div class="ps-2 border-left border-secondary" style="zoom: 90%;">
+              <div class="fw-bold fs-6" style="line-height: normal;">
+                <a class=" text-muted no-decoration" href="https://b.link/f/aboutme" target="_blank">FuoneDev</a>
+              </div>
+              <div class="small" style="line-height: normal;">
+                <a class=" text-muted no-decoration" href="mailto:${PROJINFO.EmailAutor}"
+                  target="_blank">${PROJINFO.EmailAutor}</a>
+              </div>
+            </div>
+          </div>
+        `;
+		*/
+	}
 	.fuone-tag{
 	  border: 1px dotted #cccccc; */
 	  border-radius: 6px;
@@ -2701,32 +2722,29 @@
 	  text-decoration: none;
 	}
 	.fuone-icon{
-	  --f-icon-color-1: #94a3b8;
-	  --f-icon-color-2: #64748b;
-	  --f-icon-color-3: #94a3b8;
-	  --f-icon-color-4: #64748b;
-	  --f-icon-color-full: var(--f-icon-color-1);
-	  min-width: 80px;
+    --fuone-icon-color-1: #94a3b8;
+    --fuone-icon-color-2: #64748b;
+    --fuone-icon-color-3: #94a3b8;
+    --fuone-icon-color-4: #64748b;
+    --fuone-icon-color-5: #000000;
+    --fuone-icon-color-6: transparent;
+    --fuone-icon-color-7: transparent;
+    --fuone-icon-color-8: transparent;
+    --fuone-icon-color-9: transparent;
+    --fuone-icon-color-10:transparent;
+
+    min-width: 80px;
 	  transition: transform 0.5s ease, opacity 0.5s ease-out;
-	}
-	.fuone-icon:hover{
-	  --f-icon-color-1: #3ab1ef;
-	  --f-icon-color-2: #287ab6;
-	}
-	.f-icon-color-1{
-	  fill: var(--f-icon-color-1);
-	  color: var(--f-icon-color-1);
-	}
-	.f-icon-color-2{
-	  fill: var(--f-icon-color-2);
-	  color: var(--f-icon-color-2);
-	}
-	.f-icon-color-3{
-	  fill: var(--f-icon-color-3);
-	  color: var(--f-icon-color-3);
-	}
-	.f-icon-color-4{
-	  fill: var(--f-icon-color-4);
-	  color: var(--f-icon-color-4);
+  }
+  .fuone-icon .fuone-icon-part-1{fill: var(--fuone-icon-color-1);}
+  .fuone-icon .fuone-icon-part-2{fill: var(--fuone-icon-color-2);}
+  .fuone-icon .fuone-icon-part-3{fill: var(--fuone-icon-color-3);}
+  .fuone-icon .fuone-icon-part-4{fill: var(--fuone-icon-color-4);}
+
+  .fuone-icon:hover{
+	  --fuone-icon-color-1: #3ab1ef;
+	  --fuone-icon-color-2: #287ab6;
+		--fuone-icon-color-3: #3ab1ef;
+	  --fuone-icon-color-4: #287ab6;
 	}
 /*--- fim FUONE-TAG --- */
