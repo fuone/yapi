@@ -2696,7 +2696,7 @@
 		*/
 	}
 	.fuone-tag{
-	  border: 1px dotted #cccccc; */
+	  border: 1px dotted #cccccc;
 	  border-radius: 6px;
 	  background: #eee;
 	  display: flex;
@@ -2706,21 +2706,12 @@
 	  align-items: center;
 	  justify-self: center;
 	  opacity: 0.5;
-	  /* zoom: 80%; */
 	  transition: transform 0.5s ease, opacity 0.5s ease-out;
 	}
-	.fuone-tag.no-bg{
-	  background: transparent !important;
-	}
-	.fuone-tag.no-border{
-	  border: transparent !important;
-	}
-	.fuone-tag:hover{
-	  opacity: 1;
-	}
-	.fuone-tag a{
-	  text-decoration: none;
-	}
+	.fuone-tag.no-bg{background: transparent !important;}
+	.fuone-tag.no-border{border: transparent !important;}
+	.fuone-tag:hover{opacity: 1;}
+	.fuone-tag a{text-decoration: none;}
 	.fuone-icon{
     --fuone-icon-color-1: #94a3b8;
     --fuone-icon-color-2: #64748b;
