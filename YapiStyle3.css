@@ -6,7 +6,7 @@
 * fuone.dev@gmaill.com
 **************************/
 /*
-* 130726
+* 200726
 */
 /*------------------------------*
 / BASE
@@ -3711,6 +3711,7 @@
     
     padding: var(--y-btn-padding-y) var(--y-btn-padding-x);
     margin: var(--y-btn-margin-y) var(--y-btn-margin-x);
+		font-family: inherit;
     font-size: var(--y-btn-font-size) !important;
     font-weight: var(--y-btn-font-weight) !important;
     line-height: 1;  
@@ -3778,6 +3779,41 @@
     background-color: transparent;
   }
 
+	.yapi .btn.btn-outlined.btn-light,
+	.yapi .btn.btn-outlined.bg-light{
+    --y-btn-bg-hover-color:  var(--y-light-color, var(--Y-grey-menos-80)) !important; 
+    --y-btn-txt-hover-color: var(--y-default-color,var(--Y-black-mais-50));
+    color: var(--y-color-menos-70, var(--Y-grey-menos-60));
+    border-color: var(--y-color-menos-70);    
+  }
+
+  .yapi .btn.btn-outlined.btn-destak,
+	.yapi .btn.btn-outlined.bg-destak {
+    --y-btn-bg-hover-color:  var(--y-destak-color, var(--Y-grey-menos-60));
+    /*--y-btn-txt-hover-color: var(--y-destak-color,var(--Y-black));*/
+    color: var(--y-destak-color, var(--Y-grey-menos-10));
+    background-color: var(--y-color-menos-90, var(--Y-grey-menos-90));
+    border-color: var(--y-destak-color, var(--Y-grey-menos-10));
+  }
+
+  .yapi .btn.btn-outlined.btn-vivid,
+	.yapi .btn.btn-outlined.bg-vivid {
+    --y-btn-bg-hover-color:  var(--y-vivid-color, var(--Y-grey))!important; 
+    color: var(--y-vivid-color, var(--Y-grey));
+    background-color: var(--y-color-menos-90, var(--Y-grey-menos-90));
+    border-color: vvar(--y-vivid-color, var(--Y-grey));
+  }
+
+  .yapi .btn.btn-outlined.btn-dark,
+	.yapi .btn.btn-outlined.bg-dark {
+    --y-btn-bg-hover-color:  var(--y-dark-color, var(--Y-grey-mais-40)); 
+    --y-btn-txt-hover-color: white;
+    color: var(--y-dark-color, var(--Y-grey-mais-20));
+    background-color: var(--y-color-menos-90, var(--Y-grey-menos-90));
+    border-color: var(--y-dark-color, var(--Y-grey-mais-20));
+  }
+
+
   .yapi .btn.btn-circle{
     --y-wh: 50px;
     opacity: var(--y-opacity);
@@ -3818,32 +3854,33 @@
 
   .yapi .btn.btn-light,
   .yapi .btn.bg-light{
-    --y-btn-txt-color:    var(--y-txt-color, var(--y-color-menos-10, var(--Y-black-menos-10)));
+    --y-btn-txt-color:    var(--y-txt-color, var(--y-color-menos-10, var(--Y-black-menos-10)))!important;
     --y-btn-bg-color:     var(--y-bg-color, var(--y-color-menos-90, var(--Y-grey-menos-90)));
     --y-btn-border-color: var(--y-btn-bg-color);
     
     --y-txt-hover-color:    var(--y-btn-txt-color);
     --y-bg-hover-color:     var(--y-color-menos-80, var(--Y-grey-menos-80));
-    --y-border-hover-color: var(--y-bg-hover-color);
+    /*--y-border-hover-color: var(--y-bg-hover-color);*/
   }
- .yapi .btn.btn-dark,
-  .yapi .btn.bg-dark{
-    --y-btn-txt-color:    var(--y-txt-color, var(--y-color-menos-100, var(--Y-grey-menos-100)));
-    --y-btn-bg-color:     var(--y-bg-color, var(--y-dark-color, var(--Y-grey-mais-50)));
-    --y-btn-border-color: var(--y-btn-bg-color);
-
-    --y-txt-hover-color:    var(--y-btn-txt-color);
-    --y-bg-hover-color:     var(--y-color-mais-20, var(--Y-grey-mais-20));
-    --y-border-hover-color: var(--y-bg-hover-color);
-  }
+ 
   .yapi .btn.btn-vivid,
   .yapi .btn.bg-vivid{
-    --y-btn-txt-color:    var(--y-txt-color, var(--y-color-menos-100, var(--Y-grey-menos-100)));
+    --y-btn-txt-color:    var(--y-txt-color, var(--y-color-menos-100, var(--Y-grey-menos-100)))!important;
     --y-btn-bg-color:     var(--y-bg-color, var(--y-vivid-color, var(--Y-grey-mais-50)));
     --y-btn-border-color: var(--y-btn-bg-color);
 
     --y-txt-hover-color:    var(--y-btn-txt-color);
     --y-bg-hover-color:     var(--y-color-menos-20, var(--Y-grey-mais-20));
+    --y-border-hover-color: var(--y-bg-hover-color);
+  }
+	.yapi .btn.btn-dark,
+  .yapi .btn.bg-dark{
+    --y-btn-txt-color:    var(--y-txt-color, var(--y-color-menos-100, var(--Y-grey-menos-100)))!important;
+    --y-btn-bg-color:     var(--y-bg-color, var(--y-dark-color, var(--Y-grey-mais-50)));
+    --y-btn-border-color: var(--y-btn-bg-color);
+
+    --y-txt-hover-color:    var(--y-btn-txt-color);
+    --y-bg-hover-color:     var(--y-color-mais-20, var(--Y-grey-mais-20));
     --y-border-hover-color: var(--y-bg-hover-color);
   }
 
@@ -3924,11 +3961,14 @@
     --y-btn-txt-hover-color: var(--y-color-mais-50);
     --y-btn-bg-hover-color:  var(--y-color-menos-40);
   }
-  .yapi .btn.btn-outlined.yellow{
-    --y-btn-txt-color:      var(--y-default-color);
-    --y-btn-border-color:   var(--y-btn-txt-color) !important;
-    --y-btn-bg-hover-color: var(--y-default-color);
+
+  .yapi .btn.btn-outlined.yellow:not(.btn-dark){
+    --y-btn-txt-color:        var(--y-color-mais-10)!important;
+    --y-btn-border-color:     var(--y-btn-txt-color) !important;
+    --y-btn-bg-hover-color:   var(--y-default-color);
+    --y-btn-txt-hover-color:  var(--y-color-mais-50)!important;
   }
+
   .yapi .btn.btn-h2.yellow{
     --y-btn-txt-hover-color:    var(--y-default-color);
     --y-btn-border-hover-color: var(--y-btn-txt-hover-color) !important;
@@ -3959,6 +3999,7 @@
     --y-btn-border-color:    var(--y-btn-txt-color) !important;
     --y-btn-bg-hover-color:  var(--y-default-color);
   }
+
   .yapi .btn.btn-h2.cyan{
     --y-btn-txt-hover-color:    var(--y-t-color);
     --y-btn-border-hover-color: var(--y-btn-txt-hover-color) !important;
@@ -3973,6 +4014,29 @@
     --y-btn-txt-hover-color: var(--y-t2-color);
     --y-btn-border-color:    var(--y-btn-txt-color) !important;
     --y-btn-bg-hover-color:  var(--y-default-color);
+  }
+
+	.btn.btn-vivid.yellow,
+  .btn.btn-vivid.cyan{
+    --y-btn-txt-color: var(--y-color-mais-50) !important;
+  }
+  .btn.btn-dark.yellow,
+  .btn.btn-dark.cyan{
+    --y-btn-bg-hover-color: var(--y-color-mais-40) !important;
+    --y-btn-txt-hover-color: var(--y-color-menos-100) !important;
+    --y-btn-border-hover-color: var(--y-btn-bg-hover-color);
+  }
+  .btn.btn-light.yellow,
+  .btn.btn-light.cyan{
+    --y-btn-txt-color: var(--y-color-mais-30)!important;
+    --y-btn-bg-color: var(--y-light-color);
+    --y-btn-bg-hover-color: var(--y-color-menos-70);
+  }
+
+  .btn.btn-outlined.btn-light.yellow,
+  .btn.btn-outlined.btn-light.cyan{
+    color: var(--y-color-menos-40);
+    border-color: var(--y-color-menos-40);
   }
 /*--- fim BOTAO --- */
 /*------------------------------*
