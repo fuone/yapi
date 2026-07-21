@@ -863,6 +863,494 @@
 /*------------------------------*
 / TXT
 /-------------------------------*/
+	.using-txt{}
+	.txt {
+    --y-font-size: 1rem;
+    --y-font-size-vw: 1vw;
+    --y-font-fator: 1;
+
+    font-size:			calc(var(--y-font-size) * var(--y-font-fator, 1));
+    font-family:		var(--y-font-family, var(--Y-font-family));
+    color:					var(--y-txt-color, var(--y-default-color, var(--Y-txt-color)));
+    opacity:				var(--y-opacity);
+    line-height:		var(--y-line-height, var(--Y-line-height));
+    letter-spacing:	var(--y-letter-spacing, var(--Y-letter-spacing));
+    font-weight:		var(--y-font-weight, var(--Y-font-weight));
+  }
+
+  .txt.indent {text-indent: var(--y-txt-indent, var(--Y-txt-indent));}
+  .uppercase {
+    --y-text-transform:uppercase;
+    text-transform: uppercase !important;
+  }
+  .lowercase {
+    --y-text-transform:lowercase;
+    text-transform: lowercase !important;
+  }
+  .capitalize {
+    --y-text-transform:capitalize;
+    text-transform: capitalize !important;
+  }
+  .undeline.undeline {
+    --y-text-decoration: underline;
+    text-decoration: underline !important;
+  }
+  .riscado.riscado {
+    --y-text-decoration: line-through;
+    text-decoration: line-through !important;
+  }
+  .italic.italic {
+    --y-font-style: oblique;
+    font-style: oblique !important;
+  }
+  .semibold.semibold {
+    --y-font-weight: 500; 
+    font-weight: 500 !important;
+  }
+  .bold.bold {
+    --y-font-weight: 700; 
+    font-weight: 700 !important;
+  }
+  .bolder.bolder {
+    --y-font-weight: 900; 
+    font-weight: 900 !important;
+  }
+
+	/*--- linha ---*/	
+	.line-inherit{
+		--y-line-height: inherit;
+		line-height: inherit;
+	}
+	.line-initial{
+		--y-line-height: initial;
+		line-height: initial;
+	}
+	.line-normal{
+		--y-line-height: normal;
+		line-height: normal;
+	}
+	.line-0{
+		--y-line-height: 0;
+		line-height: 0;
+	}
+	.line-05{
+		--y-line-height: 0.5;
+		line-height: 0.5;
+	}
+	.line-1{
+		--y-line-height: 1;
+		line-height: 1;
+	}
+
+  /*--- tamnahos ---*/
+  .txt-g {  --y-font-fator: 2.5;}
+  .txt-p {  --y-font-fator: 0.85;}
+  .txt-10p {--y-font-size: 10px;}
+  .txt-12p {--y-font-size: 12px;}
+  .txt-14p {--y-font-size: 14px;}
+  .txt-16p {--y-font-size: 16px;}
+  .txt-18p {--y-font-size: 18px;}
+  .txt-20p {--y-font-size: 20px;}
+  .txt-22p {--y-font-size: 22px;}
+  .txt-24p {--y-font-size: 24px;}
+  .txt-26p {--y-font-size: 26px;}
+  .txt-28p {--y-font-size: 28px;}
+  .txt-30p {--y-font-size: 30px;}
+  .txt-32p {--y-font-size: 32px;}
+  .txt-34p {--y-font-size: 34px;}
+  .txt-36p {--y-font-size: 36px;}
+  .txt-38p {--y-font-size: 38px;}
+  .txt-40p {--y-font-size: 40px;}
+  .txt-42p {--y-font-size: 42px;}
+  .txt-44p {--y-font-size: 44px;}
+  .txt-46p {--y-font-size: 46px;}
+  .txt-48p {--y-font-size: 48px;}
+  .txt-50p {--y-font-size: 50px;}
+
+  .fs-10p {font-size: 10px !important;}
+  .fs-12p {font-size: 12px !important;}
+  .fs-14p {font-size: 14px !important;}
+  .fs-16p {font-size: 16px !important;}
+  .fs-18p {font-size: 18px !important;}
+  .fs-20p {font-size: 20px !important;}
+  .fs-22p {font-size: 22px !important;}
+  .fs-24p {font-size: 24px !important;}
+  .fs-26p {font-size: 26px !important;}
+  .fs-28p {font-size: 28px !important;}
+  .fs-30p {font-size: 30px !important;}
+  .fs-32p {font-size: 32px !important;}
+	.fs-34p {font-size: 34px !important;}
+	.fs-36p {font-size: 36px !important;}
+	.fs-38p {font-size: 38px !important;}
+  .fs-40p {font-size: 40px !important;}
+	.fs-42p {font-size: 42px !important;}
+	.fs-44p {font-size: 44px !important;}
+	.fs-46p {font-size: 46px !important;}
+	.fs-48p {font-size: 48px !important;}
+  .fs-50p {font-size: 50px !important;}
+
+  .fs-10pcent {font-size: 10% !important;}
+  .fs-20pcent {font-size: 20% !important;}
+  .fs-30pcent {font-size: 30% !important;}
+  .fs-40pcent {font-size: 40% !important;}
+  .fs-50pcent {font-size: 50% !important;}
+  .fs-60pcent {font-size: 60% !important;}
+  .fs-70pcent {font-size: 70% !important;}
+  .fs-80pcent {font-size: 80% !important;}
+  .fs-90pcent {font-size: 90% !important;}
+  .fs-100pcent {font-size: 100% !important;}
+  .fs-110pcent {font-size: 110% !important;}
+  .fs-120pcent {font-size: 120% !important;}
+  .fs-130pcent {font-size: 130% !important;}
+  .fs-140pcent {font-size: 140% !important;}
+  .fs-150pcent {font-size: 150% !important;}
+  .fs-160pcent {font-size: 160% !important;}
+  .fs-170pcent {font-size: 170% !important;}
+  .fs-180pcent {font-size: 180% !important;}
+  .fs-190pcent {font-size: 190% !important;}
+  .fs-200pcent {font-size: 200% !important;}
+
+	h1,.h1 {--y-font-fator: 2;}
+  h2,.h2 {--y-font-fator: 1.5;}
+  h3,.h3 {--y-font-fator: 1.17;}
+  h4,.h4 {--y-font-fator: 1;}
+  h5,.h5 {--y-font-fator: 0.8;}
+  h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5, .title, .subtitle {
+    --y-font-min-size: calc(var(--y-font-size) * var(--y-font-fator));
+    --y-font-perfect-size: calc(var(--y-font-size-vw, var(--Y-font-size-vw, 1vw)) * var(--y-font-fator) * 2);
+    --y-font-max-size: calc(var(--y-font-size) * var(--y-font-fator) * 2.5);
+
+    font-size: var(--y-font-min-size, 2rem);
+    display: block;
+  }
+  .title {
+    --y-font-fator: 2;
+    --y-title-fator: 2;
+  }
+  .subtitle {
+    --y-font-fator: 1.15;
+    --y-title-fator: 1.15;
+  }
+
+  /* --- variação (pra ser usado se declarado a cor) --- */
+  .txt.color-mais-10{ --y-txt-color:  var(--y-color-mais-10);}
+  .txt.color-mais-20{ --y-txt-color:  var(--y-color-mais-20);}
+  .txt.color-mais-30{ --y-txt-color:  var(--y-color-mais-30);}
+  .txt.color-mais-40{ --y-txt-color:  var(--y-color-mais-40);}
+  .txt.color-mais-50{ --y-txt-color:  var(--y-color-mais-50);}
+  .txt.color-menos-10{--y-txt-color:  var(--y-color-menos-10);}
+  .txt.color-menos-20{--y-txt-color:  var(--y-color-menos-20);}
+  .txt.color-menos-30{--y-txt-color:  var(--y-color-menos-30);}
+  .txt.color-menos-40{--y-txt-color:  var(--y-color-menos-40);}
+  .txt.color-menos-50{--y-txt-color:  var(--y-color-menos-50);}
+  .txt.color-menos-60{--y-txt-color:  var(--y-color-menos-60);}
+  .txt.color-menos-70{--y-txt-color:  var(--y-color-menos-70);}
+  .txt.color-menos-80{--y-txt-color:  var(--y-color-menos-80);}
+  .txt.color-menos-90{--y-txt-color:  var(--y-color-menos-90);}
+  .txt.color-menos-100{--y-txt-color: var(--y-color-menos-100);}
+
+  .txt.color-mais-0,
+  .txt.color-menos-0, 
+  .txt.color-default,
+  .txt.color-def{   --y-txt-color: var(--y-default-color) !important;}
+  .txt.color-light{ --y-txt-color: var(--y-light-color) !important;}
+  .txt.color-destak{--y-txt-color: var(--y-destak-color) !important;}
+  .txt.color-vivid{ --y-txt-color: var(--y-vivid-color) !important;}
+  .txt.color-dark{  --y-txt-color: var(--y-dark-color) !important;}
+	/* --- Variação de cor --- */
+  .txt-white{color: #fff !important;}
+  .txt-transp{color: transparent !important;}
+
+  /* --- red --- */
+  .txt-red{           --y-txt-color: var(--Y-red);          color:  var(--Y-red) !important;}
+  .txt-red-mais-50{   --y-txt-color: var(--Y-red-mais-50);  color:  var(--Y-red-mais-50) !important;}
+  .txt-red-mais-40{   --y-txt-color: var(--Y-red-mais-40);  color:  var(--Y-red-mais-40) !important;}
+  .txt-red-mais-30{   --y-txt-color: var(--Y-red-mais-30);  color:  var(--Y-red-mais-30) !important;}
+  .txt-red-mais-20{   --y-txt-color: var(--Y-red-mais-20);  color:  var(--Y-red-mais-20) !important;}
+  .txt-red-mais-10{   --y-txt-color: var(--Y-red-mais-10);  color:  var(--Y-red-mais-10) !important;}
+  .txt-red-menos-10{  --y-txt-color: var(--Y-red-menos-10); color:  var(--Y-red-menos-10) !important;}
+  .txt-red-menos-20{  --y-txt-color: var(--Y-red-menos-20); color:  var(--Y-red-menos-20) !important;}
+  .txt-red-menos-30{  --y-txt-color: var(--Y-red-menos-30); color:  var(--Y-red-menos-30) !important;}
+  .txt-red-menos-40{  --y-txt-color: var(--Y-red-menos-40); color:  var(--Y-red-menos-40) !important;}
+  .txt-red-menos-50{  --y-txt-color: var(--Y-red-menos-50); color:  var(--Y-red-menos-50) !important;}
+  .txt-red-menos-60{  --y-txt-color: var(--Y-red-menos-60); color:  var(--Y-red-menos-60) !important;}
+  .txt-red-menos-70{  --y-txt-color: var(--Y-red-menos-70); color:  var(--Y-red-menos-70) !important;}
+  .txt-red-menos-80{  --y-txt-color: var(--Y-red-menos-80); color:  var(--Y-red-menos-80) !important;}
+  .txt-red-menos-90{  --y-txt-color: var(--Y-red-menos-90); color:  var(--Y-red-menos-90) !important;}
+  .txt-red-menos-100{ --y-txt-color: var(--Y-red-menos-100);color:  var(--Y-red-menos-100) !important;}
+
+  /* --- orange --- */
+  .txt-orange{          --y-txt-color: var(--Y-orange);          color:  var(--Y-orange) !important;}
+  .txt-orange-mais-50{  --y-txt-color: var(--Y-orange-mais-50) ; color:  var(--Y-orange-mais-50) !important;}
+  .txt-orange-mais-40{  --y-txt-color: var(--Y-orange-mais-40) ; color:  var(--Y-orange-mais-40) !important;}
+  .txt-orange-mais-30{  --y-txt-color: var(--Y-orange-mais-30) ; color:  var(--Y-orange-mais-30) !important;}
+  .txt-orange-mais-20{  --y-txt-color: var(--Y-orange-mais-20) ; color:  var(--Y-orange-mais-20) !important;}
+  .txt-orange-mais-10{  --y-txt-color: var(--Y-orange-mais-10) ; color:  var(--Y-orange-mais-10) !important;}
+  .txt-orange-menos-10{ --y-txt-color: var(--Y-orange-menos-10); color:  var(--Y-orange-menos-10) !important;}
+  .txt-orange-menos-20{ --y-txt-color: var(--Y-orange-menos-20); color:  var(--Y-orange-menos-20) !important;}
+  .txt-orange-menos-30{ --y-txt-color: var(--Y-orange-menos-30); color:  var(--Y-orange-menos-30) !important;}
+  .txt-orange-menos-40{ --y-txt-color: var(--Y-orange-menos-40); color:  var(--Y-orange-menos-40) !important;}
+  .txt-orange-menos-50{ --y-txt-color: var(--Y-orange-menos-50); color:  var(--Y-orange-menos-50) !important;}
+  .txt-orange-menos-60{ --y-txt-color: var(--Y-orange-menos-60); color:  var(--Y-orange-menos-60) !important;}
+  .txt-orange-menos-70{ --y-txt-color: var(--Y-orange-menos-70); color:  var(--Y-orange-menos-70) !important;}
+  .txt-orange-menos-80{ --y-txt-color: var(--Y-orange-menos-80); color:  var(--Y-orange-menos-80) !important;}
+  .txt-orange-menos-90{ --y-txt-color: var(--Y-orange-menos-90); color:  var(--Y-orange-menos-90) !important;}
+  .txt-orange-menos-100{--y-txt-color: var(--Y-orange-menos-100);color:  var(--Y-orange-menos-100) !important;}
+
+  /* --- yellow --- */
+  .txt-yellow{          --y-txt-color: var(--Y-yellow);         color:  var(--Y-yellow) !important;}
+  .txt-yellow-mais-50{  --y-txt-color: var(--Y-yellow-mais-50) ;color:  var(--Y-yellow-mais-50) !important;}
+  .txt-yellow-mais-40{  --y-txt-color: var(--Y-yellow-mais-40) ;color:  var(--Y-yellow-mais-40) !important;}
+  .txt-yellow-mais-30{  --y-txt-color: var(--Y-yellow-mais-30) ;color:  var(--Y-yellow-mais-30) !important;}
+  .txt-yellow-mais-20{  --y-txt-color: var(--Y-yellow-mais-20) ;color:  var(--Y-yellow-mais-20) !important;}
+  .txt-yellow-mais-10{  --y-txt-color: var(--Y-yellow-mais-10) ;color:  var(--Y-yellow-mais-10) !important;}
+  .txt-yellow-menos-10{ --y-txt-color: var(--Y-yellow-menos-10);color:  var(--Y-yellow-menos-10) !important;}
+  .txt-yellow-menos-20{ --y-txt-color: var(--Y-yellow-menos-20);color:  var(--Y-yellow-menos-20) !important;}
+  .txt-yellow-menos-30{ --y-txt-color: var(--Y-yellow-menos-30);color:  var(--Y-yellow-menos-30) !important;}
+  .txt-yellow-menos-40{ --y-txt-color: var(--Y-yellow-menos-40);color:  var(--Y-yellow-menos-40) !important;}
+  .txt-yellow-menos-50{ --y-txt-color: var(--Y-yellow-menos-50);color:  var(--Y-yellow-menos-50) !important;}
+  .txt-yellow-menos-60{ --y-txt-color: var(--Y-yellow-menos-60);color:  var(--Y-yellow-menos-60) !important;}
+  .txt-yellow-menos-70{ --y-txt-color: var(--Y-yellow-menos-70);color:  var(--Y-yellow-menos-70) !important;}
+  .txt-yellow-menos-80{ --y-txt-color: var(--Y-yellow-menos-80);color:  var(--Y-yellow-menos-80) !important;}
+  .txt-yellow-menos-90{ --y-txt-color: var(--Y-yellow-menos-90);color:  var(--Y-yellow-menos-90) !important;}
+  .txt-yellow-menos-100{--y-txt-color: var(--Y-yellow-menos-100);color: var(--Y-yellow-menos-100) !important;}
+
+  /* --- olive --- */
+  .txt-olive{          --y-txt-color: var(--Y-olive);         color:  var(--Y-olive) !important;}
+  .txt-olive-mais-50{  --y-txt-color: var(--Y-olive-mais-50) ;color:  var(--Y-olive-mais-50) !important;}
+  .txt-olive-mais-40{  --y-txt-color: var(--Y-olive-mais-40) ;color:  var(--Y-olive-mais-40) !important;}
+  .txt-olive-mais-30{  --y-txt-color: var(--Y-olive-mais-30) ;color:  var(--Y-olive-mais-30) !important;}
+  .txt-olive-mais-20{  --y-txt-color: var(--Y-olive-mais-20) ;color:  var(--Y-olive-mais-20) !important;}
+  .txt-olive-mais-10{  --y-txt-color: var(--Y-olive-mais-10) ;color:  var(--Y-olive-mais-10) !important;}
+  .txt-olive-menos-10{ --y-txt-color: var(--Y-olive-menos-10);color:  var(--Y-olive-menos-10) !important;}
+  .txt-olive-menos-20{ --y-txt-color: var(--Y-olive-menos-20);color:  var(--Y-olive-menos-20) !important;}
+  .txt-olive-menos-30{ --y-txt-color: var(--Y-olive-menos-30);color:  var(--Y-olive-menos-30) !important;}
+  .txt-olive-menos-40{ --y-txt-color: var(--Y-olive-menos-40);color:  var(--Y-olive-menos-40) !important;}
+  .txt-olive-menos-50{ --y-txt-color: var(--Y-olive-menos-50);color:  var(--Y-olive-menos-50) !important;}
+  .txt-olive-menos-60{ --y-txt-color: var(--Y-olive-menos-60);color:  var(--Y-olive-menos-60) !important;}
+  .txt-olive-menos-70{ --y-txt-color: var(--Y-olive-menos-70);color:  var(--Y-olive-menos-70) !important;}
+  .txt-olive-menos-80{ --y-txt-color: var(--Y-olive-menos-80);color:  var(--Y-olive-menos-80) !important;}
+  .txt-olive-menos-90{ --y-txt-color: var(--Y-olive-menos-90);color:  var(--Y-olive-menos-90) !important;}
+  .txt-olive-menos-100{--y-txt-color: var(--Y-olive-menos-100);color: var(--Y-olive-menos-100) !important;}
+
+  /* --- green --- */
+  .txt-green{           --y-txt-color: var(--Y-green);          color: var(--Y-green) !important;}
+  .txt-green-mais-50{   --y-txt-color: var(--Y-green-mais-50) ; color: var(--Y-green-mais-50) !important;}
+  .txt-green-mais-40{   --y-txt-color: var(--Y-green-mais-40) ; color: var(--Y-green-mais-40) !important;}
+  .txt-green-mais-30{   --y-txt-color: var(--Y-green-mais-30) ; color: var(--Y-green-mais-30) !important;}
+  .txt-green-mais-20{   --y-txt-color: var(--Y-green-mais-20) ; color: var(--Y-green-mais-20) !important;}
+  .txt-green-mais-10{   --y-txt-color: var(--Y-green-mais-10) ; color: var(--Y-green-mais-10) !important;}
+  .txt-green-menos-10{  --y-txt-color: var(--Y-green-menos-10); color: var(--Y-green-menos-10) !important;}
+  .txt-green-menos-20{  --y-txt-color: var(--Y-green-menos-20); color: var(--Y-green-menos-20) !important;}
+  .txt-green-menos-30{  --y-txt-color: var(--Y-green-menos-30); color: var(--Y-green-menos-30) !important;}
+  .txt-green-menos-40{  --y-txt-color: var(--Y-green-menos-40); color: var(--Y-green-menos-40) !important;}
+  .txt-green-menos-50{  --y-txt-color: var(--Y-green-menos-50); color: var(--Y-green-menos-50) !important;}
+  .txt-green-menos-60{  --y-txt-color: var(--Y-green-menos-60); color: var(--Y-green-menos-60) !important;}
+  .txt-green-menos-70{  --y-txt-color: var(--Y-green-menos-70); color: var(--Y-green-menos-70) !important;}
+  .txt-green-menos-80{  --y-txt-color: var(--Y-green-menos-80); color: var(--Y-green-menos-80) !important;}
+  .txt-green-menos-90{  --y-txt-color: var(--Y-green-menos-90); color: var(--Y-green-menos-90) !important;}
+  .txt-green-menos-100{ --y-txt-color: var(--Y-green-menos-100);color: var(--Y-green-menos-100) !important;}
+
+  /* --- teal --- */
+  .txt-teal{          --y-txt-color: var(--Y-teal);           color:  var(--Y-teal) !important;}
+  .txt-teal-mais-50{  --y-txt-color: var(--Y-teal-mais-50) ;  color:  var(--Y-teal-mais-50) !important;}
+  .txt-teal-mais-40{  --y-txt-color: var(--Y-teal-mais-40) ;  color:  var(--Y-teal-mais-40) !important;}
+  .txt-teal-mais-30{  --y-txt-color: var(--Y-teal-mais-30) ;  color:  var(--Y-teal-mais-30) !important;}
+  .txt-teal-mais-20{  --y-txt-color: var(--Y-teal-mais-20) ;  color:  var(--Y-teal-mais-20) !important;}
+  .txt-teal-mais-10{  --y-txt-color: var(--Y-teal-mais-10) ;  color:  var(--Y-teal-mais-10) !important;}
+  .txt-teal-menos-10{ --y-txt-color: var(--Y-teal-menos-10);  color:  var(--Y-teal-menos-10) !important;}
+  .txt-teal-menos-20{ --y-txt-color: var(--Y-teal-menos-20);  color:  var(--Y-teal-menos-20) !important;}
+  .txt-teal-menos-30{ --y-txt-color: var(--Y-teal-menos-30);  color:  var(--Y-teal-menos-30) !important;}
+  .txt-teal-menos-40{ --y-txt-color: var(--Y-teal-menos-40);  color:  var(--Y-teal-menos-40) !important;}
+  .txt-teal-menos-50{ --y-txt-color: var(--Y-teal-menos-50);  color:  var(--Y-teal-menos-50) !important;}
+  .txt-teal-menos-60{ --y-txt-color: var(--Y-teal-menos-60);  color:  var(--Y-teal-menos-60) !important;}
+  .txt-teal-menos-70{ --y-txt-color: var(--Y-teal-menos-70);  color:  var(--Y-teal-menos-70) !important;}
+  .txt-teal-menos-80{ --y-txt-color: var(--Y-teal-menos-80);  color:  var(--Y-teal-menos-80) !important;}
+  .txt-teal-menos-90{ --y-txt-color: var(--Y-teal-menos-90);  color:  var(--Y-teal-menos-90) !important;}
+  .txt-teal-menos-100{--y-txt-color: var(--Y-teal-menos-100); color:  var(--Y-teal-menos-100) !important;}
+
+  /* --- cyan --- */
+  .txt-cyan{          --y-txt-color: var(--Y-cyan);           color:  var(--Y-cyan) !important;}
+  .txt-cyan-mais-50{  --y-txt-color: var(--Y-cyan-mais-50) ;  color:  var(--Y-cyan-mais-50) !important;}
+  .txt-cyan-mais-40{  --y-txt-color: var(--Y-cyan-mais-40) ;  color:  var(--Y-cyan-mais-40) !important;}
+  .txt-cyan-mais-30{  --y-txt-color: var(--Y-cyan-mais-30) ;  color:  var(--Y-cyan-mais-30) !important;}
+  .txt-cyan-mais-20{  --y-txt-color: var(--Y-cyan-mais-20) ;  color:  var(--Y-cyan-mais-20) !important;}
+  .txt-cyan-mais-10{  --y-txt-color: var(--Y-cyan-mais-10) ;  color:  var(--Y-cyan-mais-10) !important;}
+  .txt-cyan-menos-10{ --y-txt-color: var(--Y-cyan-menos-10);  color:  var(--Y-cyan-menos-10) !important;}
+  .txt-cyan-menos-20{ --y-txt-color: var(--Y-cyan-menos-20);  color:  var(--Y-cyan-menos-20) !important;}
+  .txt-cyan-menos-30{ --y-txt-color: var(--Y-cyan-menos-30);  color:  var(--Y-cyan-menos-30) !important;}
+  .txt-cyan-menos-40{ --y-txt-color: var(--Y-cyan-menos-40);  color:  var(--Y-cyan-menos-40) !important;}
+  .txt-cyan-menos-50{ --y-txt-color: var(--Y-cyan-menos-50);  color:  var(--Y-cyan-menos-50) !important;}
+  .txt-cyan-menos-60{ --y-txt-color: var(--Y-cyan-menos-60);  color:  var(--Y-cyan-menos-60) !important;}
+  .txt-cyan-menos-70{ --y-txt-color: var(--Y-cyan-menos-70);  color:  var(--Y-cyan-menos-70) !important;}
+  .txt-cyan-menos-80{ --y-txt-color: var(--Y-cyan-menos-80);  color:  var(--Y-cyan-menos-80) !important;}
+  .txt-cyan-menos-90{ --y-txt-color: var(--Y-cyan-menos-90);  color:  var(--Y-cyan-menos-90) !important;}
+  .txt-cyan-menos-100{--y-txt-color: var(--Y-cyan-menos-100); color:  var(--Y-cyan-menos-100) !important;}
+
+  /* --- blue --- */
+  .txt-blue{          --y-txt-color: var(--Y-blue);           color:  var(--Y-blue) !important;}
+  .txt-blue-mais-50{  --y-txt-color: var(--Y-blue-mais-50) ;  color:  var(--Y-blue-mais-50) !important;}
+  .txt-blue-mais-40{  --y-txt-color: var(--Y-blue-mais-40) ;  color:  var(--Y-blue-mais-40) !important;}
+  .txt-blue-mais-30{  --y-txt-color: var(--Y-blue-mais-30) ;  color:  var(--Y-blue-mais-30) !important;}
+  .txt-blue-mais-20{  --y-txt-color: var(--Y-blue-mais-20) ;  color:  var(--Y-blue-mais-20) !important;}
+  .txt-blue-mais-10{  --y-txt-color: var(--Y-blue-mais-10) ;  color:  var(--Y-blue-mais-10) !important;}
+  .txt-blue-menos-10{ --y-txt-color: var(--Y-blue-menos-10);  color:  var(--Y-blue-menos-10) !important;}
+  .txt-blue-menos-20{ --y-txt-color: var(--Y-blue-menos-20);  color:  var(--Y-blue-menos-20) !important;}
+  .txt-blue-menos-30{ --y-txt-color: var(--Y-blue-menos-30);  color:  var(--Y-blue-menos-30) !important;}
+  .txt-blue-menos-40{ --y-txt-color: var(--Y-blue-menos-40);  color:  var(--Y-blue-menos-40) !important;}
+  .txt-blue-menos-50{ --y-txt-color: var(--Y-blue-menos-50);  color:  var(--Y-blue-menos-50) !important;}
+  .txt-blue-menos-60{ --y-txt-color: var(--Y-blue-menos-60);  color:  var(--Y-blue-menos-60) !important;}
+  .txt-blue-menos-70{ --y-txt-color: var(--Y-blue-menos-70);  color:  var(--Y-blue-menos-70) !important;}
+  .txt-blue-menos-80{ --y-txt-color: var(--Y-blue-menos-80);  color:  var(--Y-blue-menos-80) !important;}
+  .txt-blue-menos-90{ --y-txt-color: var(--Y-blue-menos-90);  color:  var(--Y-blue-menos-90) !important;}
+  .txt-blue-menos-100{--y-txt-color: var(--Y-blue-menos-100); color:  var(--Y-blue-menos-100) !important;}
+
+  /* --- violet --- */
+  .txt-violet{          --y-txt-color: var(--Y-violet);           color:  var(--Y-violet) !important;}
+  .txt-violet-mais-50{  --y-txt-color: var(--Y-violet-mais-50) ;  color:  var(--Y-violet-mais-50) !important;}
+  .txt-violet-mais-40{  --y-txt-color: var(--Y-violet-mais-40) ;  color:  var(--Y-violet-mais-40) !important;}
+  .txt-violet-mais-30{  --y-txt-color: var(--Y-violet-mais-30) ;  color:  var(--Y-violet-mais-30) !important;}
+  .txt-violet-mais-20{  --y-txt-color: var(--Y-violet-mais-20) ;  color:  var(--Y-violet-mais-20) !important;}
+  .txt-violet-mais-10{  --y-txt-color: var(--Y-violet-mais-10) ;  color:  var(--Y-violet-mais-10) !important;}
+  .txt-violet-menos-10{ --y-txt-color: var(--Y-violet-menos-10);  color:  var(--Y-violet-menos-10) !important;}
+  .txt-violet-menos-20{ --y-txt-color: var(--Y-violet-menos-20);  color:  var(--Y-violet-menos-20) !important;}
+  .txt-violet-menos-30{ --y-txt-color: var(--Y-violet-menos-30);  color:  var(--Y-violet-menos-30) !important;}
+  .txt-violet-menos-40{ --y-txt-color: var(--Y-violet-menos-40);  color:  var(--Y-violet-menos-40) !important;}
+  .txt-violet-menos-50{ --y-txt-color: var(--Y-violet-menos-50);  color:  var(--Y-violet-menos-50) !important;}
+  .txt-violet-menos-60{ --y-txt-color: var(--Y-violet-menos-60);  color:  var(--Y-violet-menos-60) !important;}
+  .txt-violet-menos-70{ --y-txt-color: var(--Y-violet-menos-70);  color:  var(--Y-violet-menos-70) !important;}
+  .txt-violet-menos-80{ --y-txt-color: var(--Y-violet-menos-80);  color:  var(--Y-violet-menos-80) !important;}
+  .txt-violet-menos-90{ --y-txt-color: var(--Y-violet-menos-90);  color:  var(--Y-violet-menos-90) !important;}
+  .txt-violet-menos-100{--y-txt-color: var(--Y-violet-menos-100); color:  var(--Y-violet-menos-100) !important;}
+
+  /* --- purple --- */
+  .txt-purple{          --y-txt-color: var(--Y-purple);          color: var(--Y-purple) !important;}
+  .txt-purple-mais-50{  --y-txt-color: var(--Y-purple-mais-50) ; color:  var(--Y-purple-mais-50) !important;}
+  .txt-purple-mais-40{  --y-txt-color: var(--Y-purple-mais-40) ; color:  var(--Y-purple-mais-40) !important;}
+  .txt-purple-mais-30{  --y-txt-color: var(--Y-purple-mais-30) ; color:  var(--Y-purple-mais-30) !important;}
+  .txt-purple-mais-20{  --y-txt-color: var(--Y-purple-mais-20) ; color:  var(--Y-purple-mais-20) !important;}
+  .txt-purple-mais-10{  --y-txt-color: var(--Y-purple-mais-10) ; color:  var(--Y-purple-mais-10) !important;}
+  .txt-purple-menos-10{ --y-txt-color: var(--Y-purple-menos-10); color:  var(--Y-purple-menos-10) !important;}
+  .txt-purple-menos-20{ --y-txt-color: var(--Y-purple-menos-20); color:  var(--Y-purple-menos-20) !important;}
+  .txt-purple-menos-30{ --y-txt-color: var(--Y-purple-menos-30); color:  var(--Y-purple-menos-30) !important;}
+  .txt-purple-menos-40{ --y-txt-color: var(--Y-purple-menos-40); color:  var(--Y-purple-menos-40) !important;}
+  .txt-purple-menos-50{ --y-txt-color: var(--Y-purple-menos-50); color:  var(--Y-purple-menos-50) !important;}
+  .txt-purple-menos-60{ --y-txt-color: var(--Y-purple-menos-60); color:  var(--Y-purple-menos-60) !important;}
+  .txt-purple-menos-70{ --y-txt-color: var(--Y-purple-menos-70); color:  var(--Y-purple-menos-70) !important;}
+  .txt-purple-menos-80{ --y-txt-color: var(--Y-purple-menos-80); color:  var(--Y-purple-menos-80) !important;}
+  .txt-purple-menos-90{ --y-txt-color: var(--Y-purple-menos-90); color:  var(--Y-purple-menos-90) !important;}
+  .txt-purple-menos-100{--y-txt-color: var(--Y-purple-menos-100);color:  var(--Y-purple-menos-100) !important;}
+
+  /* --- magenta --- */
+  .txt-magenta{          --y-txt-color: var(--Y-magenta);           color:  var(--Y-magenta) !important;}
+  .txt-magenta-mais-50{  --y-txt-color: var(--Y-magenta-mais-50) ;  color:  var(--Y-magenta-mais-50) !important;}
+  .txt-magenta-mais-40{  --y-txt-color: var(--Y-magenta-mais-40) ;  color:  var(--Y-magenta-mais-40) !important;}
+  .txt-magenta-mais-30{  --y-txt-color: var(--Y-magenta-mais-30) ;  color:  var(--Y-magenta-mais-30) !important;}
+  .txt-magenta-mais-20{  --y-txt-color: var(--Y-magenta-mais-20) ;  color:  var(--Y-magenta-mais-20) !important;}
+  .txt-magenta-mais-10{  --y-txt-color: var(--Y-magenta-mais-10) ;  color:  var(--Y-magenta-mais-10) !important;}
+  .txt-magenta-menos-10{ --y-txt-color: var(--Y-magenta-menos-10);  color:  var(--Y-magenta-menos-10) !important;}
+  .txt-magenta-menos-20{ --y-txt-color: var(--Y-magenta-menos-20);  color:  var(--Y-magenta-menos-20) !important;}
+  .txt-magenta-menos-30{ --y-txt-color: var(--Y-magenta-menos-30);  color:  var(--Y-magenta-menos-30) !important;}
+  .txt-magenta-menos-40{ --y-txt-color: var(--Y-magenta-menos-40);  color:  var(--Y-magenta-menos-40) !important;}
+  .txt-magenta-menos-50{ --y-txt-color: var(--Y-magenta-menos-50);  color:  var(--Y-magenta-menos-50) !important;}
+  .txt-magenta-menos-60{ --y-txt-color: var(--Y-magenta-menos-60);  color:  var(--Y-magenta-menos-60) !important;}
+  .txt-magenta-menos-70{ --y-txt-color: var(--Y-magenta-menos-70);  color:  var(--Y-magenta-menos-70) !important;}
+  .txt-magenta-menos-80{ --y-txt-color: var(--Y-magenta-menos-80);  color:  var(--Y-magenta-menos-80) !important;}
+  .txt-magenta-menos-90{ --y-txt-color: var(--Y-magenta-menos-90);  color:  var(--Y-magenta-menos-90) !important;}
+  .txt-magenta-menos-100{--y-txt-color: var(--Y-magenta-menos-100); color:  var(--Y-magenta-menos-100) !important;}
+
+  /* --- rose --- */
+  .txt-rose{          --y-txt-color: var(--Y-rose);           color:  var(--Y-rose) !important;}
+  .txt-rose-mais-50{  --y-txt-color: var(--Y-rose-mais-50) ;  color:  var(--Y-rose-mais-50) !important;}
+  .txt-rose-mais-40{  --y-txt-color: var(--Y-rose-mais-40) ;  color:  var(--Y-rose-mais-40) !important;}
+  .txt-rose-mais-30{  --y-txt-color: var(--Y-rose-mais-30) ;  color:  var(--Y-rose-mais-30) !important;}
+  .txt-rose-mais-20{  --y-txt-color: var(--Y-rose-mais-20) ;  color:  var(--Y-rose-mais-20) !important;}
+  .txt-rose-mais-10{  --y-txt-color: var(--Y-rose-mais-10) ;  color:  var(--Y-rose-mais-10) !important;}
+  .txt-rose-menos-10{ --y-txt-color: var(--Y-rose-menos-10);  color:  var(--Y-rose-menos-10) !important;}
+  .txt-rose-menos-20{ --y-txt-color: var(--Y-rose-menos-20);  color:  var(--Y-rose-menos-20) !important;}
+  .txt-rose-menos-30{ --y-txt-color: var(--Y-rose-menos-30);  color:  var(--Y-rose-menos-30) !important;}
+  .txt-rose-menos-40{ --y-txt-color: var(--Y-rose-menos-40);  color:  var(--Y-rose-menos-40) !important;}
+  .txt-rose-menos-50{ --y-txt-color: var(--Y-rose-menos-50);  color:  var(--Y-rose-menos-50) !important;}
+  .txt-rose-menos-60{ --y-txt-color: var(--Y-rose-menos-60);  color:  var(--Y-rose-menos-60) !important;}
+  .txt-rose-menos-70{ --y-txt-color: var(--Y-rose-menos-70);  color:  var(--Y-rose-menos-70) !important;}
+  .txt-rose-menos-80{ --y-txt-color: var(--Y-rose-menos-80);  color:  var(--Y-rose-menos-80) !important;}
+  .txt-rose-menos-90{ --y-txt-color: var(--Y-rose-menos-90);  color:  var(--Y-rose-menos-90) !important;}
+  .txt-rose-menos-100{--y-txt-color: var(--Y-rose-menos-100); color:  var(--Y-rose-menos-100) !important;}
+
+  /* --- brown --- */
+  .txt-brown{           --y-txt-color: var(--Y-brown);            color:  var(--Y-brown) !important;}
+  .txt-brown-mais-50{   --y-txt-color: var(--Y-brown-mais-50) ;   color:  var(--Y-brown-mais-50) !important;}
+  .txt-brown-mais-40{   --y-txt-color: var(--Y-brown-mais-40) ;   color:  var(--Y-brown-mais-40) !important;}
+  .txt-brown-mais-30{   --y-txt-color: var(--Y-brown-mais-30) ;   color:  var(--Y-brown-mais-30) !important;}
+  .txt-brown-mais-20{   --y-txt-color: var(--Y-brown-mais-20) ;   color:  var(--Y-brown-mais-20) !important;}
+  .txt-brown-mais-10{   --y-txt-color: var(--Y-brown-mais-10) ;   color:  var(--Y-brown-mais-10) !important;}
+  .txt-brown-menos-10{  --y-txt-color: var(--Y-brown-menos-10);   color:  var(--Y-brown-menos-10) !important;}
+  .txt-brown-menos-20{  --y-txt-color: var(--Y-brown-menos-20);   color:  var(--Y-brown-menos-20) !important;}
+  .txt-brown-menos-30{  --y-txt-color: var(--Y-brown-menos-30);   color:  var(--Y-brown-menos-30) !important;}
+  .txt-brown-menos-40{  --y-txt-color: var(--Y-brown-menos-40);   color:  var(--Y-brown-menos-40) !important;}
+  .txt-brown-menos-50{  --y-txt-color: var(--Y-brown-menos-50);   color:  var(--Y-brown-menos-50) !important;}
+  .txt-brown-menos-60{  --y-txt-color: var(--Y-brown-menos-60);   color:  var(--Y-brown-menos-60) !important;}
+  .txt-brown-menos-70{  --y-txt-color: var(--Y-brown-menos-70);   color:  var(--Y-brown-menos-70) !important;}
+  .txt-brown-menos-80{  --y-txt-color: var(--Y-brown-menos-80);   color:  var(--Y-brown-menos-80) !important;}
+  .txt-brown-menos-90{  --y-txt-color: var(--Y-brown-menos-90);   color:  var(--Y-brown-menos-90) !important;}
+  .txt-brown-menos-100{ --y-txt-color: var(--Y-brown-menos-100);  color:  var(--Y-brown-menos-100) !important;}
+
+  /* --- grey --- */
+  .txt-grey{          --y-txt-color: var(--Y-grey);           color:  var(--Y-grey) !important;}
+  .txt-grey-mais-50{  --y-txt-color: var(--Y-grey-mais-50) ;  color:  var(--Y-grey-mais-50) !important;}
+  .txt-grey-mais-40{  --y-txt-color: var(--Y-grey-mais-40) ;  color:  var(--Y-grey-mais-40) !important;}
+  .txt-grey-mais-30{  --y-txt-color: var(--Y-grey-mais-30) ;  color:  var(--Y-grey-mais-30) !important;}
+  .txt-grey-mais-20{  --y-txt-color: var(--Y-grey-mais-20) ;  color:  var(--Y-grey-mais-20) !important;}
+  .txt-grey-mais-10{  --y-txt-color: var(--Y-grey-mais-10) ;  color:  var(--Y-grey-mais-10) !important;}
+  .txt-grey-menos-10{ --y-txt-color: var(--Y-grey-menos-10);  color:  var(--Y-grey-menos-10) !important;}
+  .txt-grey-menos-20{ --y-txt-color: var(--Y-grey-menos-20);  color:  var(--Y-grey-menos-20) !important;}
+  .txt-grey-menos-30{ --y-txt-color: var(--Y-grey-menos-30);  color:  var(--Y-grey-menos-30) !important;}
+  .txt-grey-menos-40{ --y-txt-color: var(--Y-grey-menos-40);  color:  var(--Y-grey-menos-40) !important;}
+  .txt-grey-menos-50{ --y-txt-color: var(--Y-grey-menos-50);  color:  var(--Y-grey-menos-50) !important;}
+  .txt-grey-menos-60{ --y-txt-color: var(--Y-grey-menos-60);  color:  var(--Y-grey-menos-60) !important;}
+  .txt-grey-menos-70{ --y-txt-color: var(--Y-grey-menos-70);  color:  var(--Y-grey-menos-70) !important;}
+  .txt-grey-menos-80{ --y-txt-color: var(--Y-grey-menos-80);  color:  var(--Y-grey-menos-80) !important;}
+  .txt-grey-menos-90{ --y-txt-color: var(--Y-grey-menos-90);  color:  var(--Y-grey-menos-90) !important;}
+  .txt-grey-menos-100{--y-txt-color: var(--Y-grey-menos-100); color:  var(--Y-grey-menos-100) !importan }
+
+  /* --- neutral --- */
+  .txt-neutral{           --y-txt-color:var(--Y-neutral);           color: var(--Y-neutral) !important;}
+  .txt-neutral-mais-50{   --y-txt-color:var(--Y-neutral-mais-50) ;  color:  var(--Y-neutral-mais-50) !important;}
+  .txt-neutral-mais-40{   --y-txt-color:var(--Y-neutral-mais-40) ;  color:  var(--Y-neutral-mais-40) !important;}
+  .txt-neutral-mais-30{   --y-txt-color:var(--Y-neutral-mais-30) ;  color:  var(--Y-neutral-mais-30) !important;}
+  .txt-neutral-mais-20{   --y-txt-color:var(--Y-neutral-mais-20) ;  color:  var(--Y-neutral-mais-20) !important;}
+  .txt-neutral-mais-10{   --y-txt-color:var(--Y-neutral-mais-10) ;  color:  var(--Y-neutral-mais-10) !important;}
+  .txt-neutral-menos-10{  --y-txt-color:var(--Y-neutral-menos-10);  color:  var(--Y-neutral-menos-10) !important;}
+  .txt-neutral-menos-20{  --y-txt-color:var(--Y-neutral-menos-20);  color:  var(--Y-neutral-menos-20) !important;}
+  .txt-neutral-menos-30{  --y-txt-color:var(--Y-neutral-menos-30);  color:  var(--Y-neutral-menos-30) !important;}
+  .txt-neutral-menos-40{  --y-txt-color:var(--Y-neutral-menos-40);  color:  var(--Y-neutral-menos-40) !important;}
+  .txt-neutral-menos-50{  --y-txt-color:var(--Y-neutral-menos-50);  color:  var(--Y-neutral-menos-50) !important;}
+  .txt-neutral-menos-60{  --y-txt-color:var(--Y-neutral-menos-60);  color:  var(--Y-neutral-menos-60) !important;}
+  .txt-neutral-menos-70{  --y-txt-color:var(--Y-neutral-menos-70);  color:  var(--Y-neutral-menos-70) !important;}
+  .txt-neutral-menos-80{  --y-txt-color:var(--Y-neutral-menos-80);  color:  var(--Y-neutral-menos-80) !important;}
+  .txt-neutral-menos-90{  --y-txt-color:var(--Y-neutral-menos-90);  color:  var(--Y-neutral-menos-90) !important;}
+  .txt-neutral-menos-100{ --y-txt-color:var(--Y-neutral-menos-100); color:  var(--Y-neutral-menos-100) !important;}
+
+  /* --- black --- */
+  .txt-full-black{      --y-color: #000 !important;}
+  .txt-black{           --y-txt-color:var(--Y-black);           color:  var(--Y-black) !important;}
+  .txt-black-mais-50{   --y-txt-color:var(--Y-black-mais-50) ;  color:  var(--Y-black-mais-50) !important;}
+  .txt-black-mais-40{   --y-txt-color:var(--Y-black-mais-40) ;  color:  var(--Y-black-mais-40) !important;}
+  .txt-black-mais-30{   --y-txt-color:var(--Y-black-mais-30) ;  color:  var(--Y-black-mais-30) !important;}
+  .txt-black-mais-20{   --y-txt-color:var(--Y-black-mais-20) ;  color:  var(--Y-black-mais-20) !important;}
+  .txt-black-mais-10{   --y-txt-color:var(--Y-black-mais-10) ;  color:  var(--Y-black-mais-10) !important;}
+  .txt-black-menos-10{  --y-txt-color:var(--Y-black-menos-10);  color:  var(--Y-black-menos-10) !important;}
+  .txt-black-menos-20{  --y-txt-color:var(--Y-black-menos-20);  color:  var(--Y-black-menos-20) !important;}
+  .txt-black-menos-30{  --y-txt-color:var(--Y-black-menos-30);  color:  var(--Y-black-menos-30) !important;}
+  .txt-black-menos-40{  --y-txt-color:var(--Y-black-menos-40);  color:  var(--Y-black-menos-40) !important;}
+  .txt-black-menos-50{  --y-txt-color:var(--Y-black-menos-50);  color:  var(--Y-black-menos-50) !important;}
+  .txt-black-menos-60{  --y-txt-color:var(--Y-black-menos-60);  color:  var(--Y-black-menos-60) !important;}
+  .txt-black-menos-70{  --y-txt-color:var(--Y-black-menos-70);  color:  var(--Y-black-menos-70) !important;}
+  .txt-black-menos-80{  --y-txt-color:var(--Y-black-menos-80);  color:  var(--Y-black-menos-80) !important;}
+  .txt-black-menos-90{  --y-txt-color:var(--Y-black-menos-90);  color:  var(--Y-black-menos-90) !important;}
+  .txt-black-menos-100{ --y-txt-color:var(--Y-black-menos-100); color:  var(--Y-black-menos-100) !important;}
+  /* --- Fim TXT --- */
+
 /*------------------------------*
 / BORDER
 /-------------------------------*/
@@ -894,7 +1382,7 @@
     border-top: var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
   }
   .yapi .border.border-bottom, .yapi .border .border-bottom,
-  .yapi .border.border-b, ..yapi border .border-b{
+  .yapi .border.border-b, .yapi border .border-b{
     border-bottom: var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
   }
   .yapi .border.border-right, .yapi .border .border-right,
