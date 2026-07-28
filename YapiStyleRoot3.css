@@ -309,7 +309,9 @@
     --Y-black-menos-80: color-mix(in srgb, var(--Y-black), white 80%);
     --Y-black-menos-90: color-mix(in srgb, var(--Y-black), white 90%);
     --Y-black-menos-100: color-mix(in srgb, var(--Y-black), white 95%);
-
+  
+    --Y-white: #ffffff;
+  
     --Y-disabled-color: #bbbbbb;
     --Y-border-color: var(--y-color-menos-50,var(--Y-grey-menos-50));
 
