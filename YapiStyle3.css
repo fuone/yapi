@@ -2109,6 +2109,7 @@
 / ROTACAO
 /-------------------------------*/
 	.using-rotate{}
+
   .rotate{
     -webkit-transform: rotate(var(--y-rotate-angle, 0));
     transform: rotate(var(--y-rotate-angle, 0));
@@ -2117,6 +2118,13 @@
   .rotate.rotate-90{ --y-rotate-angle: 90deg;}
   .rotate.rotate-120{--y-rotate-angle:120deg;}
   .rotate.rotate-180{--y-rotate-angle:180deg;}
+	.rotate.rotate-270{--y-rotate-angle: 270deg;}
+  .rotate.rotate-menos-45{  --y-rotate-angle: -45deg;}
+  .rotate.rotate-menos-90{  --y-rotate-angle: -90deg;}
+  .rotate.rotate-menos-120{ --y-rotate-angle: -120deg;}
+  .rotate.rotate-menos-180{ --y-rotate-angle: -180deg;}
+  .rotate.rotate-menos-210{ --y-rotate-angle: -210deg;}
+  .rotate.rotate-menos-270{ --y-rotate-angle: -270deg;}
 
   .flip-both{
     -webkit-transform: scale(-1);
