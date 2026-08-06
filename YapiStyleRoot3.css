@@ -328,4 +328,8 @@
     --Y-grid-col: 12;
     --Y-sm-fator: 0.75;
     --Y-lg-fator: 1.25;
+    
+    --Y-pre-bg-color: #f8f9fa;/*f8f9fa*/
+    --Y-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --Y-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
