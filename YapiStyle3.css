@@ -6,7 +6,7 @@
 * fuone.dev@gmaill.com
 **************************/
 /*
-* 280726
+* 060826
 */
 /*------------------------------*
 / BASE
@@ -20,15 +20,17 @@
   .yapi{--y-yapi: none;   /* deve ser declarada na tag html */}
 
   *.disabled{cursor: not-allowed;}
-	body, .body{
-		--y-body-bg-color: var(--Y-bg-color, #fff);
-		--y-body-txt-color: var(--Y-txt-color, #000);
-		--y-body-font-family: var(--Y-font-family);
-		--y-body-font-weight: var(--Y-font-weight, 500);
-		--y-body-font-size: var(--Y-font-size, 13px);	
-		--y-body-line-height: var(--Y-line-height, normal);
+	body{
+    --y-body-font-family: var(--proj-font-family, var(--y-font-family, var(--Y-font-family)));
+  	--y-body-bg-color: var(--proj-body-bg-color, var(--Y-bg-color, #fff));
+		--y-body-txt-color: var(--proj-txt-color, var(--Y-txt-color, #000));
+		--y-body-font-family: var(--proj-font-family, var(--Y-font-family));
+		--y-body-font-weight: var(--proj-font-weight, var(--Y-font-weight, 500));
+		--y-body-font-size: var(--proj-font-size, var(--Y-font-size, 13px));	
+		--y-body-line-height: var(--proj-line-height, var(--Y-line-height, normal));
 		--y-body-text-align: justify;
-	
+	}
+	.body{	
 		background-color: var(--y-body-bg-color);
 		background-size: cover;
 		color: var(--y-body-txt-color);	
@@ -43,9 +45,17 @@
 		margin: var(--y-body-margin, 0);	
 	}
 	p{}
+	.p{}
 	ul{}
+	.ul{
+    padding-inline-start: 20px;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+  }
 	ol{}
+	.ol{}
 	li{}
+	.li{}
 /*--- fim BASE --- */
 /*------------------------------*
 / Fontes
@@ -1396,35 +1406,54 @@
 
   .yapi .border.border-all, .yapi .border .border-all,
   .yapi .border.border-a, .yapi .border .border-a{
-    border: var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
+		border-width: var(--y-border-width, 1px)!important;
+		border-style: var(--y-border-style)!important;
+		border-color: var(--y-bcolor)!important;
   }
   .yapi .border.border-top, .yapi .border .border-top,
   .yapi .border.border-t, .yapi .border .border-t{
-    border-top: var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
+		border-top-width: var(--y-border-width, 1px)!important;
+		border-top-style: var(--y-border-style)!important;
+		border-top-color: var(--y-bcolor)!important;
   }
   .yapi .border.border-bottom, .yapi .border .border-bottom,
   .yapi .border.border-b, .yapi border .border-b{
-    border-bottom: var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
+		border-bottom-width: var(--y-border-width, 1px)!important;
+		border-bottom-style: var(--y-border-style)!important;
+		border-bottom-color: var(--y-bcolor)!important;
   }
   .yapi .border.border-right, .yapi .border .border-right,
   .yapi .border.border-r, .yapi .border .border-r{
-    border-right: var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
+		border-right-width: var(--y-border-width, 1px)!important;
+		border-right-style: var(--y-border-style)!important;
+		border-right-color: var(--y-bcolor)!important;
   }
   .yapi .border.border-left, .yapi .border .border-left,
   .yapi .border.border-l, .yapi .border .border-l{
-    border-left: var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
+		border-left-width: var(--y-border-width, 1px)!important;
+		border-left-style: var(--y-border-style)!important;
+		border-left-color: var(--y-bcolor)!important;
   }
   .yapi .border.border-x,
   .yapi .border.border-lr{
-    border-left:  var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
-    border-right: var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
+		border-left-width: var(--y-border-width, 1px)!important;
+		border-left-style: var(--y-border-style)!important;
+		border-left-color: var(--y-bcolor)!important;
+		border-right-width: var(--y-border-width, 1px)!important;
+		border-right-style: var(--y-border-style)!important;
+		border-right-color: var(--y-bcolor)!important;
   }
   .yapi .border.border-y,
   .yapi .border.border-tb{
-    border-top:   var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
-    border-bottom:var(--y-border-width, 1px) var(--y-border-style) var(--y-bcolor)!important;
+		border-top-width: var(--y-border-width, 1px)!important;
+		border-top-style: var(--y-border-style)!important;
+		border-top-color: var(--y-bcolor)!important;
+		border-bottom-width: var(--y-border-width, 1px)!important;
+		border-bottom-style: var(--y-border-style)!important;
+		border-bottom-color: var(--y-bcolor)!important;
   }
 
+	.border-0, .no-border{border: none;}
   /*--- tamanho da borda ---*/
   .yapi .border.border-1{--y-border-width: 1px;}
   .yapi .border.border-2{--y-border-width: 2px;}
@@ -1442,10 +1471,12 @@
   .yapi .border-dashed{border-style: dashed !important;}
 
   /*--- opacidade ---*/
+	.border-opacity-0{--y-border-opacity: 0;}
   .border-opacity-10{--y-border-opacity: 0.1;}
   .border-opacity-25{--y-border-opacity: 0.25;}
   .border-opacity-50{--y-border-opacity: 0.50;}
   .border-opacity-75{--y-border-opacity: 0.75;}
+	.border-opacity-100{--y-border-opacity: 1;}
 
   /*--- radius ---*/
   .border-rad{
@@ -2067,8 +2098,12 @@
   .flex-wrap-balance{flex-wrap: balance !important};
   .flex-wrap-nowrap{flex-wrap: nowrap !important};
 
-  .overflow-hidde{overflow: hidden !important;}
+  .overflow-hidden{overflow: hidden !important;}
   .overflow-visible{overflow: visible !important;}
+	.overflow-auto{overflow: auto !important;}
+  .overflow-overlay{overflow: overlay !important;}
+  .overflow-clip{overflow: clip !important;}
+  .overflow-scroll{overflow: scroll !important;}
 /*--- fim DISPLAY --- */
 /*------------------------------*
 / ROTACAO
@@ -2965,6 +3000,66 @@
     margin-top: var(--y-gutter-y);
   }
 /*--- fim LINHAS --- */
+/*------------------------------*
+/ CODING
+/-------------------------------*/
+	.using-coding{
+		/* usado quando precisar printar trechos de código na página
+		<pre class="pre"<code class="code>conteúdo...</code></pre>
+
+		Obs:
+		1) NÂO pode haver espaços entre as tags pre e code;
+		2) Para ser printado o conteúdo html, css, javascript ou outro, o conteúdo deve ser escrito utilizando os seguintes códigos 
+		&lt; = <
+		&gt; = >
+		&quot; = " (aspas duplas)
+		*/
+	}
+	pre{
+		--y-border-color: var(--Y-neutral-menos-70); /*não alterar --y-border-color*/
+    --y-pre-bg-color: var(--proj-pre-bg-color, var(--Y-pre-bg-color));
+	}
+	.pre{
+    display: block;
+    padding: 0.5rem 1rem;
+    overflow: auto;
+    background: var(--y-pre-bg-color);
+    border-color: var(--y-border-color);
+    scrollbar-color: var(--Y-grey-menos-50, #d4d4d4) transparent;
+    scrollbar-width: thin;
+  }
+  code, .code{
+    --y-code-color-1: var(--Y-neutral-menos-20);
+    --y-code-color-2: var(--y-code-color-1);
+    --y-code-color-3: var(--y-code-color-1);
+    --y-code-color-4: var(--y-code-color-1);
+    --y-code-color-5: var(--y-code-color-1);
+    --y-code-color-6: var(--y-code-color-1);
+
+    color: var(--y-code-color-1);
+    display: inline-block;
+    font-family: var(--Y-font-monospace);
+    font-size: inherit;
+    word-wrap: normal;
+    word-break: normal;
+  }
+  .code.stylized{
+    --y-code-color-1: var(--Y-red);
+    --y-code-color-2: var(--Y-red);
+    --y-code-color-3: var(--Y-blue);
+    --y-code-color-4: var(--Y-magenta);
+    --y-code-color-5: var(--Y-grey);
+    --y-code-color-6: var(--Y-teal);
+
+    color: var(--Y-neutral-mais-30);
+  }
+  .code .code-tag-symbol{ color: var(--y-code-color-1);}
+  .code .code-tag-name{   color: var(--y-code-color-2);}
+  .code .code-attr-name{  color: var(--y-code-color-3);}
+  .code .code-attr-value{ color: var(--y-code-color-4);}
+  .code .code-comment{    color: var(--y-code-color-5); font-style: italic;}
+  .code .code-optional{   color: var(--y-code-color-6)}
+/* --- fim coding --*/
 /*------------------------------*
 / LOADERS
 /-------------------------------*/
@@ -4333,6 +4428,10 @@
 
   .alert.alert-outlined{background: white !important;}
 
+	.alert .alert-content{
+
+  }
+
   .alert>.alert-title{
     display: block;
     font-weight: 700;
@@ -5104,7 +5203,210 @@
 / Disabled
 /-------------------------------*/
 
+/*------------------------------*
+/ Collapse
+/-------------------------------*/
+	.using-collapse{
+    /*
+      [<div class="collapse-accordion-group">]<!-- Para efeito de accordion.-->
+        <div class="collapse collapse-group [cor]">
+          <div class="collapse-trigger [collapse-grouped] [trigger-icon] [icon-1] [trigger-icon-right]" aria-expanded="false" aria-controls="collapse-texto">TEXTO</div>
+          <div class="collapse [collapse-accordion]" id="collapse-texto">
+            <div class="collapse-content">
+              <div class="collapse-body">
+                Conteudo aqui...
+              </div>
+            </div>
+          </div>
+        </div>
+      [</div>]
 
+      * É necessário usar os atributos aria-expanded e aria-control
+      * A classe txt no collape-trigger é necessária para colorir o texto e ícone do acionador
+      * O valor do aria-control é o id do collapse
+      * A classe collapse-trigger é o acionador
+      * collapse-grouped é para o collapse que tem seu conteúdo agrupado
+      * trigger-icon é para inserir o ícone
+
+      Opções de ícones:
+      \1F7A6 = ✚
+      \271A = ✚
+      \268A = ⚊ 
+      \25BC = ▼
+      \25B2 = ▲
+      \29CB = ⧋
+      \2B9F = ⮟
+      \2B9D = ⮝
+      \2B9E = ⮞
+      \27A4 = ➤
+      \2795 = ➕ 
+      \2796 = ➖
+
+      
+
+    */
+  }
+  /* Grupo container */
+  .collapse-group {
+    display: flex;
+    flex-direction: column;
+  }
+	.collapse-accordion-group{}
+
+  .collapse {
+    --y-collapse-txt-color: inherit;
+    --y-collapse-bg-color: var(--y-color-menos-90, #fff);
+    --y-collapse-border-color: var(--y-color-menos-30, #ccc);
+    --y-collapse-border-radius: var(--Y-border-radius, 5px);
+  }
+	.collapse-accordion{}
+
+  /* Gatilho (Trigger) */
+  .collapse-trigger {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* Estado Aberto do Gatilho */
+  .collapse-trigger[aria-expanded="true"].collapse-grouped {
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border: none !important;
+    box-shadow: 
+      inset -1px 0 0 0 var(--y-collapse-border-color), 
+      inset 1px 0 0 0 var(--y-collapse-border-color), 
+      inset 0 1px 0 0 var(--y-collapse-border-color) !important;
+  }
+
+  /* Sistema de Ícones no Gatilho */
+  .trigger-icon {
+    --y-trigger-icon-color: var(--y-proj-txt-color, var(--y-def-color));
+    --y-trigger-icon-destak-color: var(--y-destak-color, var(--y-red)); /* Corrigido case-sensitive --y-red */
+    --y-trigger-unicode-closed: "\25bC";
+    --y-trigger-unicode-open: var(--y-trigger-unicode-closed);
+    --y-trigger-icon-transform: rotate(-180deg);
+  }
+
+  .trigger-icon::before {
+    content: var(--y-trigger-unicode-closed, '\1f7a6');
+    display: inline-block;
+    font-style: normal;
+    font-weight: 500;
+    margin-right: 10px;
+    color: var(--y-trigger-icon-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  /* Ícone quando aberto */
+  .collapse-trigger[aria-expanded="true"].trigger-icon::before {
+    content: var(--y-trigger-unicode-open, '\268a');
+    color: var(--y-trigger-icon-destak-color);
+    transform: var(--y-trigger-icon-transform);
+  }
+
+  /* Variação: Ícone à direita (Usando Flexbox em vez de Float) */
+  .trigger-icon.trigger-icon-right {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .trigger-icon.trigger-icon-right::before {
+    order: 1; /* Move o ::before para o final do elemento */
+    margin-right: 0;
+    margin-left: 10px;
+  }
+
+  /* Variações de Ícones */
+  .trigger-icon.icon-1 {
+    --y-trigger-unicode-closed: "\2b9f";/* ⮟ */
+    --y-trigger-unicode-open: var(--y-trigger-unicode-closed);
+  }
+
+  .trigger-icon.icon-2 {
+    --y-trigger-unicode-closed: "\2B9E"; /* ⮞ */
+    --y-trigger-unicode-open: var(--y-trigger-unicode-closed);
+    --y-trigger-icon-transform: rotate(-90deg);
+  }
+  .trigger-icon.icon-2a {
+    --y-trigger-unicode-closed: "\27A4";/* ➤ */
+    --y-trigger-unicode-open: var(--y-trigger-unicode-closed);
+    --y-trigger-icon-transform: rotate(-90deg);
+  }
+
+  .trigger-icon.icon-3 {
+    --y-trigger-unicode-closed: "\1F7A6"; /* + */
+    --y-trigger-unicode-open: "\268A";
+  }
+
+  /* Variante Grouped */
+  .collapse-grouped {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--y-collapse-bg-color);
+    box-shadow: 
+      inset 1px 0 0 0 var(--y-collapse-border-color),
+      inset 0 1px 0 var(--y-collapse-border-color),
+      inset -1px 0 0 0 var(--y-collapse-border-color),
+      0 1px 0 var(--y-collapse-border-color);
+    border-radius: var(--y-collapse-border-radius);
+    /*font-weight: bold;*/
+    text-align: left;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+  }
+
+  .collapse-grouped:hover {
+    /*background-color: color-mix(in srgb, var(--y-collapse-bg-color), black 5%);*/
+    /*font-weight: bold;*/
+  }
+    /* Borda superior no conteúdo aberto quando for grouped */
+    .collapse-grouped + .is-open > .collapse-content {
+      /*border-top: 1px solid var(--y-collapse-border-color);*/
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+    }
+
+  /* Conteúdo Expansível (Transição Suave) */
+  /* Seleciona APENAS o collapse-content DIRETO do collapse */
+  .collapse > .collapse-content {
+    display: grid;
+    grid-template-rows: 0fr; /* Fechado por padrão */
+    grid-auto-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 0.3s ease-out, padding 0.3s ease-out;
+    border-bottom-right-radius: var(--y-collapse-border-radius);
+    border-bottom-left-radius: var(--y-collapse-border-radius);
+  }
+
+  .collapse .collapse-body{
+    overflow: hidden;
+  }
+  .collapse-body > *{
+    overflow: auto;
+  }
+
+  /* Quando fechado, esconde o overflow para a transição funcionar */
+  .collapse:not(.is-open) > .collapse-content {
+    overflow: hidden;
+  }
+
+  /* Quando aberto, define 1fr para expandir */
+  .collapse.is-open > .collapse-content {
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    padding: 10px;
+    border: 1px solid var(--y-collapse-border-color);
+  }
+
+  /* Garante que o filho direto absorva o tamanho */
+  .collapse > .collapse-content > * {
+    min-height: 0;
+  }
+/*--- fim collapse ---*/
 /*------------------------------*
 / FuoneTag
 /-------------------------------*/
