@@ -3014,7 +3014,7 @@
 	.using-coding{
 		/* usado quando precisar printar trechos de código na página
 		<pre class="pre"<code class="code>conteúdo...</code></pre>
-
+	
 		Obs:
 		1) NÂO pode haver espaços entre as tags pre e code;
 		2) Para ser printado o conteúdo html, css, javascript ou outro, o conteúdo deve ser escrito utilizando os seguintes códigos 
@@ -3024,7 +3024,7 @@
 		*/
 	}
 	pre{
-		--y-border-color: var(--Y-neutral-menos-70); /*não alterar --y-border-color*/
+	--y-border-color: var(--Y-neutral-menos-70); /*não alterar --y-border-color*/
     --y-pre-bg-color: var(--proj-pre-bg-color, var(--Y-pre-bg-color));
 	}
 	.pre{
@@ -3062,45 +3062,18 @@
 
 		color: var(--Y-neutral-mais-30);
 	}
+    .code.code-inline{
+      display: inline;
+      padding: 0.05rem 0.35rem;
+      background: var(--Y-pre-bg-color);
+      font-size: 90%;
+    }
 	.code .code-tag-symbol{ color: var(--y-code-tag-symbol-color);}
 	.code .code-tag-name{   color: var(--y-code-tag-name-color);}
 	.code .code-attr-name{  color: var(--y-code-attr-name-color);}
 	.code .code-attr-value{ color: var(--y-code-attr-value-color);}
 	.code .code-comment{    color: var(--y-code-comment-color); font-style: italic;}
 	.code .code-optional{   color: var(--y-code-optional-color)}
-/*
-  code, .code{
-    --y-code-color-1: var(--Y-neutral-menos-20);
-    --y-code-color-2: var(--y-code-color-1);
-    --y-code-color-3: var(--y-code-color-1);
-    --y-code-color-4: var(--y-code-color-1);
-    --y-code-color-5: var(--y-code-color-1);
-    --y-code-color-6: var(--y-code-color-1);
-
-    color: var(--y-code-color-1);
-    display: inline-block;
-    font-family: var(--Y-font-monospace);
-    font-size: inherit;
-    word-wrap: normal;
-    word-break: normal;
-  }
-  .code.stylized{
-    --y-code-color-1: var(--Y-red);
-    --y-code-color-2: var(--Y-red);
-    --y-code-color-3: var(--Y-blue);
-    --y-code-color-4: var(--Y-magenta);
-    --y-code-color-5: var(--Y-grey);
-    --y-code-color-6: var(--Y-teal);
-
-    color: var(--Y-neutral-mais-30);
-  }
-  .code .code-tag-symbol{ color: var(--y-code-color-1);}
-  .code .code-tag-name{   color: var(--y-code-color-2);}
-  .code .code-attr-name{  color: var(--y-code-color-3);}
-  .code .code-attr-value{ color: var(--y-code-color-4);}
-  .code .code-comment{    color: var(--y-code-color-5); font-style: italic;}
-  .code .code-optional{   color: var(--y-code-color-6)}
-*/
 /* --- fim coding --*/
 /*------------------------------*
 / LOADERS
