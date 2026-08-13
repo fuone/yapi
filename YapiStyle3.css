@@ -3036,6 +3036,39 @@
     scrollbar-color: var(--Y-grey-menos-50, #d4d4d4) transparent;
     scrollbar-width: thin;
   }
+	code, .code{
+		--y-code-color-1: var(--Y-neutral-menos-20);
+		--y-code-tag-symbol-color: var(--y-code-color-1);
+		--y-code-tag-name-color: var(--y-code-color-1);
+		--y-code-attr-name-color: var(--y-code-color-1);
+		--y-code-attr-value-color: var(--y-code-color-1);
+		--y-code-comment-color: var(--y-code-color-1);
+		--y-code-optional-color: var(--y-code-color-1);
+
+		color: var(--y-code-color-1);
+		display: inline-block;
+		font-family: var(--Y-font-monospace);
+		font-size: inherit;
+		word-wrap: normal;
+		word-break: normal;
+	}
+	.code.stylized{
+		--y-code-tag-symbol-color: var(--Y-red);
+		--y-code-tag-name-color: var(--Y-red);
+		--y-code-attr-name-color: var(--Y-blue);
+		--y-code-attr-value-color: var(--Y-magenta);
+		--y-code-comment-color: var(--Y-grey);
+		--y-code-optional-color: var(--Y-teal);
+
+		color: var(--Y-neutral-mais-30);
+	}
+	.code .code-tag-symbol{ color: var(--y-code-tag-symbol-color);}
+	.code .code-tag-name{   color: var(--y-code-tag-name-color);}
+	.code .code-attr-name{  color: var(--y-code-attr-name-color);}
+	.code .code-attr-value{ color: var(--y-code-attr-value-color);}
+	.code .code-comment{    color: var(--y-code-comment-color); font-style: italic;}
+	.code .code-optional{   color: var(--y-code-optional-color)}
+/*
   code, .code{
     --y-code-color-1: var(--Y-neutral-menos-20);
     --y-code-color-2: var(--y-code-color-1);
@@ -3067,6 +3100,7 @@
   .code .code-attr-value{ color: var(--y-code-color-4);}
   .code .code-comment{    color: var(--y-code-color-5); font-style: italic;}
   .code .code-optional{   color: var(--y-code-color-6)}
+*/
 /* --- fim coding --*/
 /*------------------------------*
 / LOADERS
