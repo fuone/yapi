@@ -3038,6 +3038,7 @@
   }
 	code, .code{
 		--y-code-color-1: var(--Y-neutral-menos-20);
+		--y-code-bg-color: var(--proj-pre-bg-color, var(--Y-pre-bg-color));
 		--y-code-tag-symbol-color: var(--y-code-color-1);
 		--y-code-tag-name-color: var(--y-code-color-1);
 		--y-code-attr-name-color: var(--y-code-color-1);
@@ -3065,7 +3066,7 @@
     .code.code-inline{
       display: inline;
       padding: 0.05rem 0.35rem;
-      background: var(--Y-pre-bg-color);
+      background: var(--y-code-bg-color);
       font-size: 90%;
     }
 	.code .code-tag-symbol{ color: var(--y-code-tag-symbol-color);}
