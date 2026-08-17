@@ -4513,9 +4513,9 @@
 /-------------------------------*/
 .using-badge{}
 
-.yapi .badge{
+.yapi .y-badge{
   --y-badge-fator: 0.8;
-	--y-badge-txt-color:    var(--y-txt-color, var(--y-color-mais-30, var(--Y-grey-mais-30)));
+  --y-badge-txt-color:    var(--y-txt-color, var(--y-color-mais-30, var(--Y-grey-mais-30)));
   --y-badge-bg-color:     var(--y-bg-color,var(--y-color-menos-80,var(--Y-grey-menos-80)));
   --y-badge-border-color: var(--y-border-color,var(--y-color-mais-30,var(--Y-grey-mais-30)));
   --y-badge-border-radius: 0.25rem;
@@ -4542,14 +4542,12 @@
 	align-items: center;
 	align-self: center;	
 }
-.badge.badge-bold{--y-badge-font-weight: 600;}
-.badge.badge-outlined{
+.y-badge.badge-bold{--y-badge-font-weight: 600;}
+.y-badge.badge-outlined{
   --y-badge-bg-color: white;
   border-color: var(--y-badge-border-color);
   }
-.badge.badge-p,
 .y-badge.badge-p{--y-badge-fator: 0.6;}
-.badge.badge-g,
 .y-badge.badge-g{--y-badge-fator: 1;} 
 
 /*--- fim BADGE --- */
@@ -5263,7 +5261,7 @@
     */
   }
   /* Classe principal */
-  .y-collapse{
+  .yapi .y-collapse{
     --y-collapse-txt-color: vr(--proj-collapse-txt-color, inherit);
     --y-collapse-bg-color: var(--proj-collapse-bg-color, var(--y-color-menos-90, #fff));
     --y-collapse-border-color: var(--proj-collapse-border-color, var(--y-color-menos-30, #ccc));
