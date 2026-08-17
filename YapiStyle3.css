@@ -6,7 +6,7 @@
 * fuone.dev@gmaill.com
 **************************/
 /*
-* 060826
+* 160826
 */
 /*------------------------------*
 / BASE
@@ -5223,11 +5223,11 @@
 /-------------------------------*/
 	.using-collapse{
     /*
-      [<div class="collapse-accordion-group">]<!-- Para efeito de accordion.-->
-        <div class="collapse collapse-group [cor]">
+      [<div class="[y-collapse] collapse-accordion-group">]<!-- Para efeito de accordion-->
+        <div class="y-collapse collapse-group [cor]">
           <div class="collapse-trigger [collapse-grouped] [trigger-icon] [icon-1] [trigger-icon-right]" aria-expanded="false" aria-controls="collapse-texto">TEXTO</div>
-          <div class="collapse [collapse-accordion]" id="collapse-texto">
-            <div class="collapse-content">
+          <div class="collapse-content [collapse-accordion]" id="collapse-texto">
+            <div class="collapse-inner">
               <div class="collapse-body">
                 Conteudo aqui...
               </div>
@@ -5261,20 +5261,19 @@
 
     */
   }
+  /* Classe principal */
+  .y-collapse{
+    --y-collapse-txt-color: vr(--proj-collapse-txt-color, inherit);
+    --y-collapse-bg-color: var(--proj-collapse-bg-color, var(--y-color-menos-90, #fff));
+    --y-collapse-border-color: var(--proj-collapse-border-color, var(--y-color-menos-30, #ccc));
+    --y-collapse-border-radius: var(--proj-collapse-border-radius, var(--Y-border-radius, 5px));
+  }
+
   /* Grupo container */
   .collapse-group {
     display: flex;
     flex-direction: column;
   }
-	.collapse-accordion-group{}
-
-  .collapse {
-    --y-collapse-txt-color: inherit;
-    --y-collapse-bg-color: var(--y-color-menos-90, #fff);
-    --y-collapse-border-color: var(--y-color-menos-30, #ccc);
-    --y-collapse-border-radius: var(--Y-border-radius, 5px);
-  }
-	.collapse-accordion{}
 
   /* Gatilho (Trigger) */
   .collapse-trigger {
@@ -5295,10 +5294,10 @@
 
   /* Sistema de Ícones no Gatilho */
   .trigger-icon {
-    --y-trigger-icon-color: var(--y-proj-txt-color, var(--y-def-color));
-    --y-trigger-icon-destak-color: var(--y-destak-color, var(--y-red)); /* Corrigido case-sensitive --y-red */
-    --y-trigger-unicode-closed: "\25bC";
-    --y-trigger-unicode-open: var(--y-trigger-unicode-closed);
+    --y-trigger-icon-color: var(--proj-collapse-trigger-icon-color, var(--y-def-color));
+    --y-trigger-icon-destak-color: var(--y-destak-color, var(--y-red)); 
+    --y-trigger-unicode-closed: var(--proj-collapse-trigger-icon-closed,"\25bC");
+    --y-trigger-unicode-open: var(--proj-collapse-trigger-icon-open, var(--y-trigger-unicode-closed));
     --y-trigger-icon-transform: rotate(-180deg);
   }
 
@@ -5336,6 +5335,7 @@
   .trigger-icon.icon-1 {
     --y-trigger-unicode-closed: "\2b9f";/* ⮟ */
     --y-trigger-unicode-open: var(--y-trigger-unicode-closed);
+    /*--y-trigger-icon-transform: rotate(180deg);*/
   }
 
   .trigger-icon.icon-2 {
@@ -5352,7 +5352,11 @@
   .trigger-icon.icon-3 {
     --y-trigger-unicode-closed: "\1F7A6"; /* + */
     --y-trigger-unicode-open: "\268A";
+    /*--y-trigger-icon-transform: rotate(180deg);*/
   }
+
+  /* Variáveis do Collapse */
+
 
   /* Variante Grouped */
   .collapse-grouped {
@@ -5379,15 +5383,16 @@
     /*font-weight: bold;*/
   }
     /* Borda superior no conteúdo aberto quando for grouped */
-    .collapse-grouped + .is-open > .collapse-content {
+    .collapse-grouped + .is-open > .collapse-inner {
       /*border-top: 1px solid var(--y-collapse-border-color);*/
       border-top-left-radius: 0 !important;
       border-top-right-radius: 0 !important;
     }
 
+  .collapse-content{}
   /* Conteúdo Expansível (Transição Suave) */
-  /* Seleciona APENAS o collapse-content DIRETO do collapse */
-  .collapse > .collapse-content {
+  /* Seleciona APENAS o collapse-inner DIRETO do collapse */
+  .collapse-content > .collapse-inner {
     display: grid;
     grid-template-rows: 0fr; /* Fechado por padrão */
     grid-auto-rows: 0fr;
@@ -5397,7 +5402,7 @@
     border-bottom-left-radius: var(--y-collapse-border-radius);
   }
 
-  .collapse .collapse-body{
+  .collapse-content .collapse-body{
     overflow: hidden;
   }
   .collapse-body > *{
@@ -5405,22 +5410,24 @@
   }
 
   /* Quando fechado, esconde o overflow para a transição funcionar */
-  .collapse:not(.is-open) > .collapse-content {
+  .collapse-content:not(.is-open) > .collapse-inner {
     overflow: hidden;
   }
 
   /* Quando aberto, define 1fr para expandir */
-  .collapse.is-open > .collapse-content {
+  .collapse-content.is-open > .collapse-inner {
     grid-template-rows: 1fr;
     grid-auto-rows: 1fr;
     padding: 10px;
     border: 1px solid var(--y-collapse-border-color);
+    /* overflow: visible após expandir permite que collapses filhos expandam a altura */
   }
 
   /* Garante que o filho direto absorva o tamanho */
-  .collapse > .collapse-content > * {
+  .collapse-content > .collapse-inner > * {
     min-height: 0;
   }
+
 /*--- fim collapse ---*/
 /*------------------------------*
 / FuoneTag
