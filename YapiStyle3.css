@@ -6,7 +6,7 @@
 * fuone.dev@gmaill.com
 **************************/
 /*
-* 160826
+* 220826
 */
 /*------------------------------*
 / BASE
@@ -46,16 +46,6 @@
 	}
 	p{}
 	.p{}
-	ul{}
-	.ul{
-    padding-inline-start: 20px;
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
-  }
-	ol{}
-	.ol{}
-	li{}
-	.li{}
 /*--- fim BASE --- */
 /*------------------------------*
 / Fontes
@@ -3009,6 +2999,182 @@
   }
 /*--- fim LINHAS --- */
 /*------------------------------*
+/ LISTAS
+/-------------------------------*/
+	ol{}
+	ul{}
+	li{}
+  .ol,.ul{
+    padding-inline-start: 10px;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+  }
+	/*--- Lista Ordenada --- */
+
+	/*--- Lista Desordenada --- */
+  .using-lista-ul{
+    /*desordenada
+      <ul class="ul icon-1">
+        <li>Item Nível 1
+          <ul>
+            <li>Item Nível 2
+              <ul>
+                <li>Item Nível 3</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    */
+  }
+
+  .ul, .ul ul {
+    list-style: none;
+    margin: 0.3rem 0;
+  }
+  /* configuração de indentação */
+  .ul:not(.no-indent),.ul:not(.no-indent) ul{
+    padding-left: 1.25rem;
+  }
+
+  /* Configuração para lista SEM indentação */
+  .ul.no-indent, .ul.no-indent ul{
+    padding-left: 0 !important;
+  }
+  .ul.no-indent li::before{
+    margin-left: 0.25rem !important;
+  }
+  .ul.no-indent.icon-0 li::before,
+  .ul.no-indent.no-icon li::before{
+    width: 0;
+    display: none;
+  }
+
+  /* Ícones padrão (Default) */
+  .list-icon,
+  .ul {
+    --list-icon-n1: var(--proj-ul-icon-n1, var(--Y-ul-icon-n1,"\25CF"));
+    --list-icon-n2: var(--proj-ul-icon-n2, var(--Y-ul-icon-n2,"\25CB"));
+    --list-icon-n3: var(--proj-ul-icon-n3, var(--Y-ul-icon-n3,"\25C9"));
+  }
+
+  /* Sem ícone */
+  .ul.icon-0,
+  .ul.no-icon {
+    --list-icon-n1: "";
+    --list-icon-n2: "";
+    --list-icon-n3: "";
+  }
+
+  /* Ícones modelo 1 */
+  .list-icon.icon-1,
+  .ul.icon-1 {
+    --list-icon-n1: "\25C6";
+    --list-icon-n2: "\25C7";
+    --list-icon-n3: "\25C8";
+  }
+
+  /* Ícones modelo 2 */
+  .list-icon.icon-2,
+  .ul.icon-2 {
+    --list-icon-n1: "\25A0";
+    --list-icon-n2: "\25A1";
+    --list-icon-n3: "\25A3";
+  }
+
+  /* Ícones modelo 3 */
+  .list-icon.icon-3,
+  .ul.icon-3 {
+    --list-icon-n1: "\2605";
+    --list-icon-n2: "\2606";
+    --list-icon-n3: "\272d";
+  }
+
+  /* Ícones modelo 4 */
+  .list-icon.icon-4,
+  .ul.icon-4 {
+    --list-icon-n1: "\2B9E";
+    --list-icon-n2: "\2B9A";
+    --list-icon-n3: "\2B9A";
+  }
+  
+  /* Ícones modelo 5 */
+  .list-icon.icon-5,
+  .ul.icon-5 {
+    --list-icon-n1: "\2BC8"; /*"\25B6";*/
+    --list-icon-n2: "\25B7"; /*"\1405";*/
+    --list-icon-n3: "\27C1";/*"\15D2";*/
+  }
+
+  /* Estilização dos pseudo-elementos por nível */
+  .list-icon::before,
+  .ul li::before {
+    display: inline-flex;
+    margin-left: -1rem;    
+    width: 1rem;
+    margin-right: 0.65rem;
+    justify-content: center;
+
+  }
+
+  /* Nível 1 */
+  .ul > li::before {content: var(--list-icon-n1);}
+
+  /* Nível 2 */
+  .ul > li > ul > li::before {content: var(--list-icon-n2);}
+
+    /* posiciona o icone n2 nos modelos 4 e 5 */
+    .ul.icon-4 > li > ul > li::before,
+    .ul.icon-5 > li > ul > li::before {margin-left: -0.7rem;}
+
+  /* Nível 3 (e subsequentes) */
+  .ul > li > ul > li > ul li::before {content: var(--list-icon-n3);}
+
+    /* altera o tamanho do icone n3 nos modelos default, 2 e 5 */
+    .list-icon.n3:not(.icon-1):not(.icon-3):not(.icon-4)::before,
+    .ul:not(.icon-1):not(.icon-3):not(.icon-4) > li > ul > li > ul li::before {font-size:13px;}
+
+    /* gira o icone n3 no modelo 4 */
+    .list-icon.icon-4.n3::before,
+    .ul.icon-4 > li > ul > li > ul li::before{transform: scaley(-1);}
+
+    /* gira o icone n3 no modelo 5 */
+    .list-icon.icon-5.n3::before,
+    .ul.icon-5 > li > ul > li > ul li::before{transform: rotate(90deg);}
+
+    /* posiciona o icone n3 nos modelos 4 e 5 */
+    .ul.icon-4 > li > ul > li > ul li::before,
+    .ul.icon-5 > li > ul > li > ul li::before{margin-left: -0.5rem;}
+
+  /* list-icon (para ser usado fora das listas) */
+  .list-icon{}
+  .list-icon.n1::before{content: var(--list-icon-n1);}
+  .list-icon.n2::before{content: var(--list-icon-n2);}
+  .list-icon.n3::before{content: var(--list-icon-n3);}  
+
+  .list-icon.icon-1.n1::before, .list-icon.icon-1::before{content: var(--list-icon-n1);}
+  .list-icon.icon-1.n2::before{content: var(--list-icon-n2);}
+  .list-icon.icon-1.n3::before{content: var(--list-icon-n3);}
+
+  .list-icon.icon-2.n1::before, .list-icon.icon-2::before{content: var(--list-icon-n1);}
+  .list-icon.icon-2.n2::before{content: var(--list-icon-n2);}
+  .list-icon.icon-2.n3::before{content: var(--list-icon-n3);}
+
+  .list-icon.icon-3.n1::before, .list-icon.icon-3::before{content: var(--list-icon-n1);}
+  .list-icon.icon-3.n2::before{content: var(--list-icon-n2);}
+  .list-icon.icon-3.n3::before{content: var(--list-icon-n3);}
+
+  .list-icon.icon-4.n1::before, .list-icon.icon-4::before{content: var(--list-icon-n1);}
+  .list-icon.icon-4.n2::before{content: var(--list-icon-n2);}
+  .list-icon.icon-4.n3::before{content: var(--list-icon-n3);}
+
+  .list-icon.icon-5.n1::before, .list-icon.icon-5::before{content: var(--list-icon-n1);}
+  .list-icon.icon-5.n2::before{content: var(--list-icon-n2);}
+  .list-icon.icon-5.n3::before{content: var(--list-icon-n3);}
+
+  /*--- fim lista ul--- */
+/*--- fim LISTAS --- */
+/*------------------------------*
 / CODING
 /-------------------------------*/
 	.using-coding{
@@ -5269,10 +5435,11 @@
   }
 
   /* Grupo container */
-  .collapse-group {
-    display: flex;
-    flex-direction: column;
-  }
+	.collapse-group{
+	  display: flex;
+	  flex-direction: column;
+	  margin-bottom: 0.5rem;
+	}
 
   /* Gatilho (Trigger) */
   .collapse-trigger {
