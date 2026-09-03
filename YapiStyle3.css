@@ -6,7 +6,7 @@
 * fuone.dev@gmaill.com
 **************************/
 /*
-* 220826
+* 030926
 */
 /*------------------------------*
 / BASE
@@ -912,7 +912,7 @@
     --y-text-transform:capitalize;
     text-transform: capitalize !important;
   }
-  .undeline.undeline {
+  .underline.underline {
     --y-text-decoration: underline;
     text-decoration: underline !important;
   }
@@ -1443,7 +1443,6 @@
 		border-bottom-color: var(--y-bcolor)!important;
   }
 
-	.border-0, .no-border{border: none;}
   /*--- tamanho da borda ---*/
   .yapi .border.border-1{--y-border-width: 1px;}
   .yapi .border.border-2{--y-border-width: 2px;}
@@ -1562,7 +1561,7 @@
 
   /* --- Variação de cor --- */
   .border-white{border-color: #fff !important;}
-  .no-border.no-border {border: none !important;}
+  .no-border.no-border,.border-0.border-0 {border: none !important;}
   .border-transp {
     --y-border-color: transparent; 
     border-color: transparent !important;
@@ -2589,6 +2588,11 @@
       visibility: visible;
     }
   }
+
+	@keyframes fade-in-2 {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
   @keyframes fade-out{
     from {opacity: 1;}
     to {
@@ -3219,7 +3223,7 @@
 		word-wrap: normal;
 		word-break: normal;
 	}
-	.code.stylized{
+	.code.code-stylized{
 		--y-code-tag-symbol-color: var(--Y-red);
 		--y-code-tag-name-color: var(--Y-red);
 		--y-code-attr-name-color: var(--Y-blue);
@@ -5595,6 +5599,480 @@
   }
 
 /*--- fim collapse ---*/
+/*------------------------------*
+/ Tabs
+/-------------------------------*/
+	.using-tabs{
+	    /*
+	      <div class="y-tab tab-group [tab-vertical] [tab-tab]">
+	        <div class="tab-trigger-space [tab-grouped]">
+	          <a class="tab-trigger [is-active]" aria-controls="tab-1">Aba 1</a>
+	          <a class="tab-trigger" aria-controls="tab-2">Aba 2</a>
+	          <a class="tab-trigger" aria-controls="tab-3">Aba 3</a>
+	        </div>
+	        <div class="tab-content-space">
+	          <div class="tab-content [is-active]" id="tab-1">Conteúdo 1</div>
+	          <div class="tab-content" id="tab-2">Conteúdo 2</div>
+	          <div class="tab-content" id="tab-3">Conteúdo 3</div>
+	        </div>
+	      </div>
+	    */
+	  }
+  /* ==========================================================================
+    Base & Variáveis Globais (.tab-group)
+    ========================================================================== */
+    .y-tab{
+      --y-tab-bg-color: var(--proj-tab-bg-color,#ffffff);
+      --y-tab-border-color: var(--projtab-border-color, var(--Y-grey-menos-40)); /*#dee2e6;*/
+      --y-tab-txt-color: var(--proj-tab-txt-color, var(--Y-black));/* #495057;*/
+      --y-tab-decorate-color: var(--proj-tab-decorate-color, var(--Y-red));
+      --y-tab-transition-speed: 0.35s;
+      --y-tab-border-radius: 4px;
+      --y-tab-padding-y: 1rem;
+      --y-tab-padding-x: 1rem;
+      --y-tab-font-weight: 500;
+      --y-tab-vertical-trigger-icon: var(--proj-tab-vertical-trigger-icon, var(--Y-tab-vertical-trigger-icon,"\2BC7"));
+      --y-tab-horizontal-trigger-icon: var(--proj-tab-horizontal-trigger-icon, var(--Y-tab-horizontal-trigger-icon,"\2BC5"));
+
+      --y-tab-trigger-txt-color: var(--y-tab-txt-color);
+      --y-tab-trigger-bg-color: transparent;
+      --y-tab-trigger-border-color: transparent;
+      --y-tab-trigger-decorate-color: var(--y-tab-decorate-color);
+      --y-tab-trigger-border-radius: var(--y-tab-border-radius);
+      --y-tab-trigger-padding-y: var( --y-tab-padding-y);
+      --y-tab-trigger-padding-x: 0;
+      --y-tab-trigger-gap: 1rem;
+
+      --y-tab-trigger-active-txt-color: var(--y-tab-txt-color);
+      --y-tab-trigger-active-bg-color: transparent;
+      --y-tab-trigger-active-border-color: var(--y-tab-decorate-color);
+      --y-tab-trigger-active-font-weight: var(--y-tab-font-weight);
+
+      --y-tab-content-space-bg-color: var(--y-tab-bg-color);
+      --y-tab-content-space-border-color: var(--y-tab-border-color);
+      --y-tab-content-space-padding-y: 1rem;
+      --y-tab-content-space-padding-x: 1rem;
+      --y-tab-content-space-border-color: var(--y-tab-border-color);
+      --y-tab-content-space-border-radius: var(--y-tab-border-radius);
+
+      --y-tab-btn-trigger-active-bg-color: var(--y-tab-decorate-color);
+      --y-tab-btn-trigger-active-txt-color: var(--Y-white);    
+    }
+    .tab-group {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    /* Base da Navegação */
+    .tab-group .tab-trigger-space {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      list-style: none;
+      width: 100%;
+      gap: var(--y-tab-trigger-gap);
+    }    
+
+    /* Base do Trigger */
+    .tab-group .tab-trigger {
+      display: inline-flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      padding: var(--y-tab-trigger-padding-y) var(--y-tab-trigger-padding-x);
+      color: var(--y-tab-trigger-txt-color);
+      background-color: var(--y-tab-trigger-bg-color);
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid var(--y-tab-trigger-border-color);
+      border-radius: var(--y-tab-trigger-border-radius);
+      font-weight:var(--y-tab-trigger-font-weight);
+      transition: all var(--y-tab-transition-speed) ease-in-out;
+      user-select: none;
+      opacity: 0.7;
+    }
+
+    .tab-group .tab-trigger:hover{
+      opacity: 1 !important;
+    }
+    .tab-group .tab-trigger.is-active{
+      color: var(--y-tab-trigger-active-txt-color);
+      font-weight: 700;
+      opacity: 1 !important;
+    }
+
+    .tab-group:not(.tab-vertical) .tab-trigger::after{
+      content: var(--y-tab-horizontal-trigger-icon);
+      position: absolute;
+      bottom: -10px;
+      color: transparent;
+      font-size: 1.2rem;      
+      transition: color var(--y-tab-transition-speed) ease-in-out;
+      pointer-events: none;      
+    }
+    .tab-group:not(.tab-vertical) .tab-trigger.is-active::after{
+      color: var(--y-tab-content-space-border-color);
+    }
+
+    /* Base dos Painéis */
+    .tab-group .tab-content-space {
+      /*margin-top:1rem;*/
+      color: var(--y-tab-content-space-txt-color);
+      background: var(--y-tab-content-space-bg-color);
+      border: 1px solid var(--y-tab-content-space-border-color);
+      border-radius: var(--y-tab-content-space-border-radius);
+      padding: var(--y-tab-content-space-padding-y) var(--y-tab-content-space-padding-x);
+    }
+
+    .tab-group .tab-content {
+      display: none;
+    }
+
+    .tab-group .tab-content.is-active {
+      display: block;
+      animation: fade-in calc(var(--y-tab-transition-speed) * 2) forwards;
+    }
+
+  /* ==========================================================================
+    MODELO 1: tab-menu (Barra Tradicional com Linha Inferior)
+    ========================================================================== */
+    .tab-menu{
+      --y-tab-horizontal-trigger-icon: "";
+      --y-tab-trigger-padding-x: 1.25rem;
+      --y-tab-trigger-padding-y: 0.5rem;
+      --y-tab-trigger-gap: 0;
+      --y-tab-menu-trigger-border: 3px solid transparent;
+      --y-tab-menu-trigger-active-bg-color: color-mix(in srgb, var(--y-tab-trigger-decorate-color), white 90%)
+    }  
+    .tab-group.tab-menu .tab-trigger-space {}
+
+    .tab-group.tab-menu .tab-trigger {
+      border: none;
+      border-bottom: var(--y-tab-menu-trigger-border);
+      border-radius: 0;
+      margin-bottom: -2px;
+    }
+
+    .tab-group.tab-menu .tab-trigger:hover {
+      color: var(--y-tab-trigger-active-txt-color);
+    }
+
+    .tab-group.tab-menu .tab-trigger.is-active {
+      color: var(--y-tab-trigger-active-txt-color);
+      background: var(--y-tab-menu-trigger-active-bg-color);
+      border-bottom-color: var(--y-tab-trigger-active-border-color);
+      font-weight:var(--y-tab-trigger-font-weight);
+    }
+    .tab-group.tab-menu .tab-content-space{
+      margin-top: 1rem;
+    }
+
+  /* ==========================================================================
+    MODELO 2: tab-btn (Estilo Botões Pólipo/Pill)
+    ========================================================================== */
+    .tab-group.tab-btn {
+      --y-tab-btn-padding-y: 0.25rem;
+      --y-tab-btn-padding-x: 0.75rem;
+
+      --y-tab-horizontal-trigger-icon: "";
+      --y-tab-trigger-bg-color: transparent;
+      /*--y-tab-trigger-txt-color: #495057;*/
+      --y-tab-trigger-border-radius: 6px;
+      --y-tab-trigger-active-bg-color: var(--y-tab-btn-trigger-active-bg-color);
+      --y-tab-trigger-active-txt-color: var(--y-tab-btn-trigger-active-txt-color);
+      --y-tab-trigger-padding-y: var(--y-tab-btn-padding-y);
+      --y-tab-trigger-padding-x: var(--y-tab-btn-padding-x);
+      --y-tab-trigger-gap: 0;
+    }
+
+    .tab-group.tab-btn .tab-trigger:hover:not(.is-active) {
+      /*background-color: #e9ecef;*/
+      color: var(--y-tab-trigger-decorate-color);
+    }
+
+    .tab-group.tab-btn .tab-trigger.is-active {
+      background-color: var(--y-tab-trigger-active-bg-color);
+      color: var(--y-tab-trigger-active-txt-color);
+      font-weight: var(--y-tab-trigger-font-weight);
+    }
+
+    .tab-group.tab-btn .tab-content-space{
+      margin-top: 1rem;
+    }
+
+  /* ==========================================================================
+    MODELO 3: tab-link (Links Simples)
+    ========================================================================== */
+    .tab-link {
+      --y-tab-trigger-active-txt-color: var(--y-tab-trigger-decorate-color);
+      --y-tab-trigger-padding-y: 0.5rem;
+      --y-tab-trigger-padding-x: 0;
+      --y-tab-content-space-border-color: var(--y-tab-trigger-active-txt-color);
+    }
+
+    .tab-group.tab-link .tab-trigger {
+      border-radius: 0;
+    }
+    .tab-group.tab-link .tab-trigger:not(.is-active):hover{
+      /*text-decoration: underline;*/
+      color: var(--y-tab-trigger-active-txt-color);
+    }
+
+    .tab-group.tab-link .tab-trigger.is-active {
+      color: var(--y-tab-trigger-active-txt-color);
+      /*font-weight: 700;*/
+    }
+
+    .tab-group.tab-link .tab-trigger::after{
+      bottom: -15px;
+    }
+    .tab-group.tab-link .tab-trigger.is-active::after{
+      color: inherit;
+    }
+
+    .tab-group.tab-link .tab-content-space{
+      margin-top: 0.5rem;
+    }
+  /* ==========================================================================
+    MODELO 4: tab-tab (Pastas Agrupadas)
+    ========================================================================== */
+    .tab-tab{
+      --y-tab-horizontal-trigger-icon: "";
+      /*--y-tab-border-color: blue;*/
+      --y-tab-trigger-txt-color: var(--proj-tab-trigger-txt-color, var(--Y-grey-mais-50));
+      --y-tab-trigger-bg-color: var(--proj-tab-trigger-bg-color, var(--Y-grey-menos-80));
+      --y-tab-trigger-border-color: var(--y-tab-border-color);/**/
+      --y-tab-trigger-border-radius: var(--y-tab-border-radius);
+
+      /*--y-tab-trigger-hover-bg-color: linear-gradient(to bottom, #fffefe 0%, var(--y-tab-trigger-bg-color) 100%);*/
+      --y-tab-trigger-hover-bg-color: var(--y-tab-trigger-bg-color);
+
+      --y-tab-trigger-active-txt-color: var(--y-tab-txt-color);
+      --y-tab-trigger-active-bg-color: var(--y-tab-bg-color);
+      --y-tab-trigger-active-border-color: var(--y-tab-border-color);
+      
+      --y-tab-trigger-padding-y: 0.25rem;
+      --y-tab-trigger-padding-x: 1.5rem;/*1.8*/
+      --y-tab-trigger-gap: 0.25rem;
+    }
+    .tab-group.tab-tab .tab-trigger-space.tab-grouped {
+      padding-left: 0;
+      /*z-index: 3;*/
+    }
+    .tab-group.tab-tab .tab-trigger-space.tab-decorated .is-active{
+      border-top-color: var(--y-tab-trigger-decorate-color);
+    }
+
+    .tab-group.tab-tab .tab-trigger {
+      position: relative;
+      background: var(--y-tab-trigger-bg-color);
+      border-bottom: none;
+      border-color: transparent;
+      border-radius: var(--y-tab-trigger-border-radius) var(--y-tab-trigger-border-radius) 0 0; /* 8px 8px 0 0; */
+      text-shadow: 0 1px 0 #fff;
+      /*opacity: 0.7;*/
+      z-index: 1;
+    }
+
+    /* Ajuste específico para a Primeira Aba (Retilínea à esquerda) */
+    .tab-group.tab-tab .tab-trigger:first-child {
+      margin-left: 0;
+      border-bottom-left-radius: 0; 
+    }
+
+    /* Aba Inativa - Hover */
+    .tab-group.tab-tab .tab-trigger:not(.is-active):hover {
+      background: var(--y-tab-trigger-hover-bg-color);
+      /*color: #000;*/
+    }
+
+    /* Aba Ativa */
+    .tab-group.tab-tab .tab-trigger.is-active {
+      background: var(--y-tab-trigger-active-bg-color);
+      /*color: var(--y-tab-trigger-active-txt-color);*/
+      border-color: var(--y-tab-trigger-active-border-color);
+      /*border-bottom: none;*/
+      font-weight: var(--y-tab-trigger-active-font-weight);
+      margin-top: -5px;
+      /*opacity: 1;*/
+      /* z-index: 1; */
+      z-index: 3;
+    }
+
+    /* Container de Conteúdo */
+    .tab-group.tab-tab .tab-content-space {
+      position: relative;
+      /* Canto superior esquerdo reto para casar com a 1ª aba */
+      border-radius: 0 var(--y-tab-trigger-border-radius) var(--y-tab-trigger-border-radius) var(--y-tab-trigger-border-radius);
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      margin-top: -1px;
+      z-index: 2;
+    }
+
+
+    .tab-tab.tab-tab-1{}
+    .tab-tab.tab-tab-1 .tab-trigger{
+      background: transparent;
+      border:none;
+    }
+    .tab-tab.tab-tab-1 .tab-trigger:not(.is-active):hover {
+      background: transparent;
+      color: #000;
+      /*color: var(--y-tab-trigger-active-txt-color);*/
+    }
+    .tab-tab.tab-tab-1 .tab-trigger.is-active{
+      border: 1px solid var(--y-tab-trigger-border-color);
+      border-bottom: none;
+    }
+
+  /* ==========================================================================
+    MODIFICADOR GLOBAL: .tab-vertical (Layout Vertical)
+    ========================================================================== */
+    .tab-group.tab-vertical {
+      --y-tab-trigger-padding-y: 0rem;
+      --y-tab-trigger-gap:0;
+      flex-direction: row; /* Muda a orientação principal de coluna para linha */
+      align-items: stretch;
+      gap: var(--y-tab-trigger-gap);
+    }
+
+    /* Reorientação do menu de navegação */
+    .tab-group.tab-vertical .tab-trigger-space {
+      flex-direction: column; /* Empilha os triggers verticalmente */
+      width: auto;
+      min-width: 50px; /* Largura mínima ajustável para a coluna lateral */
+    }
+
+    .tab-group.tab-vertical .tab-trigger {
+      width: 100%;
+      justify-content: flex-end; /* Alinha o texto/ícone à esquerda */
+    }
+
+    .tab-group.tab-vertical .tab-trigger::after{
+      content: var(--y-tab-vertical-trigger-icon);
+      color: transparent;
+      font-size: 1.2rem;
+      padding-left: 10px;
+      margin-right: -5px;
+      z-index: -1;
+    }
+    .tab-group.tab-vertical .tab-trigger.is-active::after{
+      color: var(--y-tab-content-space-border-color);
+    }
+    .tab-group.tab-vertical .tab-trigger.is-active{
+      /*border-bottom: 1px solid var(--y-tab-trigger-border-color);*/
+    }
+
+    /* Área de conteúdo expande para ocupar o restante da largura */
+    .tab-group.tab-vertical .tab-content-space {
+      flex: 1;
+      margin-top: 0; /* Anula margens superiores do modo horizontal */
+    }
+
+    /* --------------------------------------------------------------------------
+      MODELO: .tab-vertical.tab-btn (Estilo Imagem 1 - Botões Laterais)
+      -------------------------------------------------------------------------- */
+    .tab-group.tab-vertical.tab-btn {
+      --y-tab-vertical-trigger-icon: "";
+      --y-tab-trigger-gap: 0.5rem;      
+      --y-tab-trigger-padding-y: var(--y-tab-btn-padding-y);
+      --y-tab-trigger-padding-x: var(--y-tab-btn-padding-x);
+    }
+
+    .tab-group.tab-vertical.tab-btn .tab-trigger {
+      justify-content: center;
+    }
+
+    /* --------------------------------------------------------------------------
+      MODELO: .tab-vertical.tab-tab (Estilo Imagem 2 - Abas Conectadas Lateralmente)
+      -------------------------------------------------------------------------- */
+    .tab-group.tab-vertical.tab-tab {
+      --y-tab-vertical-trigger-icon: "";
+      --y-tab-trigger-gap: 5px;
+      --y-tab-trigger-padding-y: 0.5rem;
+      --y-tab-trigger-padding-x: var(--y-tab-padding-x);
+      
+      /*--y-tab-trigger-bg-color: transparent;*/
+      /*--y-tab-trigger-hover-bg-color: transparent;*/
+      gap: 0;
+    }
+
+    .tab-group.tab-vertical.tab-tab .tab-trigger-space {
+      margin-right: -1px; /* Faz a borda direita sobrepor a borda do espaço de conteúdo */
+      row-gap: var(--y-tab-trigger-gap);
+    }
+
+    .tab-group.tab-vertical.tab-tab .tab-trigger {
+      border: 1px solid transparent;
+      /*border-right-color: var(--y-tab-trigger-border-color);*/
+      border-radius: var(--y-tab-trigger-border-radius) 0 0 var(--y-tab-trigger-border-radius); /* Arredonda cantos da esquerda */
+      margin-top: 0;
+      margin-left: 5px;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    /*.tab-group.tab-vertical.tab-tab .tab-trigger:first-child {
+      border-top-left-radius: var(--y-tab-trigger-border-radius);
+    }*/
+
+    /* Aba Ativa conectando ao painel no lado direito */
+    .tab-group.tab-vertical.tab-tab .tab-trigger.is-active {
+      background: var(--y-tab-trigger-active-bg-color);
+      border: 1px solid var(--y-tab-trigger-active-border-color);
+      /*border-color: var(--y-tab-trigger-active-border-color);*/
+      border-right-color: transparent; /* Remove a borda direita para fundir com o painel */
+      margin-top: 0;
+      margin-right: -1px;
+      margin-left: 0px;
+      z-index: 3;
+    }
+    .tab-group.tab-vertical.tab-tab .tab-content-space {
+      /*border-left-color: transparent;*/
+      border-radius: 0 var(--y-tab-trigger-border-radius) var(--y-tab-trigger-border-radius) 0;
+      /*margin-top: 0;*/
+      z-index: 2;
+    }
+
+    /* --------------------------------------------------------------------------
+      MODELO: .tab-vertical.tab-menu (Ajuste para menu lateral tradicional)
+      -------------------------------------------------------------------------- */
+    .tab-group.tab-vertical.tab-menu{
+      --y-tab-vertical-trigger-icon: "";
+      --y-tab-trigger-gap: 10px;
+      --y-tab-trigger-padding-y: 0.5rem;      
+    }
+    .tab-group.tab-vertical.tab-menu .tab-trigger-space {
+      border-bottom: none;
+    }
+
+    .tab-group.tab-vertical.tab-menu .tab-trigger {
+      border-bottom: none;
+      border-right: var(--y-tab-menu-trigger-border);
+      margin-bottom: 0;
+      /*margin-right: -2px;*/
+    }
+
+    .tab-group.tab-vertical.tab-menu .tab-trigger.is-active {
+      border-right-color: var(--y-tab-trigger-active-border-color);
+      border-bottom-color: transparent;
+    }
+
+    /* --------------------------------------------------------------------------
+      MODELO: .tab-vertical.tab-link (Ajuste para link lateral tradicional)
+      -------------------------------------------------------------------------- */
+    .tab-group.tab-vertical.tab-link{
+      --y-tab-trigger-gap: 5px;
+      /*--y-tab-vertical-trigger-icon: "";*/
+      --y-tab-trigger-padding-y: 0rem;
+    }
+
+    .tab-group.tab-vertical.tab-link .tab-trigger.is-active::after {
+      color: inherit;
+    }
+/*--- fim tabs ---*/
 /*------------------------------*
 / FuoneTag
 /-------------------------------*/
