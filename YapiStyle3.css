@@ -2539,6 +2539,20 @@
   .z-150{zoom: 150%;}
 /*--- fim ZOOM --- */
 /*------------------------------*
+/ MULTIPLICACO DE TAMANHOS
+/-------------------------------*/
+  .x1{--y-fator: 1;}
+  .x2{--y-fator: 2;}
+  .x3{--y-fator: 3;}
+  .x4{--y-fator: 4;}
+  .x5{--y-fator: 5;}
+  .x6{--y-fator: 6;}
+  .x7{--y-fator: 7;}
+  .x8{--y-fator: 8;}
+  .x9{--y-fator: 9;}
+  .x10{--y-fator:10;}
+/*--- fim TAMANHOS --- */
+/*------------------------------*
 / ANIMAÇÕES / TRANSIÇÕES
 /-------------------------------*/
   using-animations{}
@@ -5436,6 +5450,7 @@
     --y-collapse-bg-color: var(--proj-collapse-bg-color, var(--y-color-menos-90, #fff));
     --y-collapse-border-color: var(--proj-collapse-border-color, var(--y-color-menos-30, #ccc));
     --y-collapse-border-radius: var(--proj-collapse-border-radius, var(--Y-border-radius, 5px));
+		overflow: visible;
   }
 
   /* Grupo container */
@@ -5444,11 +5459,19 @@
 	  flex-direction: column;
 	  margin-bottom: 0.5rem;
 	}
+  .collapse-group.collapse-inline{
+    margin: 0 !important;
+  }
 
   /* Gatilho (Trigger) */
   .collapse-trigger {
     cursor: pointer;
     user-select: none;
+  }
+
+	.y-collapse .collapse-trigger:not(.collapse-grouped) + .collapse-content.is-open > .collapse-inner{
+    margin-top: 1rem;
+    border-radius: var(--y-collapse-border-radius);
   }
 
   /* Estado Aberto do Gatilho */
@@ -5564,7 +5587,7 @@
   /* Seleciona APENAS o collapse-inner DIRETO do collapse */
   .collapse-content > .collapse-inner {
     display: grid;
-    grid-template-rows: 0fr; /* Fechado por padrão */
+    grid-template-rows: 0fr;
     grid-auto-rows: 0fr;
     overflow: hidden;
     transition: grid-template-rows 0.3s ease-out, padding 0.3s ease-out;
