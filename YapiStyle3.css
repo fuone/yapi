@@ -4580,6 +4580,8 @@
 
 	--y-alert-decorate-color: var(--proj-alert-decorate-color, var(--y-color-menos-10, var(--Y-neutral-menos-10)));
 	--y-alert-disable-color:  var(--proj-alert-disable-color, var(--Y-disable-color, var(--Y-grey)));
+
+	overflow: initial !important;
 }
 
 /*configuração geral*/
