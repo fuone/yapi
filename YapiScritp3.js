@@ -6,7 +6,7 @@
 * fuone.dev@gmaill.com
 **************************/
 /*
-* 060826
+* 140926
 */
 
 const ICONE_SA_SUCESSO = "success";
@@ -15,6 +15,13 @@ const ICONE_SA_ATENCAO = "warning";
 const ICONE_SA_INFO = "info";
 const ICONE_SA_PERGUNTA = "question";
 var swalCustomClass = '';
+
+/*iniciação das funções no carregamento da página*/
+document.addEventListener('DOMContentLoaded', function() {
+  InitTabs()
+  InitCollapses()
+  SetupAlertClosing();
+});
 
 function MsgBox(msg, titulo, icone, timer, posicao) {
     /* 0726
@@ -124,6 +131,53 @@ function TextToUpper(texto) {
     return texto.toUpperCase();
 }
 //
+function InitTabs() {
+  const tabGroups = document.querySelectorAll('.tab-group');
+
+  // Inicialização: define a primeira aba como ativa se nenhuma foi declarada
+  tabGroups.forEach(group => {
+    const activeTrigger = group.querySelector('.tab-trigger.is-active');
+    
+    if (!activeTrigger) {
+      const firstTrigger = group.querySelector('.tab-trigger');
+      if (firstTrigger) {
+        firstTrigger.classList.add('is-active');
+        const targetId = firstTrigger.getAttribute('aria-controls');
+        const targetContent = group.querySelector(`#${targetId}`);
+        if (targetContent) {
+          targetContent.classList.add('is-active');
+        }
+      }
+    }
+  });
+
+  // Event Listeners para a troca de abas
+  const triggers = document.querySelectorAll('.tab-group .tab-trigger');
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const currentTrigger = event.currentTarget;
+      const targetId = currentTrigger.getAttribute('aria-controls');
+      
+      const tabGroup = currentTrigger.closest('.tab-group');
+      if (!tabGroup) return;
+
+      // Desativa apenas os itens deste tab-group específico
+      tabGroup.querySelectorAll('.tab-trigger').forEach(t => t.classList.remove('is-active'));
+      tabGroup.querySelectorAll('.tab-content').forEach(c => c.classList.remove('is-active'));
+
+      // Ativa o gatilho clicado e o conteúdo alvo
+      currentTrigger.classList.add('is-active');
+      const targetContent = tabGroup.querySelector(`#${targetId}`);
+      if (targetContent) {
+        targetContent.classList.add('is-active');
+      }
+    });
+  });
+}
+//
 function InitCollapses() {
   /*0826
   * Inicializa todos os componentes de collapse/accordion
@@ -202,3 +256,28 @@ function InitCollapses() {
     }
   });
 }
+
+function SetupAlertClosing() {
+    // Evento de clique com verificação da classe 'disabled'
+    document.addEventListener('click', function(event) {
+      const closeBtn = event.target.closest('.alert-close-btn');
+      
+      if (closeBtn) {
+        const alertContainer = closeBtn.closest('.y-alert');
+        
+        // Se o container existe E possui a classe 'disabled', interrompe a execução
+        if (alertContainer && alertContainer.classList.contains('disabled')) {
+          return;
+        }
+
+        if (alertContainer) {
+          // Aplica o esmaecimento e remove do DOM
+          alertContainer.classList.add('fade-out');
+
+          alertContainer.addEventListener('transitionend', function() {
+            alertContainer.remove();
+          }, { once: true });
+        }
+      }
+    });
+  }
