@@ -3009,21 +3009,21 @@
     padding-left: calc(var(--y-gutter-x) * .5);
     margin-top: var(--y-gutter-y);
   }
-  .y-col{flex: 1 0 0;}
-  .y-col.col-auto{flex: 0 0 auto; width: auto;}
-  .y-col.col-05{flex: 0 0 auto; width: calc(4.1666666666%  * var(--y-fator,1));}
-  .y-col.col-1{flex:  0 0 auto; width: calc(8.3333333333%  * var(--y-fator,1));}
-  .y-col.col-2{flex:  0 0 auto; width: calc(16.6666666666% * var(--y-fator,1));}
-  .y-col.col-3{flex:  0 0 auto; width: calc(25%            * var(--y-fator,1));}
-  .y-col.col-4{flex:  0 0 auto; width: calc(33.3333333333% * var(--y-fator,1));}
-  .y-col.col-5{flex:  0 0 auto; width: calc(41.6666666666% * var(--y-fator,1));}
-  .y-col.col-6{flex:  0 0 auto; width: calc(50%            * var(--y-fator,1));}
-  .y-col.col-7{flex:  0 0 auto; width: calc(58.3333333333% * var(--y-fator,1));}
-  .y-col.col-8{flex:  0 0 auto; width: calc(66.6666666666% * var(--y-fator,1));}
-  .y-col.col-9{flex:  0 0 auto; width: calc(75%            * var(--y-fator,1));}
-  .y-col.col-10{flex: 0 0 auto; width: calc(83.3333333333% * var(--y-fator,1));}
-  .y-col.col-11{flex: 0 0 auto; width: calc(91.6666666666% * var(--y-fator,1));}
-  .y-col.col-12{flex: 0 0 auto; width: calc(100%           * var(--y-fator,1));}
+  .y-row .col{flex: 1 0 0;}
+  .y-row .col-auto{flex: 0 0 auto; width: auto;}
+  .y-row .col-05{flex: 0 0 auto; width: calc(4.1666666666%  * var(--y-fator,1));}
+  .y-row .col-1{flex:  0 0 auto; width: calc(8.3333333333%  * var(--y-fator,1));}
+  .y-row .col-2{flex:  0 0 auto; width: calc(16.6666666666% * var(--y-fator,1));}
+  .y-row .col-3{flex:  0 0 auto; width: calc(25%            * var(--y-fator,1));}
+  .y-row .col-4{flex:  0 0 auto; width: calc(33.3333333333% * var(--y-fator,1));}
+  .y-row .col-5{flex:  0 0 auto; width: calc(41.6666666666% * var(--y-fator,1));}
+  .y-row .col-6{flex:  0 0 auto; width: calc(50%            * var(--y-fator,1));}
+  .y-row .col-7{flex:  0 0 auto; width: calc(58.3333333333% * var(--y-fator,1));}
+  .y-row .col-8{flex:  0 0 auto; width: calc(66.6666666666% * var(--y-fator,1));}
+  .y-row .col-9{flex:  0 0 auto; width: calc(75%            * var(--y-fator,1));}
+  .y-row .col-10{flex: 0 0 auto; width: calc(83.3333333333% * var(--y-fator,1));}
+  .y-row .col-11{flex: 0 0 auto; width: calc(91.6666666666% * var(--y-fator,1));}
+  .y-row .col-12{flex: 0 0 auto; width: calc(100%           * var(--y-fator,1));}
   /*--- fim RowAndCol --- */
 /*------------------------------*
 / LISTAS
