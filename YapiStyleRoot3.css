@@ -332,4 +332,41 @@
     --Y-pre-bg-color: #f8f9fa;/*f8f9fa*/
     --Y-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --Y-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+    --Y-icon-warning:   "⚠️";     /* \26A0 */
+    --Y-icon-success:   "\2611";  /* ☑ */
+    --Y-icon-info:      "\1F6C8"; /* 🛈 ℹ \2139 */
+    --Y-icon-danger:    "\2BBF";  /* 2A02 */
+    --Y-icon-alarm:     "\1F6A8"; /* 🚨 */
+    --Y-icon-negative:  "\2BBF";
+    --Y-icon-forbidden: "\1F6C7"; /* 20E0 🚫 ⛔ */
+    --Y-icon-close:     "\00D7";  /* X */
+
+    --Y-icon-circle:    "\25CF";
+    --Y-icon-circle-o:  "\25CB";
+    --Y-icon-circle-d:  "\25C9";
+
+    --Y-icon-star:      "\2605";
+    --Y-icon-star-o:    "\2606";
+    --Y-icon-star-d:    "\272D";
+
+    --Y-icon-square:    "\25A0";
+    --Y-icon-square-o:  "\25A1";
+    --Y-icon-square-d:  "\25A3";
+
+    --Y-icon-losango:   "\25C6";
+    --Y-icon-losango-o: "\25C7";
+    --Y-icon-losango-d: "\25C8";
+
+    --Y-icon-fire:      "\1F525"; /*🔥*/
+    --Y-icon-copyright: "©";      /* \00A9 24B8 */
+    --Y-icon-registered: "®";     /* \00AE 24C7 */
+    --Y-icon-heart:     "\2665";
+    --Y-icon-heart-o:   "\2661";  /**/
+    --Y-icon-telephone: "\260E";  /* ☎ */
+    --Y-icon-telephone-o:"\260F"; /* ☏ */
+    --Y-icon-telephone-2: "✆";   /* \270 6*/
+    --Y-icon-radiacao:  "☢";     /* \2622 */
+    --Y-icon-virus:     "☣";     /* \2623 */
+    --Y-icon-fuel:      "⛽";    /* \26FD */
 }
