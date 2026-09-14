@@ -6,7 +6,7 @@
 * fuone.dev@gmaill.com
 **************************/
 /*
-* 030926
+* 140926
 */
 /*------------------------------*
 / BASE
@@ -19,7 +19,19 @@
 
   .yapi{--y-yapi: none;   /* deve ser declarada na tag html */}
 
-  *.disabled{cursor: not-allowed;}
+	/* Seleção de texto */
+	.yapi *::selection {
+    background: var(--proj-selection-bg-color, var(--Y-selection-bg-color, #056ec3)); /* Cor de fundo da seleção */
+    color: var(--proj-selection-txt-color, var(--Y-selection-txt-color, #ffffff));     /* Cor do texto selecionado */
+  }
+	.disabled-selection.disabled-selection{
+		-webkit-user-select:none !important;  /* Safari */
+		-ms-user-select:    none !important;  /* IE 10 e Edge antigo */
+		user-select:        none !important;  /* Padrão moderno (Chrome, Firefox, Opera) */
+	}
+
+  .disabled.disabled{cursor: not-allowed;}
+
 	body{
     --y-body-font-family: var(--proj-font-family, var(--y-font-family, var(--Y-font-family)));
   	--y-body-bg-color: var(--proj-body-bg-color, var(--Y-bg-color, #fff));
@@ -4539,158 +4551,185 @@
 /-------------------------------*/
 	.using-alert{
     /*
-    1.  <div class="alert closing" role="alert">Este é um "alert".</div>
-    2.  <div class="alert red closing" role="alert">Este é um "alert vermelgo".</div>
-    3.  <div class="alert orange closing" role="alert">
-          Este é um "alert" orange com botão de fechar.
-          <buttom class="btn-close" data-dismiss="alert" aria-label="Close"></buttom>
-        </div>
-    4.  <div class="alert" role="alert">
-          <span class="">Este é um "alert" com título. </span>
-          <p class="">É formado com as classes "alert" e "closing" (opcional. Somente se houver botão de fechar); "txt" e "indent" (opcional), para o texto; "border" e "border-all", para as bordas (opcional);</p>
-          <p>(X) A clsse de cor pode ser declarada no elemento superior (pai, avô, bisavô...).</p>
-        </div>
-    5.  <div class="alert" role="alert">
-          <span class="alert-title">Este é um "alert" com título. </span>
-          <span class="alert-subtitle">E com subtítulo. </span>
-          <p class="">É formado com as classes "alert" e "closing" (opcional. Somente se houver botão de fechar); "txt" e "indent" (opcional), para o texto; "border" e "border-all", para as bordas (opcional);</p>
-          <p>(X) A clsse de cor pode ser declarada no elemento superior (pai, avô, bisavô...).</p>
-        </div>
-    6.  <div class="alert closing" role="alert">
-          <span class="alert-title">Este é um "alert" com título e botão fechar. </span>
-          <span class="alert-subtitle">E com subtítulo. </span>
-          <p class="">É formado com as classes "alert" e "closing" (opcional. Somente se houver botão de fechar); "txt" e "indent" (opcional), para o texto; "border" e "border-all", para as bordas (opcional);</p>
-          <p>(X) A clsse de cor pode ser declarada no elemento superior (pai, avô, bisavô...).</p>
-          <buttom class="btn-close" data-dismiss="alert" aria-label="Close"></buttom>
-        </div>
+		<div class="y-alert [alert-closing] [alert-decorated] [alert-shadowed] [alert-bordered] [alert-outlined] [alert-gradient] [alert-gradient-inverse] [cor] [def]" role="alert">
+      <div class="alert-content">
+        Este é um alert. Veja que há diversas opções de estilo.
+      </div>
+    </div>
 
-        ATENÇÃO: para usar o recurso "closing" é necessária a função JS.
+      ATENÇÃO: para usar o recurso "alert-closing" é necessária a função JS.
     */
   }
 
-  .yapi .alert{
-    --y-alert-fator: 1;
-    --y-alert-txt-color:     var(--y-txt-color, var(--y-color-mais-10, var(--Y-grey-mais-50)));
-    --y-alert-left-color:    var(--y-bg-color,var(--y-color-menos-80,var(--Y-grey-menos-100)));
-    --y-alert-right-color:   var(--y-bg-color,var(--y-color-menos-80,var(--Y-grey-menos-100)));
+/* classe principal */
+.y-alert{
+	--y-alert-fator: 1;
+	--y-alert-txt-color: var(--proj-alert-txt-color, var(--y-color-mais-40, var(--Y-neutral-mais-50)));
+	
+	--y-alert-bg-left-color:  var(--proj-alert-bg-left-color,  var(--y-color-menos-80, var(--Y-neutral-menos-80)));
+	--y-alert-bg-right-color: var(--proj-alert-bg-right-color, var(--y-color-menos-80, var(--Y-neutral-menos-80)));
 
-    /*--y-alert-bg-1-color:    var(--y-bg-color,var(--y-color-menos-80,var(--Y-grey-menos-100)));*/
-    --y-alert-bg-color:      linear-gradient(to right, var(--y-alert-left-color), var(--y-alert-right-color));
+	--y-alert-border-color:  var(--proj-alert-border-color, var(--y-color-menos-10, var(--Y-neutral-menos-10)));
+	--y-alert-border-width:  var(--proj-alert-border-width, var(--Y-border-width, 1px));
+	--y-alert-border-style:  var(--proj-alert-border-style, var(--Y-border-style, solid));
+	--y-alert-border:        var(--y-alert-border-width) var(--y-alert-border-style) var(--y-alert-border-color);
+	--y-alert-border-radius: var(--proj-alert-border-radius, 0.35rem);
+	
+	--y-alert-padding-y:     calc(1rem * var(--y-alert-fator));
+	--y-alert-padding-x:     calc(1.5rem * var(--y-alert-fator));
+	--y-alert-font-size:     calc(var(--proj-alert-font-size, var(--Y-font-size, 1rem)) * var(--y-alert-fator));
+	--y-alert-font-family:   var(--proj-alert-font-family, "calibri");
+	--y-alert-opacity:       var(--y-opacity, var(--Y-opacity));
 
-    --y-alert-border-color:  var(--y-border-color,var(--y-color-menos-10,var(--Y-grey-menos-10)));
-    --y-alert-border-radius: 0.5rem;
-    --y-alert-border-width:  var(--y-border-width, var(--Y-border-width, 1px));
-    --y-alert-border-style:  var(--y-border-style, var(--Y-border-style, solid));
-    --y-alert-border:        var(--y-alert-border-width) var(--y-alert-border-style) var(--y-alert-border-color);
-    
-    --y-alert-padding-y:     calc(15px * var(--y-alert-fator));
-    --y-alert-padding-x:     calc(20px * var(--y-alert-fator));
-    --y-alert-font-size:     calc(var(--y-font-size,var(--Y-font-size, 1rem)) * var(--y-alert-fator));
-    --y-alert-opacity:       var(--y-opacity, var(--Y-opacity));
+	--y-alert-decorate-color: var(--proj-alert-decorate-color, var(--y-color-menos-10, var(--Y-neutral-menos-10)));
+	--y-alert-disable-color:  var(--proj-alert-disable-color, var(--Y-disable-color, var(--Y-grey)));
+}
+
+/*configuração geral*/
+.y-alert *{margin: 0; padding: 0}
+.y-alert.def.def{
+	--y-alert-txt-color:      var(--Y-neutral-mais-50) !important;	
+	--y-alert-bg-left-color:  var(--Y-neutral-menos-80) !important;
+	--y-alert-bg-right-color: var(--Y-neutral-menos-80) !important;
+	--y-alert-border-color:   var(--Y-neutral-menos-10) !important;
+	--y-alert-decorate-color: var(--Y-neutral-menos-10) !important;
+}
+
+/* conteúdo */
+.y-alert .alert-content{
+  position: relative;	
+  color: var(--y-alert-txt-color);
+  background: linear-gradient(to right, var(--y-alert-bg-left-color), var(--y-alert-bg-right-color));
+  background: -webkit-gradient(linear, left top, right top, from(var(--y-alert-bg-left-color)), to(var(--y-alert-bg-right-color)));
+  background: -webkit-linear-gradient(left, var(--y-alert-bg-left-color), var(--y-alert-bg-right-color));
+  border: var(--y-alert-border-width) var(--y-alert-border-style) transparent;
+  border-radius: var(--y-alert-border-radius);
+  padding: var(--y-alert-padding-y) var(--y-alert-padding-x);/**/
+  margin: 1rem 0;
+  font-family: var(--y-alert-font-family);
+  font-size: var(--y-alert-font-size);
+  font-weight: inherit;
+  line-height: normal;/**/
+  opacity: var(--y-alert-opacity);
+  text-align: justify;
+  white-space: normal;
+  vertical-align: middle;
+  align-content: center;
+  align-items: center;
+  align-self: center;    
+  user-select: text;
+}
+.y-alert.alert-decorated.alert-decorated .alert-content{
+	border-left: 5px var(--y-alert-border-style) var(--y-alert-decorate-color);
+} /* decorar */
+.y-alert.alert-shadowed .alert-content{
+	border-color: white !important;
+	box-shadow: 6px 20px 15px -12px rgba(0, 0, 0, 0.25);
+}
+.y-alert.alert-bordered .alert-content{
+	border-color: var(--y-alert-border-color);
+} /* com border */
+.y-alert.alert-outlined .alert-content{
+	border-color: var(--y-alert-border-color) !important;
+	background: white !important;
+}
+
+/* gradiente */
+.y-alert.alert-gradient .alert-content{
+	--y-alert-bg-left-color:    var(--proj-alert-bg-left-color,  var(--y-color-menos-80, var(--Y-neutral-menos-80)));
+	--y-alert-bg-right-color:   var(--proj-alert-bg-right-color, var(--y-color-menos-60, var(--Y-neutral-menos-60)));
+	border: 0;
+}
+.y-alert.alert-gradient-inverse .alert-content{
+	--y-alert-bg-left-color:    var(--proj-alert-bg-right-color, var(--y-color-menos-60, var(--Y-neutral-menos-60)));
+	--y-alert-bg-right-color:   var(--proj-alert-bg-left-color,  var(--y-color-menos-80, var(--Y-neutral-menos-80)));
+	border: 0;
+}
+.y-alert.def.alert-gradient .alert-content{
+	--y-alert-bg-left-color:    var(--proj-alert-bg-left-color, var(--Y-neutral-menos-80));
+	--y-alert-bg-right-color:   var(--proj-alert-bg-right-color, var(--Y-neutral-menos-60));
+}
+.y-alert.def.alert-gradient-inverse .alert-content{
+	--y-alert-bg-left-color:    var(--proj-alert-bg-right-color, var(--Y-neutral-menos-60));
+	--y-alert-bg-right-color:   var(--proj-alert-bg-left-color,  var(--Y-neutral-menos-80));
+}
+
+/* desabilitado*/
+.y-alert.disabled.disabled{	
+	--y-alert-txt-color: var(--y-alert-disable-color) !important;
+	--y-alert-bg-left-color: white !important;
+	--y-alert-bg-right-color: white !important;
+	--y-alert-border-color:  var(--y-alert-disable-color) !important;
+}
+.y-alert.disabled *{
+	-webkit-user-select: none !important; /* Safari */
+  -ms-user-select: none !important;     /* IE 10 e Edge antigo */
+  user-select: none !important;         /* Padrão moderno (Chrome, Firefox, Opera) */
+}
+.y-alert.disabled .alert-content{
+	border-color: var(--y-alert-border-color);
+}
+.y-alert.disabled .alert-close-btn{
+	cursor: not-allowed !important;
+}
+
+/* botão de fechar */
+.y-alert.alert-closing{
+	position: relative;
+	font-family: var(--y-alert-font-family);
+	transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+}
+.y-alert.alert-closing.fade-out{
+	opacity: 0;
+  transform: translateY(-8px);
+}
+.y-alert.alert-closing>.alert-content{
+	--y-alert-fator: 2;
+	padding-right: calc(var(--y-alert-padding-x) * var(--y-alert-fator));
+  transition: opacity 0.5s ease;
+}
+
+.y-alert.alert-closing>.alert-close-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: calc(var(--y-alert-padding-y) * 0.7);
+  right: calc(var(--y-alert-padding-x) * 0.5);
+  
+  width: 1.8rem;
+  height: 1.8rem;
+  margin: 0;
+  padding: 0;
+  
+  opacity: 0.5;
+  color: var(--y-alert-txt-color);
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+  background: none !important;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  z-index: 2; /* Garante que o botão fique acima do conteúdo */
+}
+.y-alert.alert-closing>.alert-close-btn::before{
+	content: var(--Y-icon-close,"\00d7");
+}
+.y-alert.alert-closing:not(.disabled)>.alert-close-btn:hover{
+	opacity: 1;
+	transition: 0.5s;
+}
 
 
-    /*display: inline-block;*/
-    /*flex-wrap: nowrap;*/
-    position: relative;
-    opacity: var(--y-alert-opacity);
-    color: var(--y-alert-txt-color);
-    background: linear-gradient(to right, var(--y-alert-left-color), var(--y-alert-right-color));
-    background: -webkit-gradient(linear, left top, right top, from(var(--y-alert-left-color)), to(var(--y-alert-right-color)));
-    background: -webkit-linear-gradient(left, var(--y-alert-left-color), var(--y-alert-right-color));
-
-    border: var(--y-alert-border);
-    border-radius: var(--y-alert-border-radius);
-
-    padding: var(--y-alert-padding-y) var(--y-alert-padding-x);/**/
-    margin: 1rem 0;    
-    font-size: var(--y-alert-font-size);
-    font-weight: inherit;
-    line-height: normal;/**/
-    text-align: justify;
-    white-space: normal;
-    vertical-align: middle;
-    align-content: center;
-    align-items: center;
-    align-self: center;    
-    user-select: text;
-  }
-  .alert.disabled,
-  .alert.disabled .alert-body{
-    --y-l-color: #bbbbbb;
-    --y-alert-txt-color:    var(--y-l-color);
-    --y-alert-bg-color:     var(--Y-grey-menos-100);
-    --y-alert-border-color: var(--y-l-color);
-
-    color: var(--y-alert-txt-color) !important;
-    background: var(--y-alert-bg-color) !important;
-    border-color: var(--y-alert-border-color);
-  }
-
-  .alert.alert-outlined{background: white !important;}
-
-	.alert .alert-content{
-
-  }
-
-  .alert>.alert-title{
-    display: block;
-    font-weight: 700;
-    color: var(--y-alert-title-color,var(--y-alert-txt-color));
-    font-size: calc(var(--y-alert-font-size)* 1.3);
-  }
-  .alert>.alert-subtitle{
-    display: block;
-    font-size: calc(var(--y-alert-font-size)* 1);
-    color: var(--y-alert-subtitle-color,var(--y-alert-txt-color));
-    font-weight: 600;
-    font-style: oblique;
-    padding-bottom: .5rem;
-  }
-  .alert.indent, .alert>.indent{text-indent: 10mm;}
-  .alert p{
-    margin: 0;
-    padding-top: 5px;
-    line-height:1.2;
-  }
-
-  .alert.closing{
-    padding-right: calc(3rem * var(--y-alert-fator));
-    transition: opacity 0.5s ease;
-  }
-  .alert.closing>.btn-close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 0.5rem 1rem;
-    margin-left: 15px;
-    opacity: 0.5;
-    color: inherit;
-    float: right;
-    font-family: inherit;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: normal;/*1.5;*/
-    background: none !important;
-    border: none;
-    -webkit-appearance: none;
-  }
-  .alert.closing>.btn-close::before{content: "x";}
-  .alert.closing>.btn-close:hover{
-    opacity: 1;
-    transition: 0.5s;
-  }
-
-  /*--- variação de cores específicas ---*/
-  .alert.yellow, .yellow .alert,
-  .alert.cyan, .cyan .alert{
-    --y-alert-txt-color:       var(--y-color-mais-40);
-    --y-alert-border-color:    var(--y-color-mais-20);
-  }
-  .alert.gradient{
-    --y-alert-txt-color:    var(--y-txt-color, var(--y-color-mais-10, var(--Y-grey-mais-50)));
-    --y-alert-left-color:   var(--y-bg-color-1, var(--y-bg-color, var(--y-color-menos-80, var(--Y-grey-menos-100))));
-    --y-alert-right-color:  var(--y-bg-color-2, var(--y-bg-color, var(--y-color-menos-80, var(--Y-grey-menos-100))));
-  }
+/*--- variação de cores específicas ---*/
+.y-alert.yellow,
+.y-alert.cyan{
+	--y-alert-txt-color: var(--y-color-mais-50);
+	--y-alert-border-color: var(--y-color-mais-20);
+}
 /*--- fim ALERT --- */
 /*------------------------------*
 / BADGE
@@ -5665,6 +5704,7 @@
       --y-tab-trigger-padding-y: var( --y-tab-padding-y);
       --y-tab-trigger-padding-x: 0;
       --y-tab-trigger-gap: 1rem;
+			--y-tab-trigger-icon-font-size: 1.5rem;
 
       --y-tab-trigger-active-txt-color: var(--y-tab-txt-color);
       --y-tab-trigger-active-bg-color: transparent;
@@ -5724,7 +5764,9 @@
       font-weight: 700;
       opacity: 1 !important;
     }
-
+		.tab-group .tab-trigger::after {
+			font-size: var(--y-tab-trigger-icon-font-size);
+		}
     .tab-group:not(.tab-vertical) .tab-trigger::after{
       content: var(--y-tab-horizontal-trigger-icon);
       position: absolute;
@@ -5737,7 +5779,13 @@
     .tab-group:not(.tab-vertical) .tab-trigger.is-active::after{
       color: var(--y-tab-content-space-border-color);
     }
-
+		.tab-group.tab-vertical .tab-trigger::after {
+			content: var(--y-tab-vertical-trigger-icon);
+			color: transparent;
+			padding-left: 10px;
+			margin-right: -5px;
+			z-index: -1;
+		}
     /* Base dos Painéis */
     .tab-group .tab-content-space {
       /*margin-top:1rem;*/
