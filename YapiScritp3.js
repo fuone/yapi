@@ -18,8 +18,8 @@ var swalCustomClass = '';
 
 /*iniciação das funções no carregamento da página*/
 document.addEventListener('DOMContentLoaded', function() {
-  InitTabs()
-  InitCollapses()
+  InitTabs();
+  InitCollapses();
   SetupAlertClosing();
 });
 
