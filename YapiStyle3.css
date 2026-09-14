@@ -572,7 +572,7 @@
     */
   }
 
-  .yapi .bg{background: var(--y-bg-color, var(--y-default-color, var(--Y-bg-color))); opacity: var(--y-opacity)}
+  .yapi .bg{background: var(--y-bg-color, var(--y-default-color, var(--Y-bg-color))); opacity: var(--y-opacity) !important}
 
   /* --- variação (pra ser usado se declarado a cor) --- */
     .bg-mais-10{  --y-bg-color: var(--y-color-mais-10);}
