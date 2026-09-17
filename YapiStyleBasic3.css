@@ -560,17 +560,31 @@ body.yapi{
   --y-vivid-color:     var(--y-vv-color, var(--y-color-mais-20));
   --y-dark-color:      var(--y-dk-color, var(--y-color-mais-50));
 }
-.decorate-color{
-  
+.decorative-color{
+  --y-decorate-color: var(--y-proj-decorate-color)
 }
 /*============================================================*
 / TXT
 /=============================================================*/
 .yapi .txt {
-
+  --y-txt-indent: 15mm;
+  --y-font-size: 1rem;
+  --y-font-size-vw: 1vw;
+  --y-font-fator: var(--y-fator,1);  
+  
+  color:					var(--y-txt-color, var(--y-default-color, var(--Y-txt-color)));
+  opacity:				var(--y-opacity);  
+  font-size:			calc(var(--y-font-size) * var(--y-font-fator, 1));
+  font-family:		var(--y-font-family, var(--Y-font-family));
+  font-style:     var(--y-font-style);
+  font-weight:		var(--y-font-weight, var(--Y-font-weight));
+  line-height:		var(--y-line-height, var(--Y-line-height));
+  letter-spacing:	var(--y-letter-spacing);
+  text-transform: var(--y-text-transform);
+  text-decoration:var(--y-text-decoration);
 }
 
-/* --- varações de fonte --- */
+/* --- varações --- */
 .uppercase {
   --y-text-transform:uppercase;
   text-transform: uppercase !important;
@@ -628,6 +642,130 @@ body.yapi{
   font-family: calibri !important;
   font-optical-sizing: auto;
 }
+
+/* --- variação de tamanho  --- */
+.txt .txt-g,
+.txt.txt-g {  --y-font-fator: 2.5;}
+.txt .txt-p,
+.txt.txt-p {  --y-font-fator: 0.85;}
+.txt .txt-10,
+.txt.txt-10 {--y-font-size: 10px;}
+.txt .txt-12,
+.txt.txt-12 {--y-font-size: 12px;}
+.txt .txt-14,
+.txt.txt-14 {--y-font-size: 14px;}
+.txt .txt-16,
+.txt.txt-16 {--y-font-size: 16px;}
+.txt .txt-18,
+.txt.txt-18 {--y-font-size: 18px;}
+.txt .txt-20,
+.txt.txt-20 {--y-font-size: 20px;}
+.txt .txt-22,
+.txt.txt-22 {--y-font-size: 22px;}
+.txt .txt-24,
+.txt.txt-24 {--y-font-size: 24px;}
+.txt .txt-26,
+.txt.txt-26 {--y-font-size: 26px;}
+.txt .txt-28,
+.txt.txt-28 {--y-font-size: 28px;}
+.txt .txt-30,
+.txt.txt-30 {--y-font-size: 30px;}
+.txt .txt-32,
+.txt.txt-32 {--y-font-size: 32px;}
+.txt .txt-34,
+.txt.txt-34 {--y-font-size: 34px;}
+.txt .txt-36,
+.txt.txt-36 {--y-font-size: 36px;}
+.txt .txt-38,
+.txt.txt-38 {--y-font-size: 38px;}
+.txt .txt-40,
+.txt.txt-40 {--y-font-size: 40px;}
+.txt .txt-42,
+.txt.txt-42 {--y-font-size: 42px;}
+.txt .txt-44,
+.txt.txt-44 {--y-font-size: 44px;}
+.txt .txt-446,
+.txt.txt-46 {--y-font-size: 46px;}
+.txt .txt-48,
+.txt.txt-48 {--y-font-size: 48px;}
+.txt .txt-50,
+.txt.txt-50 {--y-font-size: 50px;}
+
+.txt .txt-10pcent,
+.txt.txt-10pcent{--y-font-fator: 0.1 !important;}
+.txt .txt-20pcent,
+.txt.txt-20pcent{--y-font-fator: 0.2 !important;}
+.txt .txt-30pcent,
+.txt.txt-30pcent{--y-font-fator: 0.3 !important;}
+.txt .txt-40pcent,
+.txt.txt-40pcent{--y-font-fator: 0.4 !important;}
+.txt .txt-50pcent,
+.txt.txt-50pcent{--y-font-fator: 0.5 !important;}
+.txt .txt-60pcent,
+.txt.txt-60pcent{--y-font-fator: 0.6 !important;}
+.txt .txt-70pcent,
+.txt.txt-70pcent{--y-font-fator: 0.7 !important;}
+.txt .txt-80pcent,
+.txt.txt-80pcent{--y-font-fator: 0.8 !important;}
+.txt .txt-90pcent,
+.txt.txt-90pcent{--y-font-fator: 0.9 !important;}
+.txt .txt-100pcent,
+.txt.txt-100pcent{--y-font-fator: 1 !important;}
+.txt .txt-110pcent,
+.txt.txt-110pcent{--y-font-fator: 1.1% !important;}
+.txt .txt-120pcent,
+.txt.txt-120pcent{--y-font-fator: 1.2 !important;}
+.txt .txt-130pcent,
+.txt.txt-130pcent{--y-font-fator: 1.3 !important;}
+.txt .txt-140pcent,
+.txt.txt-140pcent{--y-font-fator: 1.4 !important;}
+.txt .txt-150pcent,
+.txt.txt-150pcent{--y-font-fator: 1.5 !important;}
+.txt .txt-160pcent,
+.txt.txt-160pcent{--y-font-fator: 1.6 !important;}
+.txt .txt-170pcent,
+.txt.txt-170pcent{--y-font-fator: 1.7 !important;}
+.txt .txt-180pcent,
+.txt.txt-180pcent{--y-font-fator: 1.8 !important;}
+.txt .txt-190pcent,
+.txt.txt-190pcent{--y-font-fator: 1.9 !important;}
+.txt .txt-200pcent,
+.txt.txt-200pcent{--y-font-fator: 2.0 !important;}
+
+
+.fs-10{font-size: 10px !important;}
+.fs-12{font-size: 12px !important;}
+.fs-14{font-size: 14px !important;}
+.fs-16{font-size: 16px !important;}
+.fs-18{font-size: 18px !important;}
+.fs-20{font-size: 20px !important;}
+.fs-22{font-size: 22px !important;}
+.fs-24{font-size: 24px !important;}
+.fs-26{font-size: 26px !important;}
+.fs-28{font-size: 28px !important;}
+.fs-30{font-size: 30px !important;}
+.fs-32{font-size: 32px !important;}
+.fs-34{font-size: 34px !important;}
+.fs-36{font-size: 36px !important;}
+.fs-38{font-size: 38px !important;}
+.fs-40{font-size: 40px !important;}
+.fs-42{font-size: 42px !important;}
+.fs-44{font-size: 44px !important;}
+.fs-46{font-size: 46px !important;}
+.fs-48{font-size: 48px !important;}
+.fs-50{font-size: 50px !important;}
+
+/* --- reset p ---*/
+.yapi p{
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+
+/* --- H1, H2, H3, H4, H5 --- */
+
 
 /* --- variação (pra ser usado se declarado a cor) --- */
 .txt.color-mais-10{ --y-txt-color:  var(--y-color-mais-10);}
