@@ -1,12 +1,12 @@
 /*************************
-*  YAPISTYLE 3.0 - Basic
+* YAPISTYLE 3.0 - Basic
 * Framework CSS. Esse arquivo é parte do framwork Yapi
 * Edição 09/2026
 * Dev: Fuone
-* fuone.dev@gmaill.com
+* fuone.dev@gmail.com
 **************************/
 /*
-* 140926
+* 180926
 */
 
 /*============================================================*
@@ -1496,75 +1496,11 @@ body.yapi{
 .y-border.border-dashed{--y-border-style: dashed; border-style: dashed !important;}
 
 /* --- opacidade --- */
-.y-border .border-opacity-0,
-.y-border.border-opacity-0{--y-border-opacity: 0;}
-.y-border .border-opacity-10,
-.y-border.border-opacity-10{--y-border-opacity: 0.1;}
-.y-border .border-opacity-25,
-.y-border.border-opacity-25{--y-border-opacity: 0.25;}
-.y-border .border-opacity-50,
-.y-border.border-opacity-50{--y-border-opacity: 0.50;}
-.y-border .border-opacity-75,
-.y-border.border-opacity-75{--y-border-opacity: 0.75;}
-.y-border .border-opacity-100,
-.y-border.border-opacity-100{--y-border-opacity: 1;}
+
 
 /*--- radius ---*/
-.yapi .border-rad{
-  --y-border-radius: var(--proj-border-radius, var(--Y-border-radius, 4px));
-  border-radius: var(--y-border-radius);
-}
-.border-rad.border-rad-0{--y-border-radius:  0 !important;}
-.border-rad.border-rad-1{--y-border-radius:  6px !important;}
-.border-rad.border-rad-2{--y-border-radius:  10px !important;}
-.border-rad.border-rad-3{--y-border-radius:  14px !important;}
-.border-rad.border-rad-4{--y-border-radius:  18px !important;}
-.border-rad.border-rad-5{--y-border-radius:  20px !important;}
-.border-rad.border-rad-50{--y-border-radius: 50px !important;}
-.border-rad.border-rad-50pcent,
-.border-rad.border-rad-circle{--y-border-radius:  50% !important;}
 
-.border-radius-0, .rounded-0{border-radius:    0 !important;}
-.border-radius-1, .rounded-1{border-radius:    6px !important;}
-.border-radius-2, .rounded-2{border-radius:   10px !important;}
-.border-radius-3, .rounded-3{border-radius:   14px !important;}
-.border-radius-4, .rounded-4{border-radius:   18px !important;}
-.border-radius-5, .rounded-5{border-radius:   20px !important;}
-.border-radius-50,.rounded-50{border-radius:  50px !important;}
-.border-radius-50pcent,.border-circle,.rounded-50pcent{border-radius: 50% !important;}
-.rounded{border-radius:  var(--Y-border-radius, 4px) !important;}
 
-.border-rad-tl,
-.border-rad-tr,
-.border-rad-bl,
-.border-rad-br,
-.border-rad-t,
-.border-rad-b,
-.border-rad-l,
-.border-rad-r,
-.border-rad-x,
-.border-rad-y{--y-border-radius: var(--proj-border-radius,var(--Y-border-radius, 6px));}
-
-.border-rad-tl{border-top-left-radius:     var(--y-border-radius) !important;}
-.border-rad-tr{border-top-right-radius:    var(--y-border-radius) !important;}
-.border-rad-bl{border-bottom-left-radius:  var(--y-border-radius) !important;}
-.border-rad-br{border-bottom-right-radius: var(--y-border-radius) !important;}
-.border-rad-t{
-  border-top-left-radius:     var(--y-border-radius) !important;
-  border-top-right-radius:    var(--y-border-radius) !important;
-}
-.border-rad-b{
-  border-bottom-left-radius:  var(--y-border-radius) !important;
-  border-bottom-right-radius: var(--y-border-radius) !important;
-}
-.border-rad-l{
-  border-top-left-radius:     var(--y-border-radius) !important;
-  border-bottom-left-radius:  var(--y-border-radius) !important;
-}
-.border-rad-r{
-  border-top-right-radius:    var(--y-border-radius) !important;
-  border-bottom-right-radius: var(--y-border-radius) !important;	
-}
 
 /* --- variação (pra ser usado se declarado a cor) --- */
 .y-border.color-mais-10{  --y-border-color: var(--y-color-mais-10);}
@@ -1594,7 +1530,8 @@ body.yapi{
 
 /* --- Variação de cor --- */
 .border-white{ --y-border-color: var(--Y-white); border-color: var(--Y-white) !important;}
-.no-border.no-border,.border-0.border-0 {border: none !important;}
+.no-border.no-border,
+.border-0.border-0 {border: none !important;}
 .border-transp {--y-border-color: transparent; border-color: transparent !important;
 }
 
@@ -2764,7 +2701,6 @@ body.yapi{
 .z-145{zoom: 145%;}
 .z-150{zoom: 150%;}
 
-
 /*============================================================*
 / ROTAÇÃO
 /=============================================================*/
@@ -2785,7 +2721,7 @@ body.yapi{
 .y-rotate.rotate-menos-270{ --y-rotate-angle: -270deg;}
 
 .flip-both{
-   transform: scale(-1);
+  transform: scale(-1);
   -webkit-transform: scale(-1); 
 }
 .flip-h{
@@ -2793,7 +2729,7 @@ body.yapi{
   -webkit-transform: scaleX(-1);  
 }
 .flip-v{
-   transform: scaleY(-1);
+  transform: scaleY(-1);
   -webkit-transform: scaleY(-1); 
 }
 /*============================================================*
