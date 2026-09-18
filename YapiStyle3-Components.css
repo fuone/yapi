@@ -1,9 +1,9 @@
 /*************************
-*  YAPISTYLE 3.0 - Components
+* YAPISTYLE 3.0 - Components
 * Framework CSS. Esse arquivo é parte do framwork Yapi
 * Edição 09/2026
 * Dev: Fuone
-* fuone.dev@gmaill.com
+* fuone.dev@gmail.com
 **************************/
 /*
 * 180926*/
@@ -14,47 +14,47 @@
 /*============================================================*
 / ALERTS
 /=============================================================*/
-/* classe principal */
 .y-alert{
 	--y-alert-fator: 1;
 	--y-alert-txt-color: var(--y-color-mais-40, var(--Y-neutral-mais-50));
 	
-	--y-alert-bg-left-color:  var(--y-color-menos-80, var(--Y-neutral-menos-80));
+	--y-alert-bg-left-color: var(--y-color-menos-80, var(--Y-neutral-menos-80));
 	--y-alert-bg-right-color: var(--y-color-menos-80, var(--Y-neutral-menos-80));
 	
-	--y-alert-border-color:  var(--y-color-menos-10, var(--Y-neutral-menos-10));
-	--y-alert-border-width:  var(--Y-border-width, 1px);
-	--y-alert-border-style:  var(--Y-border-style, solid);
-	--y-alert-border:        var(--y-alert-border-width) var(--y-alert-border-style) var(--y-alert-border-color);
+	--y-alert-border-color: var(--y-color-menos-10, var(--Y-neutral-menos-10));
+	--y-alert-border-width: var(--Y-border-width, 1px);
+	--y-alert-border-style: var(--Y-border-style, solid);
+	--y-alert-border: var(--y-alert-border-width) var(--y-alert-border-style) var(--y-alert-border-color);
 	--y-alert-border-radius: 0.35rem;
 	
-	--y-alert-padding-y:     calc(1rem * var(--y-alert-fator));
-	--y-alert-padding-x:     calc(1.5rem * var(--y-alert-fator));
-	--y-alert-font-size:     calc(var(--Y-font-size, 1rem) * var(--y-alert-fator));
-	--y-alert-font-family:   "calibri";
-	--y-alert-opacity:       var(--y-opacity, var(--Y-opacity));
+	--y-alert-padding-y: calc(1rem * var(--y-alert-fator));
+	--y-alert-padding-x: calc(1.5rem * var(--y-alert-fator));
+	--y-alert-font-size: calc(var(--Y-font-size, 1rem) * var(--y-alert-fator));
+	--y-alert-font-family: "calibri";
+	--y-alert-opacity: var(--y-opacity, var(--Y-opacity));
 	
 	--y-alert-decorate-color: var(--y-color-menos-10, var(--Y-neutral-menos-10));
 	--y-alert-decorate-border-width: 5px;
-	--y-alert-disable-color:  var(--Y-disable-color, var(--Y-grey));
+	--y-alert-disable-color: var(--Y-disable-color, var(--Y-grey));
 }
 
 /*configuração geral*/
 .y-alert *{margin: 0; padding: 0}
 .y-alert.def.def{
-	--y-alert-txt-color:      var(--Y-neutral-mais-50) !important;	
-	--y-alert-bg-left-color:  var(--Y-neutral-menos-80) !important;
+	--y-alert-txt-color: var(--Y-neutral-mais-50) !important;
+	--y-alert-bg-left-color: var(--Y-neutral-menos-80) !important;
 	--y-alert-bg-right-color: var(--Y-neutral-menos-80) !important;
-	--y-alert-border-color:   var(--Y-neutral-menos-10) !important;
+	--y-alert-border-color: var(--Y-neutral-menos-10) !important;
 	--y-alert-decorate-color: var(--Y-neutral-menos-10) ;
 }
 
 /* conteúdo */
 .y-alert>.alert-content{
-	position: relative;	
+	position: relative;
 	color: var(--y-alert-txt-color);
 	background: linear-gradient(to right, var(--y-alert-bg-left-color), var(--y-alert-bg-right-color));
-	background: -webkit-gradient(linear, left top, right top, from(var(--y-alert-bg-left-color)), to(var(--y-alert-bg-right-color)));
+	background: -webkit-gradient(linear, left top, right top, from(var(--y-alert-bg-left-color)),
+	to(var(--y-alert-bg-right-color)));
 	background: -webkit-linear-gradient(left, var(--y-alert-bg-left-color), var(--y-alert-bg-right-color));
 	border: var(--y-alert-border-width) var(--y-alert-border-style) transparent;
 	border-radius: var(--y-alert-border-radius);
@@ -70,13 +70,13 @@
 	vertical-align: middle;
 	align-content: center;
 	align-items: center;
-	align-self: center;    
+	align-self: center;
 	user-select: text;
 }
 .y-alert.alert-decorated>.alert-content{
 	border-left: var(--y-alert-decorate-border-width) var(--y-alert-border-style) var(--y-alert-decorate-color)!important;
-	border-top-left-radius:     0 !important;
-	border-bottom-left-radius:  0 !important;
+	/*border-top-left-radius: 0 !important;*/
+	/*border-bottom-left-radius: 0 !important;*/
 } /* decorar */
 .y-alert.alert-shadowed>.alert-content{
 	border-color: white !important;
@@ -92,55 +92,55 @@
 
 /* gradiente */
 .y-alert.alert-gradient{
-	--y-alert-bg-left-color:   var(--y-color-menos-80, var(--Y-neutral-menos-80));
-	--y-alert-bg-right-color:  var(--y-color-menos-50, var(--Y-neutral-menos-60));
-	border: 0;
+	--y-alert-bg-left-color: var(--y-color-menos-80, var(--Y-neutral-menos-80));
+	--y-alert-bg-right-color: var(--y-color-menos-50, var(--Y-neutral-menos-60));
 }
-.y-alert.alert-gradient-inverse>.alert-content{
-	--y-alert-bg-left-color:    var(--proj-alert-bg-right-color, var(--y-color-menos-60, var(--Y-neutral-menos-60)));
-	--y-alert-bg-right-color:   var(--proj-alert-bg-left-color,  var(--y-color-menos-80, var(--Y-neutral-menos-80)));
-	border: 0;
+.y-alert.alert-gradient-inverse{
+	--y-alert-bg-left-color: var(--y-color-menos-60, var(--Y-neutral-menos-60));
+	--y-alert-bg-right-color: var(--y-color-menos-80, var(--Y-neutral-menos-80));
 }
-.y-alert.def.alert-gradient>.alert-content{
-	--y-alert-bg-left-color:    var(--proj-alert-bg-left-color, var(--Y-neutral-menos-80));
-	--y-alert-bg-right-color:   var(--proj-alert-bg-right-color, var(--Y-neutral-menos-60));
+.y-alert.def.alert-gradient{
+	--y-alert-bg-left-color: var(--Y-neutral-menos-80);
+	--y-alert-bg-right-color: var(--Y-neutral-menos-60);
 }
-.y-alert.def.alert-gradient-inverse>.alert-content{
-	--y-alert-bg-left-color:    var(--proj-alert-bg-right-color, var(--Y-neutral-menos-60));
-	--y-alert-bg-right-color:   var(--proj-alert-bg-left-color,  var(--Y-neutral-menos-80));
+.y-alert.def.alert-gradient-inverse{
+	--y-alert-bg-left-color: var(--Y-neutral-menos-60);
+	--y-alert-bg-right-color: var(--Y-neutral-menos-80);
 }
+.y-alert.alert-gradient>.alert-content,
+.y-alert.alert-gradient-inverse>.alert-content{border:0;}
 
- /* customizado */
+/* customizado */
 .y-alert.alert-custom{
 	--y-alert-txt-color: var(--proj-alert-txt-color, revert-rule) !important;
 	
-	--y-alert-bg-left-color:  var(--proj-alert-bg-left-color, revert-rule) !important;
+	--y-alert-bg-left-color: var(--proj-alert-bg-left-color, revert-rule) !important;
 	--y-alert-bg-right-color: var(--proj-alert-bg-right-color, revert-rule) !important;
 	
-	--y-alert-border-color:  var(--proj-alert-border-color, revert-rule) !important;
-	--y-alert-border-width:  var(--proj-alert-border-width, revert-rule) !important;
-	--y-alert-border-style:  var(--proj-alert-border-style, revert-rule) !important;
+	--y-alert-border-color: var(--proj-alert-border-color, revert-rule) !important;
+	--y-alert-border-width: var(--proj-alert-border-width, revert-rule) !important;
+	--y-alert-border-style: var(--proj-alert-border-style, revert-rule) !important;
 	--y-alert-border-radius: var(--proj-alert-border-radius, revert-rule) !important;
 	
-	--y-alert-font-size:     calc(var(--proj-alert-font-size, revert-rule) * var(--y-alert-fator)) !important;
-	--y-alert-font-family:   var(--proj-alert-font-family, revert-rule) !important;
+	--y-alert-font-size: calc(var(--proj-alert-font-size, revert-rule) * var(--y-alert-fator)) !important;
+	--y-alert-font-family: var(--proj-alert-font-family, revert-rule) !important;
 	
 	--y-alert-decorate-color: var(--proj-alert-decorate-color, revert-rule) !important;
-	--y-alert-disable-color:  var(--proj-alert-disable-color, revert-rule) !important;
+	--y-alert-disable-color: var(--proj-alert-disable-color, revert-rule) !important;
 	--y-alert-decorate-border-width: var(--proj-alert-decorate-border-width, revert-rule) !important;
 }
 
 /* desabilitado*/
-.y-alert.disabled.disabled{	
+.y-alert.disabled.disabled{
 	--y-alert-txt-color: var(--y-alert-disable-color) !important;
 	--y-alert-bg-left-color: white !important;
 	--y-alert-bg-right-color: white !important;
-	--y-alert-border-color:  var(--y-alert-disable-color) !important;
+	--y-alert-border-color: var(--y-alert-disable-color) !important;
 }
 .y-alert.disabled *{
+	user-select: none !important; /* Padrão moderno (Chrome, Firefox, Opera) */
 	-webkit-user-select: none !important; /* Safari */
-	-ms-user-select: none !important;     /* IE 10 e Edge antigo */
-	user-select: none !important;         /* Padrão moderno (Chrome, Firefox, Opera) */
+	-ms-user-select: none !important; /* IE 10 e Edge antigo */	
 }
 .y-alert.disabled>.alert-content{
 	border-color: var(--y-alert-border-color);
@@ -161,7 +161,7 @@
 	transform: translateY(-8px);
 }
 .y-alert.alert-closing>.alert-content{
-	--y-alert-fator: 2;
+--y-alert-fator: 2;
 	padding-right: calc(var(--y-alert-padding-x) * var(--y-alert-fator));
 	transition: opacity 0.5s ease;
 }
@@ -205,7 +205,13 @@
 	--y-alert-txt-color: var(--y-color-mais-50);
 	--y-alert-border-color: var(--y-color-mais-20);
 }
-
+.y-alert.white{
+	--y-alert-txt-color: var(--Y-neutral-mais-30);
+	--y-alert-bg-left-color: var(--Y-white, #fff);
+	--y-alert-bg-right-color: var(--Y-white, #fff);
+	--y-alert-border-color: var(--Y-neutral-menos-60);
+	--y-alert-decorate-color: var(--Y-neutral-menos-60);
+}
 
 /*============================================================*
 / BADGES
@@ -241,5 +247,5 @@
 / TOOLTIPS
 /=============================================================*/
 /*============================================================*
-/ Alert
+/ 
 /=============================================================*/
