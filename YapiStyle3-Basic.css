@@ -1414,7 +1414,7 @@ body.yapi{
 /*============================================================*
 / BORDER
 /=============================================================*/
-.yapy .y-border{
+.yapi .y-border{
   --y-border-width: var(--Y-border-width, inherit);
   --y-border-style: var(--Y-border-style, solid);
   --y-bcolor: hsl(from var(--y-border-color, var(--y-default-color, #dee2e6)) h s l / var(--y-border-opacity, 1));
