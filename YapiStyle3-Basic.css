@@ -1958,9 +1958,468 @@ body.yapi{
 .pos-inherit {  position: inherit !important;}/***/
 .pos-initial {  position: initial !important;}/***/
 
-/* --- pargin --- */
+/* --- top --- */
+.top-0{top:0 !important}
+.top-05pcent{top: 05% !important}
+.top-10pcent{top: 10% !important}
+.top-15pcent{top: 15% !important}
+.top-20pcent{top: 20% !important}
+.top-25pcent{top: 25% !important}
+.top-30pcent{top: 30% !important}
+.top-35pcent{top: 35% !important}
+.top-40pcent{top: 40% !important}
+.top-45pcent{top: 45% !important}
+.top-50pcent{top: 50% !important}
+.top-55pcent{top: 55% !important}
+.top-60pcent{top: 60% !important}
+.top-65pcent{top: 65% !important}
+.top-70pcent{top: 70% !important}
+.top-75pcent{top: 75% !important}
+.top-80pcent{top: 80% !important}
+.top-85pcent{top: 85% !important}
+.top-90pcent{top: 90% !important}
+.top-95pcent{top: 95% !important}
+.top-100pcent{top: 100% !important}
+
+/* --- bottom --- */
+.bottom-0{bottom:0 !important}
+.bottom-05pcent{bottom: 05% !important}
+.bottom-10pcent{bottom: 10% !important}
+.bottom-15pcent{bottom: 15% !important}
+.bottom-20pcent{bottom: 20% !important}
+.bottom-25pcent{bottom: 25% !important}
+.bottom-30pcent{bottom: 30% !important}
+.bottom-35pcent{bottom: 35% !important}
+.bottom-40pcent{bottom: 40% !important}
+.bottom-45pcent{bottom: 45% !important}
+.bottom-50pcent{bottom: 50% !important}
+.bottom-55pcent{bottom: 55% !important}
+.bottom-60pcent{bottom: 60% !important}
+.bottom-65pcent{bottom: 65% !important}
+.bottom-70pcent{bottom: 70% !important}
+.bottom-75pcent{bottom: 75% !important}
+.bottom-80pcent{bottom: 80% !important}
+.bottom-85pcent{bottom: 85% !important}
+.bottom-90pcent{bottom: 90% !important}
+.bottom-95pcent{bottom: 95% !important}
+.bottom-100pcent{bottom: 100% !important}
+
+/* --- left (start) --- */
+.left-0{left:0 !important}
+.left-05pcent{left: 05% !important}
+.left-10pcent{left: 10% !important}
+.left-15pcent{left: 15% !important}
+.left-20pcent{left: 20% !important}
+.left-25pcent{left: 25% !important}
+.left-30pcent{left: 30% !important}
+.left-35pcent{left: 35% !important}
+.left-40pcent{left: 40% !important}
+.left-45pcent{left: 45% !important}
+.left-50pcent{left: 50% !important}
+.left-55pcent{left: 55% !important}
+.left-60pcent{left: 60% !important}
+.left-65pcent{left: 65% !important}
+.left-70pcent{left: 70% !important}
+.left-75pcent{left: 75% !important}
+.left-80pcent{left: 80% !important}
+.left-85pcent{left: 85% !important}
+.left-90pcent{left: 90% !important}
+.left-95pcent{left: 95% !important}
+.left-100pcent{left: 100% !important}
+
+/* --- right (end) --- */
+.right-0{right:0 !important}
+.right-05pcent{right: 05% !important}
+.right-10pcent{right: 10% !important}
+.right-15pcent{right: 15% !important}
+.right-20pcent{right: 20% !important}
+.right-25pcent{right: 25% !important}
+.right-30pcent{right: 30% !important}
+.right-35pcent{right: 35% !important}
+.right-40pcent{right: 40% !important}
+.right-45pcent{right: 45% !important}
+.right-50pcent{right: 50% !important}
+.right-55pcent{right: 55% !important}
+.right-60pcent{right: 60% !important}
+.right-65pcent{right: 65% !important}
+.right-70pcent{right: 70% !important}
+.right-75pcent{right: 75% !important}
+.right-80pcent{right: 80% !important}
+.right-85pcent{right: 85% !important}
+.right-90pcent{right: 90% !important}
+.right-95pcent{right: 95% !important}
+.right-100pcent{right: 100% !important}
+
+/* --- Margin --- */
+.yapi .m-auto{margin:         auto !important;}
+.yapi .mt-auto{margin-top:    auto !important;}
+.yapi .mb-auto{margin-bottom: auto !important;}
+.yapi .ml-auto{margin-left:   auto !important;}
+.yapi .mr-auto{margin-right:  auto !important;}
+.yapi .mx-auto{
+  --y-margin: auto;
+  margin-inline:var(--y-margin) !important;
+  margin-left:  var(--y-margin) !important;
+  margin-right: var(--y-margin) !important;
+}
+.yapi .my-auto{
+  --y-margin: auto;
+  margin-block: var(--y-margin) !important;
+  margin-top:   var(--y-margin) !important;
+  margin-bottom:var(--y-margin) !important;
+}
+
+.yapi .m-0{margin: 0 !important;}
+.yapi .mt-0{margin-top: 0 !important;}
+.yapi .mb-0{margin-bottom: 0 !important;}
+.yapi .ml-0{margin-left: 0 !important;}
+.yapi .mr-0{margin-right: 0 !important;}
+.yapi .mx-0{
+  --y-margin: 0;
+  margin-inline:var(--y-margin) !important;
+  margin-left:  var(--y-margin) !important;
+  margin-right: var(--y-margin) !important;
+}
+.yapi .my-0{
+  --y-margin: 0;
+  margin-block: var(--y-margin) !important;
+  margin-top:   var(--y-margin) !important;
+  margin-bottom:var(--y-margin) !important;
+}
+
+.yapi .m-05{margin:         var(--Y-mp-05, 0.5rem) !important;}
+.yapi .mt-05{margin-top:    var(--Y-mp-05, 0.5rem) !important;}
+.yapi .mb-05{margin-bottom: var(--Y-mp-05, 0.5rem) !important;}
+.yapi .ml-05{margin-left:   var(--Y-mp-05, 0.5rem) !important;}
+.yapi .mr-05{margin-right:  var(--Y-mp-05, 0.5rem) !important;}
+.yapi .mx-05{
+  --y-margin:   var(--Y-mp-05, 0.5rem);
+  margin-inline:var(--y-margin) !important;
+  margin-left:  var(--y-margin) !important;
+  margin-right: var(--y-margin) !important;
+}
+.yapi .my-05{
+  --y-margin:   var(--Y-mp-05, 0.5rem);
+  margin-block: var(--y-margin) !important;
+  margin-top:   var(--y-margin) !important;
+  margin-bottom:var(--y-margin) !important;
+}
+
+.yapi .m-10{margin:         var(--Y-mp-10, 1rem) !important;}
+.yapi .mt-10{margin-top:    var(--Y-mp-10, 1rem) !important;}
+.yapi .mb-10{margin-bottom: var(--Y-mp-10, 1rem) !important;}
+.yapi .ml-10{margin-left:   var(--Y-mp-10, 1rem) !important;}
+.yapi .mr-10{margin-right:  var(--Y-mp-10, 1rem) !important;}
+.yapi .mx-10{
+  --y-margin:   var(--Y-mp-10, 1rem);
+  margin-inline:var(--y-margin) !important;
+  margin-left:  var(--y-margin) !important;
+  margin-right: var(--y-margin) !important;
+}
+.yapi .my-10{
+  --y-margin:   var(--Y-mp-10, 1rem);
+  margin-block: var(--y-margin) !important;
+  margin-top:   var(--y-margin) !important;
+  margin-bottom:var(--y-margin) !important;
+}
+
+.yapi .m-15{margin:         var(--Y-mp-15, 1.5rem) !important;}
+.yapi .mt-15{margin-top:    var(--Y-mp-15, 1.5rem) !important;}
+.yapi .mb-15{margin-bottom: var(--Y-mp-15, 1.5rem) !important;}
+.yapi .ml-15{margin-left:   var(--Y-mp-15, 1.5rem) !important;}
+.yapi .mr-15{margin-right:  var(--Y-mp-15, 1.5rem) !important;}
+.yapi .mx-15{
+  --y-margin:   var(--Y-mp-15, 1.5rem);
+  margin-inline:var(--y-margin) !important;
+  margin-left:  var(--y-margin) !important;
+  margin-right: var(--y-margin) !important;
+}
+.yapi .my-15{
+  --y-margin:   var(--Y-mp-15, 1.5rem);
+  margin-block: var(--y-margin) !important;
+  margin-top:   var(--y-margin) !important;
+  margin-bottom:var(--y-margin) !important;
+}
+
+.yapi .m-20{margin:         var(--Y-mp-20, 2rem) !important;}
+.yapi .mt-20{margin-top:    var(--Y-mp-20, 2rem) !important;}
+.yapi .mb-20{margin-bottom: var(--Y-mp-20, 2rem) !important;}
+.yapi .ml-20{margin-left:   var(--Y-mp-20, 2rem) !important;}
+.yapi .mr-20{margin-right:  var(--Y-mp-20, 2rem) !important;}
+.yapi .mx-20{
+  --y-margin:     var(--Y-mp-20, 2rem);
+  margin-inline:  var(--y-margin) !important;
+  margin-left:    var(--y-margin) !important;
+  margin-right:   var(--y-margin) !important;
+}
+.yapi .my-20{
+  --y-margin:   var(--Y-mp-20, 2rem);
+  margin-block: var(--y-margin) !important;
+  margin-top:   var(--y-margin) !important;
+  margin-bottom:var(--y-margin) !important;
+}
+
+.yapi .m-25{margin:         var(--Y-mp-25, 2.5rem) !important;}
+.yapi .mt-25{margin-top:    var(--Y-mp-25, 2.5rem) !important;}
+.yapi .mb-25{margin-bottom: var(--Y-mp-25, 2.5rem) !important;}
+.yapi .ml-25{margin-left:   var(--Y-mp-25, 2.5rem) !important;}
+.yapi .mr-25{margin-right:  var(--Y-mp-25, 2.5rem) !important;}
+.yapi .mx-25{
+  --y-margin:   var(--Y-mp-25, 2.5rem);
+  margin-inline:var(--y-margin) !important;
+  margin-left:  var(--y-margin) !important;
+  margin-right: var(--y-margin) !important;
+}
+.yapi .my-25{
+  --y-margin:   var(--Y-mp-25, 2.5rem);
+  margin-block: var(--y-margin) !important;
+  margin-top:   var(--y-margin) !important;
+  margin-bottom:var(--y-margin) !important;
+}
+
+.yapi .m-30{margin:         var(--Y-mp-30, 3rem) !important;}
+.yapi .mt-30{margin-top:    var(--Y-mp-30, 3rem) !important;}
+.yapi .mb-30{margin-bottom: var(--Y-mp-30, 3rem) !important;}
+.yapi .ml-30{margin-left:   var(--Y-mp-30, 3rem) !important;}
+.yapi .mr-30{margin-right:  var(--Y-mp-30, 3rem) !important;}
+.yapi .mx-30{
+  --y-margin:   var(--Y-mp-30, 3rem);
+  margin-inline:var(--y-margin) !important;
+  margin-left:  var(--y-margin) !important;
+  margin-right: var(--y-margin) !important;
+}
+.yapi .my-30{
+  --y-margin:   var(--Y-mp-30, 3rem);
+  margin-block: var(--y-margin) !important;
+  margin-top:   var(--y-margin) !important;
+  margin-bottom:var(--y-margin) !important;
+}
 
 /* --- padding --- */
+.yapi .p-auto{padding:        auto !important;}
+.yapi .pt-auto{padding-top:   auto !important;}
+.yapi .pb-auto{padding-bottom:auto !important;}
+.yapi .pl-auto{padding-left:  auto !important;}
+.yapi .pr-auto{padding-right: auto !important;}
+.yapi .px-auto{
+  --y-padding:    auto;
+  padding-inline: var(--y-padding) !important;
+  padding-left:   var(--y-padding) !important;
+  padding-right:  var(--y-padding) !important;
+}
+.yapi .py-auto{
+  --y-padding:    auto;
+  padding-block:  var(--y-padding) !important;
+  padding-top:    var(--y-padding) !important;
+  padding-bottom: var(--y-padding) !important;
+}
+
+.yapi .p-0{padding: 0 !important;}
+.yapi .pt-0{padding-top: 0 !important;}
+.yapi .pb-0{padding-bottom: 0 !important;}
+.yapi .pl-0{padding-left: 0 !important;}
+.yapi .pr-0{padding-right: 0 !important;}
+.yapi .px-0{
+  --y-padding: 0;
+  padding-inline: var(--y-padding) !important;
+  padding-left:   var(--y-padding) !important;
+  padding-right:  var(--y-padding) !important;
+}
+.yapi .py-0{
+  --y-padding: 0;
+  padding-block:  var(--y-padding) !important;
+  padding-top:    var(--y-padding) !important;
+  padding-bottom: var(--y-padding) !important;
+}
+
+.yapi .p-05{padding:        var(--Y-mp-05, 0.5rem) !important;}
+.yapi .pt-05{padding-top:   var(--Y-mp-05, 0.5rem) !important;}
+.yapi .pb-05{padding-bottom:var(--Y-mp-05, 0.5rem) !important;}
+.yapi .pl-05{padding-left:  var(--Y-mp-05, 0.5rem) !important;}
+.yapi .pr-05{padding-right: var(--Y-mp-05, 0.5rem) !important;}
+.yapi .px-05{
+  --y-padding:    var(--Y-mp-05, 0.5rem);
+  padding-inline: var(--y-padding) !important;
+  padding-left:   var(--y-padding) !important;
+  padding-right:  var(--y-padding) !important;
+}
+.yapi .py-05{
+  --y-padding:    var(--Y-mp-05, 0.5rem);
+  padding-block:  var(--y-padding) !important;
+  padding-top:    var(--y-padding) !important;
+  padding-bottom: var(--y-padding) !important;
+}
+
+.yapi .p-10{padding:        var(--Y-mp-10, 1rem) !important;}
+.yapi .pt-10{padding-top:   var(--Y-mp-10, 1rem) !important;}
+.yapi .pb-10{padding-bottom:var(--Y-mp-10, 1rem) !important;}
+.yapi .pl-10{padding-left:  var(--Y-mp-10, 1rem) !important;}
+.yapi .pr-10{padding-right: var(--Y-mp-10, 1rem) !important;}
+.yapi .px-10{
+  --y-padding:    var(--Y-mp-10, 1rem);
+  padding-inline: var(--y-padding) !important;
+  padding-left:   var(--y-padding) !important;
+  padding-right:  var(--y-padding) !important;
+}
+.yapi .py-10{
+  --y-padding:    var(--Y-mp-10, 1rem);
+  padding-block:  var(--y-padding) !important;
+  padding-top:    var(--y-padding) !important;
+  padding-bottom: var(--y-padding) !important;
+}
+
+.yapi .p-15{padding:        var(--Y-mp-15, 1.5rem) !important;}
+.yapi .pt-15{padding-top:   var(--Y-mp-15, 1.5rem) !important;}
+.yapi .pb-15{padding-bottom:var(--Y-mp-15, 1.5rem) !important;}
+.yapi .pl-15{padding-left:  var(--Y-mp-15, 1.5rem) !important;}
+.yapi .pr-15{padding-right: var(--Y-mp-15, 1.5rem) !important;}
+.yapi .px-15{
+  --y-padding:    var(--Y-mp-15, 1.5rem);
+  padding-inline: var(--y-padding) !important;
+  padding-left:   var(--y-padding) !important;
+  padding-right:  var(--y-padding) !important;
+}
+.yapi .py-15{
+  --y-padding:    var(--Y-mp-15, 1.5rem);
+  padding-block:  var(--y-padding) !important;
+  padding-top:    var(--y-padding) !important;
+  padding-bottom: var(--y-padding) !important;
+}
+
+.yapi .p-20{padding:        var(--Y-mp-20, 2rem) !important;}
+.yapi .pt-20{padding-top:   var(--Y-mp-20, 2rem) !important;}
+.yapi .pb-20{padding-bottom:var(--Y-mp-20, 2rem) !important;}
+.yapi .pl-20{padding-left:  var(--Y-mp-20, 2rem) !important;}
+.yapi .pr-20{padding-right: var(--Y-mp-20, 2rem) !important;}
+.yapi .px-20{
+  --y-padding:    var(--Y-mp-20, 2rem);
+  padding-inline: var(--y-padding) !important;
+  padding-left:   var(--y-padding) !important;
+  padding-right:  var(--y-padding) !important;
+}
+.yapi .py-20{
+  --y-padding:    var(--Y-mp-20, 2rem);
+  padding-block:  var(--y-padding) !important;
+  padding-top:    var(--y-padding) !important;
+  padding-bottom: var(--y-padding) !important;
+}
+
+.yapi .p-25{padding:        var(--Y-mp-25, 2.5rem) !important;}
+.yapi .pt-25{padding-top:   var(--Y-mp-25, 2.5rem) !important;}
+.yapi .pb-25{padding-bottom:var(--Y-mp-25, 2.5rem) !important;}
+.yapi .pl-25{padding-left:  var(--Y-mp-25, 2.5rem) !important;}
+.yapi .pr-25{padding-right: var(--Y-mp-25, 2.5rem) !important;}
+.yapi .px-25{
+  --y-padding:    var(--Y-mp-25, 2.5rem);
+  padding-inline: var(--y-padding) !important;
+  padding-left:   var(--y-padding) !important;
+  padding-right:  var(--y-padding) !important;
+}
+.yapi .py-25{
+  --y-padding:    var(--Y-mp-25, 2.5rem);
+  padding-block:  var(--y-padding) !important;
+  padding-top:    var(--y-padding) !important;
+  padding-bottom: var(--y-padding) !important;
+}
+/*padding 3*/
+.yapi .p-30{padding:        var(--Y-mp-30, 3rem) !important;}
+.yapi .pt-30{padding-top:   var(--Y-mp-30, 3rem) !important;}
+.yapi .pb-30{padding-bottom:var(--Y-mp-30, 3rem) !important;}
+.yapi .pl-30{padding-left:  var(--Y-mp-30, 3rem) !important;}
+.yapi .pr-30{padding-right: var(--Y-mp-30, 3rem) !important;}
+.yapi .px-30{
+  --y-padding:    var(--Y-mp-30, 3rem);
+  padding-inline: var(--y-padding) !important;
+  padding-left:   var(--y-padding) !important;
+  padding-right:  var(--y-padding) !important;
+}
+.yapi .py-30{
+  --y-padding:    var(--Y-mp-30, 3rem);
+  padding-block:  var(--y-padding) !important;
+  padding-top:    var(--y-padding) !important;
+  padding-bottom: var(--y-padding) !important;
+}
+
+/*============================================================*
+/ ALINHAMENTO
+/=============================================================*/
+.yapi .just-cont-center{   justify-content:center !important;}
+.yapi .just-cont-start{    justify-content:start !important;}
+.yapi .just-cont-end{      justify-content:end !important;}
+.yapi .just-cont-stretch{  justify-content:stretch !important;}
+.yapi .just-cont-s-between{justify-content:space-between !important;}
+.yapi .just-cont-s-around{ justify-content:space-around !important;}
+.yapi .just-cont-s-evenly{ justify-content:space-evenly !important;}
+
+.yapi .just-items-baseline{     justify-items:baseline !important;}
+.yapi .just-items-center{       justify-items:center !important;}
+.yapi .just-items-start{        justify-items:start !important;}
+.yapi .just-items-end{          justify-items:end !important;}
+.yapi .just-items-stretch{      justify-items:stretch !important;}
+.yapi .just-items-legacy{       justify-items:legacy !important;}
+.yapi .just-items-self-end{     justify-items:self-end !important;}
+.yapi .just-items-self-start{   justify-items:self-start !important;}
+.yapi .just-items-anchor-center{justify-items:anchor-center !important;}
+
+.yapi .just-self-baseline{    justify-self: baseline !important;}
+.yapi .just-self-auto{        justify-self: auto !important;}
+.yapi .just-self-center{      justify-self: center !important;}
+.yapi .just-self-start{       justify-self: start !important;}
+.yapi .just-self-end{         justify-self: end !important;}
+.yapi .just-self-stretch{     justify-self: stretch !important;}
+.yapi .just-self-self-end{    justify-self: self-end !important;}
+.yapi .just-self-self-start{  justify-self: self-start !important;}
+.yapi .just-self-anchor-center{justify-self:anchor-center !important;}
+
+.yapi .align-cont-center{   align-content:center !important;}
+.yapi .align-cont-start{    align-content:start !important;}
+.yapi .align-cont-end{      align-content:end !important;}
+.yapi .align-cont-stretch{  align-content:stretch !important;}
+.yapi .align-cont-s-between{align-content:space-between !important;}
+.yapi .align-cont-s-around{ align-content:space-around !important;}
+.yapi .align-cont-s-evenly{ align-content:space-evenly !important;}
+
+.yapi .align-items-baseline{    align-items: baseline !important;}
+.yapi .align-items-center{      align-items: center !important;}
+.yapi .align-items-start{       align-items: start !important;}
+.yapi .align-items-end{         align-items: end !important;}
+.yapi .align-items-stretch{     align-items: stretch !important;}
+.yapi .align-items-legacy{      align-items: legacy !important;}
+.yapi .align-items-self-end{    align-items: self-end !important;}
+.yapi .align-items-self-start{  align-items: self-start !important;}
+.yapi .align-items-anchor-center{align-items:anchor-center !important;}
+
+.yapi .align-self-baseline{     align-self:baseline !important;}
+.yapi .align-self-auto{         align-self:auto !important;}
+.yapi .align-self-center{       align-self:center !important;}
+.yapi .align-self-start{        align-self:start !important;}
+.yapi .align-self-end{          align-self:end !important;}
+.yapi .align-self-stretch{      align-self:stretch !important;}
+.yapi .align-self-self-end{     align-self:self-end !important;}
+.yapi .align-self-self-start{   align-self:self-start !important;}
+.yapi .align-self-anchor-center{align-self:anchor-center !important;}
+
+.yapi .v-align-bottom{  vertical-align:  bottom;}
+.yapi .v-align-top{     vertical-align:     top;}
+.yapi .v-align-middle{  vertical-align:  middle;}
+
+.yapi .txt-start{  text-align: start !important;}
+.yapi .txt-end{    text-align: end !important;}
+.yapi .txt-center{ text-align: center !important;}
+.yapi .txt-justify{text-align:justify !important}
+.yapi .center{
+  text-align: center !important;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+}
+ /* --- translate --- */
+.yapi .translate-center-y {transform: translateY(-50%) !important;}
+.yapi .translate-center-x {transform: translateX(-50%) !important;}
+.yapi .translate-center {transform:   translate(-50%, -50%) !important;}
 
 /*============================================================*
 / TAMANHO (W, H)
@@ -2305,82 +2764,6 @@ body.yapi{
 .z-145{zoom: 145%;}
 .z-150{zoom: 150%;}
 
-/*============================================================*
-/ ALINHAMENTO
-/=============================================================*/
-.just-cont-center{   justify-content:center !important;}
-.just-cont-start{    justify-content:start !important;}
-.just-cont-end{      justify-content:end !important;}
-.just-cont-stretch{  justify-content:stretch !important;}
-.just-cont-s-between{justify-content:space-between !important;}
-.just-cont-s-around{ justify-content:space-around !important;}
-.just-cont-s-evenly{ justify-content:space-evenly !important;}
-
-.just-items-baseline{     justify-items:baseline !important;}
-.just-items-center{       justify-items:center !important;}
-.just-items-start{        justify-items:start !important;}
-.just-items-end{          justify-items:end !important;}
-.just-items-stretch{      justify-items:stretch !important;}
-.just-items-legacy{       justify-items:legacy !important;}
-.just-items-self-end{     justify-items:self-end !important;}
-.just-items-self-start{   justify-items:self-start !important;}
-.just-items-anchor-center{justify-items:anchor-center !important;}
-
-.just-self-baseline{    justify-self: baseline !important;}
-.just-self-auto{        justify-self: auto !important;}
-.just-self-center{      justify-self: center !important;}
-.just-self-start{       justify-self: start !important;}
-.just-self-end{         justify-self: end !important;}
-.just-self-stretch{     justify-self: stretch !important;}
-.just-self-self-end{    justify-self: self-end !important;}
-.just-self-self-start{  justify-self: self-start !important;}
-.just-self-anchor-center{justify-self:anchor-center !important;}
-
-.align-cont-center{   align-content:center !important;}
-.align-cont-start{    align-content:start !important;}
-.align-cont-end{      align-content:end !important;}
-.align-cont-stretch{  align-content:stretch !important;}
-.align-cont-s-between{align-content:space-between !important;}
-.align-cont-s-around{ align-content:space-around !important;}
-.align-cont-s-evenly{ align-content:space-evenly !important;}
-
-.align-items-baseline{    align-items: baseline !important;}
-.align-items-center{      align-items: center !important;}
-.align-items-start{       align-items: start !important;}
-.align-items-end{         align-items: end !important;}
-.align-items-stretch{     align-items: stretch !important;}
-.align-items-legacy{      align-items: legacy !important;}
-.align-items-self-end{    align-items: self-end !important;}
-.align-items-self-start{  align-items: self-start !important;}
-.align-items-anchor-center{align-items:anchor-center !important;}
-
-.align-self-baseline{     align-self:baseline !important;}
-.align-self-auto{         align-self:auto !important;}
-.align-self-center{       align-self:center !important;}
-.align-self-start{        align-self:start !important;}
-.align-self-end{          align-self:end !important;}
-.align-self-stretch{      align-self:stretch !important;}
-.align-self-self-end{     align-self:self-end !important;}
-.align-self-self-start{   align-self:self-start !important;}
-.align-self-anchor-center{align-self:anchor-center !important;}
-
-.v-align-bottom{  vertical-align:  bottom;}
-.v-align-top{     vertical-align:     top;}
-.v-align-middle{  vertical-align:  middle;}
-
-.txt-start{  text-align: start !important;}
-.txt-end{    text-align: end !important;}
-.txt-center{ text-align: center !important;}
-.txt-justify{text-align:justify !important}
-.center{
-  text-align: center !important;
-  align-content: center;
-  align-items: center;
-  align-self: center;
-  justify-content: center;
-  justify-items: center;
-  justify-self: center;
-}
 
 /*============================================================*
 / ROTAÇÃO
@@ -2414,15 +2797,29 @@ body.yapi{
   -webkit-transform: scaleY(-1); 
 }
 /*============================================================*
-/ ROTAÇÃO
+/ CONTAINERS & ROW/COL
 /=============================================================*/
+.y-container{}
 
 /*============================================================*
-/ ROTAÇÃO
+/ OPACIDADES
 /=============================================================*/
+.yapi .opacity-05{--y-opacity: 0.05 !important; opacity: 0.05 !important;}
+.yapi .opacity-10{--y-opacity: 0.10 !important; opacity: 0.10 !important;}
+.yapi .opacity-20{--y-opacity: 0.20 !important; opacity: 0.20 !important;}
+.yapi .opacity-25{--y-opacity: 0.25 !important; opacity: 0.25 !important;}
+.yapi .opacity-30{--y-opacity: 0.30 !important; opacity: 0.30 !important;}
+.yapi .opacity-40{--y-opacity: 0.40 !important; opacity: 0.40 !important;}
+.yapi .opacity-50{--y-opacity: 0.50 !important; opacity: 0.50 !important;}
+.yapi .opacity-60{--y-opacity: 0.60 !important; opacity: 0.60 !important;}
+.yapi .opacity-70{--y-opacity: 0.70 !important; opacity: 0.70 !important;}
+.yapi .opacity-75{--y-opacity: 0.75 !important; opacity: 0.75 !important;}
+.yapi .opacity-80{--y-opacity: 0.80 !important; opacity: 0.80 !important;}
+.yapi .opacity-90{--y-opacity: 0.90 !important; opacity: 0.90 !important;}
+.yapi .opacity-100{--y-opacity:1    !important; opacity: 1    !important;}
 
 /*============================================================*
-/ ROTAÇÃO
+/ ESPACAMENTO (GAPS e GUTTERS)
 /=============================================================*/
 
 /*============================================================*
