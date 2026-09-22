@@ -6,7 +6,7 @@
 * fuone.dev@gmail.com
 **************************/
 /*
-* 180926*/
+* 220926*/
 
 /*============================================================*
 / IMPORTS
@@ -225,6 +225,234 @@
 /*============================================================*
 / COLLAPSES
 /=============================================================*/
+/* Classe principal */
+.yapi .y-collapse{
+	--y-collapse-txt-color: vr(--proj-collapse-txt-color, inherit);
+	--y-collapse-bg-color: var(--proj-collapse-bg-color, var(--y-color-menos-90, #fff));
+	--y-collapse-border-color: var(--proj-collapse-border-color, var(--y-color-menos-30, #ccc));
+	--y-collapse-border-radius: var(--proj-collapse-border-radius, var(--Y-border-radius, 4px));
+	--y-collapse-font-family: var(--proj-collapse-font-family, "calibri");
+
+	--y-collapse-trigger-bg-color: var(--proj-collapse-trigger-bg-color, var(--y-color-menos-90, #fff));
+	--y-collapse-trigger-font-size: var(--proj-collapse-font-size, 1rem;);
+	--y-collapse-trigger-padding-y: 12px;
+	--y-collapse-trigger-padding-x: 15px;
+	/*--y-collapse-trigger-line-height: 0;*/
+	
+	--y-collapse-trigger-icon-color:  var(--proj-collapse-trigger-icon-color, inherit);
+	--y-collapse-trigger-icon-open-color: var(--proj-collapse-trigger-icon-decorate-color,var(--y-collapse-trigger-icon-color));
+	--y-collapse-trigger-icon-closed: var(--proj-collapse-trigger-icon-closed, var(--Y-icon-seta-1));/* ▼ */
+	--y-collapse-trigger-icon-open: var(--proj-collapse-trigger-icon-open, var(--Y-icon-seta-1a));/* ▲ */
+	--y-collapse-trigger-icon-rotate: 0;
+	--y-collapse-trigger-icon-transform: rotate(-360deg);
+		
+	overflow: visible;
+}
+
+/* Grupo container */
+.collapse-group{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0.5rem;
+}
+.collapse-group.collapse-inline{
+	margin: 0 !important;
+}
+
+/* Gatilho (Trigger) */
+.collapse-trigger {  
+	font-size: var(--y-collapse-trigger-font-size);
+	line-height: var(--y-collapse-trigger-line-height);
+	cursor: pointer;
+	user-select: none;
+}
+
+.y-collapse .collapse-trigger:not(.collapse-grouped) + .collapse-content.is-open > .collapse-inner{
+	margin-top: 1rem;
+	border-radius: var(--y-collapse-border-radius);
+}
+
+/* Estado Aberto do Gatilho */
+.collapse-trigger[aria-expanded="true"].collapse-grouped {
+	border-bottom-right-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	border: none !important;
+	box-shadow: 
+		inset -1px 0 0 0 var(--y-collapse-border-color), 
+		inset 1px 0 0 0 var(--y-collapse-border-color), 
+		inset 0 1px 0 0 var(--y-collapse-border-color) !important;
+}
+
+/* Variante Grouped */
+.collapse-grouped {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: var(--y-collapse-trigger-padding-y) var(--y-collapse-trigger-padding-x);
+	background: var(--y-collapse-trigger-bg-color);
+	box-shadow: 
+		inset 1px 0 0 0 var(--y-collapse-border-color),
+		inset 0 1px 0 var(--y-collapse-border-color),
+		inset -1px 0 0 0 var(--y-collapse-border-color),
+		0 1px 0 var(--y-collapse-border-color);
+	border-radius: var(--y-collapse-border-radius);
+	text-align: left;
+	/*font-size: 16px;*/
+	transition: background 0.2s;
+	box-sizing: border-box;
+}
+
+/* Borda superior no conteúdo aberto quando for grouped */
+.collapse-grouped + .is-open > .collapse-inner {
+		/*border-top: 1px solid var(--y-collapse-border-color);*/
+		border-top-left-radius: 0 !important;
+		border-top-right-radius: 0 !important;
+	}
+
+
+/* Sistema de Ícones no Gatilho */
+.collapse-trigger-icon {
+	display: flex;
+	gap: 10px;
+	justify-content: start;
+	align-items: center;
+}
+
+.collapse-trigger-icon::before {
+	content: var(--y-collapse-trigger-icon-closed);
+	/*display: flex;*/
+	display: inline-flex;
+	color: var(--y-collapse-trigger-icon-color);
+	font-size: var(--y-collapse-trigger-icon-size);
+	font-style: normal;
+	font-weight: var(--y-collapse-trigger-icon-weight);
+	/*margin-right: 10px;*/	
+	width: 1rem;
+	transform: var(--y-collapse-trigger-icon-rotate);	
+	transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Ícone quando aberto */
+.collapse-trigger[aria-expanded="true"].collapse-trigger-icon::before {
+	content: var(--y-collapse-trigger-icon-open);
+	color: var(--y-collapse-trigger-icon-open-color);
+	transform: var(--y-collapse-trigger-icon-transform);
+}
+
+/* configuração dos ícones para os collapses agrupados*/
+.collapse-trigger-icon.collapse-grouped{
+	/*padding: var(--y-collapse-trigger-padding-y) var(--y-collapse-trigger-padding-x);*/
+}
+.collapse-trigger-icon.collapse-grouped::before{
+	width: auto;
+}
+
+/* Variação: Ícone à direita (Usando Flexbox em vez de Float) */
+.collapse-trigger-icon.collapse-trigger-icon-right {
+	display: flex !important;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.collapse-trigger-icon.collapse-trigger-icon-right::before {
+	order: 1; /* Move o ::before para o final do elemento */
+	margin-right: 0;
+	margin-left: 10px;
+}
+.collapse-trigger-icon.collapse-trigger-icon-right[aria-expanded="true"]::before {
+	margin-right: var(--y-collapse-trigger-icon-open-margin);
+}
+
+/* Variações de Ícones */
+.collapse-trigger-icon.collapse-icon-1 {
+	--y-collapse-trigger-icon-closed: var(--Y-icon-plus);
+	--y-collapse-trigger-icon-open: var(--Y-icon-minus);
+	--y-collapse-trigger-icon-transform: rotate(-180deg);
+} /* sinal de mais ✚ e de menos ⚊ */ 
+
+.collapse-trigger-icon.collapse-icon-2 {
+	--y-collapse-trigger-icon-closed: var(--Y-icon-seta-2);
+	--y-collapse-trigger-icon-open: var(--y-collapse-trigger-icon-closed);
+	--y-collapse-trigger-icon-transform: rotate(-180deg);
+	--y-collapse-trigger-icon-open-margin: 5px;
+} /* seta pra baixo ⮟ */
+.collapse-trigger-icon.collapse-icon-2a {
+	--y-collapse-trigger-icon-closed: var(--Y-icon-seta-2b);
+	--y-collapse-trigger-icon-open: var(--y-collapse-trigger-icon-closed);
+	--y-collapse-trigger-icon-transform: rotate(-90deg);
+} /* seta pra esquerda ⮞ */
+.collapse-trigger-icon.collapse-icon-2b {
+	--y-collapse-trigger-icon-closed: "\27A4";/**/
+	--y-collapse-trigger-icon-open: var(--y-collapse-trigger-icon-closed);
+	--y-collapse-trigger-icon-transform: rotate(-90deg);
+} /* seta maior para a esquerda ➤ */
+
+.collapse-trigger-icon.collapse-icon-3 {
+	--y-collapse-trigger-icon-closed: var(--Y-icon-seta-3);
+	--y-collapse-trigger-icon-open: var(--Y-icon-seta-3b);
+	--y-collapse-trigger-icon-weight: bolder;
+	--y-collapse-trigger-icon-rotate: rotate(90deg);
+	--y-collapse-trigger-icon-transform: var(--y-collapse-trigger-icon-rotate) scaleY(-1);
+	--y-collapse-trigger-icon-open-margin: 5px;
+	
+} /* seta aberta ❯ */ 
+.collapse-trigger-icon.collapse-icon-4 {
+	--y-collapse-trigger-icon-closed: var(--Y-icon-seta-4);
+	--y-collapse-trigger-icon-open: var(--Y-icon-seta-4a);
+	--y-collapse-trigger-icon-size: 30px;
+	--y-collapse-trigger-icon-weight: bolder;
+	--y-collapse-trigger-icon-rotate: rotate(90deg);
+	--y-collapse-trigger-icon-transform: var(--y-collapse-trigger-icon-rotate) scaleY(-1);	
+	--y-collapse-trigger-padding-y: 0.35rem;
+	--y-collapse-trigger-icon-open-margin: 5px;
+} /* seta aberta ❯ */ 
+.collapse-trigger-icon.collapse-icon-5 {
+	--y-collapse-trigger-icon-closed: var(--Y-icon-seta-6);
+	--y-collapse-trigger-icon-open: var(--Y-icon-seta-6a);
+	--y-collapse-trigger-icon-weight: bolder;
+	--y-collapse-trigger-icon-rotate: rotate(90deg);
+	--y-collapse-trigger-icon-transform: var(--y-collapse-trigger-icon-rotate) scaleY(-1);	
+	--y-collapse-trigger-icon-open-margin: 5px;
+} /* seta dupla aberta ⟫ */ 
+
+/* Conteudo */
+.collapse-content{}
+.collapse-content > .collapse-inner {
+	display: grid;
+	grid-template-rows: 0fr;
+	grid-auto-rows: 0fr;
+	overflow: hidden;
+	transition: grid-template-rows 0.3s ease-out, padding 0.3s ease-out;
+	border-bottom-right-radius: var(--y-collapse-border-radius);
+	border-bottom-left-radius: var(--y-collapse-border-radius);
+}
+.collapse-content .collapse-body{
+	overflow: hidden;
+}
+.collapse-body > *{
+	overflow: auto;
+}
+
+/* Quando fechado, esconde o overflow para a transição funcionar */
+.collapse-content:not(.is-open) > .collapse-inner {
+	overflow: hidden;
+}
+
+/* Quando aberto, define 1fr para expandir */
+.collapse-content.is-open > .collapse-inner {
+	grid-template-rows: 1fr;
+	grid-auto-rows: 1fr;
+	padding: 10px;
+	border: 1px solid var(--y-collapse-border-color);
+	/* overflow: visible após expandir permite que collapses filhos expandam a altura */
+}
+
+/* Garante que o filho direto absorva o tamanho */
+.collapse-content > .collapse-inner > * {
+	min-height: 0;
+}
+
+/*--- fim collapse ---*/
 /*============================================================*
 / FORMS
 /=============================================================*/
