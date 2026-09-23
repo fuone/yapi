@@ -6,7 +6,7 @@
 * fuone.dev@gmail.com
 **************************/
 /*
-* 230926*/
+* 230926 b*/
 
 /*============================================================*
 / IMPORTS
@@ -306,21 +306,23 @@
 		inset -1px 0 0 0 var(--y-collapse-border-color), 
 		inset 1px 0 0 0 var(--y-collapse-border-color), 
 		inset 0 1px 0 0 var(--y-collapse-border-color) !important;
+	margin-bottom: 0;
 }
 
 /* Variante Grouped */
 .collapse-grouped {
 	display: flex;
-	align-items: center;
-	width: 100%;
-	padding: var(--y-collapse-trigger-padding-y) var(--y-collapse-trigger-padding-x);
-	background: var(--y-collapse-trigger-bg-color);
+	background: var(--y-collapse-trigger-bg-color);	
+	border-radius: var(--y-collapse-border-radius);
 	box-shadow: 
 		inset 1px 0 0 0 var(--y-collapse-border-color),
 		inset 0 1px 0 var(--y-collapse-border-color),
 		inset -1px 0 0 0 var(--y-collapse-border-color),
 		0 1px 0 var(--y-collapse-border-color);
-	border-radius: var(--y-collapse-border-radius);
+	padding: var(--y-collapse-trigger-padding-y) var(--y-collapse-trigger-padding-x);
+	width: 100%;
+	margin-bottom: 1px;
+	align-items: center;
 	text-align: left;
 	/*font-size: 16px;*/
 	transition: background 0.2s;
