@@ -231,27 +231,27 @@
 	--y-collapse-bg-color: var(--proj-collapse-bg-color, var(--y-color-menos-90, #fff));
 	--y-collapse-border-color: var(--proj-collapse-border-color, var(--y-color-menos-30, #ccc));
 	--y-collapse-border-radius: var(--proj-collapse-border-radius, var(--Y-border-radius, 4px));
-	--y-collapse-font-size: var(--proj-collapse-font-size, 1rem;);
+	--y-collapse-font-size: var(--proj-collapse-font-size, 1rem);
 	--y-collapse-font-family: var(--proj-collapse-font-family, "calibri");
 
 	--y-collapse-trigger-txt-color: var(--proj-collapse-trigger-txt-color, var(--y-collapse-txt-color));
 	--y-collapse-trigger-border-color: var(--y-collapse-border-color);
 	--y-collapse-trigger-bg-color: var(--proj-collapse-trigger-bg-color, var(--y-collapse-bg-color));
-	--y-collapse-trigger-font-size: var(--proj-collapse-trigger-font-size, 1rem);
+	--y-collapse-trigger-font-size: var(--proj-collapse-trigger-font-size, var(--y-collapse-font-size));
 	--y-collapse-trigger-padding-y: 12px;
 	--y-collapse-trigger-padding-x: 15px;
 	/*--y-collapse-trigger-line-height: 0;*/
 	
 	--y-collapse-trigger-icon-color:  var(--proj-collapse-trigger-icon-color, inherit);
 	--y-collapse-trigger-icon-open-color: var(--proj-collapse-trigger-icon-decorate-color,var(--y-collapse-trigger-icon-color));
-	--y-collapse-trigger-icon-closed: var(--proj-collapse-trigger-icon-closed, var(--Y-icon-seta-1));/* ▼ */
-	--y-collapse-trigger-icon-open: var(--proj-collapse-trigger-icon-open, var(--Y-icon-seta-1a));/* ▲ */
+	--y-collapse-trigger-icon-closed: var(--proj-collapse-trigger-icon-closed, var(--Y-icon-seta-1)); /* ▼ */
+	--y-collapse-trigger-icon-open: var(--proj-collapse-trigger-icon-open, var(--Y-icon-seta-1a)); /* ▲ */
 	--y-collapse-trigger-icon-rotate: 0;
 	--y-collapse-trigger-icon-transform: rotate(-360deg);
 
 	--y-collapse-content-txt-color: var(--proj-collapse-content-txt-color, var(--y-collapse-txt-color, #000));
 	--y-collapse-content-bg-color: var(--proj-collapse-content-bg-color, #fff);
-	--y-collapse-content-border-color: var(--y-collapse-border-color) !important;
+	--y-collapse-content-border-color: var(--y-collapse-border-color);
 		
 	overflow: visible;
 }
