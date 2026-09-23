@@ -227,7 +227,7 @@
 /=============================================================*/
 /* Classe principal */
 .y-collapse{
-	--y-collapse-txt-color: var(--proj-collapse-txt-color, var(--y-default-color, #000);
+	--y-collapse-txt-color: var(--proj-collapse-txt-color, var(--y-default-color, #000));
 	--y-collapse-bg-color: var(--proj-collapse-bg-color, var(--y-color-menos-90, #fff));
 	--y-collapse-border-color: var(--proj-collapse-border-color, var(--y-color-menos-30, #ccc));
 	--y-collapse-border-radius: var(--proj-collapse-border-radius, var(--Y-border-radius, 4px));
