@@ -6,7 +6,7 @@
 * fuone.dev@gmail.com
 **************************/
 /*
-* 220926*/
+* 230926*/
 
 /*============================================================*
 / IMPORTS
@@ -227,14 +227,17 @@
 /=============================================================*/
 /* Classe principal */
 .yapi .y-collapse{
-	--y-collapse-txt-color: vr(--proj-collapse-txt-color, inherit);
+	--y-collapse-txt-color: var(--proj-collapse-txt-color, var(--y-default-color, #000);
 	--y-collapse-bg-color: var(--proj-collapse-bg-color, var(--y-color-menos-90, #fff));
 	--y-collapse-border-color: var(--proj-collapse-border-color, var(--y-color-menos-30, #ccc));
 	--y-collapse-border-radius: var(--proj-collapse-border-radius, var(--Y-border-radius, 4px));
+	--y-collapse-font-size: var(--proj-collapse-font-size, 1rem;);
 	--y-collapse-font-family: var(--proj-collapse-font-family, "calibri");
 
-	--y-collapse-trigger-bg-color: var(--proj-collapse-trigger-bg-color, var(--y-color-menos-90, #fff));
-	--y-collapse-trigger-font-size: var(--proj-collapse-font-size, 1rem;);
+	--y-collapse-trigger-txt-color: var(--proj-collapse-trigger-txt-color, var(--y-collapse-txt-color));
+	--y-collapse-trigger-border-color: var(--y-collapse-border-color);
+	--y-collapse-trigger-bg-color: var(--proj-collapse-trigger-bg-color, var(--y-collapse-bg-color));
+	--y-collapse-trigger-font-size: var(--proj-collapse-trigger-font-size, 1rem);
 	--y-collapse-trigger-padding-y: 12px;
 	--y-collapse-trigger-padding-x: 15px;
 	/*--y-collapse-trigger-line-height: 0;*/
@@ -245,8 +248,29 @@
 	--y-collapse-trigger-icon-open: var(--proj-collapse-trigger-icon-open, var(--Y-icon-seta-1a));/* ▲ */
 	--y-collapse-trigger-icon-rotate: 0;
 	--y-collapse-trigger-icon-transform: rotate(-360deg);
+
+	--y-collapse-content-txt-color: var(--proj-collapse-content-txt-color, var(--y-collapse-txt-color, #000));
+	--y-collapse-content-bg-color: var(--proj-collapse-content-bg-color, #fff);
+	--y-collapse-content-border-color: var(--y-collapse-border-color) !important;
 		
 	overflow: visible;
+}
+
+/* configuração de estio padrão*/
+.y-collapse.def.def{
+	--y-collapse-txt-color: #000 !important;
+	--y-collapse-bg-color: #fff !important;
+	--y-collapse-border-color: #ccc !important;
+	
+	--y-collapse-trigger-txt-color: #000 !important;
+	--y-collapse-trigger-bg-color: #fff !important;
+	--y-collapse-trigger-border-color: var(--y-collapse-border-color) !important;
+	--y-collapse-trigger-icon-color: inherit !important;
+	--y-collapse-trigger-icon-open-color: var(--y-collapse-trigger-icon-color) !important;
+	
+	--y-collapse-content-txt-color: #000 !important;
+	--y-collapse-content-bg-color: #fff !important;
+	--y-collapse-content-border-color: var(--y-collapse-border-color) !important;
 }
 
 /* Grupo container */
@@ -260,7 +284,8 @@
 }
 
 /* Gatilho (Trigger) */
-.collapse-trigger {  
+.collapse-trigger {
+	color: var(--y-collapse-trigger-txt-color);
 	font-size: var(--y-collapse-trigger-font-size);
 	line-height: var(--y-collapse-trigger-line-height);
 	cursor: pointer;
@@ -423,8 +448,8 @@
 	grid-auto-rows: 0fr;
 	overflow: hidden;
 	transition: grid-template-rows 0.3s ease-out, padding 0.3s ease-out;
-	border-bottom-right-radius: var(--y-collapse-border-radius);
-	border-bottom-left-radius: var(--y-collapse-border-radius);
+	border-bottom-right-radius: var(--y-collapse-content-border-radius);
+	border-bottom-left-radius: var(--y-collapse-content-border-radius);
 }
 .collapse-content .collapse-body{
 	overflow: hidden;
@@ -440,10 +465,13 @@
 
 /* Quando aberto, define 1fr para expandir */
 .collapse-content.is-open > .collapse-inner {
+	color: var(--y-collapse-content-txt-color);
+	background: var(--y-collapse-content-bg-color);
+	border: 1px solid var(--y-collapse-content-border-color);
 	grid-template-rows: 1fr;
 	grid-auto-rows: 1fr;
 	padding: 10px;
-	border: 1px solid var(--y-collapse-border-color);
+	
 	/* overflow: visible após expandir permite que collapses filhos expandam a altura */
 }
 
