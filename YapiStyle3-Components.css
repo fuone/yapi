@@ -6,7 +6,7 @@
 * fuone.dev@gmail.com
 **************************/
 /*
-* 230926 b*/
+* 240926*/
 
 /*============================================================*
 / IMPORTS
@@ -216,6 +216,85 @@
 /*============================================================*
 / BADGES
 /=============================================================*/
+.y-badge{
+  --y-badge-fator: 0.8;
+  --y-badge-txt-color:    var(--y-txt-color, var(--y-color-mais-30, var(--Y-neutral-mais-40)));
+  --y-badge-bg-color:     var(--y-bg-color, var(--y-color-menos-80, var(--Y-neutral-menos-80)));
+  --y-badge-border-color: var(--y-border-color, var(--y-color-mais-30, var(--Y-neutral-mais-30)));
+  --y-badge-border-radius: calc(0.25rem * var(--y-badge-fator));	
+	--y-badge-padding-y: calc(0.35rem * var(--y-badge-fator));
+	--y-badge-padding-x: calc(0.35rem * var(--y-badge-fator));
+	--y-badge-font-size: calc(var(--y-font-size, var(--Y-font-size, 1rem)) * var(--y-badge-fator));
+  --y-badge-font-weight: var(--y-font-weight, 500);
+	
+  display: inline-flex;
+  color: var(--y-badge-txt-color);
+  background: var(--y-badge-bg-color);
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  padding: var(--y-badge-padding-y) var(--y-badge-padding-x);  
+  font-size: var(--y-badge-font-size);
+	font-weight: var(--y-badge-font-weight);
+	line-height: 1;
+	min-width: 20px;
+	max-width: fit-content;
+	white-space: nowrap;
+  text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+/*--- variações --- */
+.y-badge.badge-bold{--y-badge-font-weight: 600;}
+.y-badge.badge-outlined:not(.badge-custom){
+	color: var(--y-default-color, var(--y-badge-txt-color));
+  background: transparent !important;
+  border-color: var(--y-default-color,var(--y-badge-border-color)) !important;
+  }
+.y-badge.badge-p{--y-badge-fator: 0.6;}
+.y-badge.badge-g{--y-badge-fator: 1;}
+
+/*--- variações de cores --- */
+.y-badge.def.def{
+  --y-badge-txt-color:    var(--Y-neutral-mais-40);
+  --y-badge-bg-color:     var(--Y-neutral-menos-80);
+  --y-badge-border-color: var(--Y-neutral-mais-30);
+  --y-badge-border-radius: 0.25rem;
+}
+.y-badge.badge-destak:not(.badge-outlined){
+	--y-badge-txt-color:    #fff;
+  --y-badge-bg-color:     var(--y-destak-color, var(--Y-neutral));
+}
+.y-badge.badge-vivid:not(.badge-outlined){
+	--y-badge-txt-color:    #fff;
+  --y-badge-bg-color:     var(--y-vivid-color, var(--Y-neutral-mais-30));
+}
+.y-badge.badge-dark:not(.badge-outlined){
+	--y-badge-txt-color:    #fff !important;
+  --y-badge-bg-color:     var(--y-dark-color, var(--Y-neutral-mais-50));
+}
+
+/*--- Customizado --- */
+.y-badge.badge-custom{
+	color: var(--proj-badge-txt-color, revert-rule) !important;
+  background: var(--proj-badge-bg-color, revert-rule) !important;
+  border-color: var(--proj-badge-border-color, revert-rule) !important;
+}
+
+/*--- variaçãpo de cores específicas ---*/
+.y-badge.yellow, .yellow .y-badge,
+.y-badge.cyan, .cyan .y-badge{
+	--y-badge-txt-color:    var(--y-color-mais-50);
+	--y-badge-border-color: var(--y-destak-color);
+}
+
+.y-badge.white, .white .y-badge{
+	--y-badge-txt-color: #ffffff !important;
+	--y-badge-bg-color: transparent !important;
+	--y-badge-border-color: #ffffff !important;
+	border-color: var(--y-badge-border-color) !important;
+}
+/*--- fim BADGE --- */
 /*============================================================*
 / BTNS
 /=============================================================*/
@@ -485,6 +564,10 @@
 /*============================================================*
 / FORMS
 /=============================================================*/
+/*============================================================*
+/ ICONS
+/=============================================================*/
+.i{}
 /*============================================================*
 / MODALS
 /=============================================================*/
