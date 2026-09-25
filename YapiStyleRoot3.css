@@ -5,7 +5,7 @@
 * Dev: Fuone
 * fuone.dev@gmaill.com
 **************************/
-/* 22/09/2026*/
+/* 25/09/2026*/
 :root{    
   /*red*/
   --Y-red: #db2828;
@@ -322,7 +322,7 @@
   --Y-icon-success-2:     "\1F5F8"; /* check 🗸 */
   --Y-icon-success-3:     "\2713"; /* check ✓ */
   --Y-icon-info:          "\1F6C8"; /* círculo com i 🛈 */
-  --Y-icon-danger:        var(--Y-icon-arning);
+  --Y-icon-danger:        var(--Y-icon-warning);
   --Y-icon-forbidden:     "\2296 "; /* ⊖ */
   --Y-icon-forbidden-1:   "\1F6C7"; /* 🛇 */
 	--Y-icon-forbidden-2:   "\20E0"; /* *⃠* */
@@ -330,7 +330,7 @@
 	--Y-icon-forbidden-4:   "\2BBF"; /* ⮿ */
   --Y-icon-forbidden-5:   "\2612"; /* ☒ */
   --Y-icon-forbidden-6:   "\1F5F7"; /* 🗷 */
-  --Y-icon-forbidden-6A:  "\1F5F5"; /* 🗵 */
+  --Y-icon-forbidden-6a:  "\1F5F5"; /* 🗵 */
   --Y-icon-close:         "\00D7"; /* X */
 	
 	--Y-icon-alarm:         "\1F6A8"; /* sirene 🚨 */
@@ -363,7 +363,7 @@
   --Y-icon-losango-o:     "\25C7"; /* ◇ */
   --Y-icon-losango-d:     "\25C8"; /* ◈ */
 
-	--Y-icon-plus:          "\1F7A6"; /* simbolo de mais grosso ✚ */
+		--Y-icon-plus:          "\1F7A6"; /* simbolo de mais grosso ✚ */
 	--Y-icon-plus-2:        "\271A"; /* simbolo de mais muito grosso ✚ */
 	--Y-icon-minus:         "\268A"; /* simbolo de menos grosso ⚊ */
 	
@@ -374,16 +374,16 @@
 	--Y-icon-seta-2a:       "\2B9D"; /* seta desenho cima ⮝ */
 	--Y-icon-seta-2b:       "\2B9E"; /* seta desenho direita ⮞ */	
 	--Y-icon-seta-2c:       "\2B9C"; /* seta desenho esquerda ⮞ */	
-
+	
 	--Y-icon-seta-3:        "\276F"; /* seta aberta direita ❯ */
 	--Y-icon-seta-3b:       "\276E"; /*seta aberta esquerda ❮ */
-
+	
 	--Y-icon-seta-4:        "\203A"; /* seta apontar direita › */
 	--Y-icon-seta-4a:       "\2039"; /* seta apontar esquerda ‹ */
-
+	
 	--Y-icon-seta-5:        "\1433"; /* seta maior que aberta direita ᐳ */
 	--Y-icon-seta-5a:       "\1438"; /* seta menor que aberta esquerda ᐸ */
-
+	
 	--Y-icon-seta-6:        "\27EB"; /* seta dupla aberta direita ⟫ */
 	--Y-icon-seta-6a:       "\27EA"; /* seta dupla aberta esquerda ⟪ */
   
