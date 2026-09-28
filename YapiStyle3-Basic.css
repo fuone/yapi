@@ -6,7 +6,7 @@
 * fuone.dev@gmail.com
 **************************/
 /*
-* 210926
+* 280926
 */
 
 /*============================================================*
@@ -551,6 +551,34 @@ body.yapi{
   --y-color-menos-90:  var(--Y-white);
   --y-color-menos-100: var(--Y-white);
   
+  --y-color-mais-0:    var(--y-def-color, var(--y-main-color));
+  --y-color-menos-0:   var(--y-color-mais-0);
+
+  --y-default-color: 	 var(--y-color-mais-0);
+  --y-light-color:     var(--y-lt-color, var(--y-color-menos-90));
+  --y-destak-color:    var(--y-dt-color, var(--y-main-color));
+  --y-vivid-color:     var(--y-vv-color, var(--y-color-mais-20));
+  --y-dark-color:      var(--y-dk-color, var(--y-color-mais-50));
+}
+.ccolor{
+  --y-main-color:      var(--Y-ccolor);
+  --y-color-mais-10:   var(--Y-ccolor-mais-10);
+  --y-color-mais-20:   var(--Y-ccolor-mais-20);
+  --y-color-mais-30:   var(--Y-ccolor-mais-30);
+  --y-color-mais-40:   var(--Y-ccolor-mais-40);
+  --y-color-mais-50:   var(--Y-ccolor-mais-50);
+
+  --y-color-menos-10:  var(--Y-ccolor-menos-10);
+  --y-color-menos-20:  var(--Y-ccolor-menos-20);
+  --y-color-menos-30:  var(--Y-ccolor-menos-30);
+  --y-color-menos-40:  var(--Y-ccolor-menos-40);
+  --y-color-menos-50:  var(--Y-ccolor-menos-50);
+  --y-color-menos-60:  var(--Y-ccolor-menos-60);
+  --y-color-menos-70:  var(--Y-ccolor-menos-70);
+  --y-color-menos-80:  var(--Y-ccolor-menos-80);
+  --y-color-menos-90:  var(--Y-ccolor-menos-90);
+  --y-color-menos-100: var(--Y-ccolor-menos-100);
+
   --y-color-mais-0:    var(--y-def-color, var(--y-main-color));
   --y-color-menos-0:   var(--y-color-mais-0);
 
@@ -3047,6 +3075,39 @@ body.yapi{
 .y-row .col-11{flex: 0 0 auto; width: calc(91.6666666666% * var(--y-fator,1));}
 .y-row .col-12{flex: 0 0 auto; width: calc(100%           * var(--y-fator,1));}
 
+/* --- grid container --- */
+.grid-space{
+	--y-grid-display: flex;
+	--y-grid-bg-color: transparent;
+
+	--y-grid-item-width:      var(--proj-items-grid-grid-item-width, 120px);
+	--y-grid-item-min-width:  var(--proj-items-grid-grid-min-item-width, 120px);
+	--y-grid-item-max-width:  var(--proj-items-grid-grid-max-item-width, 130px);
+	--y-grid-item-min-height: var(--proj-items-grid-grid-item-min-height, 10px);
+	--y-grid-item-max-height: var(--proj-items-grid-grid-item-max-height,90px);
+	
+	display: var(--y-ig-display);
+	background: var(--y-grid-bg-color);	
+	flex-wrap: wrap;
+	justify-content: stretch;
+}
+.grid-space>.grid-item{
+	position: relative;
+	overflow: hidden;
+	flex-shrink: 0;
+	width: var(--y-grid-item-width);
+	min-width: var(--y-grid-item-min-width);
+	max-width: var(--y-grid-item-max-width);
+	min-height:var(--y-grid-item-min-height);
+	max-height:var(--y-grid-item-max-height);
+	align-content: center;
+}
+.grid-space>.grid-item *{	
+	display: flex !important;
+	position: relative;
+	width: 100%;
+	justify-content: center;	
+}
 /*============================================================*
 / OPACIDADES
 /=============================================================*/
