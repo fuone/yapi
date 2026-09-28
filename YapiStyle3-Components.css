@@ -567,7 +567,145 @@
 /*============================================================*
 / ICONS
 /=============================================================*/
-.i{}
+.i{
+	color: var(--y-i-color);
+	font-size: var(--y-i-size, var(--Y-icon-size));
+	font-style: normal !important;
+	align-items: center;
+}
+
+/*--- posicionamento ---*/
+.i.iA{ margin:  0 !important;}/* iconAlone */
+.i.iB{ margin:  0 1px 0 0 !important}/* iconButton */
+.i.iBA{margin:  0 3px !important;}/* iconButtonAlone */
+.i.iF{ margin:  0 8px 0 0 !important;}/* iconField */
+.i.iT{ margin:  0 10px 0 0 !important;}/* iconText */
+
+/*--- tamanho ---*/
+.i.i-04{--y-i-size: 4px;}
+.i.i-06{--y-i-size: 6px;}
+.i.i-08{--y-i-size: 8px;}
+.i.i-10{--y-i-size: 10px;}
+.i.i-12{--y-i-size: 12px;}
+.i.i-14{--y-i-size: 14px;}
+.i.i-16{--y-i-size: 16px;}
+.i.i-18{--y-i-size: 18px;}
+.i.i-20{--y-i-size: 20px;}
+.i.i-22{--y-i-size: 22px;}
+.i.i-24{--y-i-size: 24px;}
+.i.i-26{--y-i-size: 26px;}
+.i.i-28{--y-i-size: 28px;}
+.i.i-30{--y-i-size: 30px;}
+.i.i-32{--y-i-size: 32px;}
+.i.i-34{--y-i-size: 34px;}
+.i.i-36{--y-i-size: 36px;}
+.i.i-38{--y-i-size: 38px;}
+.i.i-40{--y-i-size: 40px;}
+.i.i-42{--y-i-size: 42px;}
+.i.i-44{--y-i-size: 44px;}
+.i.i-46{--y-i-size: 46px;}
+.i.i-48{--y-i-size: 48px;}
+.i.i-50{--y-i-size: 50px;}
+
+/* --- variação de cor (pra ser usado se declarado a cor) --- */  
+.i.color-mais-10{ --y-i-color:  var(--y-color-mais-10);}
+.i.color-mais-20{ --y-i-color:  var(--y-color-mais-20);}
+.i.color-mais-30{ --y-i-color:  var(--y-color-mais-30);}
+.i.color-mais-40{ --y-i-color:  var(--y-color-mais-40);}
+.i.color-mais-50{ --y-i-color:  var(--y-color-mais-50);}
+.i.color-menos-10{--y-i-color:  var(--y-color-menos-10);}
+.i.color-menos-20{--y-i-color:  var(--y-color-menos-20);}
+.i.color-menos-30{--y-i-color:  var(--y-color-menos-30);}
+.i.color-menos-40{--y-i-color:  var(--y-color-menos-40);}
+.i.color-menos-50{--y-i-color:  var(--y-color-menos-50);}
+.i.color-menos-60{--y-i-color:  var(--y-color-menos-60);}
+.i.color-menos-70{--y-i-color:  var(--y-color-menos-70);}
+.i.color-menos-80{--y-i-color:  var(--y-color-menos-80);}
+.i.color-menos-90{--y-i-color:  var(--y-color-menos-90);}
+.i.color-menos-100{--y-i-color: var(--y-color-menos-100);}
+
+.i.color-mais-0,
+.i.color-menos-0,
+.i.color-default,
+.i.color-def{   --y-i-color:var(--y-default-color);}
+.i.color-light{ --y-i-color:var(--y-light-color) !important;}
+.i.color-destak{--y-i-color:var(--y-destak-color) !important;}
+.i.color-vivid{ --y-i-color:var(--y-vivid-color) !important;}
+.i.color-dark{  --y-i-color:var(--y-dark-color) !important;}
+
+/* --- variedade de ícones --- */
+.yi{
+	margin: 0;
+	padding: 0;
+}
+.yi::before{
+	display: inline-flex; 
+	align-items: center;
+	align-self: center;
+}
+.yi.yi-warning::before{content: var(--Y-icon-warning); margin-top: -5px;}
+.yi.yi-success::before{content: var(--Y-icon-success);}
+.yi.yi-success-2::before{content: var(--Y-icon-success-2);}
+.yi.yi-success-3::before{content: var(--Y-icon-success-3);}
+.yi.yi-info::before{content: var(--Y-icon-info);}
+.yi.yi-danger::before{content: var(--Y-icon-danger, var(--Y-icon-warning)); margin-top: -3px;}
+.yi.yi-alarm::before{content: var(--Y-icon-alarm); margin-top: -5px; margin-left: -5px; margin-right: -5px;}
+.yi.yi-close::before{content: var(--Y-icon-close); margin-top: -2px; zoom: 110%}
+.yi.yi-negative::before{content: var(--Y-icon-negative);}
+.yi.yi-forbidden::before{content: var(--Y-icon-forbidden);}
+.yi.yi-forbidden-1::before{content: var(--Y-icon-forbidden-1); margin-top: -5px;}
+.yi.yi-forbidden-2::before{content: var(--Y-icon-forbidden-2); margin-top: -5px;}
+.yi.yi-forbidden-3::before{content: var(--Y-icon-forbidden-3);}
+.yi.yi-forbidden-4::before{content: var(--Y-icon-forbidden-4); margin-top: -2px; zoom: 110%;}
+.yi.yi-forbidden-5::before{content: var(--Y-icon-forbidden-5);}
+.yi.yi-forbidden-6::before{content: var(--Y-icon-forbidden-6);}
+.yi.yi-forbidden-6a::before{content: var(--Y-icon-forbidden-6a);}
+.yi.yi-fire::before{content: var(--Y-icon-fire); margin-left: -5px; margin-right: -5px;}
+.yi.yi-heart::before{content: var(--Y-icon-heart);}
+.yi.yi-heart-2::before{content: var(--Y-icon-heart-2);}
+.yi.yi-heart-o::before{content: var(--Y-icon-heart-o);}
+.yi.yi-telephone::before{content: var(--Y-icon-telephone);}
+.yi.yi-telephone-2::before{content: var(--Y-icon-telephone-2);}
+.yi.yi-telephone-o::before{content: var(--Y-icon-telephone-o);}
+.yi.yi-radiacao::before{content: var(--Y-icon-radiacao);}
+.yi.yi-virus::before{content: var(--Y-icon-virus);}
+.yi.yi-fuel::before{content: var(--Y-icon-fuel); margin-left: -5px; margin-right: -5px;}
+
+.yi.yi-circle::before{content: var(--Y-icon-circle);}
+.yi.yi-circle-o::before{content: var(--Y-icon-circle-o);}
+.yi.yi-circle-d::before{content: var(--Y-icon-circle-d);}
+
+.yi.yi-square::before{content: var(--Y-icon-square);}
+.yi.yi-square-o::before{content: var(--Y-icon-square-o);}
+.yi.yi-square-d::before{content: var(--Y-icon-square-d);}
+
+.yi.yi-star::before{content: var(--Y-icon-star);}
+.yi.yi-star-o::before{content: var(--Y-icon-star-o);}
+.yi.yi-star-d::before{content: var(--Y-icon-star-d);}
+
+.yi.yi-losango::before{content: var(--Y-icon-losango);}
+.yi.yi-losango-o::before{content: var(--Y-icon-losango-o);}
+.yi.yi-losango-d::before{content: var(--Y-icon-losango-d);}
+
+.yi.yi-plus::before{content: var(--Y-icon-plus);}
+.yi.yi-plus-2::before{content: var(--Y-icon-plus-2);}
+.yi.yi-minus::before{content: var(--Y-icon-minus);}
+
+.yi.yi-seta-1::before{content: var(--Y-icon-seta-1);}
+.yi.yi-seta-1a::before{content: var(--Y-icon-seta-1a);}
+.yi.yi-seta-2::before{content: var(--Y-icon-seta-2);}
+.yi.yi-seta-2a::before{content: var(--Y-icon-seta-2a);}
+.yi.yi-seta-2b::before{content: var(--Y-icon-seta-2b);}
+.yi.yi-seta-2c::before{content: var(--Y-icon-seta-2c);}
+.yi.yi-seta-3::before{content: var(--Y-icon-seta-3);}
+.yi.yi-seta-3a::before{content: var(--Y-icon-seta-3a);}
+.yi.yi-seta-4::before{content: var(--Y-icon-seta-4);}
+.yi.yi-seta-4a::before{content: var(--Y-icon-seta-4a);}
+.yi.yi-seta-5::before{content: var(--Y-icon-seta-5);}
+.yi.yi-seta-5a::before{content: var(--Y-icon-seta-5a);}
+.yi.yi-seta-6::before{content: var(--Y-icon-seta-6);}
+.yi.yi-seta-6a::before{content: var(--Y-icon-seta-6a);}
+
 /*============================================================*
 / MODALS
 /=============================================================*/
