@@ -6,7 +6,7 @@
 * fuone.dev@gmail.com
 **************************/
 /*
-* 280926*/
+* 161026*/
 
 /*============================================================*
 / IMPORTS
@@ -298,6 +298,344 @@
 /*============================================================*
 / BTNS
 /=============================================================*/
+/* classe principal */
+.y-btn,
+.yapi button,
+[type=button]{
+	--y-btn-py: 0.575rem;
+	--y-btn-px: 0.75rem;
+	--y-btn-my: 0.25rem;
+	--y-btn-mx: 0.25rem;
+	--y-btn-fator: 1;
+
+	--y-btn-txt-color: var(--y-txt-color, var(--y-color-menos-100, var(--Y-neutral-mais-40)));
+	--y-btn-bg-color: var(--y-bg-color, var(--y-color-mais-0, var(--Y-neutral-menos-70)));
+	--y-btn-border-color: var(--y-btn-bg-color);
+	--y-btn-border-radius: 5px;
+	--y-btn-border-width: var(--y-border-width, 1px);
+	--y-btn-border-style: var(--y-border-style, solid);
+
+	--y-btn-box-shadow: none;
+	--y-btn-padding-y: calc(var(--y-btn-py) * var(--y-btn-fator));
+	--y-btn-padding-x: calc(var(--y-btn-px) * var(--y-btn-fator));
+	--y-btn-font-size: calc(var(--Y-font-size) * var(--y-btn-fator));
+	--y-btn-font-weight: var(--y-font-weight, 500);
+	--y-btn-font-family: var(--y-font-family, "calibri");
+	--y-btn-transition-time: 0.35s;
+
+	/* hover */
+	--y-btn-hover-txt-color: var(--y-btn-txt-color);    
+	/*--y-btn-hover-bg-color: var(--y-color-menos-20, var(--Y-neutral-menos-60));/**/
+	--y-btn-hover-bg-color: color-mix(in srgb, var(--y-btn-bg-color), black 15%);/**/
+	--y-btn-hover-border-color: var(--y-btn-hover-bg-color);
+	--y-btn-hover-box-shadow: var(--y-btn-box-shadow);
+
+	/* disabled */
+	--y-btn-txt-disabled-color:    var(--Y-disabled-txt-colorr, var(--Y-grey));
+	--y-btn-bg-disabled-color:     var(--Y-grey-menos-80);
+	--y-btn-border-disabled-color: var(--Y-grey-menos-50);
+	
+	display: inline-flex;
+	color: var(--y-btn-txt-color);
+	background: var(--y-btn-bg-color);
+	border: var(--y-btn-border-width) var(--y-btn-border-style) var(--y-btn-border-color);
+	border-radius: var(--y-btn-border-radius);	
+	box-shadow: var(--y-btn-box-shadow);
+	padding: var(--y-btn-padding-y) var(--y-btn-padding-x);
+	margin: var(--y-btn-margin-y) var(--y-btn-margin-x);
+	font-family: var(--y-btn-font-family,inherit);
+	font-size: var(--y-btn-font-size) !important;
+	font-weight: var(--y-btn-font-weight) !important;
+	line-height: 1;  
+	text-decoration: none;    
+	text-rendering: auto;
+	letter-spacing: normal;
+	word-spacing: normal;
+	text-transform: none;
+	text-indent: 0px;
+	text-shadow: none;
+	text-align: center !important;
+	justify-content: center;
+	vertical-align: middle;
+	align-content: center;
+	align-items: center;
+	align-self: center;
+	gap: 10px;
+	width: fit-content;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	cursor: pointer;	
+	transition: 
+		color var(--y-btn-transition-time) ease-in-out, background var(--y-btn-transition-time) ease-in-out,
+		border-color var(--y-btn-transition-time) ease-in-out, box-shadow var(--y-btn-transition-time) ease-in-out;	
+	z-index: 999999;
+}
+
+/* configuração geral */
+.y-btn,
+.yapi button,
+[type=button],
+[type=reset],
+[type=submit],
+[role=button]{-webkit-appearance: button;}
+
+.y-btn:not(:disabled),
+.yapi button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+[role=button]:not(:disabled){cursor: pointer;}
+
+.y-btn:focus:not(:focus-visible),
+.yapi button:focus:not(:focus-visible){outline: 0;}
+
+/* hover */
+.y-btn:hover, .yapi button:hover, 
+.y-btn:active, .yapi button:active,
+.y-btn:focus, .yapi button:focus {
+	color: var(--y-btn-hover-txt-color) !important;
+	background: var(--y-btn-hover-bg-color) !important;
+	border-color: var(--y-btn-hover-border-color) !important;
+	box-shadow: var(--y-btn-hover-box-shadow) !important;
+}
+/* variação de hover*/
+.y-btn.btn-h2{
+	--y-btn-hover-txt-color: var(--y-default-color, var(--Y-neutral-mais-10));
+	--y-btn-hover-border-color: var(--y-btn-hover-txt-color) !important;
+}
+.btn-h2:hover{
+	--y-btn-border-width: 1.5px; 
+	background: transparent !important;
+}
+
+.y-btn.btn-h3,
+.y-btn.btn-h3a,
+.y-btn.btn-h3a-t,
+.y-btn.btn-h3a-r,
+.y-btn.btn-h3a-b,
+.y-btn.btn-h3a-l{
+	--y-btn-txt-color: var(--y-default-color, var(--Y-neutral-mais-10)) !important;
+	--y-btn-bg-color: var(--y-default-color, var(--Y-neutral-menos-70)) !important;
+	--y-btn-border-color: var(--y-btn-txt-color) !important;
+	--y-btn-hover-txt-color: var(--y-color-menos-90, var(--Y-black-mais-50)) !important;
+	--y-btn-hover-bg-color: var(--y-btn-bg-color) !important;
+
+	--y-btn-border-width: 1.5px;
+	--y-btn-font-weight: 500;
+	--y-btn-transition-time: 1s;
+	
+	position: relative;
+	background: transparent;
+	overflow: hidden;
+}
+.y-btn.btn-h3::before{
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 0%;
+	top: 0;
+	left: -35px;
+	transform: skewX(45deg);
+	background: var(--y-btn-hover-bg-color) !important;
+	color: var(--y-btn-hover-txt-color);
+	z-index: -1;
+	transition: all var(--y-btn-transition-time);
+}
+.btn-h3:hover{background: transparent !important;}
+.btn-h3:hover::before{width: 200%;}
+
+.y-btn.btn-h3a,
+.y-btn.btn-h3a-t,
+.y-btn.btn-h3a-r,
+.y-btn.btn-h3a-b,
+.y-btn.btn-h3a-l{
+	--y-btn-transition-time: 0.5s;
+	box-shadow: inset 0 0 0 0 var(--y-btn-hover-bg-color);/**/
+}
+
+.y-btn.btn-h3a:hover{box-shadow:   inset 200px 0 0 0  var(--y-btn-hover-bg-color) !important;}
+.y-btn.btn-h3a-t:hover{box-shadow: inset 0 100px 0 0  var(--y-btn-hover-bg-color) !important;}
+.y-btn.btn-h3a-r:hover{box-shadow: inset -200px 0 0 0 var(--y-btn-hover-bg-color) !important;}
+.y-btn.btn-h3a-b:hover{box-shadow: inset 0 -100px 0 0 var(--y-btn-hover-bg-color) !important;}
+.y-btn.btn-h3a-l:hover{box-shadow: inset 200px 0 0 0  var(--y-btn-hover-bg-color) !important;}
+
+.y-btn.btn-h3a:active,
+.y-btn.btn-h3a-t:active,
+.y-btn.btn-h3a-r:active,
+.y-btn.btn-h3a-b:active,
+.y-btn.btn-h3a-l:active{transform: scale(0.9);}
+
+/* disabled */
+  .y-btn.disabled, .y-btn:disabled,
+  .y-btn:hover:disabled, 
+  .yapi button.disabled,
+  .yapi button:disabled,
+  .yapi button:hover:disabled,
+  [type=button]:disabled,
+  [type=reset]:disabled,
+  [type=submit]:disabled {
+    --y-btn-txt-hover-color:    var(--y-btn-txt-disabled-color);
+    --y-btn-bg-hover-color:     var(--y-btn-bg-disabled-color);
+    --y-btn-border-hover-color: var(--y-btn-border-disabled-color);
+    
+    color: var(--y-btn-txt-disabled-color) !important;
+    background: var(--y-btn-bg-disabled-color) !important;
+    border-color: var(--y-btn-border-disabled-color) !important;
+    cursor: not-allowed !important;
+  }
+
+/* variações */
+.y-btn.btn-light{	
+	--y-btn-txt-color: var(--y-color-menos-10, var(--Y-neutral-mais-10));
+	--y-btn-bg-color: var(--y-light-color, var(--Y-neutral-menos-90));
+	--y-btn-border-color: var(--y-btn-bg-color);
+	--y-btn-hover-txt-color: var(--y-color-mais-10, var(--Y-neutral));
+	--y-btn-hover-bg-color: var(--y-color-menos-80, var(--Y-neutral-menos-80));
+	
+}
+.y-btn.btn-destak{
+	--y-btn-txt-color: var(--y-txt-color, var(--Y-white));
+	--y-btn-bg-color: var(--y-bg-color, var(--y-color-mais-20, var(--Y-neutral-menos-30)));
+	--y-btn-border-color: var(--y-btn-bg-color);
+	--y-btn-hover-txt-color: var(--y-btn-txt-color);
+	--y-btn-hover-bg-color: color-mix(in srgb, var(--y-btn-bg-color), black 15%);
+	--y-btn-hover-border-color: var(--y-btn-hover-bg-color);
+}
+.y-btn.btn-vivid{
+	--y-btn-txt-color: var(--y-txt-color, var(--Y-white)) !important;
+	--y-btn-bg-color: var(--y-bg-color, var(--y-vivid-color, var(--Y-neutral)));
+	--y-btn-border-color: var(--y-btn-bg-color);
+	--y-btn-hover-txt-color: var(--y-btn-txt-color);
+	--y-btn-hover-bg-color: color-mix(in srgb, var(--y-btn-bg-color), black 15%);
+	--y-btn-hover-border-color: var(--y-btn-hover-bg-color);
+}
+.y-btn.btn-dark{
+	--y-btn-txt-color: var(--y-txt-color, var(--Y-white)) !important;
+	--y-btn-bg-color: var(--y-bg-color, var(--y-color-mais-40, var(--Y-neutral-mais-40))) !important;
+	--y-btn-border-color: var(--y-btn-bg-color) !important;
+	--y-btn-hover-txt-color: var(--y-btn-txt-color) !important;
+	--y-btn-hover-bg-color: var(--y-color-mais-20, var(--Y-neutral-mais-20)) !important;
+	--y-btn-hover-border-color: var(--y-btn-hover-bg-color) !important;
+}
+
+.y-btn.btn-outlined{
+	--y-btn-txt-color: var(--y-default-color, var(--Y-neutral-mais-10)) !important;
+	--y-btn-bg-color: var(--y-default-color, var(--Y-neutral-menos-70)) !important;
+	--y-btn-border-color: var(--y-btn-txt-color) !important;
+	--y-btn-hover-txt-color: var(--y-color-menos-90, var(--Y-black-mais-50)) !important;
+	--y-btn-hover-bg-color: var(--y-btn-bg-color) !important;
+	--y-btn-border-width: 1.5px;
+	--y-btn-transition-time: 0.4s;
+	background: transparent;
+}
+
+/* tamanho */
+.y-btn.btn-sm,
+.y-btn.btn-mini{--y-btn-fator: var(--Y-sm-fator);}
+.y-btn.btn-lg{--y-btn-fator: var(--Y-lg-fator);}
+
+/* variação de cores*/
+.y-btn.def.def{
+	--y-btn-txt-color: var(--Y-neutral-mais-40);
+	--y-btn-bg-color: var(--Y-neutral-menos-70);
+	--y-btn-border-color: var(--Y-neutral-menos-70);
+}
+.y-btn.btn-custom{
+	--y-btn-txt-color: var(--proj-btn-txt-color);
+	--y-btn-bg-color: var(--proj-btn-bg-color);
+	--y-btn-border-color: var(--proj-btn-border-color, var(--y-btn-bg-color));
+	--y-btn-hover-txt-color: var(--proj-btn-hover-txt-color, var(--y-btn-txt-color));
+	--y-btn-hover-bg-color: var(--proj-btn-hover-bg-color, color-mix(in srgb, var(--y-btn-bg-color), black 15%));
+	--y-btn-hover-border-color: var(--proj-btn-hover-border-color, var(--y-btn-hover-bg-color));
+}
+
+/* variacao de cores específicas */
+.cyan .y-btn:not(.btn-dark, .btn-destak),
+.cyan.y-btn:not(.btn-dark, .btn-destak),
+.yellow .y-btn:not(.btn-dark, .btn-destak),
+.yellow.y-btn:not(.btn-dark, .btn-destak){
+	--y-btn-txt-color: var(--y-color-mais-50);/**/
+	--y-btn-hover-txt-color: var(--y-color-mais-50) !important;
+}
+
+.yellow .y-btn:not(.btn-dark, .btn-destak, .btn-light),
+.yellow.y-btn:not(.btn-dark, .btn-destak, .btn-light){
+	--y-btn-hover-bg-color: var(--y-color-menos-40);
+}
+
+.cyan .y-btn:not(.btn-dark, .btn-destak, .btn-light),
+.cyan.y-btn:not(.btn-dark, .btn-destak, .btn-light){
+	--y-btn-hover-bg-color: var(--y-color-mais-10);
+}
+
+.cyan .btn-light, 
+.cyan.btn-light,
+.yellow .btn-light,
+.yellow.btn-light{
+	/*--y-btn-txt-color: var(--y-color-mais-50);/**/
+	--y-btn-bg-color: var(--y-color-menos-80);
+	--y-btn-hover-bg-color: var(--y-color-menos-60);/**/
+}
+
+.cyan .btn-vivid,
+.cyan.btn-vivid,
+.yellow .btn-vivid,
+.yellow.btn-vivid{
+	color: var(--y-color-mais-50);/**/
+}
+
+.cyan .btn-dark,
+.cyan.btn-dark,
+.yellow .btn-dark,
+.yellow.btn-dark{
+	/*--y-btn-txt-color: white !important;/**/
+	/*--y-btn-hover-bg-color: var(--y-color-mais-20) !important;/**/
+	/*--y-btn-hover-txt-color: white !important;/**/
+	/*--y-btn-border-hover-color: var(--y-btn-bg-hover-color);/**/
+}
+
+.cyan .btn-outlined,
+.cyan.btn-outlined,
+.yellow .btn-outlined,
+.yellow.btn-outlined{
+	--y-btn-txt-color: var(--y-color-mais-10) !important;
+	--y-btn-border-color: var(--y-btn-txt-color) !important;	
+	--y-btn-hover-bg-color: var(--y-default-color);
+}
+
+.cyan .btn-h2,
+.cyan.btn-h2,
+.yellow .btn-h2,
+.yellow.btn-h2{
+	--y-btn-hover-txt-color: var(--y-color-mais-10) !important;/**/
+}
+
+.cyan .btn-h3, .cyan .btn-h3a,
+.cyan .btn-h3a-t,
+.cyan .btn-h3a-r,
+.cyan .btn-h3a-b,
+.cyan .btn-h3a-l,
+.cyan.btn-h3, .cyan.btn-h3a,
+.cyan.btn-h3a-t,
+.cyan.btn-h3a-r,
+.cyan.btn-h3a-b,
+.cyan.btn-h3a-l,
+
+.yellow .btn-h3,.yellow .btn-h3a,
+.yellow .btn-h3a-t,
+.yellow .btn-h3a-r,
+.yellow .btn-h3a-b,
+.yellow .btn-h3a-l,
+.yellow.btn-h3, .yellow.btn-h3a,
+.yellow.btn-h3a-t,
+.yellow.btn-h3a-r,
+.yellow.btn-h3a-b,
+.yellow.btn-h3a-l
+{
+	--y-btn-txt-color: var(--y-color-mais-10) !important;
+}
+
 /*============================================================*
 / CARDS
 /=============================================================*/
@@ -433,6 +771,8 @@
 	font-weight: var(--y-collapse-trigger-icon-weight);
 	/*margin-right: 10px;*/	
 	width: 1rem;
+	flex-wrap: wrap;
+	justify-content: center;
 	transform: var(--y-collapse-trigger-icon-rotate);	
 	transition: transform 0.3s ease, color 0.3s ease;
 }
