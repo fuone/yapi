@@ -5,7 +5,7 @@
 * Dev: Fuone
 * fuone.dev@gmaill.com
 **************************/
-/* 28/09/2026*/
+/* 20/10/2026*/
 :root{    
   /* red */
   --Y-red: #db2828;
@@ -311,7 +311,7 @@
   --Y-black-menos-90: color-mix(in srgb, var(--Y-black), white 90%);
   --Y-black-menos-100: color-mix(in srgb, var(--Y-black), white 95%);
 
-	/* ccolor */
+  /* ccolor */
 	--Y-ccolor: var(--proj-ccolor);
 	--Y-ccolor-mais-10: color-mix(in srgb, var(--Y-ccolor), black 10%);
 	--Y-ccolor-mais-20: color-mix(in srgb, var(--Y-ccolor), black 20%);
@@ -414,6 +414,14 @@
   --Y-mp-25:  2.5rem;
   --Y-mp-3:   3rem;
 
+	--Y-py: 0.625rem;
+	--Y-py-sm: 0.5rem;
+	--Y-py-lg: 0.75rem;
+	
+	--Y-px: 0.75rem;	
+	--Y-px-sm: 0.6rem	
+	--Y-px-lg: 0.9rem
+
   --Y-font-size: 1rem;
   --Y-txt-indent: 10mm;
   --Y-grid-col: 12;
@@ -422,7 +430,6 @@
   
   --Y-pre-bg-color:  var(--Y-grey-menos-90);/* f7f7f7 #f8f9fa;*/
   --Y-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --Y-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  
+  --Y-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;  
 
 }
