@@ -6,7 +6,7 @@
 * fuone.dev@gmail.com
 **************************/
 /*
-* 161026*/
+* 201026*/
 
 /*============================================================*
 / IMPORTS
@@ -302,8 +302,8 @@
 .y-btn,
 .yapi button,
 [type=button]{
-	--y-btn-py: 0.575rem;
-	--y-btn-px: 0.75rem;
+	--y-btn-py: var(--Y-py, 0.575rem);
+	--y-btn-px: var(--Y-px, 0.75rem);
 	--y-btn-my: 0.25rem;
 	--y-btn-mx: 0.25rem;
 	--y-btn-fator: 1;
