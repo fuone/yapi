@@ -6,7 +6,7 @@
 * fuone.dev@gmail.com
 **************************/
 /*
-* 201026*/
+* 20/10/26 -2 */
 
 /*============================================================*
 / IMPORTS
@@ -655,8 +655,8 @@
 	--y-collapse-trigger-border-color: var(--y-collapse-border-color);
 	--y-collapse-trigger-bg-color: var(--proj-collapse-trigger-bg-color, var(--y-collapse-bg-color));
 	--y-collapse-trigger-font-size: var(--proj-collapse-trigger-font-size, var(--y-collapse-font-size));
-	--y-collapse-trigger-padding-y: 12px;
-	--y-collapse-trigger-padding-x: 15px;
+	--y-collapse-trigger-padding-y: var(--Y-py);
+	--y-collapse-trigger-padding-x: var(--Y-px);
 	
 	--y-collapse-trigger-icon-closed: var(--proj-collapse-trigger-icon-closed, var(--Y-icon-seta-1)); /* ▼ */
 	--y-collapse-trigger-icon-open: var(--proj-collapse-trigger-icon-open, var(--Y-icon-seta-1a)); /* ▲ */
@@ -848,7 +848,7 @@
 	--y-collapse-trigger-icon-weight: bolder;
 	--y-collapse-trigger-icon-rotate: rotate(90deg);
 	--y-collapse-trigger-icon-transform: var(--y-collapse-trigger-icon-rotate) scaleY(-1);	
-	--y-collapse-trigger-padding-y: 0.35rem;
+	--y-collapse-trigger-padding-y: calc(var(--Y-py) * 0.25);
 	--y-collapse-trigger-icon-open-margin: 5px;
 } /* seta aberta ❯ */ 
 .collapse-trigger-icon.collapse-icon-5 {
