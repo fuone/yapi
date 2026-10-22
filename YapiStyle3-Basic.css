@@ -6,7 +6,7 @@
 * fuone.dev@gmail.com
 **************************/
 /*
-* 280926
+* 22/10/2026
 */
 
 /*============================================================*
@@ -70,6 +70,7 @@ body.yapi{
   /* --- red --- */
   /* --- orange --- */
   /* --- yellow --- */
+  /* --- esmerald --- */
   /* --- olive --- */
   /* --- green --- */
   /* --- cyan --- */
@@ -167,6 +168,34 @@ body.yapi{
   --y-destak-color:    var(--y-dt-color, var(--y-main-color));
   --y-vivid-color:     var(--y-vv-color, gold);
   --y-dark-color:      var(--y-dk-color, var(--y-color-mais-50));
+}
+.esmerald{
+	--y-main-color: 		 var(--Y-esmerald);
+	--y-color-mais-10:   var(--Y-esmerald-mais-10);
+	--y-color-mais-20:   var(--Y-esmerald-mais-20);
+	--y-color-mais-30:   var(--Y-esmerald-mais-30);
+	--y-color-mais-40:   var(--Y-esmerald-mais-40);
+	--y-color-mais-50:   var(--Y-esmerald-mais-50);
+	
+	--y-color-menos-10:  var(--Y-esmerald-menos-10);
+	--y-color-menos-20:  var(--Y-esmerald-menos-20);
+	--y-color-menos-30:  var(--Y-esmerald-menos-30);
+	--y-color-menos-40:  var(--Y-esmerald-menos-40);
+	--y-color-menos-50:  var(--Y-esmerald-menos-50);
+	--y-color-menos-60:  var(--Y-esmerald-menos-60);
+	--y-color-menos-70:  var(--Y-esmerald-menos-70);
+	--y-color-menos-80:  var(--Y-esmerald-menos-80);
+	--y-color-menos-90:  var(--Y-esmerald-menos-90);
+	--y-color-menos-100: var(--Y-esmerald-menos-100);
+
+	--y-color-mais-0:    var(--y-def-color, var(--y-main-color));
+	--y-color-menos-0:   var(--y-color-mais-0);
+
+	--y-default-color: 	 var(--y-color-menos-30);
+	--y-light-color:     var(--y-lt-color, var(--y-color-menos-90));
+	--y-destak-color:    var(--y-dt-color, var(--y-color-menos-20));
+	--y-vivid-color:     var(--y-vv-color, var(--y-main-color));
+	--y-dark-color:      var(--y-dk-color, var(--y-color-mais-50));
 }
 .olive{
   --y-main-color: 		 var(--Y-olive);
