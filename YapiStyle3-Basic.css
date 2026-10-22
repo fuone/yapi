@@ -194,7 +194,7 @@ body.yapi{
 	--y-default-color: 	 var(--y-color-menos-30);
 	--y-light-color:     var(--y-lt-color, var(--y-color-menos-90));
 	--y-destak-color:    var(--y-dt-color, var(--y-color-menos-20));
-	--y-vivid-color:     var(--y-vv-color, var(--y-main-color));
+	--y-vivid-color:     var(--y-vv-color, #32cd32);
 	--y-dark-color:      var(--y-dk-color, var(--y-color-mais-50));
 }
 .olive{
