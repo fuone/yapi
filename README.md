@@ -1,10 +1,5 @@
 # Yapi
-
-Framework de desenvolvimento web criado por Fuone.<br/>
-📬 Contacte-me: fuone.dev@gmail.com <br/>
-📜 Conheça-me: https://b.link/f/aboutme<br/>
-☕️ Buy me a coffee: `9aaee149-d324-404f-acb0-8aa2c2e7ffe4`  \(pix)
-
+#### Framework de desenvolvimento web criado por Fuone.
 ---
 ### **CDN**:
 
@@ -19,6 +14,20 @@ Framework de desenvolvimento web criado por Fuone.<br/>
 >~~YapiStyleRoot: (Subframework CSS Root)[https://cdn.jsdelivr.net/gh/fuone/yapi@main/YapiStyleRoot3.css](https://cdn.jsdelivr.net/gh/fuone/yapi@main/YapiStyleRoot3.css)~~ <br/>
 
 ---
-### Copyright © 2026 / [Fuone](https://github.com/fuone)
-
-A utilização deste framework é gratuita a qualquer usuário, sem restrição de uso. **Não é permitido**, porém, a cópia, mescla ou alteração dos arquicos.
+> [!NOTE]
+>
+> ⭐ Autor: **Anderson Brito**<br/>
+> ☕️ Buy me a coffee: 
+ ``` 9aaee149-d324-404f-acb0-8aa2c2e7ffe4 ```
+ \(pix)<br/>
+> 📬 Contacte-me:
+> [![Gmail Badge](https://img.shields.io/badge/-fuone.dev@gmail.com-D14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:SEU-EMAIL)](mailto:fuone.dev@gmail.com)<br/>
+> 📜 Conheça-me:
+> [![Badge](https://img.shields.io/badge/-https://b.link/f/aboutme-017AD7?style=flat-square&logo=html5&logoColor=white)](https://b.link/f/aboutme)
+>
+---
+> [!WARNING]
+>##### 📝 Copyright © 2026 / [Fuone](https://github.com/fuone)
+>
+>- A utilização deste framework é gratuita a qualquer usuário, sem restrição de uso.<br/>
+>- **Não é permitido**: copiar, mesclar ou alterar os arquivos sem o consentimento do autor.
