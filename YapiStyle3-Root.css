@@ -5,7 +5,7 @@
 * Dev: Fuone
 * fuone.dev@gmail.com
 **************************/
-/* 22/10/2026 */
+/* 23/10/2026 */
 :root{    
 	/* red */
 	--Y-red: #db2828;
@@ -426,13 +426,14 @@
   --Y-disabled-bg-color: var(--Y-grey-menos-70);
   
 	--Y-border-color: var(--Y-grey-menos-50);
+	--Y-border-radius: 5px;
   
 	--Y-mp-05:  0.5rem;
-	--Y-mp-1:   1rem;
+	--Y-mp-10:   1rem;
 	--Y-mp-15:  1.5rem;
-	--Y-mp-2:   2rem;
+	--Y-mp-20:   2rem;
 	--Y-mp-25:  2.5rem;
-	--Y-mp-3:   3rem;
+	--Y-mp-30:   3rem;
 	
 	--Y-py: 0.625rem;
 	--Y-py-sm: 0.5rem;
@@ -444,7 +445,7 @@
 	
 	--Y-font-size: 1rem;
 	--Y-txt-indent: 10mm;
-	--Y-grid-col: 12;
+	--Y-grid-qtd-cols: 12;
 	--Y-sm-fator: 0.75;
 	--Y-lg-fator: 1.25;
 	
