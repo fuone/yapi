@@ -6,7 +6,7 @@
 * fuone.dev@gmail.com
 **************************/
 /*
-* 22/10/2026
+* 26/10/2026
 */
 
 /*============================================================*
@@ -3238,6 +3238,59 @@ body.yapi{
 .col-gap-48{column-gap: 48px !important;}
 .col-gap-50{column-gap: 50px !important;}
 
+.g-0,  .gy-0 {--y-gutter-y: 0   !important;}
+.g-02, .gy-02{--y-gutter-y: 2px !important;}
+.g-04, .gy-04{--y-gutter-y: 4px !important;}
+.g-06, .gy-06{--y-gutter-y: 6px !important;}
+.g-08, .gy-08{--y-gutter-y: 8px !important;}
+.g-10, .gy-10{--y-gutter-y: 10px !important;}
+.g-12, .gy-12{--y-gutter-y: 12px !important;}
+.g-14, .gy-14{--y-gutter-y: 14px !important;}
+.g-16, .gy-16{--y-gutter-y: 16px !important;}
+.g-18, .gy-18{--y-gutter-y: 18px !important;}
+.g-20, .gy-20{--y-gutter-y: 20px !important;}
+.g-22, .gy-22{--y-gutter-y: 22px !important;}
+.g-24, .gy-24{--y-gutter-y: 24px !important;}
+.g-26, .gy-26{--y-gutter-y: 26px !important;}
+.g-28, .gy-28{--y-gutter-y: 28px !important;}
+.g-30, .gy-30{--y-gutter-y: 30px !important;}
+.g-32, .gy-32{--y-gutter-y: 32px !important;}
+.g-34, .gy-34{--y-gutter-y: 34px !important;}
+.g-36, .gy-36{--y-gutter-y: 36px !important;}
+.g-38, .gy-38{--y-gutter-y: 38px !important;}
+.g-40, .gy-40{--y-gutter-y: 40px !important;}
+.g-42, .gy-42{--y-gutter-y: 42px !important;}
+.g-44, .gy-44{--y-gutter-y: 44px !important;}
+.g-46, .gy-46{--y-gutter-y: 46px !important;}
+.g-48, .gy-48{--y-gutter-y: 48px !important;}
+.g-50, .gy-50{--y-gutter-y: 50px !important;}
+
+.g-0,  .gx-0 {--y-gutter-x: 0   !important;}
+.g-02, .gx-02{--y-gutter-x: 2px !important;}
+.g-04, .gx-04{--y-gutter-x: 4px !important;}
+.g-06, .gx-06{--y-gutter-x: 6px !important;}
+.g-08, .gx-08{--y-gutter-x: 8px !important;}
+.g-10, .gx-10{--y-gutter-x: 10px !important;}
+.g-12, .gx-12{--y-gutter-x: 12px !important;}
+.g-14, .gx-14{--y-gutter-x: 14px !important;}
+.g-16, .gx-16{--y-gutter-x: 16px !important;}
+.g-18, .gx-18{--y-gutter-x: 18px !important;}
+.g-20, .gx-20{--y-gutter-x: 20px !important;}
+.g-22, .gx-22{--y-gutter-x: 22px !important;}
+.g-24, .gx-24{--y-gutter-x: 24px !important;}
+.g-26, .gx-26{--y-gutter-x: 26px !important;}
+.g-28, .gx-28{--y-gutter-x: 28px !important;}
+.g-30, .gx-30{--y-gutter-x: 30px !important;}
+.g-32, .gx-32{--y-gutter-x: 32px !important;}
+.g-34, .gx-34{--y-gutter-x: 34px !important;}
+.g-36, .gx-36{--y-gutter-x: 36px !important;}
+.g-38, .gx-38{--y-gutter-x: 38px !important;}
+.g-40, .gx-40{--y-gutter-x: 40px !important;}
+.g-42, .gx-42{--y-gutter-x: 42px !important;}
+.g-44, .gx-44{--y-gutter-x: 44px !important;}
+.g-46, .gx-46{--y-gutter-x: 46px !important;}
+.g-48, .gx-48{--y-gutter-x: 48px !important;}
+.g-50, .gx-50{--y-gutter-x: 50px !important;}
 /*============================================================*
 / ROTAÇÃO
 /=============================================================*/
