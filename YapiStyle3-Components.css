@@ -1076,7 +1076,7 @@
   border-radius: 6px;
   font-family: calibri;
   display: flex;
-  padding: padding: calc(var(--tag-p) * 1.5);
+  padding: calc(var(--tag-p) * 1.5);
   max-width: 350px;
   max-height: 100px;
   align-items: center;
@@ -1089,7 +1089,7 @@
 .fuone-tag .fuone-tag-info{  
   display: flex;
   flex-direction: column;
-  padding: var(--tag-p);
+  padding-left: var(--tag-p);
   margin-left: var(--tag-p);
   border-left: var(--tag-border);
   border-width: 2px;
