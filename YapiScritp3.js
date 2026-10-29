@@ -6,7 +6,7 @@
 * fuone.dev@gmaill.com
 **************************/
 /*
-* 140926
+* 28/10/2026
 */
 
 const ICONE_SA_SUCESSO = "success";
@@ -258,26 +258,34 @@ function InitCollapses() {
 }
 
 function SetupAlertClosing() {
-    // Evento de clique com verificação da classe 'disabled'
-    document.addEventListener('click', function(event) {
-      const closeBtn = event.target.closest('.alert-close-btn');
+  // Evento de clique com verificação da classe 'disabled'
+  document.addEventListener('click', function(event) {
+    const closeBtn = event.target.closest('.alert-close-btn');
+    
+    if (closeBtn) {
+      const alertContainer = closeBtn.closest('.y-alert');
       
-      if (closeBtn) {
-        const alertContainer = closeBtn.closest('.y-alert');
-        
-        // Se o container existe E possui a classe 'disabled', interrompe a execução
-        if (alertContainer && alertContainer.classList.contains('disabled')) {
-          return;
-        }
-
-        if (alertContainer) {
-          // Aplica o esmaecimento e remove do DOM
-          alertContainer.classList.add('fade-out');
-
-          alertContainer.addEventListener('transitionend', function() {
-            alertContainer.remove();
-          }, { once: true });
-        }
+      // Se o container existe E possui a classe 'disabled', interrompe a execução
+      if (alertContainer && alertContainer.classList.contains('disabled')) {
+        return;
       }
-    });
-  }
+
+      if (alertContainer) {
+        // Aplica o esmaecimento e remove do DOM
+        alertContainer.classList.add('fade-out');
+
+        alertContainer.addEventListener('transitionend', function() {
+          alertContainer.remove();
+        }, { once: true });
+      }
+    }
+  });
+}
+
+function SetDevTag(){
+  document.querySelector('.fuone-tag-icon').innerHTML = DEVINFO.Icon;
+  document.querySelector('.fuone-tag-nick').innerHTML = DEVINFO.Nick;
+  document.querySelector('.fuone-tag-site').href = DEVINFO.Site;
+  document.querySelector('.fuone-tag-email').innerHTML = DEVINFO.Email;
+  document.querySelector('.fuone-tag-email').href = `mailto:${DEVINFO.Email}`;
+}
