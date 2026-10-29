@@ -1068,14 +1068,14 @@
 / FUONE-TAG/FUONE-ICON
 /=============================================================*/
 .fuone-tag{
-	--tag-border: 1px solid var(--Y-neutral-menos-70);
+  --tag-border: 1px solid var(--Y-neutral-menos-70);
   --tag-p: 6px;
-	color: var(--Y-neutral);
-	background: var(--Y-neutral-menos-95);
-	border: var(--tag-border);
+  color: var(--default-color, var(--Y-neutral));
+  background: var(--color-menos-95,var(--Y-neutral-menos-95));
+  border: var(--tag-border);
   border-radius: 6px;
   font-family: calibri;
-	display: flex;
+  display: flex;
   padding: padding: calc(var(--tag-p) * 1.5);
   max-width: 350px;
   max-height: 100px;
@@ -1086,38 +1086,44 @@
 }
 .fuone-tag:hover{opacity: 1;}
 .fuone-tag .fuone-tag-icon{}
-.fuone-tag .fuone-tag-info{
-	display: flex;
-	flex-direction: column;
+.fuone-tag .fuone-tag-info{  
+  display: flex;
+  flex-direction: column;
   padding: var(--tag-p);
   margin-left: var(--tag-p);
   border-left: var(--tag-border);
   border-width: 2px;
 }
-.fuone-tag .fuone-tag-nick{font-weight: 700;}
+.fuone-tag .fuone-tag-nick{
+  color: inherit;
+  font-weight: 700;
+}
 .fuone-tag .fuone-tag-site{text-decoration: none;}
-.fuone-tag .fuone-tag-email{text-decoration: none;}
+.fuone-tag .fuone-tag-email{
+  color: inherit;
+  text-decoration: none;
+}
 
 /*--- fuone icon ---*/
-  .fuone-icon{
-    --fuone-icon-color-1: #94a3b8;
-    --fuone-icon-color-2: #64748b;
-    --fuone-icon-color-3: #94a3b8;
-    --fuone-icon-color-4: #64748b;
-    min-width: 70px;
-	  transition: transform 0.5s ease, opacity 0.5s ease-out;
-  }
-  .fuone-icon .fuone-icon-part-1{fill: var(--fuone-icon-color-1); color: var(--fuone-icon-color-1);}
-  .fuone-icon .fuone-icon-part-2{fill: var(--fuone-icon-color-2); color: var(--fuone-icon-color-2);}
-  .fuone-icon .fuone-icon-part-3{fill: var(--fuone-icon-color-3); color: var(--fuone-icon-color-3);}
-  .fuone-icon .fuone-icon-part-4{fill: var(--fuone-icon-color-4); color: var(--fuone-icon-color-4);}
+.fuone-icon{
+  --fuone-icon-color-1: #94a3b8;
+  --fuone-icon-color-2: #64748b;
+  --fuone-icon-color-3: #94a3b8;
+  --fuone-icon-color-4: #64748b;
+  min-width: 70px;
+  transition: transform 0.5s ease, opacity 0.5s ease-out;
+}
+.fuone-icon .fuone-icon-part-1{fill: var(--fuone-icon-color-1); color: var(--fuone-icon-color-1);}
+.fuone-icon .fuone-icon-part-2{fill: var(--fuone-icon-color-2); color: var(--fuone-icon-color-2);}
+.fuone-icon .fuone-icon-part-3{fill: var(--fuone-icon-color-3); color: var(--fuone-icon-color-3);}
+.fuone-icon .fuone-icon-part-4{fill: var(--fuone-icon-color-4); color: var(--fuone-icon-color-4);}
 
-  .fuone-icon:hover{
-	  --fuone-icon-color-1: #3ab1ef;
-	  --fuone-icon-color-2: #287ab6;
-    --fuone-icon-color-3: #3ab1ef;
-	  --fuone-icon-color-4: #287ab6;
-	}
+.fuone-icon:hover{
+  --fuone-icon-color-1: #3ab1ef;
+  --fuone-icon-color-2: #287ab6;
+  --fuone-icon-color-3: #3ab1ef;
+  --fuone-icon-color-4: #287ab6;
+}
 /*============================================================*
 / 
 /=============================================================*/
