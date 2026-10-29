@@ -1087,6 +1087,8 @@
 .fuone-tag:hover{opacity: 1;}
 .fuone-tag .fuone-tag-icon{}
 .fuone-tag .fuone-tag-info{
+	display: flex;
+	flex-direction: column;
   padding: var(--tag-p);
   margin-left: var(--tag-p);
   border-left: var(--tag-border);
