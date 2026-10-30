@@ -6,7 +6,7 @@
 * fuone.dev@gmail.com
 **************************/
 /*
-* 29/10/2026
+* 30/10/2026
 */
 
 /*============================================================*
@@ -3074,7 +3074,50 @@ body.yapi{
 / CONTAINERS & ROW/COL
 /=============================================================*/
 .y-container{}
+.y-container-full{}
+.y-container-sm{}
+.y-container-md{}
+.y-container-lg{}
+.y-container-xl{}
+.y-container-xxl{}
 
+.y-container, .y-container-full, .y-container-lg, .y-container-md, .y-container-sm, .y-container-xl, .y-container-xxl{
+	--y-gutter-x: 1.5rem;
+	--y-gutter-y: 0;
+	width: 100%;
+	padding-right: calc(var(--y-gutter-x) * .5);
+	padding-left: calc(var(--y-gutter-x) * .5);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media (min-width: 576px) {
+	.y-container, .y-container-sm {
+		max-width: 540px;
+	}
+}
+@media (min-width: 768px) {
+	.y-container, .y-container-sm, .y-container-md {
+		max-width: 720px;
+	}
+}
+@media (min-width: 992px) {
+	.y-container, .y-container-sm, .y-container-md, .y-container-lg {
+		max-width: 960px;
+	}
+}
+@media (min-width: 1200px) {
+	.y-container, .y-container-sm, .y-container-md, .y-container-lg, .y-container-xl {
+		max-width: 1140px;
+	}
+}
+@media (min-width: 1400px) {
+	.y-container, .y-container-sm, .y-container-md, .y-container-lg, .y-container-xl, .y-container-xxl {
+		max-width: 1320px;
+	}
+}
+
+/*--- row ---*/
 .y-row{
   --y-gutter-x: 1.5rem;
   --y-gutter-y: 0;
