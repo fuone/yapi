@@ -308,7 +308,7 @@
 	--y-btn-mx: 0.25rem;
 	--y-btn-fator: 1;
 
-	--y-btn-txt-color: var(--y-txt-color, var(--y-color-menos-100, var(--Y-neutral-mais-40)));
+	--y-btn-txt-color: var(--y-txt-color, var(--y-color-menos-90, var(--Y-neutral-mais-40)));
 	--y-btn-bg-color: var(--y-bg-color, var(--y-color-mais-0, var(--Y-neutral-menos-70)));
 	--y-btn-border-color: var(--y-btn-bg-color);
 	--y-btn-border-radius: 5px;
@@ -904,6 +904,7 @@
 /*============================================================*
 / FORMS
 /=============================================================*/
+
 /*============================================================*
 / ICONS
 /=============================================================*/
@@ -962,7 +963,7 @@
 .i.color-menos-70{--y-i-color:  var(--y-color-menos-70);}
 .i.color-menos-80{--y-i-color:  var(--y-color-menos-80);}
 .i.color-menos-90{--y-i-color:  var(--y-color-menos-90);}
-.i.color-menos-100{--y-i-color: var(--y-color-menos-100);}
+.i.color-menos-95{--y-i-color: var(--y-color-menos-95);}
 
 .i.color-mais-0,
 .i.color-menos-0,
