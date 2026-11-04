@@ -17,7 +17,7 @@
 /*============================================================*
 / BASE
 /=============================================================*/
-*{margin: 0; padding: 0;}  
+*{/*margin: 0;*//* padding: 0;*/}
 *, *::before, *::after {box-sizing: border-box;}
 
 /* Classe principal. deve ser declarada no elemento html ou body */
@@ -29,7 +29,7 @@
   color:      var(--proj-selection-txt-color,  var(--Y-selection-txt-color, #ffffff));/* Cor do texto selecionado */
 }
 
-/* ddesabilitar elementos */
+/* desabilitar elementos */
 .yapi .disabled.disabled{cursor: not-allowed;}
 .yapi .disabled-selection.disabled-selection{
   -webkit-user-select:none !important;  /* Safari */
@@ -2230,6 +2230,20 @@ body.yapi{
 .pos-inherit {  position: inherit !important;}/***/
 .pos-initial {  position: initial !important;}/***/
 
+/*--- z-index ---*/
+.z-index-menos-1{z-index: -1 !important:}
+.z-index-0{z-index:0 !important;}
+.z-index-10{z-index:10 !important;}
+.z-index-20{z-index:20 !important;}
+.z-index-30{z-index:30 !important;}
+.z-index-40{z-index:40 !important;}
+.z-index-50{z-index:50 !important;}
+.z-index-60{z-index:60 !important;}
+.z-index-70{z-index:70 !important;}
+.z-index-80{z-index:80 !important;}
+.z-index-90{z-index:90 !important;}
+.z-index-100{z-index:100 !important;}
+
 /* --- top --- */
 .top-0{top:0 !important}
 .top-05pcent{top: 05% !important}
@@ -2612,6 +2626,10 @@ body.yapi{
   padding-bottom: var(--y-padding) !important;
 }
 
+.yapi .clear-mp{
+	margin: 0;
+	padding: 0;
+}
 /*============================================================*
 / ALINHAMENTO
 /=============================================================*/
@@ -3008,36 +3026,38 @@ body.yapi{
 .x10{--y-fator:10;}
 
 /* --- zoom ---*/
-.z-05{zoom: 05%;}
-.z-10{zoom: 10%;}
-.z-15{zoom: 15%;}
-.z-20{zoom: 20%;}
-.z-25{zoom: 25%;}
-.z-30{zoom: 30%;}
-.z-35{zoom: 35%;}
-.z-40{zoom: 40%;}
-.z-45{zoom: 45%;}
-.z-50{zoom: 50%;}
-.z-55{zoom: 55%;}
-.z-60{zoom: 60%;}
-.z-65{zoom: 65%;}
-.z-70{zoom: 70%;}
-.z-75{zoom: 75%;}
-.z-80{zoom: 80%;}
-.z-85{zoom: 85%;}
-.z-90{zoom: 90%;}
-.z-95{zoom: 95%;}
-.z-100{zoom: 100%;}
-.z-105{zoom: 105%;}
-.z-110{zoom: 110%;}
-.z-115{zoom: 115%;}
-.z-120{zoom: 120%;}
-.z-125{zoom: 125%;}
-.z-130{zoom: 130%;}
-.z-135{zoom: 135%;}
-.z-140{zoom: 140%;}
-.z-145{zoom: 145%;}
-.z-150{zoom: 150%;}
+.zoom-05{zoom: 05%;}
+.zoom-10{zoom: 10%;}
+.zoom-15{zoom: 15%;}
+.zoom-20{zoom: 20%;}
+.zoom-25{zoom: 25%;}
+.zoom-30{zoom: 30%;}
+.zoom-35{zoom: 35%;}
+.zoom-40{zoom: 40%;}
+.zoom-45{zoom: 45%;}
+.zoom-50{zoom: 50%;}
+.zoom-55{zoom: 55%;}
+.zoom-60{zoom: 60%;}
+.zoom-65{zoom: 65%;}
+.zoom-70{zoom: 70%;}
+.zoom-75{zoom: 75%;}
+.zoom-80{zoom: 80%;}
+.zoom-85{zoom: 85%;}
+.zoom-90{zoom: 90%;}
+.zoom-95{zoom: 95%;}
+.zoom-100{zoom: 100%;}
+.zoom-105{zoom: 105%;}
+.zoom-110{zoom: 110%;}
+.zoom-115{zoom: 115%;}
+.zoom-120{zoom: 120%;}
+.zoom-125{zoom: 125%;}
+.zoom-130{zoom: 130%;}
+.zoom-135{zoom: 135%;}
+.zoom-140{zoom: 140%;}
+.zoom-145{zoom: 145%;}
+.zoom-150{zoom: 150%;}
+.zoom-175{zoom: 175%;}
+.zoom-200{zoom: 200%;}
 
 /*============================================================*
 / ROTAÇÃO
