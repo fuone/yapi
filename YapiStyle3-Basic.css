@@ -671,7 +671,7 @@ body.yapi{
   --y-font-weight: 100; 
   font-weight: 100 !important;
 }
-.fs-400{
+.fw-400{
   --y-font-weight: 400; 
   font-weight: 400 !important;
 }
